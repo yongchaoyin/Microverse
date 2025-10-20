@@ -1,0 +1,128 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="50" ry="6" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="45" ry="4" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="40" ry="3" fill="#9ACD32"/>
+  
+  <!-- Tree trunk -->
+  <rect x="95" y="130" width="10" height="55" fill="#8B4513" stroke="#654321" stroke-width="1.5" rx="2"/>
+  <rect x="96" y="131" width="8" height="53" fill="#A0522D" rx="1.5"/>
+  
+  <!-- Trunk texture -->
+  <line x1="98" y1="135" x2="98" y2="180" stroke="#654321" stroke-width="0.8" opacity="0.6"/>
+  <line x1="102" y1="135" x2="102" y2="180" stroke="#654321" stroke-width="0.8" opacity="0.6"/>
+  <ellipse cx="99" cy="150" rx="1" ry="0.5" fill="#654321" opacity="0.4"/>
+  <ellipse cx="101" cy="165" rx="1.2" ry="0.6" fill="#654321" opacity="0.4"/>
+  
+  <!-- Tree roots -->
+  <ellipse cx="90" cy="182" rx="6" ry="2" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  <ellipse cx="110" cy="182" rx="6" ry="2" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  <ellipse cx="100" cy="184" rx="8" ry="1.5" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  
+  <!-- Pine tree layers (from bottom to top) -->
+  <!-- Bottom layer -->
+  <polygon points="100,130 70,160 130,160" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,132 72,158 128,158" fill="#228B22"/>
+  
+  <!-- Second layer -->
+  <polygon points="100,115 75,145 125,145" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,117 77,143 123,143" fill="#228B22"/>
+  
+  <!-- Third layer -->
+  <polygon points="100,100 80,130 120,130" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,102 82,128 118,128" fill="#228B22"/>
+  
+  <!-- Fourth layer -->
+  <polygon points="100,85 85,115 115,115" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,87 87,113 113,113" fill="#228B22"/>
+  
+  <!-- Fifth layer -->
+  <polygon points="100,70 88,100 112,100" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,72 90,98 110,98" fill="#228B22"/>
+  
+  <!-- Top layer -->
+  <polygon points="100,55 92,85 108,85" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,57 94,83 106,83" fill="#228B22"/>
+  
+  <!-- Tree top -->
+  <polygon points="100,40 96,70 104,70" fill="#006400" stroke="#004000" stroke-width="1"/>
+  <polygon points="100,42 98,68 102,68" fill="#228B22"/>
+  
+  <!-- Highlight details on branches -->
+  <polygon points="100,125 75,150 85,150" fill="#32CD32" opacity="0.7"/>
+  <polygon points="100,125 115,150 125,150" fill="#32CD32" opacity="0.7"/>
+  
+  <polygon points="100,110 80,135 88,135" fill="#32CD32" opacity="0.7"/>
+  <polygon points="100,110 112,135 120,135" fill="#32CD32" opacity="0.7"/>
+  
+  <polygon points="100,95 85,120 92,120" fill="#32CD32" opacity="0.7"/>
+  <polygon points="100,95 108,120 115,120" fill="#32CD32" opacity="0.7"/>
+  
+  <polygon points="100,80 90,105 96,105" fill="#32CD32" opacity="0.7"/>
+  <polygon points="100,80 104,105 110,105" fill="#32CD32" opacity="0.7"/>
+  
+  <polygon points="100,65 93,90 98,90" fill="#32CD32" opacity="0.7"/>
+  <polygon points="100,65 102,90 107,90" fill="#32CD32" opacity="0.7"/>
+  
+  <!-- Pine needles details -->
+  <line x1="75" y1="155" x2="80" y2="150" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  <line x1="125" y1="155" x2="120" y2="150" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  <line x1="80" y1="140" x2="85" y2="135" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  <line x1="120" y1="140" x2="115" y2="135" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  <line x1="85" y1="125" x2="90" y2="120" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  <line x1="115" y1="125" x2="110" y2="120" stroke="#228B22" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Pine cones -->
+  <ellipse cx="88" cy="140" rx="2" ry="4" fill="#8B4513" transform="rotate(-15 88 140)"/>
+  <ellipse cx="88" cy="139" rx="1.5" ry="3" fill="#A0522D" transform="rotate(-15 88 139)"/>
+  <rect x="87" y="137" width="2" height="1" fill="#654321" transform="rotate(-15 88 137.5)"/>
+  
+  <ellipse cx="112" cy="125" rx="2" ry="4" fill="#8B4513" transform="rotate(20 112 125)"/>
+  <ellipse cx="112" cy="124" rx="1.5" ry="3" fill="#A0522D" transform="rotate(20 112 124)"/>
+  <rect x="111" y="122" width="2" height="1" fill="#654321" transform="rotate(20 112 122.5)"/>
+  
+  <ellipse cx="95" cy="110" rx="2" ry="4" fill="#8B4513" transform="rotate(-10 95 110)"/>
+  <ellipse cx="95" cy="109" rx="1.5" ry="3" fill="#A0522D" transform="rotate(-10 95 109)"/>
+  <rect x="94" y="107" width="2" height="1" fill="#654321" transform="rotate(-10 95 107.5)"/>
+  
+  <!-- Snow on branches (winter effect) -->
+  <ellipse cx="85" cy="150" rx="8" ry="2" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="115" cy="150" rx="8" ry="2" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="90" cy="135" rx="6" ry="1.5" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="110" cy="135" rx="6" ry="1.5" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="93" cy="120" rx="5" ry="1.2" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="107" cy="120" rx="5" ry="1.2" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="96" cy="105" rx="4" ry="1" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="104" cy="105" rx="4" ry="1" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Small branches -->
+  <line x1="95" y1="145" x2="85" y2="150" stroke="#654321" stroke-width="1.5"/>
+  <line x1="105" y1="145" x2="115" y2="150" stroke="#654321" stroke-width="1.5"/>
+  <line x1="96" y1="130" x2="88" y2="135" stroke="#654321" stroke-width="1.2"/>
+  <line x1="104" y1="130" x2="112" y2="135" stroke="#654321" stroke-width="1.2"/>
+  <line x1="97" y1="115" x2="91" y2="120" stroke="#654321" stroke-width="1"/>
+  <line x1="103" y1="115" x2="109" y2="120" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Birds -->
+  <ellipse cx="85" cy="100" rx="2" ry="1" fill="#000000" opacity="0.6"/>
+  <circle cx="84" cy="100" r="0.5" fill="#000000" opacity="0.6"/>
+  
+  <!-- Fallen pine needles -->
+  <line x1="85" y1="180" x2="90" y2="182" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+  <line x1="115" y1="181" x2="110" y2="183" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+  <line x1="95" y1="183" x2="100" y2="185" stroke="#006400" stroke-width="1" opacity="0.7"/>
+  <line x1="105" y1="182" x2="108" y2="184" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+  
+  <!-- Small pine seedlings around base -->
+  <polygon points="85,180 82,185 88,185" fill="#228B22" opacity="0.6"/>
+  <line x1="85" y1="180" x2="85" y2="185" stroke="#654321" stroke-width="0.5"/>
+  
+  <polygon points="115,181 112,186 118,186" fill="#228B22" opacity="0.6"/>
+  <line x1="115" y1="181" x2="115" y2="186" stroke="#654321" stroke-width="0.5"/>
+  
+  <!-- Tree name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#006400" stroke="#004000" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">PINE TREE</text>
+</svg>

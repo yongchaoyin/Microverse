@@ -1,0 +1,114 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="32" cy="60" rx="30" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Main building -->
+  <rect x="8" y="12" width="48" height="44" fill="#FFFFFF"/>
+  
+  <!-- Building sections -->
+  <rect x="8" y="16" width="48" height="8" fill="#F8F8FF"/>
+  <rect x="8" y="24" width="48" height="8" fill="#F0F8FF"/>
+  <rect x="8" y="32" width="48" height="8" fill="#F8F8FF"/>
+  <rect x="8" y="40" width="48" height="8" fill="#F0F8FF"/>
+  <rect x="8" y="48" width="48" height="8" fill="#F8F8FF"/>
+  
+  <!-- Red cross symbol -->
+  <rect x="28" y="4" width="8" height="2" fill="#FF0000"/>
+  <rect x="30" y="2" width="4" height="6" fill="#FF0000"/>
+  
+  <!-- Emergency entrance -->
+  <rect x="26" y="48" width="12" height="8" fill="#8B4513"/>
+  <rect x="26" y="48" width="12" height="2" fill="#A0522D"/>
+  <circle cx="32" cy="52" r="0.5" fill="#FFD700"/>
+  <rect x="28" y="50" width="8" height="4" fill="#654321"/>
+  
+  <!-- Emergency sign -->
+  <rect x="24" y="44" width="16" height="4" fill="#FF0000"/>
+  <text x="32" y="47" text-anchor="middle" font-family="Arial" font-size="3" font-weight="bold" fill="#FFFFFF">EMERGENCY</text>
+  
+  <!-- Windows pattern -->
+  <g fill="#87CEEB" stroke="#333333" stroke-width="0.3">
+    <!-- Floor 1 -->
+    <rect x="12" y="18" width="4" height="4"/>
+    <rect x="18" y="18" width="4" height="4"/>
+    <rect x="42" y="18" width="4" height="4"/>
+    <rect x="48" y="18" width="4" height="4"/>
+    
+    <!-- Floor 2 -->
+    <rect x="12" y="26" width="4" height="4"/>
+    <rect x="18" y="26" width="4" height="4"/>
+    <rect x="24" y="26" width="4" height="4"/>
+    <rect x="36" y="26" width="4" height="4"/>
+    <rect x="42" y="26" width="4" height="4"/>
+    <rect x="48" y="26" width="4" height="4"/>
+    
+    <!-- Floor 3 -->
+    <rect x="12" y="34" width="4" height="4"/>
+    <rect x="18" y="34" width="4" height="4"/>
+    <rect x="24" y="34" width="4" height="4"/>
+    <rect x="36" y="34" width="4" height="4"/>
+    <rect x="42" y="34" width="4" height="4"/>
+    <rect x="48" y="34" width="4" height="4"/>
+    
+    <!-- Floor 4 -->
+    <rect x="12" y="42" width="4" height="4"/>
+    <rect x="18" y="42" width="4" height="4"/>
+    <rect x="42" y="42" width="4" height="4"/>
+    <rect x="48" y="42" width="4" height="4"/>
+  </g>
+  
+  <!-- Hospital sign -->
+  <rect x="16" y="8" width="32" height="6" fill="#4169E1"/>
+  <text x="32" y="12" text-anchor="middle" font-family="Arial" font-size="4" font-weight="bold" fill="#FFFFFF">HOSPITAL</text>
+  
+  <!-- Ambulance bay -->
+  <rect x="4" y="50" width="16" height="6" fill="#E0E0E0"/>
+  <rect x="4" y="50" width="16" height="1" fill="#F0F0F0"/>
+  
+  <!-- Ambulance -->
+  <rect x="6" y="52" width="12" height="3" fill="#FFFFFF"/>
+  <rect x="6" y="52" width="12" height="1" fill="#FF0000"/>
+  <rect x="8" y="53" width="2" height="1" fill="#87CEEB"/>
+  <rect x="12" y="53" width="2" height="1" fill="#87CEEB"/>
+  <circle cx="8" cy="55" r="0.8" fill="#333333"/>
+  <circle cx="16" cy="55" r="0.8" fill="#333333"/>
+  <rect x="14" y="52.5" width="3" height="1" fill="#FF0000"/>
+  <text x="15.5" y="53.2" text-anchor="middle" font-family="Arial" font-size="1" fill="#FFFFFF">+</text>
+  
+  <!-- Helipad -->
+  <rect x="44" y="50" width="16" height="6" fill="#FFD700"/>
+  <circle cx="52" cy="53" r="2.5" fill="#FFFFFF"/>
+  <text x="52" y="54" text-anchor="middle" font-family="Arial" font-size="3" font-weight="bold" fill="#000000">H</text>
+  
+  <!-- Entrance steps -->
+  <rect x="22" y="56" width="20" height="2" fill="#D3D3D3"/>
+  <rect x="24" y="58" width="16" height="2" fill="#C0C0C0"/>
+  
+  <!-- Medical equipment visible through windows -->
+  <rect x="13" y="19" width="2" height="2" fill="#C0C0C0"/>
+  <rect x="19" y="19" width="2" height="2" fill="#C0C0C0"/>
+  <circle cx="44" cy="20" r="0.5" fill="#FF69B4"/>
+  <circle cx="50" cy="20" r="0.5" fill="#FF69B4"/>
+  
+  <!-- Parking area -->
+  <rect x="0" y="54" width="64" height="4" fill="#A0A0A0"/>
+  <line x1="0" y1="56" x2="64" y2="56" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- Landscaping -->
+  <circle cx="10" cy="58" r="1.5" fill="#228B22"/>
+  <circle cx="54" cy="58" r="1.5" fill="#228B22"/>
+  <circle cx="12" cy="59" r="0.5" fill="#FF69B4"/>
+  <circle cx="52" cy="59" r="0.5" fill="#FF69B4"/>
+  
+  <!-- Building edges -->
+  <rect x="8" y="12" width="2" height="44" fill="#E8E8E8"/>
+  <rect x="54" y="12" width="2" height="44" fill="#E8E8E8"/>
+  
+  <!-- Floor separators -->
+  <g stroke="#D0D0D0" stroke-width="0.5">
+    <line x1="8" y1="24" x2="56" y2="24"/>
+    <line x1="8" y1="32" x2="56" y2="32"/>
+    <line x1="8" y1="40" x2="56" y2="40"/>
+    <line x1="8" y1="48" x2="56" y2="48"/>
+  </g>
+</svg>

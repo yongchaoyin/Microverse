@@ -1,0 +1,118 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="32" cy="60" rx="30" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Main building -->
+  <rect x="8" y="16" width="48" height="36" fill="#4682B4"/>
+  
+  <!-- Roof -->
+  <polygon points="6,16 32,6 58,16" fill="#2F4F4F"/>
+  <polygon points="6,16 32,6 58,16 56,18 32,8 10,18" fill="#708090"/>
+  
+  <!-- Police badge on roof -->
+  <circle cx="32" cy="12" r="2" fill="#FFD700"/>
+  <polygon points="32,10 33,11.5 34.5,11 33.5,12.5 35,13.5 33.5,13.5 32,15 30.5,13.5 29,13.5 30.5,12.5 29.5,11 31,11.5" fill="#4169E1"/>
+  
+  <!-- Main entrance -->
+  <rect x="28" y="40" width="8" height="12" fill="#2F4F4F"/>
+  <rect x="28" y="40" width="8" height="2" fill="#708090"/>
+  <circle cx="32" cy="46" r="0.5" fill="#FFD700"/>
+  <rect x="30" y="42" width="4" height="6" fill="#1C1C1C"/>
+  
+  <!-- Police sign -->
+  <rect x="16" y="20" width="32" height="6" fill="#000080"/>
+  <text x="32" y="24.5" text-anchor="middle" font-family="Arial" font-size="3.5" font-weight="bold" fill="#FFFFFF">POLICE STATION</text>
+  
+  <!-- Windows -->
+  <g fill="#87CEEB" stroke="#2F4F4F" stroke-width="0.3">
+    <!-- Left side windows -->
+    <rect x="12" y="28" width="6" height="6"/>
+    <rect x="20" y="28" width="6" height="6"/>
+    <rect x="12" y="36" width="6" height="6"/>
+    <rect x="20" y="36" width="6" height="6"/>
+    
+    <!-- Right side windows -->
+    <rect x="38" y="28" width="6" height="6"/>
+    <rect x="46" y="28" width="6" height="6"/>
+    <rect x="38" y="36" width="6" height="6"/>
+    <rect x="46" y="36" width="6" height="6"/>
+  </g>
+  
+  <!-- Window bars (security) -->
+  <g stroke="#2F4F4F" stroke-width="0.8">
+    <line x1="13" y1="28" x2="13" y2="34"/>
+    <line x1="15" y1="28" x2="15" y2="34"/>
+    <line x1="17" y1="28" x2="17" y2="34"/>
+    <line x1="21" y1="28" x2="21" y2="34"/>
+    <line x1="23" y1="28" x2="23" y2="34"/>
+    <line x1="25" y1="28" x2="25" y2="34"/>
+    
+    <line x1="39" y1="28" x2="39" y2="34"/>
+    <line x1="41" y1="28" x2="41" y2="34"/>
+    <line x1="43" y1="28" x2="43" y2="34"/>
+    <line x1="47" y1="28" x2="47" y2="34"/>
+    <line x1="49" y1="28" x2="49" y2="34"/>
+    <line x1="51" y1="28" x2="51" y2="34"/>
+  </g>
+  
+  <!-- Police car -->
+  <rect x="4" y="50" width="14" height="4" fill="#000000"/>
+  <rect x="4" y="50" width="14" height="1" fill="#FFFFFF"/>
+  <rect x="6" y="51" width="2" height="1.5" fill="#87CEEB"/>
+  <rect x="10" y="51" width="2" height="1.5" fill="#87CEEB"/>
+  <rect x="14" y="51" width="2" height="1.5" fill="#87CEEB"/>
+  <circle cx="7" cy="54" r="1" fill="#333333"/>
+  <circle cx="15" cy="54" r="1" fill="#333333"/>
+  
+  <!-- Police car lights -->
+  <rect x="8" y="50" width="1" height="0.5" fill="#FF0000"/>
+  <rect x="9.5" y="50" width="1" height="0.5" fill="#0000FF"/>
+  <rect x="11" y="50" width="1" height="0.5" fill="#FF0000"/>
+  
+  <!-- Police car number -->
+  <text x="11" y="52.5" text-anchor="middle" font-family="Arial" font-size="1.5" font-weight="bold" fill="#FFFFFF">911</text>
+  
+  <!-- Security camera -->
+  <rect x="54" y="26" width="2" height="1" fill="#333333"/>
+  <circle cx="55" cy="26.5" r="0.5" fill="#FF0000"/>
+  
+  <!-- Antenna -->
+  <rect x="31.5" y="6" width="1" height="6" fill="#2F4F4F"/>
+  <circle cx="32" cy="6" r="0.5" fill="#FF0000"/>
+  
+  <!-- Entrance steps -->
+  <rect x="24" y="52" width="16" height="2" fill="#D3D3D3"/>
+  <rect x="26" y="54" width="12" height="2" fill="#C0C0C0"/>
+  
+  <!-- Emergency phone booth -->
+  <rect x="58" y="46" width="4" height="6" fill="#FF0000"/>
+  <rect x="59" y="47" width="2" height="2" fill="#87CEEB"/>
+  <circle cx="60" cy="50" r="0.3" fill="#FFD700"/>
+  <text x="60" y="51.5" text-anchor="middle" font-family="Arial" font-size="1" fill="#FFFFFF">911</text>
+  
+  <!-- Parking area -->
+  <rect x="0" y="54" width="64" height="4" fill="#A0A0A0"/>
+  <line x1="0" y1="56" x2="64" y2="56" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- Police parking spaces -->
+  <rect x="20" y="54" width="8" height="4" fill="#000080" opacity="0.3"/>
+  <text x="24" y="57" text-anchor="middle" font-family="Arial" font-size="2" font-weight="bold" fill="#FFFFFF">POLICE</text>
+  
+  <!-- Landscaping -->
+  <circle cx="12" cy="58" r="1.5" fill="#228B22"/>
+  <circle cx="52" cy="58" r="1.5" fill="#228B22"/>
+  <circle cx="14" cy="59" r="0.5" fill="#FFFFFF"/>
+  <circle cx="50" cy="59" r="0.5" fill="#FFFFFF"/>
+  
+  <!-- Building details -->
+  <rect x="8" y="16" width="2" height="36" fill="#36648B"/>
+  <rect x="54" y="16" width="2" height="36" fill="#36648B"/>
+  
+  <!-- Security light -->
+  <rect x="26" y="38" width="2" height="2" fill="#FFD700"/>
+  <polygon points="27,38 25,36 29,36" fill="#FFD700" opacity="0.5"/>
+  
+  <!-- Badge symbol on building -->
+  <circle cx="32" cy="32" r="3" fill="#FFD700"/>
+  <polygon points="32,29 33.5,31 35.5,30.5 34.5,32.5 36,34 34,34 32,36 30,34 28,34 29.5,32.5 28.5,30.5 30.5,31" fill="#000080"/>
+</svg>

@@ -1,0 +1,160 @@
+<svg width="64" height="80" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面阴影 -->
+  <ellipse cx="32" cy="75" rx="28" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- 建筑主体 -->
+  <rect x="8" y="40" width="48" height="32" fill="#FFF8E1"/>
+  
+  <!-- 屋顶 -->
+  <polygon points="6,40 32,24 58,40" fill="#E91E63"/>
+  <polygon points="6,40 32,24 36,28 10,40" fill="#F06292"/>
+  
+  <!-- 屋顶瓦片 -->
+  <rect x="10" y="28" width="44" height="2" fill="#AD1457"/>
+  <rect x="10" y="32" width="44" height="2" fill="#AD1457"/>
+  <rect x="10" y="36" width="44" height="2" fill="#AD1457"/>
+  
+  <!-- 招牌 -->
+  <rect x="16" y="32" width="32" height="8" fill="#4CAF50"/>
+  <rect x="17" y="33" width="30" height="6" fill="#66BB6A"/>
+  
+  <!-- 招牌文字 "FLOWERS" -->
+  <rect x="19" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="19" y="35" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="19" y="37" width="3" height="1" fill="#FFFFFF"/>
+  
+  <rect x="23" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="23" y="35" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="23" y="39" width="3" height="1" fill="#FFFFFF"/>
+  
+  <rect x="27" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="27" y="35" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="27" y="37" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="27" y="39" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="29" y="35" width="2" height="4" fill="#FFFFFF"/>
+  
+  <rect x="32" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="32" y="35" width="2" height="1" fill="#FFFFFF"/>
+  <rect x="32" y="37" width="2" height="1" fill="#FFFFFF"/>
+  <rect x="32" y="39" width="2" height="1" fill="#FFFFFF"/>
+  
+  <rect x="35" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="35" y="35" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="35" y="37" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="35" y="39" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="37" y="35" width="2" height="4" fill="#FFFFFF"/>
+  
+  <rect x="40" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="40" y="35" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="40" y="37" width="2" height="1" fill="#FFFFFF"/>
+  <rect x="40" y="39" width="3" height="1" fill="#FFFFFF"/>
+  
+  <rect x="44" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="44" y="35" width="2" height="1" fill="#FFFFFF"/>
+  <rect x="44" y="37" width="2" height="1" fill="#FFFFFF"/>
+  <rect x="44" y="39" width="2" height="1" fill="#FFFFFF"/>
+  
+  <!-- 大窗户 -->
+  <rect x="12" y="48" width="16" height="16" fill="#81D4FA"/>
+  <rect x="11" y="47" width="18" height="18" fill="#5D4037"/>
+  <rect x="12" y="48" width="16" height="16" fill="#81D4FA"/>
+  
+  <!-- 窗框 -->
+  <rect x="11" y="55" width="18" height="2" fill="#5D4037"/>
+  <rect x="19" y="47" width="2" height="18" fill="#5D4037"/>
+  
+  <!-- 窗户内部花店场景 -->
+  <rect x="13" y="49" width="14" height="12" fill="#C8E6C9" opacity="0.8"/>
+  <!-- 花束展示 -->
+  <circle cx="16" cy="54" r="1.5" fill="#E91E63"/>
+  <circle cx="19" cy="54" r="1.5" fill="#FFEB3B"/>
+  <circle cx="22" cy="54" r="1.5" fill="#2196F3"/>
+  <circle cx="25" cy="54" r="1.5" fill="#FF9800"/>
+  <circle cx="17" cy="58" r="1.5" fill="#9C27B0"/>
+  <circle cx="21" cy="58" r="1.5" fill="#4CAF50"/>
+  <circle cx="24" cy="58" r="1.5" fill="#F44336"/>
+  
+  <!-- 门 -->
+  <rect x="32" y="56" width="12" height="16" fill="#6D4C41"/>
+  <rect x="33" y="57" width="10" height="14" fill="#795548"/>
+  
+  <!-- 门把手 -->
+  <circle cx="41" cy="64" r="1" fill="#FFD700"/>
+  
+  <!-- 门框 -->
+  <rect x="31" y="55" width="14" height="2" fill="#5D4037"/>
+  <rect x="31" y="55" width="2" height="17" fill="#5D4037"/>
+  <rect x="43" y="55" width="2" height="17" fill="#5D4037"/>
+  
+  <!-- 门上花环装饰 -->
+  <circle cx="38" cy="60" r="3" fill="#4CAF50"/>
+  <circle cx="36" cy="59" r="0.5" fill="#E91E63"/>
+  <circle cx="38" cy="58" r="0.5" fill="#FFEB3B"/>
+  <circle cx="40" cy="59" r="0.5" fill="#2196F3"/>
+  <circle cx="38" cy="62" r="0.5" fill="#FF9800"/>
+  
+  <!-- 右侧小窗 -->
+  <rect x="48" y="52" width="6" height="8" fill="#81D4FA"/>
+  <rect x="47" y="51" width="8" height="10" fill="#5D4037"/>
+  <rect x="48" y="52" width="6" height="8" fill="#81D4FA"/>
+  <rect x="50" y="51" width="2" height="10" fill="#5D4037"/>
+  <rect x="47" y="55" width="8" height="2" fill="#5D4037"/>
+  
+  <!-- 遮阳篷 -->
+  <rect x="10" y="44" width="20" height="4" fill="#E91E63"/>
+  <rect x="10" y="44" width="20" height="1" fill="#AD1457"/>
+  <polygon points="10,48 12,50 30,50 32,48" fill="#880E4F"/>
+  
+  <!-- 遮阳篷支架 -->
+  <rect x="11" y="48" width="1" height="4" fill="#795548"/>
+  <rect x="29" y="48" width="1" height="4" fill="#795548"/>
+  
+  <!-- 室外花盆展示 -->
+  <rect x="4" y="68" width="4" height="4" fill="#8D6E63"/>
+  <circle cx="6" cy="66" r="2" fill="#4CAF50"/>
+  <circle cx="5" cy="65" r="0.5" fill="#E91E63"/>
+  <circle cx="7" cy="65" r="0.5" fill="#FFEB3B"/>
+  
+  <rect x="10" y="68" width="4" height="4" fill="#8D6E63"/>
+  <circle cx="12" cy="66" r="2" fill="#4CAF50"/>
+  <circle cx="11" cy="65" r="0.5" fill="#2196F3"/>
+  <circle cx="13" cy="65" r="0.5" fill="#FF9800"/>
+  
+  <rect x="16" y="68" width="4" height="4" fill="#8D6E63"/>
+  <circle cx="18" cy="66" r="2" fill="#4CAF50"/>
+  <circle cx="17" cy="65" r="0.5" fill="#9C27B0"/>
+  <circle cx="19" cy="65" r="0.5" fill="#4CAF50"/>
+  
+  <!-- 花车 -->
+  <rect x="52" y="68" width="8" height="4" fill="#8D6E63"/>
+  <circle cx="54" cy="72" r="1" fill="#424242"/>
+  <circle cx="58" cy="72" r="1" fill="#424242"/>
+  <circle cx="56" cy="66" r="2" fill="#4CAF50"/>
+  <circle cx="55" cy="65" r="0.5" fill="#E91E63"/>
+  <circle cx="57" cy="65" r="0.5" fill="#FFEB3B"/>
+  
+  <!-- 前院花园 -->
+  <rect x="4" y="72" width="56" height="8" fill="#C8E6C9"/>
+  
+  <!-- 各种花朵装饰 -->
+  <circle cx="12" cy="76" r="1" fill="#E91E63"/>
+  <circle cx="16" cy="74" r="1" fill="#FFEB3B"/>
+  <circle cx="20" cy="76" r="1" fill="#2196F3"/>
+  <circle cx="24" cy="74" r="1" fill="#FF9800"/>
+  <circle cx="28" cy="76" r="1" fill="#9C27B0"/>
+  <circle cx="32" cy="74" r="1" fill="#4CAF50"/>
+  <circle cx="36" cy="76" r="1" fill="#F44336"/>
+  <circle cx="40" cy="74" r="1" fill="#E91E63"/>
+  <circle cx="44" cy="76" r="1" fill="#FFEB3B"/>
+  <circle cx="48" cy="74" r="1" fill="#2196F3"/>
+  <circle cx="52" cy="76" r="1" fill="#FF9800"/>
+  
+  <!-- 小径 -->
+  <rect x="28" y="72" width="8" height="8" fill="#BCAAA4"/>
+  <rect x="29" y="73" width="6" height="6" fill="#D7CCC8"/>
+  
+  <!-- 花朵图案在小径上 -->
+  <circle cx="30" cy="74" r="0.5" fill="#E91E63"/>
+  <circle cx="32" cy="76" r="0.5" fill="#FFEB3B"/>
+  <circle cx="34" cy="74" r="0.5" fill="#2196F3"/>
+</svg>

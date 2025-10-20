@@ -1,0 +1,161 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="80" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Car body main -->
+  <rect x="30" y="120" width="140" height="35" fill="#FFFF00" stroke="#FFD700" stroke-width="2" rx="8"/>
+  <rect x="32" y="122" width="136" height="31" fill="#FFFF66" rx="6"/>
+  
+  <!-- Car roof -->
+  <rect x="45" y="105" width="110" height="20" fill="#FFFF00" stroke="#FFD700" stroke-width="2" rx="4"/>
+  <rect x="47" y="107" width="106" height="16" fill="#FFFF66" rx="2"/>
+  
+  <!-- Windshield -->
+  <rect x="50" y="110" width="30" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="52" y="112" width="26" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Rear window -->
+  <rect x="120" y="110" width="30" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="122" y="112" width="26" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Side windows -->
+  <rect x="85" y="110" width="30" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="87" y="112" width="26" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Wheels -->
+  <circle cx="60" cy="165" r="18" fill="#2F2F2F" stroke="#000000" stroke-width="2"/>
+  <circle cx="60" cy="165" r="14" fill="#696969"/>
+  <circle cx="60" cy="165" r="8" fill="#C0C0C0"/>
+  <circle cx="60" cy="165" r="4" fill="#FFD700"/>
+  
+  <circle cx="140" cy="165" r="18" fill="#2F2F2F" stroke="#000000" stroke-width="2"/>
+  <circle cx="140" cy="165" r="14" fill="#696969"/>
+  <circle cx="140" cy="165" r="8" fill="#C0C0C0"/>
+  <circle cx="140" cy="165" r="4" fill="#FFD700"/>
+  
+  <!-- Wheel spokes -->
+  <line x1="60" y1="147" x2="60" y2="183" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="42" y1="165" x2="78" y2="165" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="48" y1="153" x2="72" y2="177" stroke="#A9A9A9" stroke-width="1"/>
+  <line x1="72" y1="153" x2="48" y2="177" stroke="#A9A9A9" stroke-width="1"/>
+  
+  <line x1="140" y1="147" x2="140" y2="183" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="122" y1="165" x2="158" y2="165" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="128" y1="153" x2="152" y2="177" stroke="#A9A9A9" stroke-width="1"/>
+  <line x1="152" y1="153" x2="128" y2="177" stroke="#A9A9A9" stroke-width="1"/>
+  
+  <!-- Headlights -->
+  <circle cx="25" cy="130" r="8" fill="#FFFF00" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="25" cy="130" r="6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="25" cy="130" r="3" fill="#FFFF00"/>
+  
+  <circle cx="25" cy="145" r="8" fill="#FFFF00" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="25" cy="145" r="6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="25" cy="145" r="3" fill="#FFFF00"/>
+  
+  <!-- Headlight beams -->
+  <ellipse cx="10" cy="130" rx="15" ry="4" fill="#FFFF00" opacity="0.3"/>
+  <ellipse cx="10" cy="145" rx="15" ry="4" fill="#FFFF00" opacity="0.3"/>
+  
+  <!-- Taillights -->
+  <circle cx="175" cy="130" r="6" fill="#FF0000" stroke="#CC0000" stroke-width="1"/>
+  <circle cx="175" cy="130" r="4" fill="#FF4500"/>
+  
+  <circle cx="175" cy="145" r="6" fill="#FF0000" stroke="#CC0000" stroke-width="1"/>
+  <circle cx="175" cy="145" r="4" fill="#FF4500"/>
+  
+  <!-- Taxi roof sign -->
+  <rect x="80" y="95" width="40" height="12" fill="#000000" stroke="#2F2F2F" stroke-width="1" rx="2"/>
+  <rect x="82" y="97" width="36" height="8" fill="#FFFF00" rx="1"/>
+  <text x="100" y="103" text-anchor="middle" font-family="Arial" font-size="8" fill="#000000" font-weight="bold">TAXI</text>
+  
+  <!-- Taxi roof sign lights -->
+  <circle cx="85" cy="95" r="1.5" fill="#FF0000" opacity="0.8"/>
+  <circle cx="115" cy="95" r="1.5" fill="#FF0000" opacity="0.8"/>
+  
+  <!-- Side mirrors -->
+  <ellipse cx="22" cy="125" rx="4" ry="3" fill="#2F2F2F" stroke="#000000" stroke-width="0.5"/>
+  <ellipse cx="22" cy="125" rx="3" ry="2" fill="#87CEEB" opacity="0.6"/>
+  
+  <ellipse cx="178" cy="125" rx="4" ry="3" fill="#2F2F2F" stroke="#000000" stroke-width="0.5"/>
+  <ellipse cx="178" cy="125" rx="3" ry="2" fill="#87CEEB" opacity="0.6"/>
+  
+  <!-- Car doors -->
+  <rect x="50" y="125" width="25" height="30" fill="#FFD700" stroke="#FFA500" stroke-width="1" rx="2"/>
+  <rect x="52" y="127" width="21" height="26" fill="#FFFF66" rx="1"/>
+  <circle cx="70" cy="140" r="1.5" fill="#000000"/>
+  <line x1="62" y1="130" x2="62" y2="150" stroke="#FFA500" stroke-width="0.5"/>
+  
+  <rect x="125" y="125" width="25" height="30" fill="#FFD700" stroke="#FFA500" stroke-width="1" rx="2"/>
+  <rect x="127" y="127" width="21" height="26" fill="#FFFF66" rx="1"/>
+  <circle cx="130" cy="140" r="1.5" fill="#000000"/>
+  <line x1="137" y1="130" x2="137" y2="150" stroke="#FFA500" stroke-width="0.5"/>
+  
+  <!-- Taxi meter -->
+  <rect x="85" y="115" width="12" height="8" fill="#000000" stroke="#2F2F2F" stroke-width="0.5" rx="1"/>
+  <rect x="86" y="116" width="10" height="6" fill="#00FF00" rx="0.5"/>
+  <text x="91" y="120" text-anchor="middle" font-family="Arial" font-size="3" fill="#000000">$4.50</text>
+  
+  <!-- Taxi number -->
+  <rect x="105" y="130" width="15" height="8" fill="#000000" stroke="#2F2F2F" stroke-width="0.5" rx="1"/>
+  <text x="112.5" y="136" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFF00">007</text>
+  
+  <!-- Passenger silhouettes -->
+  <circle cx="65" cy="117" r="3" fill="#000000" opacity="0.4"/>
+  <circle cx="135" cy="117" r="3" fill="#000000" opacity="0.4"/>
+  
+  <!-- Driver silhouette -->
+  <circle cx="55" cy="117" r="3" fill="#000000" opacity="0.6"/>
+  <rect x="53" y="119" width="4" height="6" fill="#000000" opacity="0.4"/>
+  
+  <!-- Steering wheel -->
+  <circle cx="55" cy="125" r="3" fill="#2F2F2F" stroke="#000000" stroke-width="0.5"/>
+  <circle cx="55" cy="125" r="2" fill="#8B4513"/>
+  
+  <!-- License plate -->
+  <rect x="85" y="160" width="30" height="8" fill="#FFFFFF" stroke="#000000" stroke-width="1" rx="1"/>
+  <text x="100" y="166" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">TAXI-007</text>
+  
+  <!-- Antenna -->
+  <line x1="100" y1="95" x2="100" y2="85" stroke="#2F2F2F" stroke-width="1"/>
+  <circle cx="100" cy="85" r="1.5" fill="#2F2F2F"/>
+  
+  <!-- Windshield wipers -->
+  <line x1="55" y1="112" x2="60" y2="120" stroke="#2F2F2F" stroke-width="1"/>
+  <line x1="70" y1="112" x2="65" y2="120" stroke="#2F2F2F" stroke-width="1"/>
+  
+  <!-- Taxi company logo -->
+  <circle cx="100" cy="137" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial" font-size="5" fill="#000000">CITY</text>
+  <text x="100" y="145" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">CAB</text>
+  
+  <!-- Exhaust pipe -->
+  <rect x="175" y="155" width="10" height="4" fill="#696969" stroke="#2F2F2F" stroke-width="0.5" rx="1"/>
+  <ellipse cx="185" cy="157" rx="2" ry="1.5" fill="#2F2F2F"/>
+  
+  <!-- Exhaust smoke -->
+  <circle cx="190" cy="155" r="3" fill="#D3D3D3" opacity="0.6"/>
+  <circle cx="194" cy="152" r="2.5" fill="#D3D3D3" opacity="0.4"/>
+  <circle cx="197" cy="149" r="2" fill="#D3D3D3" opacity="0.3"/>
+  
+  <!-- Taxi fare display -->
+  <rect x="75" y="125" width="8" height="6" fill="#FF0000" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+  <text x="79" y="129" text-anchor="middle" font-family="Arial" font-size="3" fill="#FFFFFF">FARE</text>
+  
+  <!-- Body reflections -->
+  <ellipse cx="70" cy="130" rx="20" ry="4" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="130" cy="130" rx="20" ry="4" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="100" cy="115" rx="30" ry="3" fill="#FFFFFF" opacity="0.4"/>
+  
+  <!-- Tire treads -->
+  <circle cx="60" cy="165" r="16" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="3,3"/>
+  <circle cx="140" cy="165" r="16" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <!-- Ground contact -->
+  <ellipse cx="60" cy="183" rx="12" ry="3" fill="#000000" opacity="0.2"/>
+  <ellipse cx="140" cy="183" rx="12" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Taxi nameplate -->
+  <rect x="75" y="190" width="50" height="8" fill="#FFFF00" stroke="#FFD700" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">TAXI</text>
+</svg>

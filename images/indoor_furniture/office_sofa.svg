@@ -1,0 +1,158 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground Shadow -->
+  <ellipse cx="100" cy="185" rx="60" ry="8" fill="#000000" opacity="0.15"/>
+  
+  <!-- Ground Area -->
+  <rect x="0" y="175" width="200" height="25" fill="#f0f0f0"/>
+  
+  <!-- Sofa Base/Frame -->
+  <rect x="30" y="140" width="140" height="35" fill="#2c3e50" rx="3"/>
+  <rect x="32" y="142" width="136" height="31" fill="#34495e" rx="2"/>
+  
+  <!-- Sofa Legs -->
+  <g>
+    <!-- Front Left Leg -->
+    <rect x="40" y="170" width="6" height="8" fill="#2c3e50"/>
+    <rect x="41" y="170" width="4" height="8" fill="#34495e"/>
+    
+    <!-- Front Right Leg -->
+    <rect x="154" y="170" width="6" height="8" fill="#2c3e50"/>
+    <rect x="155" y="170" width="4" height="8" fill="#34495e"/>
+    
+    <!-- Back Left Leg -->
+    <rect x="40" y="165" width="6" height="8" fill="#2c3e50"/>
+    <rect x="41" y="165" width="4" height="8" fill="#34495e"/>
+    
+    <!-- Back Right Leg -->
+    <rect x="154" y="165" width="6" height="8" fill="#2c3e50"/>
+    <rect x="155" y="165" width="4" height="8" fill="#34495e"/>
+  </g>
+  
+  <!-- Main Sofa Body -->
+  <rect x="25" y="100" width="150" height="45" fill="#7f8c8d" rx="5"/>
+  <rect x="27" y="102" width="146" height="41" fill="#95a5a6" rx="4"/>
+  
+  <!-- Seat Cushions -->
+  <g>
+    <!-- Left Cushion -->
+    <rect x="35" y="110" width="60" height="30" fill="#bdc3c7" rx="3"/>
+    <rect x="37" y="112" width="56" height="26" fill="#ecf0f1" rx="2"/>
+    
+    <!-- Right Cushion -->
+    <rect x="105" y="110" width="60" height="30" fill="#bdc3c7" rx="3"/>
+    <rect x="107" y="112" width="56" height="26" fill="#ecf0f1" rx="2"/>
+    
+    <!-- Cushion Stitching -->
+    <g stroke="#95a5a6" stroke-width="1" fill="none">
+      <!-- Left cushion stitching -->
+      <rect x="40" y="115" width="50" height="20" rx="2"/>
+      <line x1="50" y1="115" x2="50" y2="135"/>
+      <line x1="60" y1="115" x2="60" y2="135"/>
+      <line x1="70" y1="115" x2="70" y2="135"/>
+      <line x1="80" y1="115" x2="80" y2="135"/>
+      
+      <!-- Right cushion stitching -->
+      <rect x="110" y="115" width="50" height="20" rx="2"/>
+      <line x1="120" y1="115" x2="120" y2="135"/>
+      <line x1="130" y1="115" x2="130" y2="135"/>
+      <line x1="140" y1="115" x2="140" y2="135"/>
+      <line x1="150" y1="115" x2="150" y2="135"/>
+    </g>
+  </g>
+  
+  <!-- Back Rest -->
+  <rect x="25" y="60" width="150" height="45" fill="#7f8c8d" rx="5"/>
+  <rect x="27" y="62" width="146" height="41" fill="#95a5a6" rx="4"/>
+  
+  <!-- Back Cushions -->
+  <g>
+    <!-- Left Back Cushion -->
+    <rect x="35" y="70" width="60" height="30" fill="#bdc3c7" rx="3"/>
+    <rect x="37" y="72" width="56" height="26" fill="#ecf0f1" rx="2"/>
+    
+    <!-- Right Back Cushion -->
+    <rect x="105" y="70" width="60" height="30" fill="#bdc3c7" rx="3"/>
+    <rect x="107" y="72" width="56" height="26" fill="#ecf0f1" rx="2"/>
+    
+    <!-- Back Cushion Stitching -->
+    <g stroke="#95a5a6" stroke-width="1" fill="none">
+      <!-- Left back cushion -->
+      <rect x="40" y="75" width="50" height="20" rx="2"/>
+      <circle cx="50" cy="85" r="2"/>
+      <circle cx="65" cy="85" r="2"/>
+      <circle cx="80" cy="85" r="2"/>
+      
+      <!-- Right back cushion -->
+      <rect x="110" y="75" width="50" height="20" rx="2"/>
+      <circle cx="120" cy="85" r="2"/>
+      <circle cx="135" cy="85" r="2"/>
+      <circle cx="150" cy="85" r="2"/>
+    </g>
+  </g>
+  
+  <!-- Armrests -->
+  <g>
+    <!-- Left Armrest -->
+    <rect x="15" y="80" width="20" height="50" fill="#7f8c8d" rx="3"/>
+    <rect x="17" y="82" width="16" height="46" fill="#95a5a6" rx="2"/>
+    <rect x="19" y="85" width="12" height="15" fill="#bdc3c7" rx="2"/>
+    <rect x="20" y="86" width="10" height="13" fill="#ecf0f1" rx="1"/>
+    
+    <!-- Right Armrest -->
+    <rect x="165" y="80" width="20" height="50" fill="#7f8c8d" rx="3"/>
+    <rect x="167" y="82" width="16" height="46" fill="#95a5a6" rx="2"/>
+    <rect x="169" y="85" width="12" height="15" fill="#bdc3c7" rx="2"/>
+    <rect x="170" y="86" width="10" height="13" fill="#ecf0f1" rx="1"/>
+  </g>
+  
+  <!-- Decorative Pillows -->
+  <g>
+    <!-- Left Pillow -->
+    <rect x="45" y="75" width="15" height="15" fill="#e74c3c" rx="2" transform="rotate(-10 52.5 82.5)"/>
+    <rect x="46" y="76" width="13" height="13" fill="#c0392b" rx="1" transform="rotate(-10 52.5 82.5)"/>
+    
+    <!-- Right Pillow -->
+    <rect x="140" y="75" width="15" height="15" fill="#3498db" rx="2" transform="rotate(15 147.5 82.5)"/>
+    <rect x="141" y="76" width="13" height="13" fill="#2980b9" rx="1" transform="rotate(15 147.5 82.5)"/>
+  </g>
+  
+  <!-- Sofa Highlights -->
+  <g>
+    <!-- Main highlight on backrest -->
+    <rect x="27" y="62" width="146" height="8" fill="url(#sofaGradient)" opacity="0.4" rx="4"/>
+    
+    <!-- Seat highlight -->
+    <rect x="27" y="102" width="146" height="8" fill="url(#sofaGradient)" opacity="0.3" rx="4"/>
+  </g>
+  
+  <!-- Brand Tag -->
+  <rect x="160" y="95" width="12" height="8" fill="#2c3e50" rx="1"/>
+  <text x="166" y="100.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" font-weight="bold" fill="#ffffff">COMFORT</text>
+  
+  <!-- Fabric Texture Lines -->
+  <g stroke="#95a5a6" stroke-width="0.5" opacity="0.3">
+    <!-- Horizontal texture lines -->
+    <line x1="35" y1="120" x2="165" y2="120"/>
+    <line x1="35" y1="125" x2="165" y2="125"/>
+    <line x1="35" y1="130" x2="165" y2="130"/>
+    
+    <!-- Vertical texture lines on backrest -->
+    <line x1="50" y1="70" x2="50" y2="100"/>
+    <line x1="75" y1="70" x2="75" y2="100"/>
+    <line x1="100" y1="70" x2="100" y2="100"/>
+    <line x1="125" y1="70" x2="125" y2="100"/>
+    <line x1="150" y1="70" x2="150" y2="100"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="sofaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Nameplate -->
+  <rect x="70" y="190" width="60" height="8" fill="#2c3e50" rx="1"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff">OFFICE SOFA</text>
+</svg>

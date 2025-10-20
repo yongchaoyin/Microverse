@@ -1,0 +1,127 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="32" cy="32" r="30" fill="#708090" opacity="0.3"/>
+  
+  <!-- Dark rain cloud -->
+  <ellipse cx="32" cy="25" rx="20" ry="12" fill="#696969"/>
+  <ellipse cx="32" cy="25" rx="19" ry="11" fill="#778899"/>
+  
+  <!-- Cloud bumps for realistic shape -->
+  <circle cx="15" cy="25" r="8" fill="#696969"/>
+  <circle cx="15" cy="25" r="7" fill="#778899"/>
+  
+  <circle cx="25" cy="18" r="9" fill="#696969"/>
+  <circle cx="25" cy="18" r="8" fill="#778899"/>
+  
+  <circle cx="38" cy="18" r="8" fill="#696969"/>
+  <circle cx="38" cy="18" r="7" fill="#778899"/>
+  
+  <circle cx="48" cy="25" r="7" fill="#696969"/>
+  <circle cx="48" cy="25" r="6" fill="#778899"/>
+  
+  <!-- Cloud shadows (darker areas) -->
+  <ellipse cx="32" cy="27" rx="18" ry="10" fill="#2F4F4F" opacity="0.6"/>
+  <circle cx="20" cy="27" r="6" fill="#2F4F4F" opacity="0.6"/>
+  <circle cx="44" cy="27" r="5" fill="#2F4F4F" opacity="0.6"/>
+  
+  <!-- Cloud highlights -->
+  <ellipse cx="28" cy="20" rx="4" ry="3" fill="#A9A9A9" opacity="0.8"/>
+  <ellipse cx="40" cy="20" rx="3" ry="2" fill="#A9A9A9" opacity="0.8"/>
+  
+  <!-- Lightning (optional, subtle) -->
+  <path d="M 30 30 L 28 35 L 32 35 L 30 40 L 34 35 L 30 35 Z" fill="#FFFF00" opacity="0.7"/>
+  <path d="M 30 30 L 28 35 L 32 35 L 30 40 L 34 35 L 30 35 Z" fill="#FFFFFF" opacity="0.5"/>
+  
+  <!-- Rain drops (main) -->
+  <g fill="#4682B4" opacity="0.8">
+    <!-- Heavy rain drops -->
+    <ellipse cx="20" cy="42" rx="1" ry="4"/>
+    <ellipse cx="25" cy="45" rx="1" ry="4"/>
+    <ellipse cx="30" cy="40" rx="1" ry="4"/>
+    <ellipse cx="35" cy="43" rx="1" ry="4"/>
+    <ellipse cx="40" cy="41" rx="1" ry="4"/>
+    <ellipse cx="45" cy="44" rx="1" ry="4"/>
+    
+    <!-- Second row -->
+    <ellipse cx="18" cy="48" rx="1" ry="4"/>
+    <ellipse cx="23" cy="51" rx="1" ry="4"/>
+    <ellipse cx="28" cy="46" rx="1" ry="4"/>
+    <ellipse cx="33" cy="49" rx="1" ry="4"/>
+    <ellipse cx="38" cy="47" rx="1" ry="4"/>
+    <ellipse cx="43" cy="50" rx="1" ry="4"/>
+    <ellipse cx="48" cy="48" rx="1" ry="4"/>
+    
+    <!-- Third row -->
+    <ellipse cx="16" cy="54" rx="1" ry="4"/>
+    <ellipse cx="21" cy="57" rx="1" ry="4"/>
+    <ellipse cx="26" cy="52" rx="1" ry="4"/>
+    <ellipse cx="31" cy="55" rx="1" ry="4"/>
+    <ellipse cx="36" cy="53" rx="1" ry="4"/>
+    <ellipse cx="41" cy="56" rx="1" ry="4"/>
+    <ellipse cx="46" cy="54" rx="1" ry="4"/>
+  </g>
+  
+  <!-- Lighter rain drops -->
+  <g fill="#87CEEB" opacity="0.7">
+    <ellipse cx="22" cy="44" rx="0.8" ry="3"/>
+    <ellipse cx="27" cy="47" rx="0.8" ry="3"/>
+    <ellipse cx="32" cy="42" rx="0.8" ry="3"/>
+    <ellipse cx="37" cy="45" rx="0.8" ry="3"/>
+    <ellipse cx="42" cy="43" rx="0.8" ry="3"/>
+    
+    <ellipse cx="19" cy="50" rx="0.8" ry="3"/>
+    <ellipse cx="24" cy="53" rx="0.8" ry="3"/>
+    <ellipse cx="29" cy="48" rx="0.8" ry="3"/>
+    <ellipse cx="34" cy="51" rx="0.8" ry="3"/>
+    <ellipse cx="39" cy="49" rx="0.8" ry="3"/>
+    <ellipse cx="44" cy="52" rx="0.8" ry="3"/>
+  </g>
+  
+  <!-- Small rain drops -->
+  <g fill="#B0E0E6" opacity="0.6">
+    <ellipse cx="17" cy="46" rx="0.5" ry="2"/>
+    <ellipse cx="24" cy="49" rx="0.5" ry="2"/>
+    <ellipse cx="31" cy="44" rx="0.5" ry="2"/>
+    <ellipse cx="38" cy="47" rx="0.5" ry="2"/>
+    <ellipse cx="45" cy="45" rx="0.5" ry="2"/>
+    
+    <ellipse cx="20" cy="52" rx="0.5" ry="2"/>
+    <ellipse cx="27" cy="55" rx="0.5" ry="2"/>
+    <ellipse cx="34" cy="50" rx="0.5" ry="2"/>
+    <ellipse cx="41" cy="53" rx="0.5" ry="2"/>
+    <ellipse cx="48" cy="51" rx="0.5" ry="2"/>
+  </g>
+  
+  <!-- Rain splash effects on ground -->
+  <g fill="#4682B4" opacity="0.4">
+    <ellipse cx="20" cy="60" rx="2" ry="0.5"/>
+    <ellipse cx="28" cy="60" rx="1.5" ry="0.4"/>
+    <ellipse cx="36" cy="60" rx="2.2" ry="0.6"/>
+    <ellipse cx="44" cy="60" rx="1.8" ry="0.5"/>
+  </g>
+  
+  <!-- Puddle reflections -->
+  <g fill="#87CEEB" opacity="0.3">
+    <ellipse cx="20" cy="60" rx="1.5" ry="0.3"/>
+    <ellipse cx="28" cy="60" rx="1" ry="0.2"/>
+    <ellipse cx="36" cy="60" rx="1.8" ry="0.4"/>
+    <ellipse cx="44" cy="60" rx="1.3" ry="0.3"/>
+  </g>
+  
+  <!-- Rain motion lines -->
+  <g stroke="#4682B4" stroke-width="0.5" opacity="0.5">
+    <line x1="15" y1="35" x2="13" y2="45"/>
+    <line x1="25" y1="35" x2="23" y2="45"/>
+    <line x1="35" y1="35" x2="33" y2="45"/>
+    <line x1="45" y1="35" x2="43" y2="45"/>
+    <line x1="50" y1="35" x2="48" y2="45"/>
+  </g>
+  
+  <!-- Wind effect on rain -->
+  <g stroke="#B0E0E6" stroke-width="0.3" opacity="0.4">
+    <path d="M 12 38 Q 15 36 18 38"/>
+    <path d="M 22 40 Q 25 38 28 40"/>
+    <path d="M 32 38 Q 35 36 38 38"/>
+    <path d="M 42 40 Q 45 38 48 40"/>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+<svg width="128" height="96" viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="64" cy="88" rx="50" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Desk legs (front) -->
+  <rect x="20" y="70" width="6" height="18" fill="#8B4513"/>
+  <rect x="102" y="70" width="6" height="18" fill="#8B4513"/>
+  <rect x="20" y="70" width="6" height="18" fill="#A0522D" opacity="0.8"/>
+  <rect x="102" y="70" width="6" height="18" fill="#A0522D" opacity="0.8"/>
+  
+  <!-- Desk legs (back) -->
+  <rect x="20" y="45" width="6" height="25" fill="#654321"/>
+  <rect x="102" y="45" width="6" height="25" fill="#654321"/>
+  <rect x="20" y="45" width="6" height="25" fill="#8B4513" opacity="0.8"/>
+  <rect x="102" y="45" width="6" height="25" fill="#8B4513" opacity="0.8"/>
+  
+  <!-- Desk support beam -->
+  <rect x="20" y="65" width="88" height="4" fill="#8B4513"/>
+  <rect x="20" y="65" width="88" height="2" fill="#A0522D"/>
+  
+  <!-- Desk drawers (left side) -->
+  <rect x="16" y="50" width="24" height="15" fill="#8B4513"/>
+  <rect x="16" y="50" width="24" height="15" fill="#A0522D" opacity="0.9"/>
+  <rect x="16" y="50" width="24" height="1" fill="#DEB887"/>
+  
+  <!-- Drawer handles -->
+  <circle cx="35" cy="57.5" r="1.5" fill="#C0C0C0"/>
+  <circle cx="35" cy="57.5" r="1" fill="#E6E6E6"/>
+  
+  <!-- Desk drawers (right side) -->
+  <rect x="88" y="50" width="24" height="15" fill="#8B4513"/>
+  <rect x="88" y="50" width="24" height="15" fill="#A0522D" opacity="0.9"/>
+  <rect x="88" y="50" width="24" height="1" fill="#DEB887"/>
+  
+  <!-- Right drawer handles -->
+  <circle cx="93" cy="57.5" r="1.5" fill="#C0C0C0"/>
+  <circle cx="93" cy="57.5" r="1" fill="#E6E6E6"/>
+  
+  <!-- Main desk surface -->
+  <rect x="12" y="45" width="104" height="6" fill="#8B4513"/>
+  <rect x="12" y="45" width="104" height="4" fill="#A0522D"/>
+  <rect x="12" y="45" width="104" height="2" fill="#DEB887"/>
+  
+  <!-- Desk surface details -->
+  <rect x="14" y="47" width="100" height="2" fill="#CD853F" opacity="0.8"/>
+  <rect x="16" y="48" width="96" height="1" fill="#F4A460" opacity="0.6"/>
+  
+  <!-- Wood grain pattern -->
+  <g stroke="#8B4513" stroke-width="0.3" opacity="0.4">
+    <line x1="20" y1="46" x2="110" y2="46"/>
+    <line x1="18" y1="48" x2="112" y2="48"/>
+    <line x1="22" y1="49" x2="108" y2="49"/>
+  </g>
+  
+  <!-- Items on desk -->
+  <!-- Computer monitor -->
+  <rect x="45" y="25" width="38" height="22" fill="#2F2F2F"/>
+  <rect x="47" y="27" width="34" height="18" fill="#000000"/>
+  <rect x="48" y="28" width="32" height="16" fill="#1E90FF" opacity="0.3"/>
+  
+  <!-- Monitor stand -->
+  <rect x="60" y="43" width="8" height="4" fill="#2F2F2F"/>
+  <rect x="58" y="47" width="12" height="2" fill="#2F2F2F"/>
+  
+  <!-- Keyboard -->
+  <rect x="35" y="52" width="20" height="8" fill="#F5F5F5"/>
+  <rect x="35" y="52" width="20" height="6" fill="#FFFFFF"/>
+  
+  <!-- Keyboard keys -->
+  <g fill="#E0E0E0">
+    <rect x="37" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="39" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="41" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="43" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="45" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="47" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="49" y="54" width="1.5" height="1" rx="0.2"/>
+    <rect x="51" y="54" width="1.5" height="1" rx="0.2"/>
+    
+    <rect x="37" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="39" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="41" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="43" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="45" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="47" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="49" y="56" width="1.5" height="1" rx="0.2"/>
+    <rect x="51" y="56" width="1.5" height="1" rx="0.2"/>
+  </g>
+  
+  <!-- Mouse -->
+  <ellipse cx="60" cy="55" rx="3" ry="4" fill="#2F2F2F"/>
+  <ellipse cx="60" cy="55" rx="2.5" ry="3.5" fill="#696969"/>
+  <circle cx="60" cy="53" r="0.5" fill="#FF0000" opacity="0.8"/>
+  
+  <!-- Papers/documents -->
+  <rect x="70" y="48" width="12" height="16" fill="#FFFFFF"/>
+  <rect x="70" y="48" width="12" height="16" fill="#F8F8FF" opacity="0.9"/>
+  <rect x="72" y="50" width="8" height="1" fill="#000000" opacity="0.3"/>
+  <rect x="72" y="52" width="6" height="0.5" fill="#000000" opacity="0.3"/>
+  <rect x="72" y="54" width="7" height="0.5" fill="#000000" opacity="0.3"/>
+  <rect x="72" y="56" width="5" height="0.5" fill="#000000" opacity="0.3"/>
+  
+  <!-- Pen holder -->
+  <ellipse cx="90" cy="52" rx="4" ry="3" fill="#8B4513"/>
+  <ellipse cx="90" cy="50" rx="4" ry="3" fill="#A0522D"/>
+  <ellipse cx="90" cy="50" rx="3.5" ry="2.5" fill="#CD853F"/>
+  
+  <!-- Pens in holder -->
+  <rect x="88" y="42" width="1" height="8" fill="#FF0000"/>
+  <rect x="90" y="40" width="1" height="10" fill="#0000FF"/>
+  <rect x="92" y="43" width="1" height="7" fill="#008000"/>
+  
+  <!-- Coffee mug -->
+  <ellipse cx="25" cy="52" rx="3" ry="2.5" fill="#8B4513"/>
+  <ellipse cx="25" cy="50" rx="3" ry="2.5" fill="#A0522D"/>
+  <ellipse cx="25" cy="50" rx="2.5" ry="2" fill="#654321"/>
+  <ellipse cx="25" cy="49" rx="2.5" ry="2" fill="#8B0000"/>
+  
+  <!-- Mug handle -->
+  <path d="M 28 50 Q 30 50 30 52 Q 30 54 28 54" stroke="#8B4513" stroke-width="1" fill="none"/>
+  
+  <!-- Desk lamp -->
+  <rect x="100" y="35" width="2" height="15" fill="#C0C0C0"/>
+  <ellipse cx="101" cy="32" rx="6" ry="3" fill="#C0C0C0"/>
+  <ellipse cx="101" cy="32" rx="5" ry="2.5" fill="#E6E6E6"/>
+  <circle cx="101" cy="32" r="1" fill="#FFFF00" opacity="0.8"/>
+  
+  <!-- Lamp base -->
+  <ellipse cx="101" cy="50" rx="4" ry="2" fill="#C0C0C0"/>
+  <ellipse cx="101" cy="50" rx="3.5" ry="1.5" fill="#E6E6E6"/>
+  
+  <!-- Cable management -->
+  <path d="M 64 47 Q 66 49 68 47 Q 70 45 72 47" stroke="#000000" stroke-width="1" fill="none" opacity="0.6"/>
+  
+  <!-- Desk edge highlight -->
+  <rect x="12" y="45" width="104" height="1" fill="#F4A460" opacity="0.8"/>
+  
+  <!-- Name plate -->
+  <rect x="50" y="85" width="28" height="8" fill="#8B4513" opacity="0.8"/>
+  <rect x="51" y="86" width="26" height="6" fill="#DEB887"/>
+  <text x="64" y="90" text-anchor="middle" font-family="Arial" font-size="4" fill="#654321">OFFICE DESK</text>
+</svg>

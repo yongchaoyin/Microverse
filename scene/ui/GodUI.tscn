@@ -2679,6 +2679,10 @@ text = "管理任务"
 layout_mode = 2
 text = "故事背景"
 
+[node name="CreateProjectButton" type="Button" parent="HBoxContainer/RightPanel/VBoxContainer"]
+layout_mode = 2
+text = "📋 创建项目"
+
 [node name="Spacer" type="Control" parent="HBoxContainer/RightPanel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3

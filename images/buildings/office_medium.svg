@@ -1,0 +1,144 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="32" cy="60" rx="30" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Main building base -->
+  <rect x="8" y="8" width="48" height="48" fill="#E8E8E8"/>
+  
+  <!-- Building floors -->
+  <rect x="8" y="12" width="48" height="8" fill="#D8D8D8"/>
+  <rect x="8" y="20" width="48" height="8" fill="#D8D8D8"/>
+  <rect x="8" y="28" width="48" height="8" fill="#D8D8D8"/>
+  <rect x="8" y="36" width="48" height="8" fill="#D8D8D8"/>
+  <rect x="8" y="44" width="48" height="8" fill="#D8D8D8"/>
+  <rect x="8" y="52" width="48" height="4" fill="#D8D8D8"/>
+  
+  <!-- Floor separators -->
+  <g stroke="#B8B8B8" stroke-width="1">
+    <line x1="8" y1="20" x2="56" y2="20"/>
+    <line x1="8" y1="28" x2="56" y2="28"/>
+    <line x1="8" y1="36" x2="56" y2="36"/>
+    <line x1="8" y1="44" x2="56" y2="44"/>
+    <line x1="8" y1="52" x2="56" y2="52"/>
+  </g>
+  
+  <!-- Windows pattern -->
+  <!-- Floor 1 -->
+  <rect x="12" y="14" width="4" height="4" fill="#87CEEB"/>
+  <rect x="20" y="14" width="4" height="4" fill="#87CEEB"/>
+  <rect x="28" y="14" width="4" height="4" fill="#87CEEB"/>
+  <rect x="36" y="14" width="4" height="4" fill="#87CEEB"/>
+  <rect x="44" y="14" width="4" height="4" fill="#87CEEB"/>
+  <rect x="52" y="14" width="2" height="4" fill="#87CEEB"/>
+  
+  <!-- Floor 2 -->
+  <rect x="12" y="22" width="4" height="4" fill="#87CEEB"/>
+  <rect x="20" y="22" width="4" height="4" fill="#87CEEB"/>
+  <rect x="28" y="22" width="4" height="4" fill="#87CEEB"/>
+  <rect x="36" y="22" width="4" height="4" fill="#87CEEB"/>
+  <rect x="44" y="22" width="4" height="4" fill="#87CEEB"/>
+  <rect x="52" y="22" width="2" height="4" fill="#87CEEB"/>
+  
+  <!-- Floor 3 -->
+  <rect x="12" y="30" width="4" height="4" fill="#87CEEB"/>
+  <rect x="20" y="30" width="4" height="4" fill="#87CEEB"/>
+  <rect x="28" y="30" width="4" height="4" fill="#87CEEB"/>
+  <rect x="36" y="30" width="4" height="4" fill="#87CEEB"/>
+  <rect x="44" y="30" width="4" height="4" fill="#87CEEB"/>
+  <rect x="52" y="30" width="2" height="4" fill="#87CEEB"/>
+  
+  <!-- Floor 4 -->
+  <rect x="12" y="38" width="4" height="4" fill="#87CEEB"/>
+  <rect x="20" y="38" width="4" height="4" fill="#87CEEB"/>
+  <rect x="28" y="38" width="4" height="4" fill="#87CEEB"/>
+  <rect x="36" y="38" width="4" height="4" fill="#87CEEB"/>
+  <rect x="44" y="38" width="4" height="4" fill="#87CEEB"/>
+  <rect x="52" y="38" width="2" height="4" fill="#87CEEB"/>
+  
+  <!-- Floor 5 -->
+  <rect x="12" y="46" width="4" height="4" fill="#87CEEB"/>
+  <rect x="20" y="46" width="4" height="4" fill="#87CEEB"/>
+  <rect x="28" y="46" width="4" height="4" fill="#87CEEB"/>
+  <rect x="36" y="46" width="4" height="4" fill="#87CEEB"/>
+  <rect x="44" y="46" width="4" height="4" fill="#87CEEB"/>
+  <rect x="52" y="46" width="2" height="4" fill="#87CEEB"/>
+  
+  <!-- Window frames -->
+  <g stroke="#333333" stroke-width="0.3" fill="none">
+    <!-- Floor 1 -->
+    <rect x="12" y="14" width="4" height="4"/>
+    <rect x="20" y="14" width="4" height="4"/>
+    <rect x="28" y="14" width="4" height="4"/>
+    <rect x="36" y="14" width="4" height="4"/>
+    <rect x="44" y="14" width="4" height="4"/>
+    <rect x="52" y="14" width="2" height="4"/>
+    
+    <!-- Floor 2 -->
+    <rect x="12" y="22" width="4" height="4"/>
+    <rect x="20" y="22" width="4" height="4"/>
+    <rect x="28" y="22" width="4" height="4"/>
+    <rect x="36" y="22" width="4" height="4"/>
+    <rect x="44" y="22" width="4" height="4"/>
+    <rect x="52" y="22" width="2" height="4"/>
+    
+    <!-- Floor 3 -->
+    <rect x="12" y="30" width="4" height="4"/>
+    <rect x="20" y="30" width="4" height="4"/>
+    <rect x="28" y="30" width="4" height="4"/>
+    <rect x="36" y="30" width="4" height="4"/>
+    <rect x="44" y="30" width="4" height="4"/>
+    <rect x="52" y="30" width="2" height="4"/>
+    
+    <!-- Floor 4 -->
+    <rect x="12" y="38" width="4" height="4"/>
+    <rect x="20" y="38" width="4" height="4"/>
+    <rect x="28" y="38" width="4" height="4"/>
+    <rect x="36" y="38" width="4" height="4"/>
+    <rect x="44" y="38" width="4" height="4"/>
+    <rect x="52" y="38" width="2" height="4"/>
+    
+    <!-- Floor 5 -->
+    <rect x="12" y="46" width="4" height="4"/>
+    <rect x="20" y="46" width="4" height="4"/>
+    <rect x="28" y="46" width="4" height="4"/>
+    <rect x="36" y="46" width="4" height="4"/>
+    <rect x="44" y="46" width="4" height="4"/>
+    <rect x="52" y="46" width="2" height="4"/>
+  </g>
+  
+  <!-- Entrance -->
+  <rect x="26" y="52" width="12" height="4" fill="#8B4513"/>
+  <rect x="26" y="52" width="12" height="1" fill="#A0522D"/>
+  <circle cx="32" cy="54" r="0.5" fill="#FFD700"/>
+  <rect x="28" y="53" width="8" height="2" fill="#654321"/>
+  
+  <!-- Company sign -->
+  <rect x="16" y="4" width="32" height="6" fill="#2E8B57"/>
+  <text x="32" y="8" text-anchor="middle" font-family="Arial" font-size="5" font-weight="bold" fill="#FFFFFF">CORPORATE</text>
+  
+  <!-- Roof -->
+  <rect x="6" y="6" width="52" height="4" fill="#A8A8A8"/>
+  <rect x="6" y="6" width="52" height="2" fill="#B8B8B8"/>
+  
+  <!-- Roof equipment -->
+  <rect x="10" y="7" width="6" height="2" fill="#666666"/>
+  <rect x="48" y="7" width="6" height="2" fill="#666666"/>
+  <rect x="28" y="7" width="8" height="2" fill="#777777"/>
+  
+  <!-- Building edges -->
+  <rect x="8" y="8" width="2" height="48" fill="#C8C8C8"/>
+  <rect x="54" y="8" width="2" height="48" fill="#C8C8C8"/>
+  
+  <!-- Front plaza -->
+  <rect x="4" y="54" width="56" height="4" fill="#D3D3D3"/>
+  
+  <!-- Entrance steps -->
+  <rect x="22" y="56" width="20" height="2" fill="#C0C0C0"/>
+  <rect x="24" y="58" width="16" height="2" fill="#B0B0B0"/>
+  
+  <!-- Landscaping -->
+  <circle cx="12" cy="56" r="1.5" fill="#228B22"/>
+  <circle cx="52" cy="56" r="1.5" fill="#228B22"/>
+  <circle cx="14" cy="57" r="0.5" fill="#FF69B4"/>
+  <circle cx="50" cy="57" r="0.5" fill="#FF69B4"/>
+</svg>

@@ -1,0 +1,122 @@
+meta:
+  pack: "ground-and-terrain"
+  save_root: "res://assets/maps/tiles/ground/"
+  macros: "assets/prompts/_macros.yaml"
+  notes:
+    - Tiles are 16x16px and must be seamless when tileable=true.
+    - Use 47-tile autotile masks for roads/edges where applicable.
+    - Honor color palette from macros.style.palette.
+defaults:
+  apply:
+    base_prompt: "@base"
+    negative_prompt: "@negative"
+    tile_size: [16, 16]
+assets:
+  - id: basic_grass
+    file: "basic_grass.png"
+    kind: "tile"
+    tileable: true
+    prompt: >-
+      @base, seamless grass texture, vibrant green (#7CBF6E), soft fine blades,
+      subtle brightness variation, include variants: center, edges, corners, isolated tufts
+    negative: "@negative"
+    variants: ["center","edge_in","edge_out","corner_in","corner_out","island"]
+  - id: dark_grass
+    file: "dark_grass.png"
+    kind: "tile"
+    tileable: true
+    prompt: >-
+      @base, seamless deep forest grass (#6AAA5B), cooler tone, thicker blades,
+      low contrast noise to avoid banding
+    negative: "@negative"
+  - id: dry_grass
+    file: "dry_grass.png"
+    kind: "tile"
+    tileable: true
+    prompt: >-
+      @base, seamless dry grass with autumn tint, earth tone mix (#8B6F47 + #C5A882),
+      sparse blades, occasional straw tufts
+    negative: "@negative"
+  - id: flower_grass
+    file: "flower_grass.png"
+    kind: "tile"
+    tileable: true
+    prompt: >-
+      @base, seamless grass with tiny scattered flowers (white, pink, yellow),
+      low density, readable at 16x16, avoid clutter
+    negative: "@negative, high-density flowers"
+
+  - id: stone_path
+    file: "stone_path.png"
+    kind: "autotile"
+    tileable: true
+    prompt: >-
+      @base, stone path tiles, rounded irregular stones, light brown (#C5A882),
+      include straight H/V, T-junctions, cross, all 4 corners, dead ends, wear details
+    negative: "@negative"
+    autotile_mask: 47
+  - id: dirt_path
+    file: "dirt_path.png"
+    kind: "autotile"
+    tileable: true
+    prompt: >-
+      @base, dirt path tiles, compacted earth (#8B6F47) with subtle footprints and pebbles,
+      full connection set (H/V, T, cross, corners)
+    negative: "@negative"
+    autotile_mask: 47
+  - id: cobblestone_road
+    file: "cobblestone_road.png"
+    kind: "autotile"
+    tileable: true
+    prompt: >-
+      @base, cobblestone road, tight cobbles, slight shading for depth,
+      clean edges for junctions, full connection set
+    negative: "@negative"
+    autotile_mask: 47
+  - id: asphalt_road
+    file: "asphalt_road.png"
+    kind: "autotile"
+    tileable: true
+    prompt: >-
+      @base, asphalt road tiles, dark gray (#5A5A5A) with brighter lane markings (white),
+      include straight, corners, cross, T, dead ends, intersection marker tiles
+    negative: "@negative"
+    autotile_mask: 47
+
+  - id: sand
+    file: "sand.png"
+    kind: "tile"
+    tileable: true
+    prompt: >-
+      @base, seamless sand texture, warm beige, tiny sparkles and micro ripples,
+      smooth transition option to grass
+    negative: "@negative"
+    transition_to: ["basic_grass","water"]
+  - id: water
+    file: "water.png"
+    kind: "animated_tile"
+    tileable: true
+    prompt: >-
+      @base, lake water surface tiles, bright to deep blue gradient dither (#6DAEDB,#4287C8),
+      soft highlights (#FFFFFF 20% opacity), looped ripple animation 4 frames
+    negative: "@negative"
+    animation:
+      frames: 4
+      frame_duration_s: 0.3
+  - id: cliff_edge
+    file: "cliff_edge.png"
+    kind: "edge_tile"
+    tileable: false
+    prompt: >-
+      @base, cliff edge tiles with shadowed vertical face, readable pixel texture,
+      compatible with grass on top and dirt/rock face
+    negative: "@negative"
+  - id: bridge
+    file: "bridge.png"
+    kind: "overlay_tile"
+    tileable: false
+    prompt: >-
+      @base, wooden bridge segments over water, plank texture (#D4A373),
+      subtle nails, cast soft shadow, straight and corner parts
+    negative: "@negative"
+

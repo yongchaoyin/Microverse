@@ -1,0 +1,211 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="40" ry="6" fill="#000000" opacity="0.4"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="35" ry="5" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="30" ry="4" fill="#9ACD32"/>
+  
+  <!-- Soil and organic matter -->
+  <ellipse cx="100" cy="183" rx="32" ry="5" fill="#8B4513" opacity="0.6"/>
+  <ellipse cx="100" cy="182" rx="28" ry="4" fill="#A0522D" opacity="0.5"/>
+  
+  <!-- Fern base and root area -->
+  <ellipse cx="100" cy="180" rx="15" ry="8" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="100" cy="179" rx="12" ry="6" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="100" cy="178" rx="10" ry="4" fill="#9ACD32" opacity="0.5"/>
+  
+  <!-- Main fern fronds (large) -->
+  <!-- Frond 1 - Center left -->
+  <path d="M 100 175 Q 85 160 75 140 Q 70 130 68 120 Q 66 110 65 100 Q 64 90 63 80" 
+        fill="none" stroke="#228B22" stroke-width="2"/>
+  
+  <!-- Frond 1 leaflets -->
+  <ellipse cx="95" cy="170" rx="8" ry="3" fill="#228B22" transform="rotate(-30 95 170)"/>
+  <ellipse cx="90" cy="165" rx="7" ry="2.5" fill="#32CD32" transform="rotate(-35 90 165)"/>
+  <ellipse cx="85" cy="160" rx="6" ry="2" fill="#228B22" transform="rotate(-40 85 160)"/>
+  <ellipse cx="80" cy="155" rx="5.5" ry="2" fill="#32CD32" transform="rotate(-45 80 155)"/>
+  <ellipse cx="78" cy="150" rx="5" ry="1.8" fill="#228B22" transform="rotate(-50 78 150)"/>
+  <ellipse cx="76" cy="145" rx="4.5" ry="1.6" fill="#32CD32" transform="rotate(-55 76 145)"/>
+  <ellipse cx="74" cy="140" rx="4" ry="1.4" fill="#228B22" transform="rotate(-60 74 140)"/>
+  <ellipse cx="72" cy="135" rx="3.5" ry="1.2" fill="#32CD32" transform="rotate(-65 72 135)"/>
+  <ellipse cx="70" cy="130" rx="3" ry="1" fill="#228B22" transform="rotate(-70 70 130)"/>
+  <ellipse cx="69" cy="125" rx="2.5" ry="0.8" fill="#32CD32" transform="rotate(-75 69 125)"/>
+  <ellipse cx="68" cy="120" rx="2" ry="0.6" fill="#228B22" transform="rotate(-80 68 120)"/>
+  <ellipse cx="67" cy="115" rx="1.8" ry="0.5" fill="#32CD32" transform="rotate(-85 67 115)"/>
+  <ellipse cx="66" cy="110" rx="1.5" ry="0.4" fill="#228B22" transform="rotate(-90 66 110)"/>
+  <ellipse cx="65" cy="105" rx="1.2" ry="0.3" fill="#32CD32" transform="rotate(-95 65 105)"/>
+  <ellipse cx="64" cy="100" rx="1" ry="0.2" fill="#228B22" transform="rotate(-100 64 100)"/>
+  <ellipse cx="63.5" cy="95" rx="0.8" ry="0.2" fill="#32CD32" transform="rotate(-105 63.5 95)"/>
+  <ellipse cx="63.2" cy="90" rx="0.6" ry="0.15" fill="#228B22" transform="rotate(-110 63.2 90)"/>
+  <ellipse cx="63" cy="85" rx="0.4" ry="0.1" fill="#32CD32" transform="rotate(-115 63 85)"/>
+  
+  <!-- Frond 2 - Center right -->
+  <path d="M 100 175 Q 115 160 125 140 Q 130 130 132 120 Q 134 110 135 100 Q 136 90 137 80" 
+        fill="none" stroke="#228B22" stroke-width="2"/>
+  
+  <!-- Frond 2 leaflets -->
+  <ellipse cx="105" cy="170" rx="8" ry="3" fill="#228B22" transform="rotate(30 105 170)"/>
+  <ellipse cx="110" cy="165" rx="7" ry="2.5" fill="#32CD32" transform="rotate(35 110 165)"/>
+  <ellipse cx="115" cy="160" rx="6" ry="2" fill="#228B22" transform="rotate(40 115 160)"/>
+  <ellipse cx="120" cy="155" rx="5.5" ry="2" fill="#32CD32" transform="rotate(45 120 155)"/>
+  <ellipse cx="122" cy="150" rx="5" ry="1.8" fill="#228B22" transform="rotate(50 122 150)"/>
+  <ellipse cx="124" cy="145" rx="4.5" ry="1.6" fill="#32CD32" transform="rotate(55 124 145)"/>
+  <ellipse cx="126" cy="140" rx="4" ry="1.4" fill="#228B22" transform="rotate(60 126 140)"/>
+  <ellipse cx="128" cy="135" rx="3.5" ry="1.2" fill="#32CD32" transform="rotate(65 128 135)"/>
+  <ellipse cx="130" cy="130" rx="3" ry="1" fill="#228B22" transform="rotate(70 130 130)"/>
+  <ellipse cx="131" cy="125" rx="2.5" ry="0.8" fill="#32CD32" transform="rotate(75 131 125)"/>
+  <ellipse cx="132" cy="120" rx="2" ry="0.6" fill="#228B22" transform="rotate(80 132 120)"/>
+  <ellipse cx="133" cy="115" rx="1.8" ry="0.5" fill="#32CD32" transform="rotate(85 133 115)"/>
+  <ellipse cx="134" cy="110" rx="1.5" ry="0.4" fill="#228B22" transform="rotate(90 134 110)"/>
+  <ellipse cx="135" cy="105" rx="1.2" ry="0.3" fill="#32CD32" transform="rotate(95 135 105)"/>
+  <ellipse cx="136" cy="100" rx="1" ry="0.2" fill="#228B22" transform="rotate(100 136 100)"/>
+  <ellipse cx="136.5" cy="95" rx="0.8" ry="0.2" fill="#32CD32" transform="rotate(105 136.5 95)"/>
+  <ellipse cx="136.8" cy="90" rx="0.6" ry="0.15" fill="#228B22" transform="rotate(110 136.8 90)"/>
+  <ellipse cx="137" cy="85" rx="0.4" ry="0.1" fill="#32CD32" transform="rotate(115 137 85)"/>
+  
+  <!-- Frond 3 - Center -->
+  <path d="M 100 175 Q 100 155 100 135 Q 100 125 100 115 Q 100 105 100 95 Q 100 85 100 75" 
+        fill="none" stroke="#228B22" stroke-width="2.5"/>
+  
+  <!-- Frond 3 leaflets -->
+  <ellipse cx="92" cy="170" rx="7" ry="2.5" fill="#228B22" transform="rotate(-10 92 170)"/>
+  <ellipse cx="108" cy="170" rx="7" ry="2.5" fill="#228B22" transform="rotate(10 108 170)"/>
+  <ellipse cx="90" cy="165" rx="6.5" ry="2.2" fill="#32CD32" transform="rotate(-15 90 165)"/>
+  <ellipse cx="110" cy="165" rx="6.5" ry="2.2" fill="#32CD32" transform="rotate(15 110 165)"/>
+  <ellipse cx="88" cy="160" rx="6" ry="2" fill="#228B22" transform="rotate(-20 88 160)"/>
+  <ellipse cx="112" cy="160" rx="6" ry="2" fill="#228B22" transform="rotate(20 112 160)"/>
+  <ellipse cx="86" cy="155" rx="5.5" ry="1.8" fill="#32CD32" transform="rotate(-25 86 155)"/>
+  <ellipse cx="114" cy="155" rx="5.5" ry="1.8" fill="#32CD32" transform="rotate(25 114 155)"/>
+  <ellipse cx="84" cy="150" rx="5" ry="1.6" fill="#228B22" transform="rotate(-30 84 150)"/>
+  <ellipse cx="116" cy="150" rx="5" ry="1.6" fill="#228B22" transform="rotate(30 116 150)"/>
+  <ellipse cx="82" cy="145" rx="4.5" ry="1.4" fill="#32CD32" transform="rotate(-35 82 145)"/>
+  <ellipse cx="118" cy="145" rx="4.5" ry="1.4" fill="#32CD32" transform="rotate(35 118 145)"/>
+  <ellipse cx="80" cy="140" rx="4" ry="1.2" fill="#228B22" transform="rotate(-40 80 140)"/>
+  <ellipse cx="120" cy="140" rx="4" ry="1.2" fill="#228B22" transform="rotate(40 120 140)"/>
+  <ellipse cx="78" cy="135" rx="3.5" ry="1" fill="#32CD32" transform="rotate(-45 78 135)"/>
+  <ellipse cx="122" cy="135" rx="3.5" ry="1" fill="#32CD32" transform="rotate(45 122 135)"/>
+  <ellipse cx="76" cy="130" rx="3" ry="0.8" fill="#228B22" transform="rotate(-50 76 130)"/>
+  <ellipse cx="124" cy="130" rx="3" ry="0.8" fill="#228B22" transform="rotate(50 124 130)"/>
+  <ellipse cx="74" cy="125" rx="2.5" ry="0.6" fill="#32CD32" transform="rotate(-55 74 125)"/>
+  <ellipse cx="126" cy="125" rx="2.5" ry="0.6" fill="#32CD32" transform="rotate(55 126 125)"/>
+  <ellipse cx="72" cy="120" rx="2" ry="0.5" fill="#228B22" transform="rotate(-60 72 120)"/>
+  <ellipse cx="128" cy="120" rx="2" ry="0.5" fill="#228B22" transform="rotate(60 128 120)"/>
+  <ellipse cx="70" cy="115" rx="1.8" ry="0.4" fill="#32CD32" transform="rotate(-65 70 115)"/>
+  <ellipse cx="130" cy="115" rx="1.8" ry="0.4" fill="#32CD32" transform="rotate(65 130 115)"/>
+  <ellipse cx="68" cy="110" rx="1.5" ry="0.3" fill="#228B22" transform="rotate(-70 68 110)"/>
+  <ellipse cx="132" cy="110" rx="1.5" ry="0.3" fill="#228B22" transform="rotate(70 132 110)"/>
+  <ellipse cx="66" cy="105" rx="1.2" ry="0.25" fill="#32CD32" transform="rotate(-75 66 105)"/>
+  <ellipse cx="134" cy="105" rx="1.2" ry="0.25" fill="#32CD32" transform="rotate(75 134 105)"/>
+  <ellipse cx="64" cy="100" rx="1" ry="0.2" fill="#228B22" transform="rotate(-80 64 100)"/>
+  <ellipse cx="136" cy="100" rx="1" ry="0.2" fill="#228B22" transform="rotate(80 136 100)"/>
+  <ellipse cx="62" cy="95" rx="0.8" ry="0.15" fill="#32CD32" transform="rotate(-85 62 95)"/>
+  <ellipse cx="138" cy="95" rx="0.8" ry="0.15" fill="#32CD32" transform="rotate(85 138 95)"/>
+  <ellipse cx="60" cy="90" rx="0.6" ry="0.1" fill="#228B22" transform="rotate(-90 60 90)"/>
+  <ellipse cx="140" cy="90" rx="0.6" ry="0.1" fill="#228B22" transform="rotate(90 140 90)"/>
+  <ellipse cx="58" cy="85" rx="0.4" ry="0.08" fill="#32CD32" transform="rotate(-95 58 85)"/>
+  <ellipse cx="142" cy="85" rx="0.4" ry="0.08" fill="#32CD32" transform="rotate(95 142 85)"/>
+  <ellipse cx="56" cy="80" rx="0.3" ry="0.06" fill="#228B22" transform="rotate(-100 56 80)"/>
+  <ellipse cx="144" cy="80" rx="0.3" ry="0.06" fill="#228B22" transform="rotate(100 144 80)"/>
+  
+  <!-- Smaller fern fronds -->
+  <!-- Small frond 1 -->
+  <path d="M 85 178 Q 75 165 70 150 Q 68 140 66 130" 
+        fill="none" stroke="#228B22" stroke-width="1.5"/>
+  <ellipse cx="80" cy="175" rx="4" ry="1.5" fill="#32CD32" transform="rotate(-20 80 175)"/>
+  <ellipse cx="77" cy="170" rx="3.5" ry="1.3" fill="#228B22" transform="rotate(-25 77 170)"/>
+  <ellipse cx="74" cy="165" rx="3" ry="1.1" fill="#32CD32" transform="rotate(-30 74 165)"/>
+  <ellipse cx="72" cy="160" rx="2.5" ry="0.9" fill="#228B22" transform="rotate(-35 72 160)"/>
+  <ellipse cx="70" cy="155" rx="2" ry="0.7" fill="#32CD32" transform="rotate(-40 70 155)"/>
+  <ellipse cx="69" cy="150" rx="1.5" ry="0.5" fill="#228B22" transform="rotate(-45 69 150)"/>
+  <ellipse cx="68" cy="145" rx="1.2" ry="0.4" fill="#32CD32" transform="rotate(-50 68 145)"/>
+  <ellipse cx="67" cy="140" rx="1" ry="0.3" fill="#228B22" transform="rotate(-55 67 140)"/>
+  <ellipse cx="66.5" cy="135" rx="0.8" ry="0.2" fill="#32CD32" transform="rotate(-60 66.5 135)"/>
+  <ellipse cx="66.2" cy="130" rx="0.6" ry="0.15" fill="#228B22" transform="rotate(-65 66.2 130)"/>
+  
+  <!-- Small frond 2 -->
+  <path d="M 115 178 Q 125 165 130 150 Q 132 140 134 130" 
+        fill="none" stroke="#228B22" stroke-width="1.5"/>
+  <ellipse cx="120" cy="175" rx="4" ry="1.5" fill="#32CD32" transform="rotate(20 120 175)"/>
+  <ellipse cx="123" cy="170" rx="3.5" ry="1.3" fill="#228B22" transform="rotate(25 123 170)"/>
+  <ellipse cx="126" cy="165" rx="3" ry="1.1" fill="#32CD32" transform="rotate(30 126 165)"/>
+  <ellipse cx="128" cy="160" rx="2.5" ry="0.9" fill="#228B22" transform="rotate(35 128 160)"/>
+  <ellipse cx="130" cy="155" rx="2" ry="0.7" fill="#32CD32" transform="rotate(40 130 155)"/>
+  <ellipse cx="131" cy="150" rx="1.5" ry="0.5" fill="#228B22" transform="rotate(45 131 150)"/>
+  <ellipse cx="132" cy="145" rx="1.2" ry="0.4" fill="#32CD32" transform="rotate(50 132 145)"/>
+  <ellipse cx="133" cy="140" rx="1" ry="0.3" fill="#228B22" transform="rotate(55 133 140)"/>
+  <ellipse cx="133.5" cy="135" rx="0.8" ry="0.2" fill="#32CD32" transform="rotate(60 133.5 135)"/>
+  <ellipse cx="133.8" cy="130" rx="0.6" ry="0.15" fill="#228B22" transform="rotate(65 133.8 130)"/>
+  
+  <!-- Young fern fiddleheads (unfurling fronds) -->
+  <circle cx="90" cy="180" r="3" fill="#228B22"/>
+  <circle cx="90" cy="180" r="2.5" fill="#32CD32"/>
+  <path d="M 90 180 Q 88 178 86 180 Q 88 182 90 180" fill="#228B22"/>
+  <path d="M 90 180 Q 89 179 88 180 Q 89 181 90 180" fill="#32CD32"/>
+  
+  <circle cx="110" cy="182" r="2.5" fill="#228B22"/>
+  <circle cx="110" cy="182" r="2" fill="#32CD32"/>
+  <path d="M 110 182 Q 108 180 106 182 Q 108 184 110 182" fill="#228B22"/>
+  <path d="M 110 182 Q 109 181 108 182 Q 109 183 110 182" fill="#32CD32"/>
+  
+  <circle cx="95" cy="183" r="2" fill="#228B22"/>
+  <circle cx="95" cy="183" r="1.5" fill="#32CD32"/>
+  <path d="M 95 183 Q 93 181 91 183 Q 93 185 95 183" fill="#228B22"/>
+  
+  <circle cx="105" cy="184" r="1.8" fill="#228B22"/>
+  <circle cx="105" cy="184" r="1.3" fill="#32CD32"/>
+  <path d="M 105 184 Q 103 182 101 184 Q 103 186 105 184" fill="#228B22"/>
+  
+  <!-- Moss and small plants around fern -->
+  <ellipse cx="75" cy="185" rx="6" ry="3" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="125" cy="186" rx="7" ry="3.5" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="85" cy="187" rx="4" ry="2" fill="#9ACD32" opacity="0.5"/>
+  <ellipse cx="115" cy="188" rx="5" ry="2.5" fill="#228B22" opacity="0.6"/>
+  
+  <!-- Small grass blades -->
+  <rect x="70" y="180" width="0.5" height="8" fill="#228B22" rx="0.25"/>
+  <rect x="72" y="179" width="0.4" height="9" fill="#32CD32" rx="0.2"/>
+  <rect x="130" y="182" width="0.6" height="6" fill="#228B22" rx="0.3"/>
+  <rect x="132" y="181" width="0.4" height="7" fill="#32CD32" rx="0.2"/>
+  <rect x="80" y="186" width="0.3" height="5" fill="#9ACD32" rx="0.15"/>
+  <rect x="120" y="187" width="0.4" height="6" fill="#228B22" rx="0.2"/>
+  
+  <!-- Fallen leaves and organic matter -->
+  <ellipse cx="78" cy="186" rx="1.5" ry="2" fill="#8B4513" transform="rotate(25 78 186)" opacity="0.7"/>
+  <ellipse cx="122" cy="188" rx="1.3" ry="1.8" fill="#A0522D" transform="rotate(-15 122 188)" opacity="0.7"/>
+  <ellipse cx="88" cy="189" rx="1.2" ry="1.5" fill="#D2691E" transform="rotate(40 88 189)" opacity="0.6"/>
+  <ellipse cx="112" cy="190" rx="1.4" ry="1.7" fill="#8B4513" transform="rotate(-30 112 190)" opacity="0.6"/>
+  
+  <!-- Insects and small creatures -->
+  <ellipse cx="92" cy="165" rx="1.2" ry="0.6" fill="#000000" opacity="0.6"/>
+  <circle cx="91" cy="165" r="0.3" fill="#000000" opacity="0.6"/>
+  <line x1="90" y1="164" x2="88" y2="163" stroke="#000000" stroke-width="0.2"/>
+  <line x1="90" y1="166" x2="88" y2="167" stroke="#000000" stroke-width="0.2"/>
+  
+  <ellipse cx="108" cy="150" rx="1" ry="0.5" fill="#8B4513" opacity="0.6"/>
+  <circle cx="107" cy="150" r="0.25" fill="#8B4513" opacity="0.6"/>
+  
+  <!-- Spider web -->
+  <path d="M 75 140 L 85 135 L 80 145 Z" fill="none" stroke="#E6E6FA" stroke-width="0.3" opacity="0.6"/>
+  <path d="M 78 138 L 82 140 L 79 143" fill="none" stroke="#E6E6FA" stroke-width="0.2" opacity="0.5"/>
+  <circle cx="79" cy="140" r="0.3" fill="#000000" opacity="0.7"/>
+  
+  <!-- Dewdrops -->
+  <circle cx="85" cy="155" r="0.6" fill="#E0FFFF" opacity="0.8" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="115" cy="160" r="0.5" fill="#E0FFFF" opacity="0.8" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="95" cy="145" r="0.4" fill="#E0FFFF" opacity="0.7" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="105" cy="135" r="0.3" fill="#E0FFFF" opacity="0.7" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="75" cy="165" r="0.3" fill="#E0FFFF" opacity="0.6" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="125" cy="170" r="0.4" fill="#E0FFFF" opacity="0.6" stroke="#B0E0E6" stroke-width="0.1"/>
+  
+  <!-- Spores -->
+  <circle cx="100" cy="70" r="0.2" fill="#9ACD32" opacity="0.5"/>
+  <circle cx="98" cy="68" r="0.15" fill="#9ACD32" opacity="0.4"/>
+  <circle cx="102" cy="72" r="0.18" fill="#9ACD32" opacity="0.4"/>
+  <circle cx="96" cy="74" r="0.12" fill="#9ACD32" opacity="0.3"/>
+  <circle cx="104" cy="66" r="0.15" fill="#9ACD32" opacity="0.3"/>
+  
+  <!-- Fern name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#228B22" stroke="#006400" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">FERN</text>
+</svg>

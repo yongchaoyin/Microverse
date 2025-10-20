@@ -1,0 +1,113 @@
+<svg width="64" height="80" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面阴影 -->
+  <ellipse cx="32" cy="75" rx="28" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- 建筑主体 -->
+  <rect x="8" y="40" width="48" height="32" fill="#E3F2FD"/>
+  
+  <!-- 平屋顶 -->
+  <rect x="6" y="36" width="52" height="8" fill="#1976D2"/>
+  <rect x="6" y="36" width="52" height="2" fill="#0D47A1"/>
+  
+  <!-- 招牌 -->
+  <rect x="12" y="32" width="40" height="8" fill="#4CAF50"/>
+  <rect x="13" y="33" width="38" height="6" fill="#66BB6A"/>
+  
+  <!-- 招牌文字 "SHOP" -->
+  <rect x="16" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="16" y="35" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="16" y="37" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="16" y="39" width="4" height="1" fill="#FFFFFF"/>
+  
+  <rect x="22" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="22" y="35" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="22" y="37" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="22" y="39" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="25" y="35" width="2" height="4" fill="#FFFFFF"/>
+  
+  <rect x="29" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="29" y="35" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="29" y="37" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="29" y="39" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="32" y="35" width="2" height="4" fill="#FFFFFF"/>
+  
+  <rect x="36" y="35" width="2" height="4" fill="#FFFFFF"/>
+  <rect x="36" y="35" width="4" height="1" fill="#FFFFFF"/>
+  <rect x="36" y="37" width="3" height="1" fill="#FFFFFF"/>
+  <rect x="39" y="37" width="2" height="2" fill="#FFFFFF"/>
+  
+  <!-- 大玻璃窗 -->
+  <rect x="10" y="44" width="44" height="20" fill="#81D4FA"/>
+  <rect x="9" y="43" width="46" height="22" fill="#1565C0"/>
+  <rect x="10" y="44" width="44" height="20" fill="#81D4FA"/>
+  
+  <!-- 窗框分割 -->
+  <rect x="9" y="53" width="46" height="2" fill="#1565C0"/>
+  <rect x="20" y="43" width="2" height="22" fill="#1565C0"/>
+  <rect x="31" y="43" width="2" height="22" fill="#1565C0"/>
+  <rect x="42" y="43" width="2" height="22" fill="#1565C0"/>
+  
+  <!-- 窗户内部商品展示 -->
+  <rect x="11" y="45" width="8" height="6" fill="#FFEB3B" opacity="0.7"/>
+  <rect x="22" y="45" width="8" height="6" fill="#FF5722" opacity="0.7"/>
+  <rect x="34" y="45" width="8" height="6" fill="#4CAF50" opacity="0.7"/>
+  <rect x="44" y="45" width="8" height="6" fill="#9C27B0" opacity="0.7"/>
+  
+  <rect x="11" y="55" width="8" height="6" fill="#2196F3" opacity="0.7"/>
+  <rect x="22" y="55" width="8" height="6" fill="#FF9800" opacity="0.7"/>
+  <rect x="34" y="55" width="8" height="6" fill="#E91E63" opacity="0.7"/>
+  <rect x="44" y="55" width="8" height="6" fill="#795548" opacity="0.7"/>
+  
+  <!-- 门 -->
+  <rect x="26" y="64" width="12" height="8" fill="#37474F"/>
+  <rect x="27" y="65" width="10" height="6" fill="#455A64"/>
+  
+  <!-- 门把手 -->
+  <circle cx="35" cy="68" r="0.5" fill="#FFD700"/>
+  
+  <!-- 门框 -->
+  <rect x="25" y="63" width="14" height="1" fill="#263238"/>
+  <rect x="25" y="63" width="1" height="9" fill="#263238"/>
+  <rect x="38" y="63" width="1" height="9" fill="#263238"/>
+  
+  <!-- 自动门感应器 -->
+  <rect x="30" y="62" width="4" height="1" fill="#F44336"/>
+  <circle cx="32" cy="61" r="0.5" fill="#F44336"/>
+  
+  <!-- 购物车停放区 -->
+  <rect x="4" y="68" width="8" height="4" fill="#9E9E9E"/>
+  <rect x="5" y="69" width="6" height="2" fill="#BDBDBD"/>
+  
+  <!-- 购物车 -->
+  <rect x="6" y="67" width="4" height="2" fill="#757575"/>
+  <rect x="5" y="67" width="1" height="3" fill="#616161"/>
+  <circle cx="6.5" cy="70" r="0.5" fill="#424242"/>
+  <circle cx="9.5" cy="70" r="0.5" fill="#424242"/>
+  
+  <!-- ATM机 -->
+  <rect x="52" y="64" width="4" height="8" fill="#263238"/>
+  <rect x="53" y="65" width="2" height="3" fill="#81D4FA"/>
+  <rect x="53" y="69" width="2" height="1" fill="#4CAF50"/>
+  
+  <!-- 前院 -->
+  <rect x="4" y="72" width="56" height="8" fill="#E8F5E8"/>
+  
+  <!-- 停车位标线 -->
+  <rect x="8" y="74" width="12" height="1" fill="#FFFFFF"/>
+  <rect x="8" y="78" width="12" height="1" fill="#FFFFFF"/>
+  <rect x="8" y="74" width="1" height="5" fill="#FFFFFF"/>
+  <rect x="19" y="74" width="1" height="5" fill="#FFFFFF"/>
+  
+  <rect x="44" y="74" width="12" height="1" fill="#FFFFFF"/>
+  <rect x="44" y="78" width="12" height="1" fill="#FFFFFF"/>
+  <rect x="44" y="74" width="1" height="5" fill="#FFFFFF"/>
+  <rect x="55" y="74" width="1" height="5" fill="#FFFFFF"/>
+  
+  <!-- 小径 -->
+  <rect x="24" y="72" width="16" height="8" fill="#CFD8DC"/>
+  <rect x="25" y="73" width="14" height="6" fill="#ECEFF1"/>
+  
+  <!-- 垃圾桶 -->
+  <rect x="48" y="68" width="3" height="4" fill="#424242"/>
+  <rect x="47" y="67" width="5" height="1" fill="#616161"/>
+</svg>

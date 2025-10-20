@@ -1,0 +1,15 @@
+engine: a1111
+base_url: "http://127.0.0.1:7860"
+output_root: "images"
+pack_globs:
+  - "assets/prompts/*.yaml"
+exclude:
+  - "assets/prompts/_macros.yaml"
+render:
+  steps: 30
+  cfg_scale: 7.5
+  sampler_name: "Euler a"
+  seed: -1
+dry_run: true
+timeout_s: 60
+

@@ -1,0 +1,132 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="190" rx="90" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="95" ry="12" fill="#8FBC8F"/>
+  
+  <!-- Gazebo base platform -->
+  <ellipse cx="100" cy="170" rx="80" ry="15" fill="#D2B48C" stroke="#8B7355" stroke-width="2"/>
+  <ellipse cx="100" cy="167" rx="80" ry="15" fill="#DEB887"/>
+  
+  <!-- Platform steps -->
+  <ellipse cx="100" cy="175" rx="85" ry="8" fill="#CD853F"/>
+  <ellipse cx="100" cy="178" rx="90" ry="6" fill="#D2B48C"/>
+  
+  <!-- Support columns (8 columns in octagon) -->
+  <!-- Front columns -->
+  <rect x="95" y="120" width="6" height="50" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <rect x="99" y="120" width="6" height="50" fill="#A0522D" stroke="#654321" stroke-width="0.5"/>
+  
+  <!-- Side columns -->
+  <rect x="65" y="125" width="5" height="45" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <rect x="130" y="125" width="5" height="45" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <rect x="45" y="135" width="4" height="35" fill="#A0522D" stroke="#654321" stroke-width="0.5"/>
+  <rect x="151" y="135" width="4" height="35" fill="#A0522D" stroke="#654321" stroke-width="0.5"/>
+  
+  <!-- Back columns -->
+  <rect x="75" y="130" width="4" height="40" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <rect x="121" y="130" width="4" height="40" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  
+  <!-- Column capitals -->
+  <rect x="93" y="118" width="10" height="4" fill="#DEB887"/>
+  <rect x="97" y="118" width="10" height="4" fill="#DEB887"/>
+  <rect x="63" y="123" width="9" height="3" fill="#DEB887"/>
+  <rect x="128" y="123" width="9" height="3" fill="#DEB887"/>
+  <rect x="43" y="133" width="8" height="3" fill="#DEB887"/>
+  <rect x="149" y="133" width="8" height="3" fill="#DEB887"/>
+  <rect x="73" y="128" width="8" height="3" fill="#DEB887"/>
+  <rect x="119" y="128" width="8" height="3" fill="#DEB887"/>
+  
+  <!-- Roof structure -->
+  <!-- Main roof (octagonal) -->
+  <polygon points="100,60 130,80 150,100 150,120 130,130 100,135 70,130 50,120 50,100 70,80" 
+           fill="#8B0000" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Roof shingles pattern -->
+  <polygon points="100,65 125,82 145,100 145,115 125,125 100,130 75,125 55,115 55,100 75,82" 
+           fill="#A0522D" opacity="0.8"/>
+  <polygon points="100,70 120,85 135,100 135,110 120,118 100,122 80,118 65,110 65,100 80,85" 
+           fill="#CD853F" opacity="0.6"/>
+  
+  <!-- Roof peak -->
+  <circle cx="100" cy="60" r="8" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <circle cx="100" cy="60" r="5" fill="#DEB887"/>
+  <circle cx="100" cy="60" r="2" fill="#FFD700"/>
+  
+  <!-- Roof support beams -->
+  <line x1="100" y1="60" x2="130" y2="80" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="150" y2="100" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="150" y2="120" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="130" y2="130" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="70" y2="130" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="50" y2="120" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="50" y2="100" stroke="#654321" stroke-width="2"/>
+  <line x1="100" y1="60" x2="70" y2="80" stroke="#654321" stroke-width="2"/>
+  
+  <!-- Decorative railings -->
+  <ellipse cx="100" cy="155" rx="75" ry="8" fill="none" stroke="#8B4513" stroke-width="3"/>
+  <ellipse cx="100" cy="155" rx="70" ry="6" fill="none" stroke="#A0522D" stroke-width="2"/>
+  
+  <!-- Railing posts -->
+  <rect x="48" y="150" width="3" height="10" fill="#8B4513"/>
+  <rect x="65" y="148" width="3" height="12" fill="#8B4513"/>
+  <rect x="85" y="147" width="3" height="13" fill="#8B4513"/>
+  <rect x="112" y="147" width="3" height="13" fill="#8B4513"/>
+  <rect x="132" y="148" width="3" height="12" fill="#8B4513"/>
+  <rect x="149" y="150" width="3" height="10" fill="#8B4513"/>
+  
+  <!-- Central seating area -->
+  <ellipse cx="100" cy="150" rx="25" ry="8" fill="#DEB887" stroke="#8B4513" stroke-width="1"/>
+  <ellipse cx="100" cy="148" rx="25" ry="8" fill="#F5DEB3"/>
+  
+  <!-- Bench inside gazebo -->
+  <rect x="80" y="145" width="40" height="6" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <rect x="80" y="140" width="40" height="8" fill="#A0522D" stroke="#654321" stroke-width="0.5"/>
+  
+  <!-- Bench legs -->
+  <rect x="82" y="145" width="3" height="8" fill="#654321"/>
+  <rect x="115" y="145" width="3" height="8" fill="#654321"/>
+  
+  <!-- Decorative elements -->
+  <!-- Hanging lanterns -->
+  <rect x="75" y="100" width="6" height="8" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <rect x="119" y="100" width="6" height="8" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <circle cx="78" cy="108" r="2" fill="#FF6347"/>
+  <circle cx="122" cy="108" r="2" fill="#FF6347"/>
+  
+  <!-- Decorative roof trim -->
+  <polygon points="100,60 125,78 145,95 145,110 125,120 100,125 75,120 55,110 55,95 75,78" 
+           fill="none" stroke="#FFD700" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Surrounding landscaping -->
+  <!-- Flower beds around gazebo -->
+  <ellipse cx="60" cy="180" rx="12" ry="5" fill="#228B22"/>
+  <ellipse cx="140" cy="180" rx="12" ry="5" fill="#228B22"/>
+  <ellipse cx="100" cy="185" rx="15" ry="4" fill="#32CD32"/>
+  
+  <!-- Flowers -->
+  <circle cx="55" cy="178" r="2" fill="#FF69B4"/>
+  <circle cx="65" cy="177" r="2" fill="#FF1493"/>
+  <circle cx="135" cy="178" r="2" fill="#FFB6C1"/>
+  <circle cx="145" cy="177" r="2" fill="#FFC0CB"/>
+  <circle cx="95" cy="183" r="1.5" fill="#FF6347"/>
+  <circle cx="105" cy="183" r="1.5" fill="#FF4500"/>
+  
+  <!-- Small pathway -->
+  <ellipse cx="100" cy="190" rx="20" ry="3" fill="#D2B48C"/>
+  <ellipse cx="100" cy="192" rx="25" ry="2" fill="#DEB887"/>
+  
+  <!-- Gazebo nameplate -->
+  <rect x="85" y="175" width="30" height="6" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <text x="100" y="179" text-anchor="middle" font-family="Arial" font-size="5" fill="#FFFFFF">GAZEBO</text>
+  
+  <!-- Shadow details under roof -->
+  <ellipse cx="100" cy="130" rx="60" ry="10" fill="#000000" opacity="0.1"/>
+  
+  <!-- Wood grain details on columns -->
+  <line x1="96" y1="125" x2="96" y2="165" stroke="#654321" stroke-width="0.3" opacity="0.6"/>
+  <line x1="103" y1="125" x2="103" y2="165" stroke="#654321" stroke-width="0.3" opacity="0.6"/>
+  <line x1="67" y1="130" x2="67" y2="165" stroke="#654321" stroke-width="0.3" opacity="0.6"/>
+  <line x1="132" y1="130" x2="132" y2="165" stroke="#654321" stroke-width="0.3" opacity="0.6"/>
+</svg>

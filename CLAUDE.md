@@ -221,6 +221,203 @@ From [CONTRIBUTING.md:173-190](CONTRIBUTING.md#L173-L190):
 - `test:` - Tests
 - `chore:` - Build/tools
 
+## Map System
+
+The map system provides the visual environment and interaction framework for AI characters. It includes lighting, buildings, and optimization systems.
+
+### Map Scripts
+
+Located in [script/world/](script/world/):
+
+1. **DayNightCycle** ([script/world/DayNightCycle.gd](script/world/DayNightCycle.gd))
+   - Extends CanvasModulate to control global lighting color
+   - 7 time periods: dawn, morning, noon, afternoon, dusk, evening, night
+   - Connects to TimeSystem's `hour_changed` signal
+   - Emits `night_time_start` (19:00) and `day_time_start` (6:00) signals
+   - Smooth color transitions with configurable duration
+   - Customizable color presets via @export variables
+
+2. **WindowLights** ([script/world/WindowLights.gd](script/world/WindowLights.gd))
+   - Manages building window lights (Light2D nodes)
+   - Auto-collects lights from "window_lights" group
+   - Turns lights on/off based on DayNightCycle signals
+   - Random delays for realistic effect (0-2 seconds)
+   - Fade in/out animations (0.5 seconds)
+
+3. **StreetLights** ([script/world/StreetLights.gd](script/world/StreetLights.gd))
+   - Manages street lamp system
+   - Collects lights from "street_lights" group
+   - Optional procedural generation along paths
+   - Flicker effect for realism (configurable interval and intensity)
+   - Supports StreetLight scene instances
+
+4. **StreetLight** ([script/world/StreetLight.gd](script/world/StreetLight.gd))
+   - Individual street lamp node (extends Node2D)
+   - Methods: `turn_on()`, `turn_off()`, `toggle()`
+   - Optional flicker animation
+   - Configurable light color, range, and energy
+   - Scene: [scene/world/StreetLight.tscn](scene/world/StreetLight.tscn)
+
+5. **InteractionZone** ([script/world/InteractionZone.gd](script/world/InteractionZone.gd))
+   - Base class for interactive areas (extends Area2D)
+   - Types: enter (buildings), work, sit, talk, rest, custom
+   - Detects AI characters entering/exiting
+   - Emits `interaction_triggered(zone_name, character)` signal
+   - Optional highlight on mouse hover
+   - Cooldown system to prevent rapid re-triggers
+   - Character restriction (allow only specific characters)
+
+6. **Building** ([script/world/Building.gd](script/world/Building.gd))
+   - Base class for all buildings (extends StaticBody2D)
+   - Types: house, office, cafe, bar, shop, public
+   - Manages entrance interaction zone
+   - Access control: owner check, relationship requirements, time restrictions
+   - Window lights integration
+   - Tracks characters inside building
+   - Methods: `can_character_enter()`, `enter_building()`, `exit_building()`
+
+7. **ViewportCulling** ([script/world/ViewportCulling.gd](script/world/ViewportCulling.gd))
+   - Performance optimization system
+   - Hides objects outside camera view
+   - Configurable buffer zone (default 5 tiles)
+   - Groups: trees, decorations, buildings, characters, effects
+   - Optional process disabling for hidden objects
+   - Performance stats tracking
+
+### CameraController
+
+Extended [CameraController](script/CameraController.gd) (class_name: CameraController):
+
+**Features**:
+- Follow mode: Smoothly follows selected character
+- Manual mode: Right-click or middle-click drag to pan
+- Zoom levels: 5 presets (0.5x, 0.75x, 1.0x, 1.5x, 2.0x)
+- Map bounds: Restricts camera to map area
+- Keyboard shortcuts:
+  - `Space`: Restore view to current character
+  - `R`: Reset camera to initial state
+  - `F`: Toggle follow mode on/off
+
+**Key Methods**:
+- `follow_character(character)`: Start following a character
+- `reset_camera()`: Return to initial position and zoom
+- `toggle_follow_mode()`: Switch between follow and free modes
+- `zoom_in()` / `zoom_out()`: Step through zoom presets
+- `get_visible_rect()`: Returns current visible area (for culling)
+
+### Map System Integration
+
+**With TimeSystem**:
+- DayNightCycle listens to `hour_changed` signal
+- Updates lighting every hour
+- Triggers day/night events at specific hours
+
+**With Characters**:
+- InteractionZone detects characters via `is_in_group("characters")`
+- Building checks character metadata for access control
+- CameraController follows character via `target` property
+
+**With Lighting**:
+```
+TimeSystem (hour=19)
+  → DayNightCycle.night_time_start
+  → WindowLights.turn_on_all_lights()
+  → StreetLights.turn_on_all_lights()
+```
+
+### Scene Structure
+
+Typical world scene hierarchy:
+```
+World (Node2D)
+├── CanvasModulate (DayNightCycle script)
+├── TileMaps
+│   ├── Ground (TileMap)
+│   ├── Decorations (TileMap)
+│   └── Roads (TileMap)
+├── Buildings
+│   ├── House_Alice (Building)
+│   │   ├── Sprite2D
+│   │   ├── CollisionShape2D
+│   │   ├── EntranceZone (InteractionZone)
+│   │   └── Windows (Node2D)
+│   │       ├── WindowLight1 (Light2D) [group: window_lights]
+│   │       └── WindowLight2 (Light2D) [group: window_lights]
+│   └── ... (other buildings)
+├── StreetLights (StreetLights script)
+│   ├── StreetLight1 [group: street_lights]
+│   └── StreetLight2 [group: street_lights]
+├── Characters (YSort)
+│   ├── Alice [group: characters]
+│   └── ... (other characters)
+├── Camera2D (CameraController script)
+├── WindowLights (WindowLights script)
+└── ViewportCulling (ViewportCulling script)
+```
+
+### Map Design Notes
+
+- **Current Map**: Office.tscn (indoor office environment)
+- **Planned**: Full town map with outdoor areas (see [docs/design/17_地图系统与场景设计规范.md](docs/design/17_地图系统与场景设计规范.md))
+- **Map Size**: Designed for 150×120 tiles (2400×1920 pixels) @ 16px per tile
+- **Visual Style**: Stardew Valley-like pixel art, 2.5D top-down view
+- **Assets**: Located in [asset/maps/](asset/maps/) (currently has interior tiles)
+
+### Office Map System Integration
+
+**OfficeMapSetup** ([script/world/OfficeMapSetup.gd](script/world/OfficeMapSetup.gd)) provides one-click integration of map systems into the Office scene.
+
+**Quick Start**:
+1. Open [scene/maps/Office.tscn](scene/maps/Office.tscn) in Godot editor
+2. Attach `OfficeMapSetup.gd` script to root "Office" node
+3. Press F5 to run → All systems auto-initialize
+4. Press Ctrl+S to save → Nodes persist to scene
+
+**What It Creates**:
+- **DayNightCycle** (CanvasModulate): Global lighting control (7 time periods)
+- **WindowLights** (Node2D + 8 Light2D): Office window lights (auto on/off at 19:00/6:00)
+- **OfficeAreaLights** (Node2D + 9 Light2D): Ceiling lights for work areas, meeting rooms, gym
+- **InteractionZones** (Node2D + 11 Area2D): Work desks, meeting room, gym, tea room
+- **Camera Bounds**: Configures MainCamera's `map_bounds` to (0, 0, 1200, 600)
+
+**Export Variables**:
+```gdscript
+@export var auto_setup_on_ready: bool = true
+@export var enable_day_night_cycle: bool = true
+@export var enable_window_lights: bool = true
+@export var enable_office_lights: bool = true
+@export var enable_interaction_zones: bool = true
+@export var configure_camera_bounds: bool = true
+```
+
+**Features**:
+- Non-destructive: Does not modify original Office.tscn data (17052 lines preserved)
+- Auto-detection: Skips creation if nodes already exist
+- Editor-compatible: Sets node `owner` correctly for scene persistence
+- Customizable: Toggle features via export variables
+
+**Created Node Hierarchy**:
+```
+Office (Node2D) + OfficeMapSetup.gd script
+├── [Original 17052 lines of scene data unchanged]
+├── DayNightCycle (CanvasModulate)
+├── WindowLights (Node2D)
+│   └── Windows (Node2D)
+│       └── WindowLight1-8 (Light2D) [group: window_lights]
+├── OfficeAreaLights (Node2D)
+│   └── CeilingLight1-9 (Light2D)
+└── InteractionZones (Node2D)
+    └── WorkDesk_Joe, MeetingRoom, GymArea, etc. (Area2D)
+```
+
+**Integration Points**:
+- Connects to TimeSystem for hour-based lighting
+- InteractionZones trigger character behaviors (work/talk/rest)
+- Window lights respond to DayNightCycle signals
+- Camera bounds prevent viewport from exceeding map area
+
+**Documentation**: [docs/runing/30_Office地图系统集成完成报告.md](docs/runing/30_Office地图系统集成完成报告.md)
+
 ## Known Issues
 
 1. **.import files**: If project fails to load, delete all `.import` files and reopen in Godot
@@ -232,6 +429,8 @@ From [CONTRIBUTING.md:173-190](CONTRIBUTING.md#L173-L190):
 - **Core Managers**: [script/CharacterManager.gd](script/CharacterManager.gd), [script/ai/DialogManager.gd](script/ai/DialogManager.gd), [script/ai/APIManager.gd](script/ai/APIManager.gd)
 - **AI System**: [script/ai/AIAgent.gd](script/ai/AIAgent.gd), [script/ai/APIConfig.gd](script/ai/APIConfig.gd), [script/ai/memory/MemoryManager.gd](script/ai/memory/MemoryManager.gd)
 - **Character Data**: [script/CharacterPersonality.gd](script/CharacterPersonality.gd)
+- **Map System**: [script/world/](script/world/) - DayNightCycle, WindowLights, StreetLights, InteractionZone, Building, ViewportCulling
+- **Camera**: [script/CameraController.gd](script/CameraController.gd)
 - **Settings**: [script/ui/SettingsManager.gd](script/ui/SettingsManager.gd)
 - **Save System**: [script/GameSaveManager.gd](script/GameSaveManager.gd)
 - **Project Config**: [project.godot](project.godot)

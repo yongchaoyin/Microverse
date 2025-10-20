@@ -3,6 +3,10 @@
 # 脚本引用
 var BackgroundStoryManager = preload("res://script/ai/background_story/BackgroundStoryManager.gd")
 
+# 项目系统UI场景引用
+const PROJECT_CREATION_UI_SCENE = preload("res://scene/ui/project/ProjectCreationUI.tscn")
+const PROJECT_MONITOR_UI_SCENE = preload("res://scene/ui/project/ProjectMonitorUI.tscn")
+
 # 面板引用
 @onready var left_panel = $HBoxContainer/LeftPanel
 @onready var right_panel = $HBoxContainer/RightPanel
@@ -45,6 +49,9 @@ var _schedule_manager = null
 var _task_system = null
 var _economy_manager = null
 var _last_payroll_summary = {}
+var _project_system = null
+var _project_creation_ui: Control = null
+var _project_monitor_ui: Control = null
 
 const TASK_STATE_LABELS := {
 	0: "进行中",
@@ -99,6 +106,7 @@ func _ready():
 	$HBoxContainer/RightPanel/VBoxContainer/EmotionButton.pressed.connect(_on_emotion_pressed)
 	$HBoxContainer/RightPanel/VBoxContainer/TaskButton.pressed.connect(_on_task_pressed)
 	$HBoxContainer/RightPanel/VBoxContainer/BackgroundButton.pressed.connect(_on_background_pressed)
+	$HBoxContainer/RightPanel/VBoxContainer/CreateProjectButton.pressed.connect(_on_create_project_pressed)
 	toggle_ui_button.pressed.connect(_on_toggle_ui_pressed)
 	
 	# 连接角色列表信号
@@ -200,6 +208,25 @@ func _setup_observer_bindings():
 			_economy_manager.transaction_recorded.connect(_on_economy_transaction)
 		if _economy_manager.has_signal("payroll_processed") and not _economy_manager.payroll_processed.is_connected(_on_economy_payroll_processed):
 			_economy_manager.payroll_processed.connect(_on_economy_payroll_processed)
+
+	# 项目系统集成
+	_project_system = get_node_or_null("/root/ProjectSystem")
+	if _project_system:
+		if _project_system.has_signal("project_started") and not _project_system.project_started.is_connected(_on_project_started):
+			_project_system.project_started.connect(_on_project_started)
+		if _project_system.has_signal("project_completed") and not _project_system.project_completed.is_connected(_on_project_ended):
+			_project_system.project_completed.connect(_on_project_ended)
+		if _project_system.has_signal("project_failed") and not _project_system.project_failed.is_connected(_on_project_ended):
+			_project_system.project_failed.connect(_on_project_ended)
+		if _project_system.has_signal("project_cancelled") and not _project_system.project_cancelled.is_connected(_on_project_ended):
+			_project_system.project_cancelled.connect(_on_project_ended)
+
+		# 检查是否已有活跃项目，如果有则显示监控UI
+		var active_project = _project_system.get_active_project()
+		if active_project:
+			_show_project_monitor_ui()
+
+		print("[GodUI] 项目系统集成完成")
 
 func _is_selected_ai(ai_id: String) -> bool:
 	return selected_character != null and selected_character.name == ai_id
@@ -1479,9 +1506,13 @@ func _input(event):
 			var settings = get_node_or_null("/root/GlobalSettings")
 			if settings != null and settings.has_method("is_settings_visible"):
 				settings_ui_visible = settings.is_settings_visible()
-			
+
 			if not settings_ui_visible:
 				_toggle_ui(!ui_visible)
+
+		# Ctrl+P 打开项目创建界面
+		if event.keycode == KEY_P and event.ctrl_pressed:
+			_on_create_project_pressed()
 
 # 故事背景按钮点击
 func _on_background_pressed():
@@ -1799,3 +1830,69 @@ func _refresh_relationship_view():
 		relation_tags_cache[target] = _relationship_manager.get_tags(selected_character.name, target)
 	_relation_list_render()
 
+
+# ========================================
+# 项目系统UI管理
+# ========================================
+
+# 创建项目按钮点击处理
+func _on_create_project_pressed() -> void:
+	if not _project_system:
+		print("[GodUI] ProjectSystem未找到")
+		return
+	
+	# 检查是否已有活跃项目
+	var active_project = _project_system.get_active_project()
+	if active_project:
+		print("[GodUI] 已有活跃项目: %s，无法创建新项目" % active_project.title)
+		return
+	
+	# 关闭现有的创建UI
+	if _project_creation_ui:
+		_project_creation_ui.queue_free()
+	
+	# 创建新的UI实例
+	_project_creation_ui = PROJECT_CREATION_UI_SCENE.instantiate()
+	get_tree().root.add_child(_project_creation_ui)
+	
+	print("[GodUI] 打开项目创建界面")
+
+# 显示项目监控界面
+func _show_project_monitor_ui() -> void:
+	if _project_monitor_ui:
+		return  # 已经显示
+	
+	_project_monitor_ui = PROJECT_MONITOR_UI_SCENE.instantiate()
+	get_tree().root.add_child(_project_monitor_ui)
+	
+	print("[GodUI] 显示项目监控界面")
+
+# 隐藏项目监控界面
+func _hide_project_monitor_ui() -> void:
+	if not _project_monitor_ui:
+		return
+	
+	_project_monitor_ui.queue_free()
+	_project_monitor_ui = null
+	
+	print("[GodUI] 隐藏项目监控界面")
+
+# 项目启动回调
+func _on_project_started(project) -> void:
+	print("[GodUI] 项目已启动: %s" % project.title)
+	
+	# 关闭创建UI
+	if _project_creation_ui:
+		_project_creation_ui.queue_free()
+		_project_creation_ui = null
+	
+	# 显示监控UI
+	_show_project_monitor_ui()
+
+# 项目结束回调
+func _on_project_ended(project, reason: String = "") -> void:
+	var end_reason = "完成" if reason.is_empty() else reason
+	print("[GodUI] 项目已结束: %s (%s)" % [project.title, end_reason])
+	
+	# 隐藏监控UI
+	_hide_project_monitor_ui()

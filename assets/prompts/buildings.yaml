@@ -1,0 +1,201 @@
+meta:
+  pack: "buildings"
+  save_root: "res://assets/maps/buildings/"
+  macros: "assets/prompts/_macros.yaml"
+  notes:
+    - Sizes are in pixels; align to 16px grid.
+    - Provide clear facades, readable signage, and soft top-left lighting.
+defaults:
+  apply:
+    base_prompt: "@base"
+    negative_prompt: "@negative"
+    outline_px: 1
+    cast_shadow: true
+groups:
+  - name: residential
+    save_dir: "houses"
+    items:
+      - id: house_red_roof
+        file: "house_red_roof.png"
+        size_px: [64, 80]
+        prompt: >-
+          @base, cozy small residential house, red tiled roof, brick/wood walls,
+          door and 2-4 windows, optional chimney smoke, small front yard, friendly colors
+        negative: "@negative"
+      - id: house_blue_roof
+        file: "house_blue_roof.png"
+        size_px: [64, 80]
+        prompt: >-
+          @base, cozy small house, blue tiled roof, beige walls (#F5E6D3),
+          2-4 windows with warm window lights
+        negative: "@negative"
+      - id: house_modern
+        file: "house_modern.png"
+        size_px: [80, 96]
+        prompt: >-
+          @base, modern flat roof house, clean geometry, white body (#FAFAFA),
+          glass panels (#B3E5FC), minimal planter boxes
+        negative: "@negative"
+      - id: house_cottage
+        file: "house_cottage.png"
+        size_px: [48, 64]
+        prompt: >-
+          @base, countryside cottage, timber + stone, flower boxes under windows,
+          warm wooden tones (#D4A373)
+        negative: "@negative"
+      - id: house_two_story
+        file: "house_two_story.png"
+        size_px: [96, 112]
+        prompt: >-
+          @base, two-story family home, gabled roof, brick lower + light upper walls,
+          balcony and bay window
+        negative: "@negative"
+      - id: house_green_roof
+        file: "house_green_roof.png"
+        size_px: [64, 80]
+        prompt: >-
+          @base, small house, green shingle roof, light plaster walls,
+          potted shrubs by door
+        negative: "@negative"
+      - id: house_brown_roof
+        file: "house_brown_roof.png"
+        size_px: [64, 80]
+        prompt: >-
+          @base, brown tiled roof, wooden siding, mailbox and small fence segment,
+          cozy neighborhood vibe
+        negative: "@negative"
+      - id: house_townhouse
+        file: "house_townhouse.png"
+        size_px: [80, 96]
+        prompt: >-
+          @base, narrow townhouse, vertical emphasis, front steps, door canopy,
+          brick textures and warm windows
+        negative: "@negative"
+  - name: commercial
+    save_dir: "commercial"
+    items:
+      - id: cafe
+        file: "cafe.png"
+        size_px: [80, 96]
+        prompt: >-
+          @base, cozy cafe building, coffee cup signage, awning, outdoor seating,
+          warm color scheme, large front windows
+        negative: "@negative"
+      - id: bar
+        file: "bar.png"
+        size_px: [80, 96]
+        prompt: >-
+          @base, lively bar, neon sign, darker exterior, beer barrel props,
+          welcoming doorway
+        negative: "@negative"
+      - id: convenience_store
+        file: "convenience_store.png"
+        size_px: [84, 80]
+        prompt: >-
+          @base, bright convenience store, large display windows, automatic doors,
+          product posters, modern signage
+        negative: "@negative"
+      - id: restaurant
+        file: "restaurant.png"
+        size_px: [96, 112]
+        prompt: >-
+          @base, family restaurant, big sign with food icon, tables visible inside,
+          warm lights, decorative planters
+        negative: "@negative"
+      - id: bookstore
+        file: "bookstore.png"
+        size_px: [84, 80]
+        prompt: >-
+          @base, quaint bookstore, books icon signage, display shelves silhouette,
+          artsy vibe
+        negative: "@negative"
+      - id: flower_shop
+        file: "flower_shop.png"
+        size_px: [84, 80]
+        prompt: >-
+          @base, colorful flower shop, potted plants and bouquets outside,
+          striped canopy, cheerful palette
+        negative: "@negative"
+      - id: gym
+        file: "gym.png"
+        size_px: [96, 112]
+        prompt: >-
+          @base, compact gym, dumbbell signage, glass facade, visible equipment silhouettes,
+          strong lines
+        negative: "@negative"
+  - name: office
+    save_dir: "office"
+    items:
+      - id: office_small
+        file: "office_small.png"
+        size_px: [64, 96]
+        prompt: >-
+          @base, small office building, modern look, glass and white body,
+          simple entrance canopy
+        negative: "@negative"
+      - id: office_medium
+        file: "office_medium.png"
+        size_px: [96, 128]
+        prompt: >-
+          @base, mid-size office, vertical glass strips, clear lobby doors,
+          subtle branding banner
+        negative: "@negative"
+      - id: office_tower
+        file: "office_tower.png"
+        size_px: [128, 160]
+        prompt: >-
+          @base, slender office tower, stacked volumes, reflective glass,
+          rooftop equipment, cast long shadow
+        negative: "@negative"
+      - id: company_building
+        file: "company_building.png"
+        size_px: [112, 144]
+        prompt: >-
+          @base, company HQ, unique facade pattern, glass atrium,
+          modern signage and flag poles
+        negative: "@negative"
+  - name: public
+    save_dir: "public"
+    items:
+      - id: town_hall
+        file: "town_hall.png"
+        size_px: [128, 144]
+        prompt: >-
+          @base, town hall with clock tower, landmark architecture, symmetric facade,
+          civic emblem, stone steps
+        negative: "@negative"
+      - id: library
+        file: "library.png"
+        size_px: [96, 112]
+        prompt: >-
+          @base, public library, book sculpture icon, large windows with bookshelves silhouette,
+          quiet civic feel
+        negative: "@negative"
+      - id: hospital
+        file: "hospital.png"
+        size_px: [96, 112]
+        prompt: >-
+          @base, small hospital/clinic, red cross sign, clean white facade,
+          glass entrance, emergency sign
+        negative: "@negative"
+      - id: school
+        file: "school.png"
+        size_px: [128, 128]
+        prompt: >-
+          @base, school building, playground hints, bell icon,
+          friendly colors and windows
+        negative: "@negative"
+      - id: park_pavilion
+        file: "park_pavilion.png"
+        size_px: [64, 64]
+        prompt: >-
+          @base, park pavilion, wooden posts, roofed shade, nearby benches,
+          decorative trim
+        negative: "@negative"
+      - id: bus_stop
+        file: "bus_stop.png"
+        size_px: [32, 48]
+        prompt: >-
+          @base, bus stop shelter, glass panels, route sign, bench, curb tile hint
+        negative: "@negative"
+

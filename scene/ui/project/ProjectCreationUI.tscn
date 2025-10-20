@@ -1,0 +1,203 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8y4q5r6p7s8t9"]
+
+[ext_resource type="Script" path="res://script/ui/project/ProjectCreationUI.gd" id="1_a1b2c"]
+
+[node name="ProjectCreationUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a1b2c")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -350.0
+offset_right = 350.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "创建新项目"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="TypeRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TypeLabel" type="Label" parent="Panel/VBox/TypeRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "项目类型:"
+vertical_alignment = 1
+
+[node name="TypeDropdown" type="OptionButton" parent="Panel/VBox/TypeRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel2" type="Label" parent="Panel/VBox/TitleRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "项目名称:"
+vertical_alignment = 1
+
+[node name="TitleInput" type="LineEdit" parent="Panel/VBox/TitleRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "请输入项目名称"
+
+[node name="DescriptionRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="DescLabel" type="Label" parent="Panel/VBox/DescriptionRow"]
+layout_mode = 2
+text = "需求描述:"
+
+[node name="DescriptionText" type="TextEdit" parent="Panel/VBox/DescriptionRow"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+placeholder_text = "详细描述项目需求..."
+wrap_mode = 1
+
+[node name="BudgetRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BudgetTitleLabel" type="Label" parent="Panel/VBox/BudgetRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "预算:"
+vertical_alignment = 1
+
+[node name="BudgetSlider" type="HSlider" parent="Panel/VBox/BudgetRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 10000.0
+max_value = 200000.0
+step = 5000.0
+value = 50000.0
+
+[node name="BudgetLabel" type="Label" parent="Panel/VBox/BudgetRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "50000 金币"
+vertical_alignment = 1
+
+[node name="DurationRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DurationTitleLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "工期:"
+vertical_alignment = 1
+
+[node name="DurationSlider" type="HSlider" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 5.0
+max_value = 90.0
+step = 1.0
+value = 30.0
+
+[node name="DurationLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "30 天"
+vertical_alignment = 1
+
+[node name="QualityRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="QualityTitleLabel" type="Label" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "质量要求:"
+vertical_alignment = 1
+
+[node name="QualityHigh" type="CheckBox" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+text = "高"
+
+[node name="QualityMedium" type="CheckBox" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+button_pressed = true
+text = "中"
+
+[node name="QualityLow" type="CheckBox" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+text = "低"
+
+[node name="DifficultyRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DifficultyTitleLabel" type="Label" parent="Panel/VBox/DifficultyRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "难度模式:"
+vertical_alignment = 1
+
+[node name="DifficultyStrict" type="CheckBox" parent="Panel/VBox/DifficultyRow"]
+layout_mode = 2
+text = "严格"
+
+[node name="DifficultyBalanced" type="CheckBox" parent="Panel/VBox/DifficultyRow"]
+layout_mode = 2
+button_pressed = true
+text = "平衡"
+
+[node name="DifficultyRelaxed" type="CheckBox" parent="Panel/VBox/DifficultyRow"]
+layout_mode = 2
+text = "轻松"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="CancelButton" type="Button" parent="Panel/VBox/ButtonRow"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+text = "取消"
+
+[node name="CreateButton" type="Button" parent="Panel/VBox/ButtonRow"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+text = "创建项目"

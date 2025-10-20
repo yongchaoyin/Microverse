@@ -1,0 +1,186 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="55" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="50" ry="6" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="45" ry="4" fill="#9ACD32"/>
+  
+  <!-- Soil and root area -->
+  <ellipse cx="100" cy="182" rx="40" ry="6" fill="#654321" stroke="#8B4513" stroke-width="1"/>
+  <ellipse cx="100" cy="184" rx="35" ry="4" fill="#8B4513"/>
+  
+  <!-- Flower stems -->
+  <rect x="95" y="150" width="2" height="35" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="1"/>
+  <rect x="105" y="155" width="2" height="30" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="1"/>
+  <rect x="88" y="160" width="1.8" height="25" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="0.9"/>
+  <rect x="112" y="158" width="1.8" height="27" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="0.9"/>
+  <rect x="100" y="145" width="2.2" height="40" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="1.1"/>
+  <rect x="82" y="165" width="1.5" height="20" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="0.75"/>
+  <rect x="118" y="162" width="1.5" height="23" fill="#228B22" stroke="#006400" stroke-width="0.5" rx="0.75"/>
+  
+  <!-- Large central flower (rose-like) -->
+  <g transform="translate(100,140)">
+    <!-- Outer petals -->
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5" transform="rotate(90)"/>
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5" transform="rotate(135)"/>
+    <!-- Middle petals -->
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#FFB6C1" stroke="#FF69B4" stroke-width="0.5" transform="rotate(22.5)"/>
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#FFB6C1" stroke="#FF69B4" stroke-width="0.5" transform="rotate(67.5)"/>
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#FFB6C1" stroke="#FF69B4" stroke-width="0.5" transform="rotate(112.5)"/>
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#FFB6C1" stroke="#FF69B4" stroke-width="0.5" transform="rotate(157.5)"/>
+    <!-- Inner petals -->
+    <ellipse cx="0" cy="0" rx="4" ry="3" fill="#FFC0CB" stroke="#FFB6C1" stroke-width="0.5" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="3" fill="#FFC0CB" stroke="#FFB6C1" stroke-width="0.5" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="3" fill="#FFC0CB" stroke="#FFB6C1" stroke-width="0.5" transform="rotate(120)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="0.3"/>
+    <circle cx="0" cy="0" r="1" fill="#FF8C00"/>
+  </g>
+  
+  <!-- Medium flowers -->
+  <g transform="translate(96,150)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.4" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.4" transform="rotate(72)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.4" transform="rotate(144)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.4" transform="rotate(216)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.4" transform="rotate(288)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="1.5" fill="#FFD700"/>
+    <circle cx="0" cy="0" r="0.8" fill="#FF8C00"/>
+  </g>
+  
+  <g transform="translate(104,155)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#FF6347" stroke="#DC143C" stroke-width="0.4" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#FF6347" stroke="#DC143C" stroke-width="0.4" transform="rotate(72)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#FF6347" stroke="#DC143C" stroke-width="0.4" transform="rotate(144)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#FF6347" stroke="#DC143C" stroke-width="0.4" transform="rotate(216)"/>
+    <ellipse cx="0" cy="0" rx="5" ry="4" fill="#FF6347" stroke="#DC143C" stroke-width="0.4" transform="rotate(288)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="1.5" fill="#FFD700"/>
+    <circle cx="0" cy="0" r="0.8" fill="#FF8C00"/>
+  </g>
+  
+  <!-- Small flowers -->
+  <g transform="translate(89,160)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(120)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(180)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(240)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.3" transform="rotate(300)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="1" fill="#FF8C00"/>
+  </g>
+  
+  <g transform="translate(111,158)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(120)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(180)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(240)"/>
+    <ellipse cx="0" cy="0" rx="3" ry="2.5" fill="#ADFF2F" stroke="#9ACD32" stroke-width="0.3" transform="rotate(300)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="1" fill="#FF8C00"/>
+  </g>
+  
+  <g transform="translate(83,165)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#87CEEB" stroke="#4682B4" stroke-width="0.3" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#87CEEB" stroke="#4682B4" stroke-width="0.3" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#87CEEB" stroke="#4682B4" stroke-width="0.3" transform="rotate(90)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#87CEEB" stroke="#4682B4" stroke-width="0.3" transform="rotate(135)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="0.8" fill="#FFD700"/>
+  </g>
+  
+  <g transform="translate(117,162)">
+    <!-- Petals -->
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#DDA0DD" stroke="#9370DB" stroke-width="0.3" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#DDA0DD" stroke="#9370DB" stroke-width="0.3" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#DDA0DD" stroke="#9370DB" stroke-width="0.3" transform="rotate(90)"/>
+    <ellipse cx="0" cy="0" rx="2.5" ry="2" fill="#DDA0DD" stroke="#9370DB" stroke-width="0.3" transform="rotate(135)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="0.8" fill="#FFD700"/>
+  </g>
+  
+  <!-- Flower buds (unopened flowers) -->
+  <ellipse cx="92" cy="145" rx="2" ry="4" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5" transform="rotate(-10 92 145)"/>
+  <ellipse cx="108" cy="148" rx="1.8" ry="3.5" fill="#DA70D6" stroke="#BA55D3" stroke-width="0.5" transform="rotate(15 108 148)"/>
+  <ellipse cx="85" cy="155" rx="1.5" ry="3" fill="#FFD700" stroke="#FFA500" stroke-width="0.5" transform="rotate(-20 85 155)"/>
+  <ellipse cx="115" cy="152" rx="1.5" ry="3" fill="#87CEEB" stroke="#4682B4" stroke-width="0.5" transform="rotate(25 115 152)"/>
+  
+  <!-- Leaves -->
+  <ellipse cx="90" cy="170" rx="4" ry="8" fill="#228B22" stroke="#006400" stroke-width="0.5" transform="rotate(-30 90 170)"/>
+  <ellipse cx="110" cy="172" rx="4" ry="8" fill="#228B22" stroke="#006400" stroke-width="0.5" transform="rotate(30 110 172)"/>
+  <ellipse cx="85" cy="175" rx="3.5" ry="7" fill="#32CD32" stroke="#228B22" stroke-width="0.5" transform="rotate(-45 85 175)"/>
+  <ellipse cx="115" cy="174" rx="3.5" ry="7" fill="#32CD32" stroke="#228B22" stroke-width="0.5" transform="rotate(45 115 174)"/>
+  <ellipse cx="100" cy="168" rx="5" ry="9" fill="#228B22" stroke="#006400" stroke-width="0.5" transform="rotate(0 100 168)"/>
+  <ellipse cx="95" cy="175" rx="3" ry="6" fill="#32CD32" stroke="#228B22" stroke-width="0.5" transform="rotate(-15 95 175)"/>
+  <ellipse cx="105" cy="176" rx="3" ry="6" fill="#32CD32" stroke="#228B22" stroke-width="0.5" transform="rotate(15 105 176)"/>
+  
+  <!-- Leaf veins -->
+  <line x1="90" y1="165" x2="90" y2="175" stroke="#006400" stroke-width="0.5" opacity="0.7"/>
+  <line x1="110" y1="167" x2="110" y2="177" stroke="#006400" stroke-width="0.5" opacity="0.7"/>
+  <line x1="100" y1="163" x2="100" y2="173" stroke="#006400" stroke-width="0.5" opacity="0.7"/>
+  
+  <!-- Butterflies visiting flowers -->
+  <g transform="translate(105,135)">
+    <ellipse cx="0" cy="0" rx="3" ry="1.5" fill="#FF69B4" opacity="0.8"/>
+    <ellipse cx="-1" cy="0" rx="2" ry="1" fill="#FFB6C1" opacity="0.8"/>
+    <ellipse cx="1" cy="0" rx="2" ry="1" fill="#FFB6C1" opacity="0.8"/>
+    <line x1="0" y1="-1" x2="0" y2="1" stroke="#000000" stroke-width="0.3"/>
+    <circle cx="-0.5" cy="-0.5" r="0.2" fill="#000000"/>
+    <circle cx="0.5" cy="-0.5" r="0.2" fill="#000000"/>
+  </g>
+  
+  <g transform="translate(88,152)">
+    <ellipse cx="0" cy="0" rx="2.5" ry="1.2" fill="#FFD700" opacity="0.8"/>
+    <ellipse cx="-0.8" cy="0" rx="1.5" ry="0.8" fill="#FFA500" opacity="0.8"/>
+    <ellipse cx="0.8" cy="0" rx="1.5" ry="0.8" fill="#FFA500" opacity="0.8"/>
+    <line x1="0" y1="-0.8" x2="0" y2="0.8" stroke="#000000" stroke-width="0.2"/>
+  </g>
+  
+  <!-- Bees around flowers -->
+  <ellipse cx="112" cy="145" rx="1.5" ry="0.8" fill="#FFD700"/>
+  <ellipse cx="112" cy="145" rx="1.2" ry="0.6" fill="#000000" opacity="0.3"/>
+  <line x1="111" y1="144" x2="113" y2="144" stroke="#000000" stroke-width="0.2"/>
+  <line x1="111" y1="146" x2="113" y2="146" stroke="#000000" stroke-width="0.2"/>
+  
+  <ellipse cx="94" cy="165" rx="1.5" ry="0.8" fill="#FFD700"/>
+  <ellipse cx="94" cy="165" rx="1.2" ry="0.6" fill="#000000" opacity="0.3"/>
+  <line x1="93" y1="164" x2="95" y2="164" stroke="#000000" stroke-width="0.2"/>
+  <line x1="93" y1="166" x2="95" y2="166" stroke="#000000" stroke-width="0.2"/>
+  
+  <!-- Fallen petals -->
+  <ellipse cx="75" cy="180" rx="2" ry="1" fill="#FF69B4" transform="rotate(25 75 180)" opacity="0.7"/>
+  <ellipse cx="125" cy="182" rx="1.8" ry="0.9" fill="#DA70D6" transform="rotate(-15 125 182)" opacity="0.7"/>
+  <ellipse cx="85" cy="185" rx="1.5" ry="0.8" fill="#FFD700" transform="rotate(45 85 185)" opacity="0.7"/>
+  <ellipse cx="115" cy="183" rx="1.5" ry="0.8" fill="#87CEEB" transform="rotate(-30 115 183)" opacity="0.7"/>
+  <ellipse cx="100" cy="187" rx="1.8" ry="1" fill="#FF6347" transform="rotate(10 100 187)" opacity="0.7"/>
+  <ellipse cx="90" cy="186" rx="1.2" ry="0.6" fill="#DDA0DD" transform="rotate(-20 90 186)" opacity="0.7"/>
+  <ellipse cx="110" cy="186" rx="1.2" ry="0.6" fill="#ADFF2F" transform="rotate(35 110 186)" opacity="0.7"/>
+  
+  <!-- Small grass around flowers -->
+  <rect x="70" y="175" width="0.8" height="10" fill="#228B22" rx="0.4"/>
+  <rect x="72" y="177" width="0.6" height="8" fill="#32CD32" rx="0.3"/>
+  <rect x="128" y="176" width="0.8" height="9" fill="#228B22" rx="0.4"/>
+  <rect x="130" y="178" width="0.6" height="7" fill="#32CD32" rx="0.3"/>
+  <rect x="75" y="172" width="0.5" height="13" fill="#9ACD32" rx="0.25"/>
+  <rect x="125" y="173" width="0.5" height="12" fill="#9ACD32" rx="0.25"/>
+  
+  <!-- Dewdrops on petals -->
+  <circle cx="98" cy="142" r="0.8" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="102" cy="157" r="0.6" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="91" cy="162" r="0.5" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  
+  <!-- Flower cluster name plate -->
+  <rect x="70" y="190" width="60" height="8" fill="#FF69B4" stroke="#FF1493" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">FLOWER CLUSTER</text>
+</svg>

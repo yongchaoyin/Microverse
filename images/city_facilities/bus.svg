@@ -1,0 +1,156 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="80" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Bus body main -->
+  <rect x="20" y="110" width="160" height="50" fill="#FFD700" stroke="#FFA500" stroke-width="2" rx="8"/>
+  <rect x="22" y="112" width="156" height="46" fill="#FFFF00" rx="6"/>
+  
+  <!-- Bus roof -->
+  <rect x="25" y="95" width="150" height="20" fill="#FFD700" stroke="#FFA500" stroke-width="2" rx="4"/>
+  <rect x="27" y="97" width="146" height="16" fill="#FFFF00" rx="2"/>
+  
+  <!-- Front windshield -->
+  <rect x="30" y="100" width="25" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="32" y="102" width="21" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Side windows -->
+  <rect x="65" y="100" width="20" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="67" y="102" width="16" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <rect x="90" y="100" width="20" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="92" y="102" width="16" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <rect x="115" y="100" width="20" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="117" y="102" width="16" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <rect x="140" y="100" width="20" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="142" y="102" width="16" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Rear window -->
+  <rect x="165" y="100" width="10" height="15" fill="#87CEEB" stroke="#4682B4" stroke-width="1" rx="2"/>
+  <rect x="167" y="102" width="6" height="11" fill="#B0E0E6" opacity="0.8" rx="1"/>
+  
+  <!-- Wheels -->
+  <circle cx="50" cy="170" r="18" fill="#2F2F2F" stroke="#000000" stroke-width="2"/>
+  <circle cx="50" cy="170" r="12" fill="#696969"/>
+  <circle cx="50" cy="170" r="6" fill="#C0C0C0"/>
+  <circle cx="50" cy="170" r="3" fill="#FFD700"/>
+  
+  <circle cx="150" cy="170" r="18" fill="#2F2F2F" stroke="#000000" stroke-width="2"/>
+  <circle cx="150" cy="170" r="12" fill="#696969"/>
+  <circle cx="150" cy="170" r="6" fill="#C0C0C0"/>
+  <circle cx="150" cy="170" r="3" fill="#FFD700"/>
+  
+  <!-- Wheel spokes -->
+  <line x1="50" y1="155" x2="50" y2="185" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="35" y1="170" x2="65" y2="170" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="40" y1="160" x2="60" y2="180" stroke="#A9A9A9" stroke-width="1"/>
+  <line x1="60" y1="160" x2="40" y2="180" stroke="#A9A9A9" stroke-width="1"/>
+  
+  <line x1="150" y1="155" x2="150" y2="185" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="135" y1="170" x2="165" y2="170" stroke="#A9A9A9" stroke-width="1.5"/>
+  <line x1="140" y1="160" x2="160" y2="180" stroke="#A9A9A9" stroke-width="1"/>
+  <line x1="160" y1="160" x2="140" y2="180" stroke="#A9A9A9" stroke-width="1"/>
+  
+  <!-- Headlights -->
+  <circle cx="25" cy="130" r="8" fill="#FFFF00" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="25" cy="130" r="6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="25" cy="130" r="3" fill="#FFFF00"/>
+  
+  <circle cx="25" cy="145" r="8" fill="#FFFF00" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="25" cy="145" r="6" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="25" cy="145" r="3" fill="#FFFF00"/>
+  
+  <!-- Taillights -->
+  <circle cx="175" cy="130" r="6" fill="#FF0000" stroke="#CC0000" stroke-width="1"/>
+  <circle cx="175" cy="130" r="4" fill="#FF4500"/>
+  
+  <circle cx="175" cy="145" r="6" fill="#FF0000" stroke="#CC0000" stroke-width="1"/>
+  <circle cx="175" cy="145" r="4" fill="#FF4500"/>
+  
+  <!-- Bus door -->
+  <rect x="60" y="120" width="15" height="35" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="1" rx="2"/>
+  <rect x="62" y="122" width="11" height="31" fill="#D3D3D3" rx="1"/>
+  <line x1="67" y1="125" x2="67" y2="150" stroke="#A9A9A9" stroke-width="1"/>
+  <circle cx="70" cy="137" r="1.5" fill="#FFD700"/>
+  
+  <!-- Bus route number display -->
+  <rect x="30" y="85" width="25" height="12" fill="#000000" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="42.5" y="93" text-anchor="middle" font-family="Arial" font-size="8" fill="#00FF00">42</text>
+  
+  <!-- Bus destination display -->
+  <rect x="60" y="85" width="80" height="12" fill="#000000" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="100" y="93" text-anchor="middle" font-family="Arial" font-size="6" fill="#00FF00">DOWNTOWN</text>
+  
+  <!-- Side mirrors -->
+  <ellipse cx="18" cy="120" rx="4" ry="3" fill="#2F2F2F" stroke="#000000" stroke-width="0.5"/>
+  <ellipse cx="18" cy="120" rx="3" ry="2" fill="#87CEEB" opacity="0.6"/>
+  
+  <ellipse cx="182" cy="120" rx="4" ry="3" fill="#2F2F2F" stroke="#000000" stroke-width="0.5"/>
+  <ellipse cx="182" cy="120" rx="3" ry="2" fill="#87CEEB" opacity="0.6"/>
+  
+  <!-- Bus company logo -->
+  <circle cx="100" cy="125" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+  <text x="100" y="129" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">CITY</text>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">BUS</text>
+  
+  <!-- Passenger silhouettes in windows -->
+  <circle cx="72" cy="107" r="3" fill="#000000" opacity="0.4"/>
+  <circle cx="97" cy="107" r="3" fill="#000000" opacity="0.4"/>
+  <circle cx="122" cy="107" r="3" fill="#000000" opacity="0.4"/>
+  <circle cx="147" cy="107" r="3" fill="#000000" opacity="0.4"/>
+  
+  <!-- Bus stop request button -->
+  <rect x="85" y="120" width="8" height="6" fill="#FF0000" stroke="#CC0000" stroke-width="0.5" rx="1"/>
+  <text x="89" y="125" text-anchor="middle" font-family="Arial" font-size="3" fill="#FFFFFF">STOP</text>
+  
+  <!-- License plate -->
+  <rect x="85" y="155" width="30" height="8" fill="#FFFFFF" stroke="#000000" stroke-width="1" rx="1"/>
+  <text x="100" y="161" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">BUS-001</text>
+  
+  <!-- Exhaust pipe -->
+  <rect x="175" y="160" width="10" height="4" fill="#696969" stroke="#2F2F2F" stroke-width="0.5" rx="1"/>
+  <ellipse cx="185" cy="162" rx="2" ry="1.5" fill="#2F2F2F"/>
+  
+  <!-- Exhaust smoke -->
+  <circle cx="190" cy="160" r="3" fill="#D3D3D3" opacity="0.6"/>
+  <circle cx="194" cy="157" r="2.5" fill="#D3D3D3" opacity="0.4"/>
+  <circle cx="197" cy="154" r="2" fill="#D3D3D3" opacity="0.3"/>
+  
+  <!-- Bus body details -->
+  <!-- Ventilation grilles -->
+  <rect x="25" y="115" width="15" height="3" fill="#A9A9A9" stroke="#696969" stroke-width="0.5"/>
+  <line x1="26" y1="116" x2="39" y2="116" stroke="#2F2F2F" stroke-width="0.3"/>
+  <line x1="26" y1="117" x2="39" y2="117" stroke="#2F2F2F" stroke-width="0.3"/>
+  
+  <!-- Emergency exit -->
+  <rect x="140" y="120" width="12" height="25" fill="#FF0000" stroke="#CC0000" stroke-width="1" rx="1"/>
+  <text x="146" y="130" text-anchor="middle" font-family="Arial" font-size="3" fill="#FFFFFF">EXIT</text>
+  <text x="146" y="135" text-anchor="middle" font-family="Arial" font-size="3" fill="#FFFFFF">ONLY</text>
+  
+  <!-- Wheelchair accessibility symbol -->
+  <rect x="45" y="140" width="8" height="8" fill="#0000FF" stroke="#000080" stroke-width="0.5" rx="1"/>
+  <circle cx="47" cy="143" r="1" fill="#FFFFFF"/>
+  <rect x="47" y="144" width="1" height="2" fill="#FFFFFF"/>
+  <rect x="46" y="145" width="3" height="1" fill="#FFFFFF"/>
+  <circle cx="49" cy="146" r="0.5" fill="#FFFFFF"/>
+  <circle cx="51" cy="146" r="0.5" fill="#FFFFFF"/>
+  
+  <!-- Body reflections -->
+  <ellipse cx="70" cy="125" rx="20" ry="4" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="130" cy="125" rx="20" ry="4" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="100" cy="105" rx="30" ry="3" fill="#FFFFFF" opacity="0.4"/>
+  
+  <!-- Tire treads -->
+  <circle cx="50" cy="170" r="16" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="3,3"/>
+  <circle cx="150" cy="170" r="16" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <!-- Ground contact -->
+  <ellipse cx="50" cy="186" rx="12" ry="3" fill="#000000" opacity="0.2"/>
+  <ellipse cx="150" cy="186" rx="12" ry="3" fill="#000000" opacity="0.2"/>
+  
+  <!-- Bus nameplate -->
+  <rect x="75" y="190" width="50" height="8" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">CITY BUS</text>
+</svg>

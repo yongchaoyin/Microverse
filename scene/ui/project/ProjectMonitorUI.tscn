@@ -1,0 +1,177 @@
+[gd_scene load_steps=2 format=3 uid="uid://d9z5r6s7t8u9v0"]
+
+[ext_resource type="Script" path="res://script/ui/project/ProjectMonitorUI.gd" id="1_b2c3d"]
+
+[node name="ProjectMonitorUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b2c3d")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -420.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 700.0
+grow_horizontal = 0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "项目: [项目名称]"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="StatusRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="StatusTitleLabel" type="Label" parent="Panel/VBox/StatusRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "状态:"
+
+[node name="StatusLabel" type="Label" parent="Panel/VBox/StatusRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "进行中"
+
+[node name="BudgetRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BudgetTitleLabel" type="Label" parent="Panel/VBox/BudgetRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "预算:"
+
+[node name="BudgetLabel" type="Label" parent="Panel/VBox/BudgetRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "50000 金币"
+
+[node name="DurationRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="DurationTitleLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "工期:"
+
+[node name="DurationLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/30 天 (剩余30天)"
+
+[node name="ProgressRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ProgressTitleLabel" type="Label" parent="Panel/VBox/ProgressRow"]
+layout_mode = 2
+text = "总进度:"
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/VBox/ProgressRow"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+max_value = 100.0
+show_percentage = true
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CurrentEpicRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="CurrentEpicLabel" type="Label" parent="Panel/VBox/CurrentEpicRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "当前阶段: 无"
+
+[node name="CurrentEpicProgress" type="ProgressBar" parent="Panel/VBox/CurrentEpicRow"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+max_value = 100.0
+show_percentage = true
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CompletedEpicsLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "已完成阶段:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CompletedEpicsList" type="VBoxContainer" parent="Panel/VBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+
+[node name="PendingEpicsLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "待完成阶段:"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PendingEpicsList" type="VBoxContainer" parent="Panel/VBox/ScrollContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="TeamRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TeamTitleLabel" type="Label" parent="Panel/VBox/TeamRow"]
+layout_mode = 2
+text = "团队成员:"
+
+[node name="TeamMembersLabel" type="Label" parent="Panel/VBox/TeamRow"]
+layout_mode = 2
+text = "无"
+autowrap_mode = 3
+
+[node name="HSeparator5" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="Panel/VBox/ButtonRow"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+text = "取消项目"

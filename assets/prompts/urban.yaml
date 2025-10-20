@@ -1,0 +1,79 @@
+meta:
+  pack: "urban-facilities-and-vehicles"
+  save_root: "res://assets/maps/urban/"
+  macros: "assets/prompts/_macros.yaml"
+defaults:
+  apply:
+    base_prompt: "@base"
+    negative_prompt: "@negative"
+street:
+  save_dir: "street"
+  items:
+    - { id: street_light_modern, file: "street_light_modern.png", size_px: [16, 32],
+        prompt: "@base, modern street light, slim pole, rectangular head, subtle glow",
+        negative: "@negative" }
+    - { id: street_light_classic, file: "street_light_classic.png", size_px: [16, 40],
+        prompt: "@base, classic street lamp, decorative top, warm glow, cast shadow",
+        negative: "@negative" }
+    - { id: traffic_light, file: "traffic_light.png", size_px: [16, 32],
+        prompt: "@base, traffic signal, red/yellow/green lights, simple frame, animation-ready",
+        negative: "@negative",
+        animation: { frames: 3, frame_duration_s: 0.4 } }
+    - { id: crosswalk, file: "crosswalk.png", size_px: [48, 16],
+        prompt: "@base, zebra crosswalk tile, white stripes on asphalt, crisp edges",
+        negative: "@negative" }
+    - { id: parking_lot, file: "parking_lot.png", size_px: [32, 48],
+        prompt: "@base, parking lot tile, white bay lines, asphalt base, oil stain detail",
+        negative: "@negative" }
+    - { id: bike_rack, file: "bike_rack.png", size_px: [24, 16],
+        prompt: "@base, metal bike rack, U-rails, sidewalk tile hint",
+        negative: "@negative" }
+    - { id: phone_booth, file: "phone_booth.png", size_px: [16, 24],
+        prompt: "@base, compact phone booth, glass panels, frame highlights",
+        negative: "@negative" }
+    - { id: atm, file: "atm.png", size_px: [16, 24],
+        prompt: "@base, street ATM, screen highlight, card slot, secure metal body",
+        negative: "@negative" }
+park:
+  save_dir: "park"
+  items:
+    - { id: swing_set, file: "swing_set.png", size_px: [48, 32],
+        prompt: "@base, playground swing set, A-frame, two swings, motion-ready",
+        negative: "@negative" }
+    - { id: slide, file: "slide.png", size_px: [32, 48],
+        prompt: "@base, playground slide, ladder and curved slide, cheerful colors",
+        negative: "@negative" }
+    - { id: sandbox, file: "sandbox.png", size_px: [48, 48],
+        prompt: "@base, square sandbox, wooden border, toys hint, soft shading",
+        negative: "@negative" }
+    - { id: picnic_table, file: "picnic_table.png", size_px: [32, 32],
+        prompt: "@base, wooden picnic table with benches, plank texture, park setting",
+        negative: "@negative" }
+    - { id: bbq_grill, file: "BBQ_grill.png", size_px: [16, 16],
+        prompt: "@base, compact BBQ grill, lid and legs, subtle ember hint",
+        negative: "@negative" }
+    - { id: gazebo, file: "gazebo.png", size_px: [64, 64],
+        prompt: "@base, small park gazebo, hex roof, posts, decorative railing",
+        negative: "@negative" }
+vehicles:
+  save_dir: "vehicles"
+  items:
+    - { id: car_red, file: "car_red.png", size_px: [32, 48],
+        prompt: "@base, red compact car, top-down, readable windows and wheels, parked",
+        negative: "@negative" }
+    - { id: car_blue, file: "car_blue.png", size_px: [32, 48],
+        prompt: "@base, blue compact car, similar size, consistent perspective, parked",
+        negative: "@negative" }
+    - { id: car_yellow_taxi, file: "car_yellow_taxi.png", size_px: [32, 48],
+        prompt: "@base, yellow taxi, roof sign, black stripe detail, parked",
+        negative: "@negative" }
+    - { id: truck, file: "truck.png", size_px: [48, 64],
+        prompt: "@base, small delivery truck, box body, cab and wheels readable, parked",
+        negative: "@negative" }
+    - { id: bicycle, file: "bicycle.png", size_px: [16, 24],
+        prompt: "@base, bicycle top-down, frame and wheels simplified yet clear, parked",
+        negative: "@negative" }
+    - { id: motorcycle, file: "motorcycle.png", size_px: [24, 32],
+        prompt: "@base, motorcycle top-down, handlebar and seat distinct, parked",
+        negative: "@negative" }
+

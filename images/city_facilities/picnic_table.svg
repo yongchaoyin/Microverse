@@ -1,0 +1,141 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="190" rx="80" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="85" ry="12" fill="#8FBC8F"/>
+  
+  <!-- Table top -->
+  <rect x="50" y="120" width="100" height="40" fill="#8B4513" stroke="#654321" stroke-width="2" rx="3"/>
+  <rect x="52" y="122" width="96" height="36" fill="#A0522D" rx="2"/>
+  
+  <!-- Table top wood planks -->
+  <line x1="50" y1="130" x2="150" y2="130" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <line x1="50" y1="140" x2="150" y2="140" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <line x1="50" y1="150" x2="150" y2="150" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Table legs -->
+  <!-- Front left leg -->
+  <rect x="60" y="160" width="8" height="25" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="62" y="162" width="4" height="21" fill="#A0522D"/>
+  
+  <!-- Front right leg -->
+  <rect x="132" y="160" width="8" height="25" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="134" y="162" width="4" height="21" fill="#A0522D"/>
+  
+  <!-- Back left leg -->
+  <rect x="60" y="160" width="6" height="25" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="61" y="162" width="4" height="21" fill="#8B4513"/>
+  
+  <!-- Back right leg -->
+  <rect x="134" y="160" width="6" height="25" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="135" y="162" width="4" height="21" fill="#8B4513"/>
+  
+  <!-- Table support beam -->
+  <rect x="65" y="175" width="70" height="6" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="67" y="177" width="66" height="2" fill="#A0522D"/>
+  
+  <!-- Bench seats -->
+  <!-- Left bench -->
+  <rect x="30" y="165" width="80" height="12" fill="#8B4513" stroke="#654321" stroke-width="1.5" rx="2"/>
+  <rect x="32" y="167" width="76" height="8" fill="#A0522D" rx="1"/>
+  
+  <!-- Right bench -->
+  <rect x="90" y="165" width="80" height="12" fill="#8B4513" stroke="#654321" stroke-width="1.5" rx="2"/>
+  <rect x="92" y="167" width="76" height="8" fill="#A0522D" rx="1"/>
+  
+  <!-- Bench wood planks -->
+  <line x1="30" y1="171" x2="110" y2="171" stroke="#654321" stroke-width="0.8" opacity="0.6"/>
+  <line x1="90" y1="171" x2="170" y2="171" stroke="#654321" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Bench legs -->
+  <!-- Left bench legs -->
+  <rect x="40" y="177" width="6" height="15" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  <rect x="94" y="177" width="6" height="15" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  
+  <!-- Right bench legs -->
+  <rect x="100" y="177" width="6" height="15" fill="#8B4513" stroke="#654321" stroke-width="0.8"/>
+  <rect x="154" y="177" width="6" height="15" fill="#8B4513" stroke-width="0.8"/>
+  
+  <!-- Bench support beams -->
+  <rect x="45" y="185" width="50" height="4" fill="#654321"/>
+  <rect x="105" y="185" width="50" height="4" fill="#654321"/>
+  
+  <!-- Table items -->
+  <!-- Picnic basket -->
+  <rect x="110" y="110" width="20" height="12" fill="#8B4513" stroke="#654321" stroke-width="1" rx="2"/>
+  <rect x="112" y="112" width="16" height="8" fill="#D2B48C" rx="1"/>
+  <rect x="118" y="108" width="8" height="4" fill="#8B4513" rx="1"/>
+  
+  <!-- Plates -->
+  <circle cx="80" cy="135" r="8" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="1"/>
+  <circle cx="80" cy="135" r="6" fill="#F5F5F5"/>
+  <circle cx="120" cy="145" r="8" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="1"/>
+  <circle cx="120" cy="145" r="6" fill="#F5F5F5"/>
+  
+  <!-- Food on plates -->
+  <circle cx="78" cy="133" r="3" fill="#FF6347"/>
+  <circle cx="82" cy="137" r="2.5" fill="#32CD32"/>
+  <circle cx="118" cy="143" r="3" fill="#FFD700"/>
+  <circle cx="122" cy="147" r="2" fill="#FF4500"/>
+  
+  <!-- Cups -->
+  <rect x="90" y="130" width="6" height="8" fill="#4169E1" stroke="#000080" stroke-width="0.5" rx="1"/>
+  <ellipse cx="93" cy="130" rx="3" ry="1" fill="#87CEEB"/>
+  <rect x="130" y="135" width="6" height="8" fill="#DC143C" stroke="#8B0000" stroke-width="0.5" rx="1"/>
+  <ellipse cx="133" cy="135" rx="3" ry="1" fill="#FFB6C1"/>
+  
+  <!-- Napkins -->
+  <rect x="65" y="125" width="8" height="8" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.5" rx="1"/>
+  <rect x="67" y="127" width="4" height="4" fill="#F0F8FF"/>
+  
+  <!-- Condiment bottles -->
+  <rect x="140" y="125" width="3" height="10" fill="#FF0000" stroke="#8B0000" stroke-width="0.3" rx="0.5"/>
+  <rect x="145" y="125" width="3" height="10" fill="#FFFF00" stroke="#FFD700" stroke-width="0.3" rx="0.5"/>
+  
+  <!-- Wood grain details -->
+  <line x1="55" y1="125" x2="145" y2="125" stroke="#654321" stroke-width="0.5" opacity="0.4"/>
+  <line x1="55" y1="135" x2="145" y2="135" stroke="#654321" stroke-width="0.5" opacity="0.4"/>
+  <line x1="55" y1="145" x2="145" y2="145" stroke="#654321" stroke-width="0.5" opacity="0.4"/>
+  <line x1="55" y1="155" x2="145" y2="155" stroke="#654321" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Bench wood grain -->
+  <line x1="35" y1="170" x2="105" y2="170" stroke="#654321" stroke-width="0.4" opacity="0.4"/>
+  <line x1="95" y1="170" x2="165" y2="170" stroke="#654321" stroke-width="0.4" opacity="0.4"/>
+  
+  <!-- Screws and bolts -->
+  <circle cx="58" cy="128" r="1" fill="#C0C0C0"/>
+  <circle cx="142" cy="128" r="1" fill="#C0C0C0"/>
+  <circle cx="58" cy="152" r="1" fill="#C0C0C0"/>
+  <circle cx="142" cy="152" r="1" fill="#C0C0C0"/>
+  
+  <!-- Bench screws -->
+  <circle cx="38" cy="170" r="0.8" fill="#C0C0C0"/>
+  <circle cx="102" cy="170" r="0.8" fill="#C0C0C0"/>
+  <circle cx="98" cy="170" r="0.8" fill="#C0C0C0"/>
+  <circle cx="162" cy="170" r="0.8" fill="#C0C0C0"/>
+  
+  <!-- Surrounding environment -->
+  <!-- Grass patches -->
+  <ellipse cx="40" cy="185" rx="15" ry="5" fill="#228B22"/>
+  <ellipse cx="160" cy="185" rx="15" ry="5" fill="#228B22"/>
+  <ellipse cx="100" cy="195" rx="20" ry="4" fill="#32CD32"/>
+  
+  <!-- Small flowers -->
+  <circle cx="35" cy="183" r="1.5" fill="#FF69B4"/>
+  <circle cx="45" cy="182" r="1.2" fill="#FF1493"/>
+  <circle cx="155" cy="183" r="1.5" fill="#FFB6C1"/>
+  <circle cx="165" cy="182" r="1.2" fill="#FFC0CB"/>
+  
+  <!-- Ants on table (small detail) -->
+  <circle cx="75" cy="140" r="0.5" fill="#000000"/>
+  <circle cx="125" cy="150" r="0.5" fill="#000000"/>
+  <circle cx="85" cy="145" r="0.4" fill="#000000"/>
+  
+  <!-- Table nameplate -->
+  <rect x="75" y="190" width="50" height="6" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <text x="100" y="194" text-anchor="middle" font-family="Arial" font-size="5" fill="#FFFFFF">PICNIC TABLE</text>
+  
+  <!-- Shadow under table -->
+  <ellipse cx="100" cy="185" rx="60" ry="8" fill="#000000" opacity="0.1"/>
+</svg>

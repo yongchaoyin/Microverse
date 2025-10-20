@@ -1,0 +1,87 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon background -->
+  <rect x="4" y="4" width="56" height="56" rx="8" ry="8" fill="#2F4F4F"/>
+  <rect x="6" y="6" width="52" height="52" rx="6" ry="6" fill="#708090"/>
+  <rect x="8" y="8" width="48" height="48" rx="4" ry="4" fill="#778899"/>
+  
+  <!-- Map grid -->
+  <line x1="8" y1="20" x2="56" y2="20" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  <line x1="8" y1="32" x2="56" y2="32" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  <line x1="8" y1="44" x2="56" y2="44" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  <line x1="20" y1="8" x2="20" y2="56" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  <line x1="32" y1="8" x2="32" y2="56" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  <line x1="44" y1="8" x2="44" y2="56" stroke="#A9A9A9" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Terrain features -->
+  <!-- Mountains -->
+  <path d="M 12 40 L 18 28 L 24 40 Z" fill="#696969"/>
+  <path d="M 12 40 L 18 30 L 24 40 Z" fill="#778899"/>
+  <path d="M 18 30 L 20 28 L 22 30" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Forest area -->
+  <circle cx="40" cy="16" r="3" fill="#228B22"/>
+  <circle cx="44" cy="18" r="2.5" fill="#32CD32"/>
+  <circle cx="36" cy="18" r="2.8" fill="#228B22"/>
+  <circle cx="42" cy="14" r="2.2" fill="#9ACD32"/>
+  <circle cx="38" cy="20" r="2.6" fill="#32CD32"/>
+  
+  <!-- Water body -->
+  <ellipse cx="48" cy="40" rx="6" ry="4" fill="#4682B4"/>
+  <ellipse cx="48" cy="40" rx="5" ry="3" fill="#87CEEB"/>
+  <ellipse cx="48" cy="40" rx="4" ry="2" fill="#B0E0E6"/>
+  
+  <!-- Desert/plains -->
+  <ellipse cx="16" cy="48" rx="4" ry="3" fill="#F4A460"/>
+  <ellipse cx="16" cy="48" rx="3" ry="2" fill="#DEB887"/>
+  
+  <!-- Roads/paths -->
+  <path d="M 8 50 Q 20 45 32 50 Q 44 55 56 50" stroke="#8B4513" stroke-width="1.5" fill="none"/>
+  <path d="M 8 50 Q 20 45 32 50 Q 44 55 56 50" stroke="#A0522D" stroke-width="1" fill="none"/>
+  
+  <!-- Cities/settlements -->
+  <rect x="28" y="28" width="4" height="4" fill="#696969"/>
+  <rect x="28" y="28" width="4" height="2" fill="#A9A9A9"/>
+  <rect x="29" y="26" width="2" height="2" fill="#696969"/>
+  
+  <rect x="14" y="14" width="3" height="3" fill="#8B4513"/>
+  <rect x="14" y="14" width="3" height="1.5" fill="#A0522D"/>
+  <rect x="14.5" y="12.5" width="2" height="1.5" fill="#8B4513"/>
+  
+  <!-- Player position indicator -->
+  <circle cx="32" cy="32" r="2.5" fill="#FF0000"/>
+  <circle cx="32" cy="32" r="2" fill="#FF4500"/>
+  <circle cx="32" cy="32" r="1.5" fill="#FFFFFF"/>
+  <circle cx="32" cy="32" r="0.8" fill="#FF0000"/>
+  
+  <!-- Direction indicator -->
+  <path d="M 32 28 L 34 30 L 32 26 L 30 30 Z" fill="#FFFFFF"/>
+  
+  <!-- Compass rose -->
+  <g transform="translate(52,12)">
+    <circle cx="0" cy="0" r="4" fill="#2F4F4F" opacity="0.8"/>
+    <circle cx="0" cy="0" r="3.5" fill="#708090" opacity="0.9"/>
+    
+    <!-- North -->
+    <path d="M 0 -3 L 1 -1 L 0 -2 L -1 -1 Z" fill="#FF0000"/>
+    <text x="0" y="-4.5" text-anchor="middle" font-family="Arial" font-size="3" fill="#FFFFFF">N</text>
+    
+    <!-- East -->
+    <path d="M 3 0 L 1 1 L 2 0 L 1 -1 Z" fill="#FFFFFF"/>
+    
+    <!-- South -->
+    <path d="M 0 3 L 1 1 L 0 2 L -1 1 Z" fill="#FFFFFF"/>
+    
+    <!-- West -->
+    <path d="M -3 0 L -1 1 L -2 0 L -1 -1 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Border highlight -->
+  <rect x="4" y="4" width="56" height="56" rx="8" ry="8" fill="none" stroke="#C0C0C0" stroke-width="1" opacity="0.8"/>
+  <rect x="6" y="6" width="52" height="52" rx="6" ry="6" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Corner decorations -->
+  <circle cx="10" cy="10" r="1" fill="#FFD700" opacity="0.8"/>
+  <circle cx="54" cy="10" r="1" fill="#FFD700" opacity="0.8"/>
+  <circle cx="10" cy="54" r="1" fill="#FFD700" opacity="0.8"/>
+  <circle cx="54" cy="54" r="1" fill="#FFD700" opacity="0.8"/>
+</svg>

@@ -42,6 +42,9 @@ RelationshipManager="*res://script/ai/relationship/RelationshipManager.gd"
 SaveManager="*res://script/save/SaveManager.gd"
 ConflictSystem="*res://script/conflict/ConflictSystem.gd"
 ObservationUI="*res://script/ui/observation/ObservationUI.gd"
+ProjectTypeTemplates="*res://script/project/ProjectTypeTemplates.gd"
+ProjectDifficultyConfig="*res://script/project/ProjectDifficultyConfig.gd"
+ProjectSystem="*res://script/project/ProjectSystem.gd"
 
 [display]
 

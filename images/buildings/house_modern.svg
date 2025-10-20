@@ -1,0 +1,82 @@
+<svg width="64" height="80" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面阴影 -->
+  <ellipse cx="32" cy="75" rx="28" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- 房屋主体墙壁 -->
+  <rect x="8" y="32" width="48" height="40" fill="#FAFAFA"/>
+  
+  <!-- 平屋顶 -->
+  <rect x="6" y="28" width="52" height="8" fill="#424242"/>
+  
+  <!-- 屋顶边缘 -->
+  <rect x="4" y="26" width="56" height="4" fill="#616161"/>
+  
+  <!-- 左侧墙面 -->
+  <rect x="8" y="32" width="20" height="40" fill="#ECEFF1"/>
+  
+  <!-- 右侧墙面 -->
+  <rect x="36" y="32" width="20" height="40" fill="#FAFAFA"/>
+  
+  <!-- 大窗户 -->
+  <rect x="12" y="36" width="16" height="20" fill="#81D4FA"/>
+  <rect x="11" y="35" width="18" height="22" fill="#263238"/>
+  <rect x="12" y="36" width="16" height="20" fill="#81D4FA"/>
+  
+  <!-- 窗户分割线 -->
+  <rect x="11" y="45" width="18" height="2" fill="#263238"/>
+  <rect x="19" y="35" width="2" height="22" fill="#263238"/>
+  
+  <!-- 窗户反光 -->
+  <rect x="13" y="37" width="6" height="6" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="21" y="37" width="6" height="6" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- 前门 -->
+  <rect x="40" y="52" width="12" height="20" fill="#37474F"/>
+  <rect x="41" y="53" width="10" height="18" fill="#455A64"/>
+  
+  <!-- 门把手 -->
+  <circle cx="49" cy="62" r="1" fill="#FFC107"/>
+  
+  <!-- 门框 -->
+  <rect x="39" y="51" width="14" height="2" fill="#263238"/>
+  <rect x="39" y="51" width="2" height="21" fill="#263238"/>
+  <rect x="51" y="51" width="2" height="21" fill="#263238"/>
+  
+  <!-- 小窗户 -->
+  <rect x="40" y="36" width="8" height="8" fill="#81D4FA"/>
+  <rect x="39" y="35" width="10" height="10" fill="#263238"/>
+  <rect x="40" y="36" width="8" height="8" fill="#81D4FA"/>
+  <rect x="43" y="35" width="2" height="10" fill="#263238"/>
+  <rect x="39" y="39" width="10" height="2" fill="#263238"/>
+  
+  <!-- 小窗户反光 -->
+  <rect x="41" y="37" width="2" height="2" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- 阳台 -->
+  <rect x="32" y="48" width="4" height="24" fill="#ECEFF1"/>
+  
+  <!-- 阳台栏杆 -->
+  <rect x="30" y="48" width="8" height="2" fill="#90A4AE"/>
+  <rect x="30" y="48" width="2" height="8" fill="#90A4AE"/>
+  <rect x="36" y="48" width="2" height="8" fill="#90A4AE"/>
+  <rect x="33" y="48" width="2" height="8" fill="#90A4AE"/>
+  
+  <!-- 前院 -->
+  <rect x="4" y="72" width="56" height="8" fill="#E8F5E8"/>
+  
+  <!-- 现代景观 -->
+  <rect x="8" y="74" width="12" height="4" fill="#4CAF50"/>
+  <rect x="44" y="74" width="12" height="4" fill="#4CAF50"/>
+  
+  <!-- 装饰灌木 -->
+  <circle cx="14" cy="76" r="2" fill="#2E7D32"/>
+  <circle cx="50" cy="76" r="2" fill="#2E7D32"/>
+  
+  <!-- 现代小径 -->
+  <rect x="28" y="72" width="8" height="8" fill="#CFD8DC"/>
+  <rect x="29" y="73" width="6" height="6" fill="#ECEFF1"/>
+  
+  <!-- 装饰线条 -->
+  <rect x="8" y="42" width="20" height="1" fill="#B0BEC5"/>
+  <rect x="36" y="42" width="20" height="1" fill="#B0BEC5"/>
+</svg>

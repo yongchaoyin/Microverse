@@ -1,0 +1,267 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="50" ry="7" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="48" ry="6" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="45" ry="5" fill="#90EE90"/>
+  <ellipse cx="100" cy="185" rx="42" ry="4" fill="#98FB98"/>
+  
+  <!-- Lake water (main body) -->
+  <ellipse cx="100" cy="130" rx="45" ry="35" fill="#4682B4"/>
+  <ellipse cx="100" cy="130" rx="43" ry="33" fill="#5F9EA0"/>
+  <ellipse cx="100" cy="130" rx="40" ry="30" fill="#87CEEB"/>
+  <ellipse cx="100" cy="130" rx="38" ry="28" fill="#B0E0E6"/>
+  <ellipse cx="100" cy="130" rx="35" ry="25" fill="#E0F6FF"/>
+  
+  <!-- Water depth gradient -->
+  <ellipse cx="100" cy="130" rx="35" ry="25" fill="#4169E1" opacity="0.3"/>
+  <ellipse cx="100" cy="130" rx="30" ry="20" fill="#191970" opacity="0.2"/>
+  <ellipse cx="100" cy="130" rx="25" ry="15" fill="#000080" opacity="0.15"/>
+  <ellipse cx="100" cy="130" rx="20" ry="12" fill="#00008B" opacity="0.1"/>
+  <ellipse cx="100" cy="130" rx="15" ry="8" fill="#191970" opacity="0.08"/>
+  
+  <!-- Water surface reflections -->
+  <ellipse cx="90" cy="115" rx="12" ry="4" fill="#FFFFFF" opacity="0.5"/>
+  <ellipse cx="120" cy="110" rx="10" ry="3.5" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="75" cy="125" rx="8" ry="3" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="125" cy="140" rx="15" ry="5" fill="#FFFFFF" opacity="0.5"/>
+  <ellipse cx="85" cy="145" rx="9" ry="3.2" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="110" cy="150" rx="11" ry="3.8" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="100" cy="105" rx="6" ry="2" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Water ripples -->
+  <ellipse cx="100" cy="130" rx="42" ry="32" fill="none" stroke="#FFFFFF" stroke-width="0.6" opacity="0.3"/>
+  <ellipse cx="100" cy="130" rx="38" ry="28" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25"/>
+  <ellipse cx="100" cy="130" rx="34" ry="24" fill="none" stroke="#FFFFFF" stroke-width="0.4" opacity="0.2"/>
+  <ellipse cx="100" cy="130" rx="30" ry="20" fill="none" stroke="#FFFFFF" stroke-width="0.4" opacity="0.15"/>
+  <ellipse cx="100" cy="130" rx="26" ry="16" fill="none" stroke="#FFFFFF" stroke-width="0.3" opacity="0.1"/>
+  
+  <!-- Lake shore/edge -->
+  <ellipse cx="100" cy="130" rx="46" ry="36" fill="none" stroke="#8B4513" stroke-width="2"/>
+  <ellipse cx="100" cy="130" rx="47" ry="37" fill="none" stroke="#A0522D" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="100" cy="130" rx="48" ry="38" fill="none" stroke="#D2691E" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Rocky shore areas -->
+  <ellipse cx="65" cy="105" rx="6" ry="4" fill="#696969"/>
+  <ellipse cx="65" cy="105" rx="5" ry="3.2" fill="#778899"/>
+  <ellipse cx="65" cy="105" rx="3.8" ry="2.4" fill="#A9A9A9"/>
+  
+  <ellipse cx="135" cy="110" rx="7" ry="5" fill="#696969"/>
+  <ellipse cx="135" cy="110" rx="5.8" ry="4.2" fill="#778899"/>
+  <ellipse cx="135" cy="110" rx="4.4" ry="3.2" fill="#A9A9A9"/>
+  
+  <ellipse cx="70" cy="155" rx="5.5" ry="4.2" fill="#696969"/>
+  <ellipse cx="70" cy="155" rx="4.6" ry="3.5" fill="#778899"/>
+  <ellipse cx="70" cy="155" rx="3.5" ry="2.6" fill="#A9A9A9"/>
+  
+  <ellipse cx="130" cy="150" rx="6.5" ry="4.8" fill="#696969"/>
+  <ellipse cx="130" cy="150" rx="5.4" ry="4" fill="#778899"/>
+  <ellipse cx="130" cy="150" rx="4.1" ry="3" fill="#A9A9A9"/>
+  
+  <ellipse cx="85" cy="95" rx="4.5" ry="3.5" fill="#696969"/>
+  <ellipse cx="85" cy="95" rx="3.7" ry="2.9" fill="#778899"/>
+  <ellipse cx="85" cy="95" rx="2.8" ry="2.2" fill="#A9A9A9"/>
+  
+  <ellipse cx="115" cy="165" rx="5" ry="3.8" fill="#696969"/>
+  <ellipse cx="115" cy="165" rx="4.2" ry="3.2" fill="#778899"/>
+  <ellipse cx="115" cy="165" rx="3.2" ry="2.4" fill="#A9A9A9"/>
+  
+  <!-- Smaller rocks and pebbles -->
+  <circle cx="75" cy="115" r="1.8" fill="#A9A9A9"/>
+  <circle cx="125" cy="120" r="2.2" fill="#A9A9A9"/>
+  <circle cx="80" cy="145" r="1.5" fill="#696969"/>
+  <circle cx="120" cy="140" r="1.9" fill="#696969"/>
+  <circle cx="90" cy="100" r="1.3" fill="#A9A9A9"/>
+  <circle cx="110" cy="160" r="1.6" fill="#A9A9A9"/>
+  <circle cx="95" cy="165" r="1.1" fill="#696969"/>
+  <circle cx="105" cy="95" r="1.4" fill="#696969"/>
+  
+  <!-- Aquatic vegetation -->
+  <!-- Reeds and cattails -->
+  <ellipse cx="60" cy="120" rx="2" ry="15" fill="#228B22"/>
+  <ellipse cx="60" cy="120" rx="1.5" ry="14" fill="#32CD32"/>
+  <ellipse cx="60" cy="108" rx="2.5" ry="4" fill="#8B4513"/>
+  <ellipse cx="60" cy="108" rx="2" ry="3.2" fill="#A0522D"/>
+  
+  <ellipse cx="62" cy="125" rx="1.8" ry="12" fill="#228B22"/>
+  <ellipse cx="62" cy="125" rx="1.3" ry="11" fill="#32CD32"/>
+  
+  <ellipse cx="58" cy="118" rx="1.5" ry="10" fill="#228B22"/>
+  <ellipse cx="58" cy="118" rx="1.1" ry="9" fill="#32CD32"/>
+  <ellipse cx="58" cy="110" rx="2" ry="3" fill="#8B4513"/>
+  <ellipse cx="58" cy="110" rx="1.6" ry="2.4" fill="#A0522D"/>
+  
+  <ellipse cx="140" cy="125" rx="2.2" ry="16" fill="#228B22"/>
+  <ellipse cx="140" cy="125" rx="1.7" ry="15" fill="#32CD32"/>
+  <ellipse cx="140" cy="111" rx="2.8" ry="4.5" fill="#8B4513"/>
+  <ellipse cx="140" cy="111" rx="2.3" ry="3.8" fill="#A0522D"/>
+  
+  <ellipse cx="142" cy="130" rx="2" ry="14" fill="#228B22"/>
+  <ellipse cx="142" cy="130" rx="1.5" ry="13" fill="#32CD32"/>
+  
+  <ellipse cx="138" cy="120" rx="1.7" ry="11" fill="#228B22"/>
+  <ellipse cx="138" cy="120" rx="1.2" ry="10" fill="#32CD32"/>
+  <ellipse cx="138" cy="112" rx="2.2" ry="3.2" fill="#8B4513"/>
+  <ellipse cx="138" cy="112" rx="1.8" ry="2.6" fill="#A0522D"/>
+  
+  <!-- Water lilies and lily pads -->
+  <ellipse cx="85" cy="120" rx="5" ry="4.5" fill="#228B22"/>
+  <ellipse cx="85" cy="120" rx="4.3" ry="3.8" fill="#32CD32"/>
+  <ellipse cx="85" cy="120" rx="3.5" ry="3" fill="#9ACD32"/>
+  <path d="M 85 120 L 89 116" stroke="#228B22" stroke-width="1" fill="none"/>
+  
+  <circle cx="85" cy="120" r="2.5" fill="#FFB6C1"/>
+  <circle cx="85" cy="120" r="2" fill="#FF69B4"/>
+  <circle cx="85" cy="120" r="1.5" fill="#FFFFFF"/>
+  <circle cx="85" cy="120" r="0.8" fill="#FFD700"/>
+  
+  <ellipse cx="115" cy="135" rx="4.5" ry="4" fill="#228B22"/>
+  <ellipse cx="115" cy="135" rx="3.8" ry="3.3" fill="#32CD32"/>
+  <ellipse cx="115" cy="135" rx="3" ry="2.5" fill="#9ACD32"/>
+  <path d="M 115 135 L 119 131" stroke="#228B22" stroke-width="1" fill="none"/>
+  
+  <circle cx="115" cy="135" r="2.2" fill="#FFB6C1"/>
+  <circle cx="115" cy="135" r="1.8" fill="#FF69B4"/>
+  <circle cx="115" cy="135" r="1.3" fill="#FFFFFF"/>
+  <circle cx="115" cy="135" r="0.7" fill="#FFD700"/>
+  
+  <ellipse cx="95" cy="145" rx="4" ry="3.5" fill="#228B22"/>
+  <ellipse cx="95" cy="145" rx="3.3" ry="2.8" fill="#32CD32"/>
+  <ellipse cx="95" cy="145" rx="2.5" ry="2" fill="#9ACD32"/>
+  <path d="M 95 145 L 98 141" stroke="#228B22" stroke-width="0.8" fill="none"/>
+  
+  <circle cx="95" cy="145" r="2" fill="#FFB6C1"/>
+  <circle cx="95" cy="145" r="1.6" fill="#FF69B4"/>
+  <circle cx="95" cy="145" r="1.1" fill="#FFFFFF"/>
+  <circle cx="95" cy="145" r="0.6" fill="#FFD700"/>
+  
+  <!-- Submerged aquatic plants -->
+  <ellipse cx="75" cy="130" rx="1.5" ry="8" fill="#228B22" opacity="0.6"/>
+  <ellipse cx="75" cy="130" rx="1.2" ry="7" fill="#32CD32" opacity="0.5"/>
+  <ellipse cx="77" cy="132" rx="1.3" ry="6" fill="#228B22" opacity="0.5"/>
+  <ellipse cx="77" cy="132" rx="1" ry="5" fill="#32CD32" opacity="0.4"/>
+  
+  <ellipse cx="125" cy="125" rx="1.8" ry="9" fill="#228B22" opacity="0.6"/>
+  <ellipse cx="125" cy="125" rx="1.4" ry="8" fill="#32CD32" opacity="0.5"/>
+  <ellipse cx="123" cy="128" rx="1.5" ry="7" fill="#228B22" opacity="0.5"/>
+  <ellipse cx="123" cy="128" rx="1.1" ry="6" fill="#32CD32" opacity="0.4"/>
+  
+  <!-- Fish in the lake -->
+  <ellipse cx="90" cy="125" rx="4" ry="2" fill="#FFA500" opacity="0.7"/>
+  <ellipse cx="88" cy="125" rx="1.5" ry="1.2" fill="#FF8C00" opacity="0.7"/>
+  <path d="M 94 125 L 97 123 L 97 127 Z" fill="#FFA500" opacity="0.7"/>
+  <circle cx="88.5" cy="124.5" r="0.3" fill="#000000" opacity="0.7"/>
+  
+  <ellipse cx="110" cy="140" rx="3.5" ry="1.8" fill="#FF6347" opacity="0.6"/>
+  <ellipse cx="108.2" cy="140" rx="1.3" ry="1" fill="#FF4500" opacity="0.6"/>
+  <path d="M 113.5 140 L 116 138.5 L 116 141.5 Z" fill="#FF6347" opacity="0.6"/>
+  <circle cx="108.7" cy="139.5" r="0.25" fill="#000000" opacity="0.6"/>
+  
+  <ellipse cx="105" cy="115" rx="3" ry="1.5" fill="#4169E1" opacity="0.5"/>
+  <ellipse cx="103.5" cy="115" rx="1.1" ry="0.8" fill="#0000FF" opacity="0.5"/>
+  <path d="M 108 115 L 110 113.8 L 110 116.2 Z" fill="#4169E1" opacity="0.5"/>
+  <circle cx="104" cy="114.7" r="0.2" fill="#000000" opacity="0.5"/>
+  
+  <!-- School of small fish -->
+  <ellipse cx="82" cy="135" rx="1.5" ry="0.8" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="84" cy="136" rx="1.3" ry="0.7" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="80" cy="137" rx="1.4" ry="0.75" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="83" cy="138" rx="1.2" ry="0.6" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="81" cy="134" rx="1.3" ry="0.7" fill="#32CD32" opacity="0.6"/>
+  
+  <!-- Dragonflies -->
+  <ellipse cx="70" cy="100" rx="2.5" ry="0.6" fill="#4169E1" opacity="0.8"/>
+  <ellipse cx="68.8" cy="100" rx="1" ry="0.4" fill="#0000FF" opacity="0.8"/>
+  <line x1="66.5" y1="100" x2="64" y2="99" stroke="#000000" stroke-width="0.4" opacity="0.8"/>
+  <line x1="66.5" y1="100" x2="64" y2="101" stroke="#000000" stroke-width="0.4" opacity="0.8"/>
+  <ellipse cx="71.5" cy="99.3" rx="2" ry="0.4" fill="#87CEEB" opacity="0.6"/>
+  <ellipse cx="71.5" cy="100.7" rx="2" ry="0.4" fill="#87CEEB" opacity="0.6"/>
+  
+  <ellipse cx="130" cy="105" rx="2.3" ry="0.55" fill="#32CD32" opacity="0.8"/>
+  <ellipse cx="129" cy="105" rx="0.9" ry="0.35" fill="#228B22" opacity="0.8"/>
+  <line x1="127" y1="105" x2="124.8" y2="104.3" stroke="#000000" stroke-width="0.35" opacity="0.8"/>
+  <line x1="127" y1="105" x2="124.8" y2="105.7" stroke="#000000" stroke-width="0.35" opacity="0.8"/>
+  <ellipse cx="131.3" cy="104.5" rx="1.8" ry="0.35" fill="#98FB98" opacity="0.6"/>
+  <ellipse cx="131.3" cy="105.5" rx="1.8" ry="0.35" fill="#98FB98" opacity="0.6"/>
+  
+  <!-- Birds on the lake -->
+  <ellipse cx="100" cy="118" rx="3" ry="1.5" fill="#FFFFFF"/>
+  <ellipse cx="100" cy="118" rx="2.5" ry="1.2" fill="#F8F8FF"/>
+  <ellipse cx="98" cy="117" rx="1.2" ry="0.8" fill="#FFFFFF"/>
+  <circle cx="97.5" cy="116.8" r="0.2" fill="#000000"/>
+  <path d="M 96.8 116.8 L 96 116.5" stroke="#FFA500" stroke-width="0.3" fill="none"/>
+  <ellipse cx="101.5" cy="118.5" rx="1.8" ry="0.6" fill="#F8F8FF"/>
+  
+  <ellipse cx="120" cy="125" rx="2.5" ry="1.2" fill="#696969"/>
+  <ellipse cx="120" cy="125" rx="2" ry="1" fill="#778899"/>
+  <ellipse cx="118.2" cy="124.2" rx="1" ry="0.7" fill="#696969"/>
+  <circle cx="117.8" cy="124" r="0.15" fill="#000000"/>
+  <path d="M 117.2 124 L 116.5 123.8" stroke="#FFA500" stroke-width="0.25" fill="none"/>
+  <ellipse cx="121.2" cy="125.3" rx="1.5" ry="0.5" fill="#778899"/>
+  
+  <!-- Butterflies around the lake -->
+  <ellipse cx="75" cy="90" rx="2" ry="1.5" fill="#FF69B4" opacity="0.8"/>
+  <ellipse cx="78" cy="90" rx="2" ry="1.5" fill="#FF1493" opacity="0.8"/>
+  <ellipse cx="75" cy="93" rx="1.5" ry="1" fill="#FFB6C1" opacity="0.8"/>
+  <ellipse cx="78" cy="93" rx="1.5" ry="1" fill="#FF69B4" opacity="0.8"/>
+  <line x1="76.5" y1="90" x2="76.5" y2="95" stroke="#000000" stroke-width="0.4"/>
+  <line x1="76.5" y1="90" x2="74.5" y2="88" stroke="#000000" stroke-width="0.3"/>
+  <line x1="76.5" y1="90" x2="78.5" y2="88" stroke="#000000" stroke-width="0.3"/>
+  
+  <ellipse cx="125" cy="95" rx="1.8" ry="1.3" fill="#FFD700" opacity="0.8"/>
+  <ellipse cx="127.5" cy="95" rx="1.8" ry="1.3" fill="#FFA500" opacity="0.8"/>
+  <ellipse cx="125" cy="97.5" rx="1.3" ry="0.9" fill="#FFFF00" opacity="0.8"/>
+  <ellipse cx="127.5" cy="97.5" rx="1.3" ry="0.9" fill="#FFD700" opacity="0.8"/>
+  <line x1="126.25" y1="95" x2="126.25" y2="99" stroke="#000000" stroke-width="0.4"/>
+  <line x1="126.25" y1="95" x2="124.25" y2="93.5" stroke="#000000" stroke-width="0.3"/>
+  <line x1="126.25" y1="95" x2="128.25" y2="93.5" stroke="#000000" stroke-width="0.3"/>
+  
+  <!-- Grass and vegetation around lake -->
+  <ellipse cx="50" cy="140" rx="3" ry="12" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="52" cy="142" rx="2.5" ry="10" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="48" cy="138" rx="2.8" ry="11" fill="#9ACD32" opacity="0.5"/>
+  
+  <ellipse cx="150" cy="135" rx="3.2" ry="13" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="152" cy="137" rx="2.7" ry="11" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="148" cy="133" rx="3" ry="12" fill="#9ACD32" opacity="0.5"/>
+  
+  <ellipse cx="80" cy="175" rx="2.5" ry="8" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="82" cy="177" rx="2" ry="6.5" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="78" cy="173" rx="2.3" ry="7.5" fill="#9ACD32" opacity="0.5"/>
+  
+  <ellipse cx="120" cy="175" rx="2.8" ry="9" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="122" cy="177" rx="2.3" ry="7" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="118" cy="173" rx="2.5" ry="8" fill="#9ACD32" opacity="0.5"/>
+  
+  <!-- Small wildflowers around lake -->
+  <circle cx="65" cy="170" r="1.2" fill="#FFD700"/>
+  <circle cx="65" cy="170" r="0.9" fill="#FFA500"/>
+  <circle cx="65" cy="170" r="0.5" fill="#FF8C00"/>
+  
+  <circle cx="135" cy="175" r="1" fill="#FF69B4"/>
+  <circle cx="135" cy="175" r="0.7" fill="#FF1493"/>
+  <circle cx="135" cy="175" r="0.4" fill="#FFFFFF"/>
+  
+  <circle cx="85" cy="85" r="1.1" fill="#9370DB"/>
+  <circle cx="85" cy="85" r="0.8" fill="#8A2BE2"/>
+  <circle cx="85" cy="85" r="0.4" fill="#FFFFFF"/>
+  
+  <circle cx="115" cy="85" r="0.9" fill="#FF4500"/>
+  <circle cx="115" cy="85" r="0.6" fill="#FF6347"/>
+  <circle cx="115" cy="85" r="0.3" fill="#FFD700"/>
+  
+  <!-- Water bubbles and foam -->
+  <circle cx="88" cy="122" r="0.6" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="112" cy="128" r="0.4" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="95" cy="138" r="0.5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="105" cy="115" r="0.3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="78" cy="135" r="0.4" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="122" cy="142" r="0.5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="92" cy="148" r="0.3" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="108" cy="108" r="0.4" fill="#FFFFFF" opacity="0.5"/>
+  
+  <!-- Lake name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#4682B4" stroke="#191970" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">LAKE</text>
+</svg>

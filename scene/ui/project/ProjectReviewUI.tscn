@@ -1,0 +1,179 @@
+[gd_scene load_steps=2 format=3 uid="uid://e0a6s7t8u9v0w1"]
+
+[ext_resource type="Script" path="res://script/ui/project/ProjectReviewUI.gd" id="1_c3d4e"]
+
+[node name="ProjectReviewUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c3d4e")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="ResultLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "✓ 项目验收成功!"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ProjectNameLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "项目名称: [项目名称]"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CompletionRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CompletionTitleLabel" type="Label" parent="Panel/VBox/CompletionRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "完成度:"
+
+[node name="CompletionLabel" type="Label" parent="Panel/VBox/CompletionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "★★★★★ 100%"
+
+[node name="QualityRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="QualityTitleLabel" type="Label" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "质量评分:"
+
+[node name="QualityLabel" type="Label" parent="Panel/VBox/QualityRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "85 分"
+
+[node name="DurationRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="DurationTitleLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "实际工期:"
+
+[node name="DurationLabel" type="Label" parent="Panel/VBox/DurationRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "30 天 (准时)"
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SummaryRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SummaryTitleLabel" type="Label" parent="Panel/VBox/SummaryRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "评估总结:"
+
+[node name="SummaryText" type="RichTextLabel" parent="Panel/VBox/SummaryRow"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "项目整体完成度良好，符合预期目标。"
+fit_content = true
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="StrengthsRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="StrengthsTitleLabel" type="Label" parent="Panel/VBox/StrengthsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "优点:"
+
+[node name="StrengthsList" type="VBoxContainer" parent="Panel/VBox/StrengthsRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="WeaknessesRow" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="WeaknessesTitleLabel" type="Label" parent="Panel/VBox/WeaknessesRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "缺点:"
+
+[node name="WeaknessesList" type="VBoxContainer" parent="Panel/VBox/WeaknessesRow"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HSeparator5" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BonusSection" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BonusTitleLabel" type="Label" parent="Panel/VBox/BonusSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "奖金分配:"
+
+[node name="BonusTotalLabel" type="Label" parent="Panel/VBox/BonusSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+text = "总奖金: 50000 金币"
+
+[node name="BonusBreakdownList" type="VBoxContainer" parent="Panel/VBox/BonusSection"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HSeparator6" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="Panel/VBox/ButtonRow"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "确认"

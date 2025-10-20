@@ -1,0 +1,184 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="190" rx="95" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Background grass area -->
+  <rect x="0" y="0" width="200" height="200" fill="#8FBC8F"/>
+  
+  <!-- Garden border fence -->
+  <rect x="20" y="30" width="160" height="140" fill="none" stroke="#8B4513" stroke-width="3"/>
+  <rect x="22" y="32" width="156" height="136" fill="none" stroke="#A0522D" stroke-width="1"/>
+  
+  <!-- Fence posts -->
+  <rect x="18" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="38" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="58" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="78" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="98" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="118" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="138" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="158" y="28" width="4" height="20" fill="#654321"/>
+  <rect x="178" y="28" width="4" height="20" fill="#654321"/>
+  
+  <!-- Garden gate -->
+  <rect x="85" y="30" width="30" height="18" fill="none" stroke="#8B4513" stroke-width="2"/>
+  <rect x="87" y="32" width="26" height="14" fill="none" stroke="#A0522D" stroke-width="1"/>
+  <circle cx="110" cy="39" r="1.5" fill="#FFD700"/>
+  <text x="100" y="42" text-anchor="middle" font-family="Arial" font-size="4" fill="#654321">GARDEN</text>
+  
+  <!-- Garden paths -->
+  <rect x="95" y="48" width="10" height="120" fill="#D2B48C"/>
+  <rect x="30" y="95" width="140" height="10" fill="#D2B48C"/>
+  
+  <!-- Path borders -->
+  <rect x="95" y="48" width="10" height="120" fill="none" stroke="#8B7355" stroke-width="1"/>
+  <rect x="30" y="95" width="140" height="10" fill="none" stroke="#8B7355" stroke-width="1"/>
+  
+  <!-- Flower beds -->
+  <!-- Top left bed -->
+  <rect x="30" y="55" width="60" height="35" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="32" y="57" width="56" height="31" fill="#8B4513"/>
+  
+  <!-- Top right bed -->
+  <rect x="110" y="55" width="60" height="35" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="112" y="57" width="56" height="31" fill="#8B4513"/>
+  
+  <!-- Bottom left bed -->
+  <rect x="30" y="110" width="60" height="35" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="32" y="112" width="56" height="31" fill="#8B4513"/>
+  
+  <!-- Bottom right bed -->
+  <rect x="110" y="110" width="60" height="35" fill="#654321" stroke="#5D4E37" stroke-width="1"/>
+  <rect x="112" y="112" width="56" height="31" fill="#8B4513"/>
+  
+  <!-- Flowers in beds -->
+  <!-- Top left bed flowers -->
+  <circle cx="40" cy="65" r="3" fill="#FF69B4"/>
+  <circle cx="50" cy="67" r="3" fill="#FF1493"/>
+  <circle cx="60" cy="65" r="3" fill="#FFB6C1"/>
+  <circle cx="70" cy="68" r="3" fill="#FFC0CB"/>
+  <circle cx="80" cy="66" r="3" fill="#FF6347"/>
+  <circle cx="45" cy="75" r="3" fill="#FF4500"/>
+  <circle cx="55" cy="77" r="3" fill="#FF69B4"/>
+  <circle cx="65" cy="75" r="3" fill="#FF1493"/>
+  <circle cx="75" cy="78" r="3" fill="#FFB6C1"/>
+  
+  <!-- Top right bed flowers -->
+  <circle cx="120" cy="65" r="3" fill="#9370DB"/>
+  <circle cx="130" cy="67" r="3" fill="#8A2BE2"/>
+  <circle cx="140" cy="65" r="3" fill="#BA55D3"/>
+  <circle cx="150" cy="68" r="3" fill="#DA70D6"/>
+  <circle cx="160" cy="66" r="3" fill="#DDA0DD"/>
+  <circle cx="125" cy="75" r="3" fill="#9370DB"/>
+  <circle cx="135" cy="77" r="3" fill="#8A2BE2"/>
+  <circle cx="145" cy="75" r="3" fill="#BA55D3"/>
+  <circle cx="155" cy="78" r="3" fill="#DA70D6"/>
+  
+  <!-- Bottom left bed flowers -->
+  <circle cx="40" cy="120" r="3" fill="#FFD700"/>
+  <circle cx="50" cy="122" r="3" fill="#FFA500"/>
+  <circle cx="60" cy="120" r="3" fill="#FF8C00"/>
+  <circle cx="70" cy="123" r="3" fill="#FF7F50"/>
+  <circle cx="80" cy="121" r="3" fill="#FF6347"/>
+  <circle cx="45" cy="130" r="3" fill="#FFD700"/>
+  <circle cx="55" cy="132" r="3" fill="#FFA500"/>
+  <circle cx="65" cy="130" r="3" fill="#FF8C00"/>
+  <circle cx="75" cy="133" r="3" fill="#FF7F50"/>
+  
+  <!-- Bottom right bed flowers -->
+  <circle cx="120" cy="120" r="3" fill="#00CED1"/>
+  <circle cx="130" cy="122" r="3" fill="#00BFFF"/>
+  <circle cx="140" cy="120" r="3" fill="#87CEEB"/>
+  <circle cx="150" cy="123" r="3" fill="#87CEFA"/>
+  <circle cx="160" cy="121" r="3" fill="#B0E0E6"/>
+  <circle cx="125" cy="130" r="3" fill="#00CED1"/>
+  <circle cx="135" cy="132" r="3" fill="#00BFFF"/>
+  <circle cx="145" cy="130" r="3" fill="#87CEEB"/>
+  <circle cx="155" cy="133" r="3" fill="#87CEFA"/>
+  
+  <!-- Flower stems -->
+  <!-- Top left stems -->
+  <line x1="40" y1="68" x2="40" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="50" y1="70" x2="50" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="60" y1="68" x2="60" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="70" y1="71" x2="70" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="80" y1="69" x2="80" y2="85" stroke="#228B22" stroke-width="1"/>
+  
+  <!-- Top right stems -->
+  <line x1="120" y1="68" x2="120" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="130" y1="70" x2="130" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="140" y1="68" x2="140" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="150" y1="71" x2="150" y2="85" stroke="#228B22" stroke-width="1"/>
+  <line x1="160" y1="69" x2="160" y2="85" stroke="#228B22" stroke-width="1"/>
+  
+  <!-- Garden tools -->
+  <!-- Watering can -->
+  <ellipse cx="175" cy="155" rx="8" ry="6" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="1"/>
+  <rect x="170" y="150" width="3" height="8" fill="#A9A9A9"/>
+  <rect x="180" y="152" width="6" height="2" fill="#A9A9A9"/>
+  <circle cx="185" cy="153" r="1" fill="#A9A9A9"/>
+  
+  <!-- Shovel -->
+  <rect x="25" y="150" width="2" height="15" fill="#8B4513"/>
+  <ellipse cx="26" cy="148" rx="3" ry="2" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="0.5"/>
+  
+  <!-- Garden hose -->
+  <path d="M 180 170 Q 160 175 140 170 Q 120 165 100 170" 
+        fill="none" stroke="#228B22" stroke-width="4"/>
+  <circle cx="180" cy="170" r="3" fill="#C0C0C0"/>
+  <circle cx="100" cy="170" r="2" fill="#FFD700"/>
+  
+  <!-- Butterflies -->
+  <ellipse cx="85" cy="70" rx="2" ry="1" fill="#FFD700" opacity="0.8"/>
+  <ellipse cx="87" cy="70" rx="2" ry="1" fill="#FFA500" opacity="0.8"/>
+  <line x1="86" y1="69" x2="86" y2="71" stroke="#000000" stroke-width="0.5"/>
+  
+  <ellipse cx="125" cy="85" rx="2" ry="1" fill="#FF69B4" opacity="0.8"/>
+  <ellipse cx="127" cy="85" rx="2" ry="1" fill="#FF1493" opacity="0.8"/>
+  <line x1="126" y1="84" x2="126" y2="86" stroke="#000000" stroke-width="0.5"/>
+  
+  <!-- Bees -->
+  <ellipse cx="65" cy="80" rx="1.5" ry="1" fill="#FFD700"/>
+  <line x1="64" y1="80" x2="66" y2="80" stroke="#000000" stroke-width="0.3"/>
+  <line x1="65" y1="79" x2="65" y2="81" stroke="#000000" stroke-width="0.3"/>
+  
+  <ellipse cx="145" cy="95" rx="1.5" ry="1" fill="#FFD700"/>
+  <line x1="144" y1="95" x2="146" y2="95" stroke="#000000" stroke-width="0.3"/>
+  <line x1="145" y1="94" x2="145" y2="96" stroke="#000000" stroke-width="0.3"/>
+  
+  <!-- Garden sprinkler -->
+  <rect x="98" y="85" width="4" height="8" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="0.5"/>
+  <circle cx="100" cy="85" r="2" fill="#87CEEB" opacity="0.6"/>
+  
+  <!-- Water droplets from sprinkler -->
+  <circle cx="95" cy="82" r="0.5" fill="#87CEEB" opacity="0.8"/>
+  <circle cx="105" cy="83" r="0.5" fill="#87CEEB" opacity="0.8"/>
+  <circle cx="92" cy="85" r="0.5" fill="#87CEEB" opacity="0.8"/>
+  <circle cx="108" cy="84" r="0.5" fill="#87CEEB" opacity="0.8"/>
+  
+  <!-- Garden sign -->
+  <rect x="160" y="175" width="30" height="15" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="162" y="177" width="26" height="11" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <text x="175" y="182" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">COMMUNITY</text>
+  <text x="175" y="186" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">GARDEN</text>
+  
+  <!-- Garden bench -->
+  <rect x="35" y="175" width="25" height="6" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1"/>
+  <rect x="37" y="177" width="21" height="2" fill="#A0522D"/>
+  <rect x="39" y="181" width="3" height="8" fill="#654321"/>
+  <rect x="54" y="181" width="3" height="8" fill="#654321"/>
+  
+  <!-- Small decorative elements -->
+  <!-- Ladybugs -->
+  <circle cx="55" cy="72" r="1" fill="#FF0000"/>
+  <circle cx="55" cy="72" r="0.5" fill="#000000" opacity="0.3"/>
+  
+  <circle cx="135" cy="127" r="1" fill="#FF0000"/>
+  <circle cx="135" cy="127" r="0.5" fill="#000000" opacity="0.3"/>
+  
+  <!-- Garden stepping stones -->
+  <circle cx="100" cy="70" r="4" fill="#A9A9A9" stroke="#696969" stroke-width="0.5"/>
+  <circle cx="100" cy="125" r="4" fill="#A9A9A9" stroke="#696969" stroke-width="0.5"/>
+  <circle cx="70" cy="100" r="4" fill="#A9A9A9" stroke="#696969" stroke-width="0.5"/>
+  <circle cx="130" cy="100" r="4" fill="#A9A9A9" stroke="#696969" stroke-width="0.5"/>
+</svg>

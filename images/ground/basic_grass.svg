@@ -1,0 +1,38 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- 基础草地背景 -->
+  <rect width="16" height="16" fill="#4CAF50"/>
+  
+  <!-- 草地纹理细节 -->
+  <rect x="2" y="1" width="1" height="1" fill="#66BB6A"/>
+  <rect x="5" y="2" width="1" height="1" fill="#66BB6A"/>
+  <rect x="8" y="1" width="1" height="1" fill="#66BB6A"/>
+  <rect x="11" y="3" width="1" height="1" fill="#66BB6A"/>
+  <rect x="14" y="2" width="1" height="1" fill="#66BB6A"/>
+  
+  <rect x="1" y="4" width="1" height="1" fill="#66BB6A"/>
+  <rect x="4" y="5" width="1" height="1" fill="#66BB6A"/>
+  <rect x="7" y="4" width="1" height="1" fill="#66BB6A"/>
+  <rect x="10" y="6" width="1" height="1" fill="#66BB6A"/>
+  <rect x="13" y="5" width="1" height="1" fill="#66BB6A"/>
+  
+  <rect x="3" y="8" width="1" height="1" fill="#66BB6A"/>
+  <rect x="6" y="9" width="1" height="1" fill="#66BB6A"/>
+  <rect x="9" y="8" width="1" height="1" fill="#66BB6A"/>
+  <rect x="12" y="10" width="1" height="1" fill="#66BB6A"/>
+  <rect x="15" y="9" width="1" height="1" fill="#66BB6A"/>
+  
+  <rect x="0" y="11" width="1" height="1" fill="#66BB6A"/>
+  <rect x="2" y="12" width="1" height="1" fill="#66BB6A"/>
+  <rect x="5" y="13" width="1" height="1" fill="#66BB6A"/>
+  <rect x="8" y="12" width="1" height="1" fill="#66BB6A"/>
+  <rect x="11" y="14" width="1" height="1" fill="#66BB6A"/>
+  <rect x="14" y="13" width="1" height="1" fill="#66BB6A"/>
+  
+  <!-- 阴影细节 -->
+  <rect x="0" y="15" width="1" height="1" fill="#388E3C"/>
+  <rect x="3" y="15" width="1" height="1" fill="#388E3C"/>
+  <rect x="6" y="15" width="1" height="1" fill="#388E3C"/>
+  <rect x="9" y="15" width="1" height="1" fill="#388E3C"/>
+  <rect x="12" y="15" width="1" height="1" fill="#388E3C"/>
+  <rect x="15" y="15" width="1" height="1" fill="#388E3C"/>
+</svg>

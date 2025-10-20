@@ -1,0 +1,133 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground Shadow -->
+  <ellipse cx="100" cy="185" rx="45" ry="8" fill="#000000" opacity="0.15"/>
+  
+  <!-- Ground Area -->
+  <rect x="0" y="175" width="200" height="25" fill="#f0f0f0"/>
+  
+  <!-- Whiteboard Stand Base -->
+  <ellipse cx="100" cy="175" rx="25" ry="4" fill="#666666"/>
+  <ellipse cx="100" cy="173" rx="25" ry="4" fill="#777777"/>
+  
+  <!-- Stand Legs -->
+  <g>
+    <!-- Left Leg -->
+    <rect x="85" y="90" width="3" height="85" fill="#666666"/>
+    <rect x="84" y="90" width="3" height="85" fill="#777777"/>
+    
+    <!-- Right Leg -->
+    <rect x="112" y="90" width="3" height="85" fill="#666666"/>
+    <rect x="111" y="90" width="3" height="85" fill="#777777"/>
+    
+    <!-- Center Support -->
+    <rect x="88" y="130" width="24" height="2" fill="#666666"/>
+    <rect x="88" y="129" width="24" height="2" fill="#777777"/>
+  </g>
+  
+  <!-- Whiteboard Frame -->
+  <rect x="40" y="30" width="120" height="80" fill="#333333" rx="2"/>
+  <rect x="42" y="32" width="116" height="76" fill="#444444" rx="1"/>
+  
+  <!-- Whiteboard Surface -->
+  <rect x="45" y="35" width="110" height="70" fill="#ffffff" rx="1"/>
+  
+  <!-- Whiteboard Grid Lines (subtle) -->
+  <g stroke="#f0f0f0" stroke-width="0.5" opacity="0.3">
+    <!-- Horizontal lines -->
+    <line x1="45" y1="45" x2="155" y2="45"/>
+    <line x1="45" y1="55" x2="155" y2="55"/>
+    <line x1="45" y1="65" x2="155" y2="65"/>
+    <line x1="45" y1="75" x2="155" y2="75"/>
+    <line x1="45" y1="85" x2="155" y2="85"/>
+    <line x1="45" y1="95" x2="155" y2="95"/>
+    
+    <!-- Vertical lines -->
+    <line x1="65" y1="35" x2="65" y2="105"/>
+    <line x1="85" y1="35" x2="85" y2="105"/>
+    <line x1="115" y1="35" x2="115" y2="105"/>
+    <line x1="135" y1="35" x2="135" y2="105"/>
+  </g>
+  
+  <!-- Content on Whiteboard -->
+  <g>
+    <!-- Title -->
+    <text x="100" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2c5aa0">PROJECT PLAN</text>
+    
+    <!-- Bullet Points -->
+    <circle cx="55" cy="62" r="1" fill="#e74c3c"/>
+    <text x="60" y="65" font-family="Arial, sans-serif" font-size="6" fill="#333333">Phase 1: Research</text>
+    
+    <circle cx="55" cy="72" r="1" fill="#e74c3c"/>
+    <text x="60" y="75" font-family="Arial, sans-serif" font-size="6" fill="#333333">Phase 2: Development</text>
+    
+    <circle cx="55" cy="82" r="1" fill="#e74c3c"/>
+    <text x="60" y="85" font-family="Arial, sans-serif" font-size="6" fill="#333333">Phase 3: Testing</text>
+    
+    <!-- Simple Chart -->
+    <rect x="120" y="60" width="25" height="35" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <rect x="122" y="85" width="4" height="8" fill="#3498db"/>
+    <rect x="127" y="80" width="4" height="13" fill="#2ecc71"/>
+    <rect x="132" y="75" width="4" height="18" fill="#f39c12"/>
+    <rect x="137" y="70" width="4" height="23" fill="#e74c3c"/>
+  </g>
+  
+  <!-- Marker Tray -->
+  <rect x="45" y="108" width="110" height="4" fill="#dddddd"/>
+  <rect x="45" y="107" width="110" height="4" fill="#eeeeee"/>
+  
+  <!-- Markers in Tray -->
+  <g>
+    <!-- Red Marker -->
+    <rect x="55" y="109" width="8" height="2" fill="#e74c3c" rx="1"/>
+    <circle cx="56" r="0.5" cy="110" fill="#c0392b"/>
+    
+    <!-- Blue Marker -->
+    <rect x="65" y="109" width="8" height="2" fill="#3498db" rx="1"/>
+    <circle cx="66" r="0.5" cy="110" fill="#2980b9"/>
+    
+    <!-- Green Marker -->
+    <rect x="75" y="109" width="8" height="2" fill="#2ecc71" rx="1"/>
+    <circle cx="76" r="0.5" cy="110" fill="#27ae60"/>
+    
+    <!-- Black Marker -->
+    <rect x="85" y="109" width="8" height="2" fill="#2c3e50" rx="1"/>
+    <circle cx="86" r="0.5" cy="110" fill="#1a252f"/>
+  </g>
+  
+  <!-- Eraser -->
+  <rect x="130" y="108.5" width="15" height="3" fill="#8e44ad" rx="1"/>
+  <rect x="131" y="109" width="13" height="2" fill="#9b59b6" rx="0.5"/>
+  <text x="137.5" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#ffffff">ERASE</text>
+  
+  <!-- Adjustment Knobs -->
+  <g>
+    <!-- Left Knob -->
+    <circle cx="50" cy="70" r="3" fill="#666666"/>
+    <circle cx="50" cy="70" r="2.5" fill="#777777"/>
+    <circle cx="50" cy="70" r="1" fill="#888888"/>
+    
+    <!-- Right Knob -->
+    <circle cx="150" cy="70" r="3" fill="#666666"/>
+    <circle cx="150" cy="70" r="2.5" fill="#777777"/>
+    <circle cx="150" cy="70" r="1" fill="#888888"/>
+  </g>
+  
+  <!-- Brand Logo -->
+  <rect x="140" y="37" width="12" height="6" fill="#2c5aa0" rx="1"/>
+  <text x="146" y="41.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" font-weight="bold" fill="#ffffff">SMART</text>
+  
+  <!-- Whiteboard Highlight -->
+  <rect x="45" y="35" width="110" height="15" fill="url(#whiteboardGradient)" opacity="0.3" rx="1"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="whiteboardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Nameplate -->
+  <rect x="70" y="190" width="60" height="8" fill="#2c3e50" rx="1"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff">WHITEBOARD</text>
+</svg>

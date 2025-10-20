@@ -1,0 +1,116 @@
+<svg width="64" height="80" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面阴影 -->
+  <ellipse cx="32" cy="75" rx="28" ry="4" fill="#000000" opacity="0.2"/>
+  
+  <!-- 建筑主体 -->
+  <rect x="8" y="40" width="48" height="32" fill="#2C2C2C"/>
+  
+  <!-- 屋顶 -->
+  <polygon points="6,40 32,24 58,40" fill="#1A1A1A"/>
+  <polygon points="6,40 32,24 36,28 10,40" fill="#333333"/>
+  
+  <!-- 屋顶瓦片 -->
+  <rect x="10" y="28" width="44" height="2" fill="#0D0D0D"/>
+  <rect x="10" y="32" width="44" height="2" fill="#0D0D0D"/>
+  <rect x="10" y="36" width="44" height="2" fill="#0D0D0D"/>
+  
+  <!-- 霓虹招牌 -->
+  <rect x="16" y="32" width="32" height="8" fill="#000000"/>
+  <rect x="17" y="33" width="30" height="6" fill="#1A1A1A"/>
+  
+  <!-- 霓虹文字 "BAR" -->
+  <rect x="20" y="35" width="2" height="4" fill="#FF1744"/>
+  <rect x="20" y="35" width="4" height="1" fill="#FF1744"/>
+  <rect x="20" y="37" width="4" height="1" fill="#FF1744"/>
+  <rect x="20" y="39" width="4" height="1" fill="#FF1744"/>
+  <rect x="23" y="35" width="2" height="4" fill="#FF1744"/>
+  
+  <rect x="27" y="35" width="2" height="4" fill="#FF1744"/>
+  <rect x="27" y="35" width="4" height="1" fill="#FF1744"/>
+  <rect x="27" y="37" width="3" height="1" fill="#FF1744"/>
+  <rect x="30" y="35" width="2" height="4" fill="#FF1744"/>
+  
+  <rect x="34" y="35" width="2" height="4" fill="#FF1744"/>
+  <rect x="34" y="35" width="4" height="1" fill="#FF1744"/>
+  <rect x="34" y="37" width="3" height="1" fill="#FF1744"/>
+  <rect x="37" y="37" width="2" height="2" fill="#FF1744"/>
+  
+  <!-- 霓虹光晕 -->
+  <rect x="19" y="34" width="20" height="6" fill="#FF1744" opacity="0.3"/>
+  
+  <!-- 大窗户 -->
+  <rect x="12" y="48" width="16" height="16" fill="#FFD54F"/>
+  <rect x="11" y="47" width="18" height="18" fill="#1A1A1A"/>
+  <rect x="12" y="48" width="16" height="16" fill="#FFD54F"/>
+  
+  <!-- 窗框 -->
+  <rect x="11" y="55" width="18" height="2" fill="#1A1A1A"/>
+  <rect x="19" y="47" width="2" height="18" fill="#1A1A1A"/>
+  
+  <!-- 窗户内部酒吧场景 -->
+  <rect x="13" y="49" width="14" height="14" fill="#FFA726" opacity="0.8"/>
+  <rect x="15" y="58" width="10" height="2" fill="#8D6E63"/>
+  <circle cx="18" cy="56" r="1" fill="#FFFFFF"/>
+  <circle cx="22" cy="56" r="1" fill="#FFFFFF"/>
+  
+  <!-- 门 -->
+  <rect x="32" y="56" width="12" height="16" fill="#1A1A1A"/>
+  <rect x="33" y="57" width="10" height="14" fill="#333333"/>
+  
+  <!-- 门把手 -->
+  <circle cx="41" cy="64" r="1" fill="#FFD700"/>
+  
+  <!-- 门框 -->
+  <rect x="31" y="55" width="14" height="2" fill="#0D0D0D"/>
+  <rect x="31" y="55" width="2" height="17" fill="#0D0D0D"/>
+  <rect x="43" y="55" width="2" height="17" fill="#0D0D0D"/>
+  
+  <!-- 门上装饰 -->
+  <rect x="34" y="58" width="8" height="4" fill="#FF1744"/>
+  <rect x="35" y="59" width="6" height="2" fill="#FFFFFF"/>
+  
+  <!-- 右侧小窗 -->
+  <rect x="48" y="52" width="6" height="8" fill="#FFD54F"/>
+  <rect x="47" y="51" width="8" height="10" fill="#1A1A1A"/>
+  <rect x="48" y="52" width="6" height="8" fill="#FFD54F"/>
+  <rect x="50" y="51" width="2" height="10" fill="#1A1A1A"/>
+  <rect x="47" y="55" width="8" height="2" fill="#1A1A1A"/>
+  
+  <!-- 遮阳篷 -->
+  <rect x="10" y="44" width="20" height="4" fill="#424242"/>
+  <rect x="10" y="44" width="20" height="1" fill="#1A1A1A"/>
+  <polygon points="10,48 12,50 30,50 32,48" fill="#0D0D0D"/>
+  
+  <!-- 遮阳篷支架 -->
+  <rect x="11" y="48" width="1" height="4" fill="#616161"/>
+  <rect x="29" y="48" width="1" height="4" fill="#616161"/>
+  
+  <!-- 室外桌椅 -->
+  <rect x="4" y="68" width="8" height="2" fill="#424242"/>
+  <rect x="6" y="66" width="4" height="2" fill="#616161"/>
+  <rect x="5" y="70" width="2" height="2" fill="#1A1A1A"/>
+  <rect x="9" y="70" width="2" height="2" fill="#1A1A1A"/>
+  
+  <!-- 椅子 -->
+  <rect x="2" y="66" width="2" height="4" fill="#424242"/>
+  <rect x="12" y="66" width="2" height="4" fill="#424242"/>
+  
+  <!-- 酒瓶装饰 -->
+  <rect x="7" y="65" width="1" height="3" fill="#4CAF50"/>
+  <rect x="7" y="64" width="1" height="1" fill="#2E7D32"/>
+  <rect x="9" y="65" width="1" height="3" fill="#8D6E63"/>
+  <rect x="9" y="64" width="1" height="1" fill="#5D4037"/>
+  
+  <!-- 前院 -->
+  <rect x="4" y="72" width="56" height="8" fill="#2E2E2E"/>
+  
+  <!-- 路灯 -->
+  <rect x="52" y="64" width="2" height="8" fill="#424242"/>
+  <rect x="51" y="62" width="4" height="2" fill="#616161"/>
+  <circle cx="53" cy="63" r="1.5" fill="#FFEB3B" opacity="0.8"/>
+  <circle cx="53" cy="63" r="3" fill="#FFF59D" opacity="0.3"/>
+  
+  <!-- 小径 -->
+  <rect x="28" y="72" width="8" height="8" fill="#424242"/>
+  <rect x="29" y="73" width="6" height="6" fill="#616161"/>
+</svg>

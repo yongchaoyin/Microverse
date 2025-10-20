@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "date": "2025-10-20",
+  "style": {
+    "view": "top-down 2.5D",
+    "tile_size_px": 16,
+    "palette_from": "assets/prompts/_macros.yaml"
+  },
+  "packs": [
+    {
+      "name": "ground-and-terrain",
+      "save_root": "res://assets/maps/tiles/ground/",
+      "prompt_file": "assets/prompts/ground.yaml",
+      "items": [
+        "basic_grass.png",
+        "dark_grass.png",
+        "dry_grass.png",
+        "flower_grass.png",
+        "stone_path.png",
+        "dirt_path.png",
+        "cobblestone_road.png",
+        "asphalt_road.png",
+        "sand.png",
+        "water.png",
+        "cliff_edge.png",
+        "bridge.png"
+      ]
+    },
+    {
+      "name": "buildings",
+      "save_root": "res://assets/maps/buildings/",
+      "prompt_file": "assets/prompts/buildings.yaml",
+      "expected_counts": {
+        "residential": 8,
+        "commercial": 7,
+        "office": 4,
+        "public": 6
+      }
+    },
+    {
+      "name": "nature-and-water",
+      "save_root": "res://assets/maps/nature/",
+      "prompt_file": "assets/prompts/nature.yaml"
+    },
+    {
+      "name": "urban",
+      "save_root": "res://assets/maps/urban/",
+      "prompt_file": "assets/prompts/urban.yaml"
+    },
+    {
+      "name": "interior-office",
+      "save_root": "res://assets/maps/interior/office/",
+      "prompt_file": "assets/prompts/interior_office.yaml"
+    }
+  ]
+}
+

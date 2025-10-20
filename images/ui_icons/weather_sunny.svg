@@ -1,0 +1,101 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#87CEEB" opacity="0.3"/>
+  
+  <!-- Sun rays (outer) -->
+  <g stroke="#FFD700" stroke-width="3" stroke-linecap="round">
+    <!-- Main rays -->
+    <line x1="32" y1="8" x2="32" y2="2"/>
+    <line x1="32" y1="56" x2="32" y2="62"/>
+    <line x1="8" y1="32" x2="2" y2="32"/>
+    <line x1="56" y1="32" x2="62" y2="32"/>
+    
+    <!-- Diagonal rays -->
+    <line x1="13.86" y1="13.86" x2="9.64" y2="9.64"/>
+    <line x1="50.14" y1="13.86" x2="54.36" y2="9.64"/>
+    <line x1="13.86" y1="50.14" x2="9.64" y2="54.36"/>
+    <line x1="50.14" y1="50.14" x2="54.36" y2="54.36"/>
+  </g>
+  
+  <!-- Sun rays (medium) -->
+  <g stroke="#FFA500" stroke-width="2" stroke-linecap="round">
+    <line x1="32" y1="12" x2="32" y2="6"/>
+    <line x1="32" y1="52" x2="32" y2="58"/>
+    <line x1="12" y1="32" x2="6" y2="32"/>
+    <line x1="52" y1="32" x2="58" y2="32"/>
+    
+    <line x1="17.27" y1="17.27" x2="12.73" y2="12.73"/>
+    <line x1="46.73" y1="17.27" x2="51.27" y2="12.73"/>
+    <line x1="17.27" y1="46.73" x2="12.73" y2="51.27"/>
+    <line x1="46.73" y1="46.73" x2="51.27" y2="51.27"/>
+  </g>
+  
+  <!-- Additional smaller rays -->
+  <g stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+    <line x1="32" y1="14" x2="32" y2="10"/>
+    <line x1="32" y1="50" x2="32" y2="54"/>
+    <line x1="14" y1="32" x2="10" y2="32"/>
+    <line x1="50" y1="32" x2="54" y2="32"/>
+    
+    <line x1="19.8" y1="19.8" x2="16.22" y2="16.22"/>
+    <line x1="44.2" y1="19.8" x2="47.78" y2="16.22"/>
+    <line x1="19.8" y1="44.2" x2="16.22" y2="47.78"/>
+    <line x1="44.2" y1="44.2" x2="47.78" y2="47.78"/>
+  </g>
+  
+  <!-- Sun body (outer glow) -->
+  <circle cx="32" cy="32" r="16" fill="#FFD700" opacity="0.3"/>
+  <circle cx="32" cy="32" r="14" fill="#FFD700" opacity="0.5"/>
+  <circle cx="32" cy="32" r="12" fill="#FFD700" opacity="0.7"/>
+  
+  <!-- Sun body (main) -->
+  <circle cx="32" cy="32" r="10" fill="#FFD700"/>
+  <circle cx="32" cy="32" r="9" fill="#FFA500"/>
+  <circle cx="32" cy="32" r="8" fill="#FFD700"/>
+  
+  <!-- Sun face -->
+  <!-- Eyes -->
+  <circle cx="28" cy="28" r="1.5" fill="#FF8C00"/>
+  <circle cx="36" cy="28" r="1.5" fill="#FF8C00"/>
+  <circle cx="28" cy="28" r="1" fill="#FF4500"/>
+  <circle cx="36" cy="28" r="1" fill="#FF4500"/>
+  
+  <!-- Smile -->
+  <path d="M 26 34 Q 32 38 38 34" stroke="#FF8C00" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 26 34 Q 32 37 38 34" stroke="#FF4500" stroke-width="1" fill="none" stroke-linecap="round"/>
+  
+  <!-- Cheeks -->
+  <circle cx="24" cy="32" r="1.5" fill="#FF8C00" opacity="0.6"/>
+  <circle cx="40" cy="32" r="1.5" fill="#FF8C00" opacity="0.6"/>
+  
+  <!-- Sun surface details -->
+  <circle cx="30" cy="30" r="0.5" fill="#FFA500" opacity="0.8"/>
+  <circle cx="34" cy="30" r="0.3" fill="#FFA500" opacity="0.8"/>
+  <circle cx="32" cy="26" r="0.4" fill="#FFA500" opacity="0.8"/>
+  <circle cx="29" cy="35" r="0.3" fill="#FFA500" opacity="0.8"/>
+  <circle cx="35" cy="35" r="0.4" fill="#FFA500" opacity="0.8"/>
+  
+  <!-- Highlight -->
+  <ellipse cx="29" cy="27" rx="2" ry="3" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="29" cy="27" rx="1.5" ry="2" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Sparkles around sun -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <path d="M 20 20 L 21 22 L 23 21 L 21 20 Z"/>
+    <path d="M 44 20 L 45 22 L 47 21 L 45 20 Z"/>
+    <path d="M 20 44 L 21 46 L 23 45 L 21 44 Z"/>
+    <path d="M 44 44 L 45 46 L 47 45 L 45 44 Z"/>
+  </g>
+  
+  <!-- Additional sparkles -->
+  <g fill="#FFD700" opacity="0.6">
+    <circle cx="18" cy="25" r="0.5"/>
+    <circle cx="46" cy="25" r="0.5"/>
+    <circle cx="18" cy="39" r="0.5"/>
+    <circle cx="46" cy="39" r="0.5"/>
+    <circle cx="25" cy="18" r="0.5"/>
+    <circle cx="39" cy="18" r="0.5"/>
+    <circle cx="25" cy="46" r="0.5"/>
+    <circle cx="39" cy="46" r="0.5"/>
+  </g>
+</svg>

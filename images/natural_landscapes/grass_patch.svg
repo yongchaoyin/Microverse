@@ -1,0 +1,154 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="70" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="65" ry="6" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="60" ry="4" fill="#9ACD32"/>
+  
+  <!-- Soil base -->
+  <ellipse cx="100" cy="182" rx="55" ry="6" fill="#654321" stroke="#8B4513" stroke-width="1"/>
+  <ellipse cx="100" cy="184" rx="50" ry="4" fill="#8B4513"/>
+  
+  <!-- Main grass patch - multiple layers for natural look -->
+  <ellipse cx="100" cy="160" rx="50" ry="25" fill="#228B22" opacity="0.6"/>
+  <ellipse cx="100" cy="165" rx="45" ry="20" fill="#32CD32" opacity="0.7"/>
+  <ellipse cx="100" cy="170" rx="40" ry="15" fill="#9ACD32" opacity="0.8"/>
+  
+  <!-- Individual grass blades - tall grass in center -->
+  <rect x="95" y="140" width="1.5" height="45" fill="#228B22" rx="0.75" transform="rotate(-2 95.75 162.5)"/>
+  <rect x="98" y="135" width="1.8" height="50" fill="#32CD32" rx="0.9" transform="rotate(1 98.9 160)"/>
+  <rect x="101" y="138" width="1.6" height="47" fill="#228B22" rx="0.8" transform="rotate(-1 101.8 161.5)"/>
+  <rect x="104" y="142" width="1.4" height="43" fill="#9ACD32" rx="0.7" transform="rotate(3 104.7 163.5)"/>
+  <rect x="107" y="140" width="1.7" height="45" fill="#32CD32" rx="0.85" transform="rotate(-3 107.85 162.5)"/>
+  
+  <!-- Medium height grass blades -->
+  <rect x="88" y="150" width="1.3" height="35" fill="#228B22" rx="0.65" transform="rotate(-5 88.65 167.5)"/>
+  <rect x="91" y="148" width="1.5" height="37" fill="#32CD32" rx="0.75" transform="rotate(2 91.75 166.5)"/>
+  <rect x="112" y="149" width="1.4" height="36" fill="#228B22" rx="0.7" transform="rotate(4 112.7 167)"/>
+  <rect x="115" y="151" width="1.2" height="34" fill="#9ACD32" rx="0.6" transform="rotate(-2 115.6 168)"/>
+  <rect x="85" y="155" width="1.1" height="30" fill="#32CD32" rx="0.55" transform="rotate(-8 85.55 170)"/>
+  <rect x="118" y="154" width="1.3" height="31" fill="#228B22" rx="0.65" transform="rotate(6 118.65 169.5)"/>
+  
+  <!-- Short grass blades around edges -->
+  <rect x="75" y="165" width="1" height="20" fill="#228B22" rx="0.5" transform="rotate(-10 75.5 175)"/>
+  <rect x="78" y="163" width="1.1" height="22" fill="#32CD32" rx="0.55" transform="rotate(-6 78.55 174)"/>
+  <rect x="81" y="167" width="0.9" height="18" fill="#9ACD32" rx="0.45" transform="rotate(-4 81.45 176)"/>
+  <rect x="125" y="164" width="1" height="21" fill="#228B22" rx="0.5" transform="rotate(8 125.5 174.5)"/>
+  <rect x="122" y="166" width="1.1" height="19" fill="#32CD32" rx="0.55" transform="rotate(5 122.55 175.5)"/>
+  <rect x="119" y="168" width="0.9" height="17" fill="#9ACD32" rx="0.45" transform="rotate(3 119.45 176.5)"/>
+  
+  <!-- Very short grass for ground cover -->
+  <rect x="70" y="175" width="0.8" height="10" fill="#228B22" rx="0.4" transform="rotate(-15 70.4 180)"/>
+  <rect x="72" y="173" width="0.7" height="12" fill="#32CD32" rx="0.35" transform="rotate(-12 72.35 179)"/>
+  <rect x="74" y="177" width="0.6" height="8" fill="#9ACD32" rx="0.3" transform="rotate(-8 74.3 181)"/>
+  <rect x="130" y="174" width="0.8" height="11" fill="#228B22" rx="0.4" transform="rotate(12 130.4 179.5)"/>
+  <rect x="128" y="176" width="0.7" height="9" fill="#32CD32" rx="0.35" transform="rotate(10 128.35 180.5)"/>
+  <rect x="126" y="178" width="0.6" height="7" fill="#9ACD32" rx="0.3" transform="rotate(8 126.3 181.5)"/>
+  
+  <!-- Additional scattered grass blades for density -->
+  <rect x="93" y="155" width="1.2" height="30" fill="#32CD32" rx="0.6" transform="rotate(-1 93.6 170)"/>
+  <rect x="109" y="157" width="1.1" height="28" fill="#228B22" rx="0.55" transform="rotate(2 109.55 171)"/>
+  <rect x="87" y="160" width="1" height="25" fill="#9ACD32" rx="0.5" transform="rotate(-7 87.5 172.5)"/>
+  <rect x="113" y="162" width="1" height="23" fill="#32CD32" rx="0.5" transform="rotate(5 113.5 173.5)"/>
+  <rect x="90" y="165" width="0.9" height="20" fill="#228B22" rx="0.45" transform="rotate(-3 90.45 175)"/>
+  <rect x="110" y="167" width="0.9" height="18" fill="#9ACD32" rx="0.45" transform="rotate(4 110.45 176)"/>
+  
+  <!-- Grass seed heads (flowering grass) -->
+  <ellipse cx="96" cy="132" rx="1" ry="3" fill="#F0E68C" stroke="#DAA520" stroke-width="0.3"/>
+  <ellipse cx="99" cy="130" rx="1.2" ry="3.5" fill="#F0E68C" stroke="#DAA520" stroke-width="0.3"/>
+  <ellipse cx="102" cy="133" rx="1" ry="3" fill="#F0E68C" stroke="#DAA520" stroke-width="0.3"/>
+  <ellipse cx="105" cy="135" rx="1.1" ry="3.2" fill="#F0E68C" stroke="#DAA520" stroke-width="0.3"/>
+  <ellipse cx="108" cy="132" rx="1" ry="3" fill="#F0E68C" stroke="#DAA520" stroke-width="0.3"/>
+  
+  <!-- Dandelions in grass -->
+  <circle cx="82" cy="150" r="2.5" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <circle cx="82" cy="150" r="1.8" fill="#FFFF00"/>
+  <rect x="81.5" y="152" width="1" height="15" fill="#228B22" rx="0.5"/>
+  
+  <circle cx="118" cy="155" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <circle cx="118" cy="155" r="1.4" fill="#FFFF00"/>
+  <rect x="117.5" y="157" width="1" height="12" fill="#228B22" rx="0.5"/>
+  
+  <!-- Dandelion seeds (blown dandelions) -->
+  <circle cx="95" cy="145" r="3" fill="none" stroke="#E0E0E0" stroke-width="0.5"/>
+  <g transform="translate(95,145)">
+    <line x1="0" y1="0" x2="2" y2="-1" stroke="#E0E0E0" stroke-width="0.3"/>
+    <line x1="0" y1="0" x2="1.5" y2="1.5" stroke="#E0E0E0" stroke-width="0.3"/>
+    <line x1="0" y1="0" x2="-1" y2="2" stroke="#E0E0E0" stroke-width="0.3"/>
+    <line x1="0" y1="0" x2="-2" y2="-0.5" stroke="#E0E0E0" stroke-width="0.3"/>
+    <line x1="0" y1="0" x2="0.5" y2="-2.5" stroke="#E0E0E0" stroke-width="0.3"/>
+    <line x1="0" y1="0" x2="-1.5" y2="1" stroke="#E0E0E0" stroke-width="0.3"/>
+    <circle cx="2" cy="-1" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="1.5" cy="1.5" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="-1" cy="2" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="-2" cy="-0.5" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="0.5" cy="-2.5" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="-1.5" cy="1" r="0.3" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+  <rect x="94.5" y="148" width="1" height="10" fill="#228B22" rx="0.5"/>
+  
+  <!-- Clover patches -->
+  <g transform="translate(85,170)">
+    <circle cx="0" cy="0" r="1.5" fill="#32CD32"/>
+    <circle cx="-1" cy="-1" r="1.2" fill="#32CD32"/>
+    <circle cx="1" cy="-1" r="1.2" fill="#32CD32"/>
+    <circle cx="0" cy="-2" r="1" fill="#32CD32"/>
+    <circle cx="0" cy="-1" r="0.5" fill="#FFFFFF"/>
+  </g>
+  
+  <g transform="translate(115,172)">
+    <circle cx="0" cy="0" r="1.3" fill="#32CD32"/>
+    <circle cx="-0.8" cy="-0.8" r="1" fill="#32CD32"/>
+    <circle cx="0.8" cy="-0.8" r="1" fill="#32CD32"/>
+    <circle cx="0" cy="-1.6" r="0.8" fill="#32CD32"/>
+    <circle cx="0" cy="-0.8" r="0.4" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Small wildflowers scattered in grass -->
+  <circle cx="77" cy="160" r="1" fill="#FF69B4"/>
+  <circle cx="77" cy="160" r="0.5" fill="#FFD700"/>
+  <circle cx="123" cy="165" r="0.8" fill="#87CEEB"/>
+  <circle cx="123" cy="165" r="0.4" fill="#FFD700"/>
+  <circle cx="92" cy="170" r="0.6" fill="#DDA0DD"/>
+  <circle cx="92" cy="170" r="0.3" fill="#FFD700"/>
+  <circle cx="108" cy="175" r="0.7" fill="#ADFF2F"/>
+  <circle cx="108" cy="175" r="0.35" fill="#FF8C00"/>
+  
+  <!-- Insects in grass -->
+  <ellipse cx="89" cy="155" rx="1.5" ry="0.8" fill="#000000" opacity="0.6"/>
+  <circle cx="88" cy="155" r="0.4" fill="#000000" opacity="0.6"/>
+  <ellipse cx="111" cy="160" rx="1.2" ry="0.6" fill="#8B4513" opacity="0.6"/>
+  <circle cx="110" cy="160" r="0.3" fill="#8B4513" opacity="0.6"/>
+  
+  <!-- Grasshopper -->
+  <ellipse cx="105" cy="150" rx="2" ry="1" fill="#228B22"/>
+  <ellipse cx="104" cy="149" rx="0.8" ry="0.5" fill="#32CD32"/>
+  <line x1="103" y1="149" x2="101" y2="147" stroke="#228B22" stroke-width="0.5"/>
+  <line x1="103" y1="150" x2="101" y2="152" stroke="#228B22" stroke-width="0.5"/>
+  <line x1="107" y1="149" x2="109" y2="147" stroke="#228B22" stroke-width="0.5"/>
+  <line x1="107" y1="151" x2="109" y2="153" stroke="#228B22" stroke-width="0.5"/>
+  
+  <!-- Dewdrops on grass -->
+  <circle cx="97" cy="140" r="0.6" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="103" cy="145" r="0.5" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="91" cy="155" r="0.4" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="109" cy="158" r="0.4" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="85" cy="165" r="0.3" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  <circle cx="115" cy="167" r="0.3" fill="#E0F6FF" stroke="#B0E0E6" stroke-width="0.2" opacity="0.8"/>
+  
+  <!-- Wind effect on grass -->
+  <path d="M 75 160 Q 70 165 75 170" fill="none" stroke="#228B22" stroke-width="1" opacity="0.5"/>
+  <path d="M 125 160 Q 130 165 125 170" fill="none" stroke="#228B22" stroke-width="1" opacity="0.5"/>
+  <path d="M 95 145 Q 90 150 95 155" fill="none" stroke="#32CD32" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 105 145 Q 110 150 105 155" fill="none" stroke="#32CD32" stroke-width="0.8" opacity="0.5"/>
+  
+  <!-- Small stones in grass -->
+  <ellipse cx="80" cy="178" rx="2" ry="1.5" fill="#696969" stroke="#2F4F4F" stroke-width="0.5"/>
+  <ellipse cx="120" cy="180" rx="1.8" ry="1.3" fill="#708090" stroke="#2F4F4F" stroke-width="0.5"/>
+  <ellipse cx="100" cy="182" rx="1.5" ry="1" fill="#778899" stroke="#2F4F4F" stroke-width="0.5"/>
+  
+  <!-- Grass patch name plate -->
+  <rect x="70" y="190" width="60" height="8" fill="#228B22" stroke="#006400" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">GRASS PATCH</text>
+</svg>

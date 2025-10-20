@@ -1,0 +1,146 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="190" rx="95" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Background grass area -->
+  <rect x="0" y="0" width="200" height="200" fill="#8FBC8F"/>
+  
+  <!-- Main walking path (curved) -->
+  <path d="M 20 180 Q 50 120 100 100 Q 150 80 180 20" 
+        fill="none" stroke="#D2B48C" stroke-width="25"/>
+  <path d="M 20 180 Q 50 120 100 100 Q 150 80 180 20" 
+        fill="none" stroke="#DEB887" stroke-width="20"/>
+  
+  <!-- Path center line -->
+  <path d="M 20 180 Q 50 120 100 100 Q 150 80 180 20" 
+        fill="none" stroke="#F5DEB3" stroke-width="2" stroke-dasharray="8,4"/>
+  
+  <!-- Path edges -->
+  <path d="M 20 180 Q 50 120 100 100 Q 150 80 180 20" 
+        fill="none" stroke="#8B7355" stroke-width="2" transform="translate(-10,0)"/>
+  <path d="M 20 180 Q 50 120 100 100 Q 150 80 180 20" 
+        fill="none" stroke="#8B7355" stroke-width="2" transform="translate(10,0)"/>
+  
+  <!-- Side path branches -->
+  <!-- Left branch -->
+  <path d="M 60 140 Q 30 130 10 110" 
+        fill="none" stroke="#D2B48C" stroke-width="15"/>
+  <path d="M 60 140 Q 30 130 10 110" 
+        fill="none" stroke="#DEB887" stroke-width="12"/>
+  
+  <!-- Right branch -->
+  <path d="M 140 60 Q 170 50 190 30" 
+        fill="none" stroke="#D2B48C" stroke-width="15"/>
+  <path d="M 140 60 Q 170 50 190 30" 
+        fill="none" stroke="#DEB887" stroke-width="12"/>
+  
+  <!-- Path markers and signs -->
+  <!-- Distance marker 1 -->
+  <rect x="45" y="135" width="12" height="20" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="47" y="137" width="8" height="12" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <text x="51" y="145" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">1KM</text>
+  
+  <!-- Distance marker 2 -->
+  <rect x="125" y="75" width="12" height="20" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="127" y="77" width="8" height="12" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <text x="131" y="85" text-anchor="middle" font-family="Arial" font-size="6" fill="#000000">2KM</text>
+  
+  <!-- Directional arrows on path -->
+  <polygon points="70,125 75,120 75,123 85,123 85,127 75,127 75,130" fill="#FFFFFF" opacity="0.8"/>
+  <polygon points="110,85 115,80 115,83 125,83 125,87 115,87 115,90" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Benches along the path -->
+  <!-- Bench 1 -->
+  <rect x="35" y="150" width="20" height="6" fill="#8B4513" stroke="#654321" stroke-width="0.8" rx="1"/>
+  <rect x="37" y="152" width="16" height="2" fill="#A0522D"/>
+  <rect x="39" y="156" width="3" height="8" fill="#654321"/>
+  <rect x="48" y="156" width="3" height="8" fill="#654321"/>
+  
+  <!-- Bench 2 -->
+  <rect x="145" y="45" width="20" height="6" fill="#8B4513" stroke="#654321" stroke-width="0.8" rx="1"/>
+  <rect x="147" y="47" width="16" height="2" fill="#A0522D"/>
+  <rect x="149" y="51" width="3" height="8" fill="#654321"/>
+  <rect x="158" y="51" width="3" height="8" fill="#654321"/>
+  
+  <!-- Lamp posts along path -->
+  <!-- Lamp post 1 -->
+  <rect x="25" y="160" width="3" height="25" fill="#696969"/>
+  <circle cx="26.5" cy="160" r="4" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <circle cx="26.5" cy="160" r="2" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Lamp post 2 -->
+  <rect x="155" y="35" width="3" height="25" fill="#696969"/>
+  <circle cx="156.5" cy="35" r="4" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <circle cx="156.5" cy="35" r="2" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Trees and landscaping -->
+  <!-- Tree 1 -->
+  <rect x="15" y="90" width="4" height="15" fill="#8B4513"/>
+  <circle cx="17" cy="90" r="12" fill="#228B22"/>
+  <circle cx="17" cy="90" r="8" fill="#32CD32"/>
+  
+  <!-- Tree 2 -->
+  <rect x="175" y="60" width="4" height="15" fill="#8B4513"/>
+  <circle cx="177" cy="60" r="12" fill="#228B22"/>
+  <circle cx="177" cy="60" r="8" fill="#32CD32"/>
+  
+  <!-- Tree 3 -->
+  <rect x="80" y="160" width="4" height="15" fill="#8B4513"/>
+  <circle cx="82" cy="160" r="12" fill="#228B22"/>
+  <circle cx="82" cy="160" r="8" fill="#32CD32"/>
+  
+  <!-- Flower beds -->
+  <ellipse cx="65" cy="165" rx="15" ry="6" fill="#228B22"/>
+  <circle cx="60" cy="163" r="2" fill="#FF69B4"/>
+  <circle cx="70" cy="164" r="2" fill="#FF1493"/>
+  <circle cx="65" cy="167" r="1.5" fill="#FFB6C1"/>
+  
+  <ellipse cx="120" cy="50" rx="15" ry="6" fill="#228B22"/>
+  <circle cx="115" cy="48" r="2" fill="#FFC0CB"/>
+  <circle cx="125" cy="49" r="2" fill="#FF6347"/>
+  <circle cx="120" cy="52" r="1.5" fill="#FF4500"/>
+  
+  <!-- Path texture details -->
+  <!-- Small stones on path -->
+  <circle cx="40" cy="165" r="1" fill="#A0522D" opacity="0.6"/>
+  <circle cx="85" cy="115" r="1" fill="#A0522D" opacity="0.6"/>
+  <circle cx="130" cy="70" r="1" fill="#A0522D" opacity="0.6"/>
+  <circle cx="160" cy="40" r="1" fill="#A0522D" opacity="0.6"/>
+  
+  <!-- Path wear marks -->
+  <ellipse cx="50" cy="155" rx="3" ry="1" fill="#8B7355" opacity="0.4"/>
+  <ellipse cx="110" cy="95" rx="3" ry="1" fill="#8B7355" opacity="0.4"/>
+  <ellipse cx="150" cy="55" rx="3" ry="1" fill="#8B7355" opacity="0.4"/>
+  
+  <!-- Jogger silhouettes -->
+  <ellipse cx="90" cy="110" rx="2" ry="4" fill="#000000" opacity="0.6"/>
+  <circle cx="90" cy="106" r="1.5" fill="#000000" opacity="0.6"/>
+  
+  <ellipse cx="140" cy="65" rx="2" ry="4" fill="#000000" opacity="0.6"/>
+  <circle cx="140" cy="61" r="1.5" fill="#000000" opacity="0.6"/>
+  
+  <!-- Path information board -->
+  <rect x="5" y="170" width="25" height="20" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <rect x="7" y="172" width="21" height="16" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <text x="17.5" y="178" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">WALKING</text>
+  <text x="17.5" y="183" text-anchor="middle" font-family="Arial" font-size="4" fill="#000000">PATH</text>
+  <text x="17.5" y="187" text-anchor="middle" font-family="Arial" font-size="3" fill="#000000">3.5 KM</text>
+  
+  <!-- Path maintenance elements -->
+  <!-- Trash bins -->
+  <rect x="55" y="145" width="6" height="10" fill="#696969" stroke="#2F4F4F" stroke-width="0.5" rx="1"/>
+  <rect x="56" y="143" width="4" height="2" fill="#A9A9A9" rx="0.5"/>
+  
+  <rect x="135" y="70" width="6" height="10" fill="#696969" stroke="#2F4F4F" stroke-width="0.5" rx="1"/>
+  <rect x="136" y="68" width="4" height="2" fill="#A9A9A9" rx="0.5"/>
+  
+  <!-- Emergency call box -->
+  <rect x="100" y="95" width="8" height="12" fill="#FF0000" stroke="#8B0000" stroke-width="1"/>
+  <rect x="102" y="97" width="4" height="4" fill="#FFFFFF"/>
+  <text x="104" y="100" text-anchor="middle" font-family="Arial" font-size="3" fill="#000000">911</text>
+  <circle cx="104" cy="103" r="1" fill="#000000"/>
+  
+  <!-- Path lighting effects -->
+  <circle cx="26.5" cy="160" r="15" fill="#FFFF00" opacity="0.1"/>
+  <circle cx="156.5" cy="35" r="15" fill="#FFFF00" opacity="0.1"/>
+</svg>

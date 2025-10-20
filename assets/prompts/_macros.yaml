@@ -1,0 +1,61 @@
+version: 1
+date: 2025-10-20
+source_docs:
+  - docs/design/17_地图系统与场景设计规范.md
+  - docs/design/18_美术资源与视觉规范.md
+  - docs/design/小镇地图资源生成提示词.md
+  - docs/requirements_summary.md
+style:
+  view: "top-down 2.5D (≈45°)"
+  tile_size_px: 16
+  character_size_px: [16, 32]
+  palette:
+    nature_green:
+      grass_main: "#7CBF6E"
+      grass_dark: "#6AAA5B"
+      grass_light: "#8FD47D"
+      leaves: "#4CAF50"
+      bush: "#388E3C"
+    earth_tones:
+      dirt: "#8B6F47"
+      road_stone: "#C5A882"
+      wood: "#D4A373"
+      concrete: "#BDBDBD"
+    sky_water:
+      sky: "#87CEEB"
+      water_bright: "#6DAEDB"
+      water_deep: "#4287C8"
+      water_highlight: "#FFFFFF"
+    building:
+      brick: "#C1440E"
+      wall: "#F5E6D3"
+      roof: "#5A5A5A"
+      modern_body: "#FAFAFA"
+      glass: "#B3E5FC"
+    accent:
+      gold: "#FFD54F"
+      orange: "#FF9800"
+      pink: "#FF4081"
+      cyan: "#00BCD4"
+prompts:
+  base: >-
+    pixel art, Stardew Valley style, top-down 2.5D 45-degree view,
+    warm cozy vibe, clean 1px outlines, limited palette,
+    hand-drawn pixel detailing, consistent light from top-left, soft shadows,
+    no anti-aliasing, crisp pixels, 16x16 pixel grid alignment
+  negative: >-
+    photo, photorealistic, 3d render, realistic lighting, vector, smooth gradients,
+    blurry, anti-aliased, noise, jpeg artifacts, text, watermark, signature,
+    isometric at 30°, perspective camera, outlines thicker than 2px
+render_defaults:
+  sampler: "Euler a"
+  steps: 30
+  cfg_scale: 7.5
+  seed: -1
+  tiling_hint: false
+animation_defaults:
+  water_frames: 4
+  water_frame_duration_s: 0.3
+  foliage_frames: 3
+  foliage_frame_duration_s: 0.5
+

@@ -1,0 +1,111 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="70" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="65" ry="6" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="60" ry="4" fill="#9ACD32"/>
+  
+  <!-- Tree trunk -->
+  <rect x="92" y="110" width="16" height="75" fill="#8B4513" stroke="#654321" stroke-width="2" rx="4"/>
+  <rect x="94" y="112" width="12" height="71" fill="#A0522D" rx="3"/>
+  
+  <!-- Trunk texture -->
+  <line x1="97" y1="115" x2="97" y2="180" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <line x1="103" y1="115" x2="103" y2="180" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <ellipse cx="99" cy="130" rx="2" ry="1" fill="#654321" opacity="0.4"/>
+  <ellipse cx="101" cy="150" rx="1.5" ry="0.8" fill="#654321" opacity="0.4"/>
+  <ellipse cx="98" cy="170" rx="2.5" ry="1.2" fill="#654321" opacity="0.4"/>
+  
+  <!-- Tree roots -->
+  <ellipse cx="80" cy="182" rx="10" ry="3" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <ellipse cx="120" cy="182" rx="10" ry="3" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <ellipse cx="100" cy="185" rx="15" ry="2" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Main branches -->
+  <rect x="80" y="105" width="15" height="4" fill="#8B4513" stroke="#654321" stroke-width="1" rx="2" transform="rotate(-25 87.5 107)"/>
+  <rect x="105" y="105" width="15" height="4" fill="#8B4513" stroke="#654321" stroke-width="1" rx="2" transform="rotate(25 112.5 107)"/>
+  <rect x="85" y="95" width="12" height="3" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.5" transform="rotate(-40 91 96.5)"/>
+  <rect x="103" y="95" width="12" height="3" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.5" transform="rotate(40 109 96.5)"/>
+  
+  <!-- Willow crown - drooping branches structure -->
+  <ellipse cx="100" cy="80" rx="35" ry="25" fill="#9ACD32" stroke="#32CD32" stroke-width="1" opacity="0.8"/>
+  <ellipse cx="100" cy="75" rx="30" ry="20" fill="#ADFF2F" stroke="#9ACD32" stroke-width="1" opacity="0.9"/>
+  
+  <!-- Drooping willow branches (characteristic feature) -->
+  <!-- Left side drooping branches -->
+  <path d="M 70 85 Q 65 110 70 135 Q 75 160 65 180" fill="none" stroke="#32CD32" stroke-width="3"/>
+  <path d="M 75 90 Q 70 115 75 140 Q 80 165 70 185" fill="none" stroke="#32CD32" stroke-width="2.5"/>
+  <path d="M 80 95 Q 75 120 80 145 Q 85 170 75 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  <path d="M 85 100 Q 80 125 85 150 Q 90 175 80 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  
+  <!-- Right side drooping branches -->
+  <path d="M 130 85 Q 135 110 130 135 Q 125 160 135 180" fill="none" stroke="#32CD32" stroke-width="3"/>
+  <path d="M 125 90 Q 130 115 125 140 Q 120 165 130 185" fill="none" stroke="#32CD32" stroke-width="2.5"/>
+  <path d="M 120 95 Q 125 120 120 145 Q 115 170 125 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  <path d="M 115 100 Q 120 125 115 150 Q 110 175 120 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  
+  <!-- Center drooping branches -->
+  <path d="M 95 85 Q 90 115 95 145 Q 100 175 90 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  <path d="M 105 85 Q 110 115 105 145 Q 100 175 110 185" fill="none" stroke="#32CD32" stroke-width="2"/>
+  <path d="M 100 80 Q 95 110 100 140 Q 105 170 95 185" fill="none" stroke="#32CD32" stroke-width="2.5"/>
+  <path d="M 100 80 Q 105 110 100 140 Q 95 170 105 185" fill="none" stroke="#32CD32" stroke-width="2.5"/>
+  
+  <!-- Leaves clusters on drooping branches -->
+  <ellipse cx="68" cy="120" rx="8" ry="15" fill="#9ACD32" opacity="0.8"/>
+  <ellipse cx="72" cy="150" rx="6" ry="12" fill="#ADFF2F" opacity="0.8"/>
+  <ellipse cx="78" cy="170" rx="5" ry="10" fill="#32CD32" opacity="0.8"/>
+  
+  <ellipse cx="132" cy="120" rx="8" ry="15" fill="#9ACD32" opacity="0.8"/>
+  <ellipse cx="128" cy="150" rx="6" ry="12" fill="#ADFF2F" opacity="0.8"/>
+  <ellipse cx="122" cy="170" rx="5" ry="10" fill="#32CD32" opacity="0.8"/>
+  
+  <ellipse cx="93" cy="125" rx="7" ry="13" fill="#9ACD32" opacity="0.8"/>
+  <ellipse cx="107" cy="125" rx="7" ry="13" fill="#9ACD32" opacity="0.8"/>
+  <ellipse cx="98" cy="155" rx="5" ry="11" fill="#ADFF2F" opacity="0.8"/>
+  <ellipse cx="102" cy="155" rx="5" ry="11" fill="#ADFF2F" opacity="0.8"/>
+  
+  <!-- Additional leaf details -->
+  <ellipse cx="85" cy="140" rx="4" ry="8" fill="#7CFC00" opacity="0.7"/>
+  <ellipse cx="115" cy="140" rx="4" ry="8" fill="#7CFC00" opacity="0.7"/>
+  <ellipse cx="75" cy="165" rx="3" ry="6" fill="#7CFC00" opacity="0.7"/>
+  <ellipse cx="125" cy="165" rx="3" ry="6" fill="#7CFC00" opacity="0.7"/>
+  
+  <!-- Willow catkins (spring flowers) -->
+  <ellipse cx="88" cy="110" rx="1.5" ry="6" fill="#FFFF99" transform="rotate(-10 88 110)"/>
+  <ellipse cx="112" cy="110" rx="1.5" ry="6" fill="#FFFF99" transform="rotate(10 112 110)"/>
+  <ellipse cx="95" cy="105" rx="1.5" ry="6" fill="#FFFF99" transform="rotate(-5 95 105)"/>
+  <ellipse cx="105" cy="105" rx="1.5" ry="6" fill="#FFFF99" transform="rotate(5 105 105)"/>
+  
+  <!-- Wind effect on drooping branches -->
+  <path d="M 65 140 Q 60 145 65 150" fill="none" stroke="#228B22" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 135 140 Q 140 145 135 150" fill="none" stroke="#228B22" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 90 160 Q 85 165 90 170" fill="none" stroke="#228B22" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 110 160 Q 115 165 110 170" fill="none" stroke="#228B22" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Pond reflection effect (willows often grow near water) -->
+  <ellipse cx="100" cy="188" rx="40" ry="3" fill="#87CEEB" opacity="0.4"/>
+  <ellipse cx="100" cy="189" rx="35" ry="2" fill="#B0E0E6" opacity="0.3"/>
+  
+  <!-- Birds near willow -->
+  <ellipse cx="75" cy="95" rx="2" ry="1" fill="#000000" opacity="0.6"/>
+  <circle cx="74" cy="95" r="0.5" fill="#000000" opacity="0.6"/>
+  <ellipse cx="125" cy="90" rx="2" ry="1" fill="#000000" opacity="0.6"/>
+  <circle cx="124" cy="90" r="0.5" fill="#000000" opacity="0.6"/>
+  
+  <!-- Fallen willow leaves -->
+  <ellipse cx="70" cy="180" rx="4" ry="2" fill="#ADFF2F" transform="rotate(25 70 180)" opacity="0.7"/>
+  <ellipse cx="130" cy="182" rx="4" ry="2" fill="#9ACD32" transform="rotate(-15 130 182)" opacity="0.7"/>
+  <ellipse cx="85" cy="185" rx="3" ry="1.5" fill="#32CD32" transform="rotate(45 85 185)" opacity="0.7"/>
+  <ellipse cx="115" cy="183" rx="3" ry="1.5" fill="#7CFC00" transform="rotate(-30 115 183)" opacity="0.7"/>
+  <ellipse cx="100" cy="187" rx="3.5" ry="2" fill="#ADFF2F" transform="rotate(10 100 187)" opacity="0.7"/>
+  
+  <!-- Small insects around willow -->
+  <circle cx="82" cy="130" r="0.8" fill="#FFD700" opacity="0.6"/>
+  <circle cx="118" cy="135" r="0.8" fill="#FFD700" opacity="0.6"/>
+  <circle cx="95" cy="145" r="0.6" fill="#FF69B4" opacity="0.6"/>
+  
+  <!-- Tree name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#32CD32" stroke="#228B22" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">WILLOW TREE</text>
+</svg>

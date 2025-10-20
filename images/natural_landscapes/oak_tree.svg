@@ -1,0 +1,95 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="60" ry="8" fill="#000000" opacity="0.3"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="55" ry="6" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="50" ry="4" fill="#9ACD32"/>
+  
+  <!-- Tree trunk -->
+  <rect x="90" y="120" width="20" height="65" fill="#8B4513" stroke="#654321" stroke-width="2" rx="3"/>
+  <rect x="92" y="122" width="16" height="61" fill="#A0522D" rx="2"/>
+  
+  <!-- Trunk texture -->
+  <line x1="95" y1="125" x2="95" y2="180" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <line x1="105" y1="125" x2="105" y2="180" stroke="#654321" stroke-width="1" opacity="0.6"/>
+  <ellipse cx="98" cy="140" rx="2" ry="1" fill="#654321" opacity="0.4"/>
+  <ellipse cx="102" cy="155" rx="1.5" ry="0.8" fill="#654321" opacity="0.4"/>
+  <ellipse cx="96" cy="170" rx="2.5" ry="1.2" fill="#654321" opacity="0.4"/>
+  
+  <!-- Tree roots -->
+  <ellipse cx="85" cy="182" rx="8" ry="3" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <ellipse cx="115" cy="182" rx="8" ry="3" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <ellipse cx="100" cy="185" rx="12" ry="2" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Main branches -->
+  <rect x="85" y="115" width="12" height="3" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.5" transform="rotate(-20 91 116.5)"/>
+  <rect x="103" y="115" width="12" height="3" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.5" transform="rotate(20 109 116.5)"/>
+  <rect x="88" y="105" width="10" height="2.5" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.25" transform="rotate(-35 93 106.25)"/>
+  <rect x="102" y="105" width="10" height="2.5" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1.25" transform="rotate(35 107 106.25)"/>
+  <rect x="95" y="100" width="8" height="2" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1" transform="rotate(-10 99 101)"/>
+  <rect x="97" y="100" width="8" height="2" fill="#8B4513" stroke="#654321" stroke-width="1" rx="1" transform="rotate(10 101 101)"/>
+  
+  <!-- Tree crown - multiple layers for fullness -->
+  <!-- Bottom layer -->
+  <circle cx="70" cy="90" r="25" fill="#228B22" stroke="#006400" stroke-width="1" opacity="0.8"/>
+  <circle cx="130" cy="90" r="25" fill="#228B22" stroke="#006400" stroke-width="1" opacity="0.8"/>
+  <circle cx="100" cy="85" r="28" fill="#228B22" stroke="#006400" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Middle layer -->
+  <circle cx="75" cy="75" r="22" fill="#32CD32" stroke="#228B22" stroke-width="1" opacity="0.9"/>
+  <circle cx="125" cy="75" r="22" fill="#32CD32" stroke="#228B22" stroke-width="1" opacity="0.9"/>
+  <circle cx="100" cy="70" r="25" fill="#32CD32" stroke="#228B22" stroke-width="1" opacity="0.9"/>
+  <circle cx="85" cy="80" r="18" fill="#32CD32" stroke="#228B22" stroke-width="1" opacity="0.9"/>
+  <circle cx="115" cy="80" r="18" fill="#32CD32" stroke="#228B22" stroke-width="1" opacity="0.9"/>
+  
+  <!-- Top layer -->
+  <circle cx="80" cy="60" r="20" fill="#9ACD32" stroke="#32CD32" stroke-width="1"/>
+  <circle cx="120" cy="60" r="20" fill="#9ACD32" stroke="#32CD32" stroke-width="1"/>
+  <circle cx="100" cy="55" r="22" fill="#9ACD32" stroke="#32CD32" stroke-width="1"/>
+  <circle cx="90" cy="65" r="16" fill="#9ACD32" stroke="#32CD32" stroke-width="1"/>
+  <circle cx="110" cy="65" r="16" fill="#9ACD32" stroke="#32CD32" stroke-width="1"/>
+  
+  <!-- Highlight layer for depth -->
+  <circle cx="85" cy="50" r="15" fill="#ADFF2F" stroke="#9ACD32" stroke-width="1" opacity="0.8"/>
+  <circle cx="115" cy="50" r="15" fill="#ADFF2F" stroke="#9ACD32" stroke-width="1" opacity="0.8"/>
+  <circle cx="100" cy="45" r="18" fill="#ADFF2F" stroke="#9ACD32" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Leaves details -->
+  <circle cx="65" cy="70" r="3" fill="#7CFC00" opacity="0.7"/>
+  <circle cx="135" cy="70" r="3" fill="#7CFC00" opacity="0.7"/>
+  <circle cx="100" cy="40" r="4" fill="#7CFC00" opacity="0.7"/>
+  <circle cx="75" cy="55" r="2.5" fill="#7CFC00" opacity="0.7"/>
+  <circle cx="125" cy="55" r="2.5" fill="#7CFC00" opacity="0.7"/>
+  
+  <!-- Acorns -->
+  <ellipse cx="90" cy="85" rx="2" ry="3" fill="#8B4513"/>
+  <ellipse cx="90" cy="84" rx="1.5" ry="1" fill="#D2691E"/>
+  <ellipse cx="110" cy="80" rx="2" ry="3" fill="#8B4513"/>
+  <ellipse cx="110" cy="79" rx="1.5" ry="1" fill="#D2691E"/>
+  <ellipse cx="105" cy="95" rx="2" ry="3" fill="#8B4513"/>
+  <ellipse cx="105" cy="94" rx="1.5" ry="1" fill="#D2691E"/>
+  
+  <!-- Small branches visible through leaves -->
+  <line x1="85" y1="70" x2="90" y2="65" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+  <line x1="115" y1="70" x2="110" y2="65" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="60" x2="95" y2="55" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="60" x2="105" y2="55" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Birds in tree -->
+  <ellipse cx="75" cy="65" rx="2" ry="1" fill="#000000" opacity="0.6"/>
+  <circle cx="74" cy="65" r="0.5" fill="#000000" opacity="0.6"/>
+  <ellipse cx="125" cy="58" rx="2" ry="1" fill="#000000" opacity="0.6"/>
+  <circle cx="124" cy="58" r="0.5" fill="#000000" opacity="0.6"/>
+  
+  <!-- Fallen leaves around base -->
+  <ellipse cx="80" cy="180" rx="3" ry="2" fill="#DAA520" transform="rotate(15 80 180)"/>
+  <ellipse cx="120" cy="182" rx="3" ry="2" fill="#FF8C00" transform="rotate(-20 120 182)"/>
+  <ellipse cx="95" cy="185" rx="2.5" ry="1.5" fill="#CD853F" transform="rotate(45 95 185)"/>
+  <ellipse cx="110" cy="183" rx="3" ry="2" fill="#D2691E" transform="rotate(-10 110 183)"/>
+  <ellipse cx="85" cy="187" rx="2" ry="1.5" fill="#B8860B" transform="rotate(30 85 187)"/>
+  
+  <!-- Tree name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">OAK TREE</text>
+</svg>

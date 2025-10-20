@@ -1,0 +1,127 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="385" rx="60" ry="10" fill="#000000" opacity="0.2"/>
+  
+  <!-- Ground area -->
+  <rect x="0" y="375" width="400" height="25" fill="#f5f5f5"/>
+  
+  <!-- Cabinet base -->
+  <rect x="150" y="360" width="100" height="15" fill="#2c3e50"/>
+  <rect x="148" y="358" width="104" height="4" fill="#34495e"/>
+  
+  <!-- Main cabinet body -->
+  <rect x="150" y="100" width="100" height="260" fill="#34495e"/>
+  <rect x="152" y="102" width="96" height="256" fill="#4a5f7a"/>
+  
+  <!-- Cabinet sides (3D effect) -->
+  <polygon points="250,100 260,90 260,350 250,360" fill="#2c3e50"/>
+  <polygon points="150,100 160,90 260,90 250,100" fill="#3a4f6a"/>
+  
+  <!-- Drawer 1 (top) -->
+  <g>
+    <rect x="155" y="105" width="90" height="60" fill="#5a6f8a"/>
+    <rect x="157" y="107" width="86" height="56" fill="#6a7f9a"/>
+    
+    <!-- Drawer handle -->
+    <rect x="220" y="130" width="20" height="8" rx="4" fill="#888888"/>
+    <rect x="222" y="132" width="16" height="4" rx="2" fill="#aaaaaa"/>
+    
+    <!-- Drawer lock -->
+    <circle cx="210" cy="134" r="4" fill="#666666"/>
+    <circle cx="210" cy="134" r="2" fill="#333333"/>
+    <rect x="209" y="132" width="2" height="4" fill="#333333"/>
+    
+    <!-- Drawer label holder -->
+    <rect x="160" y="125" width="35" height="15" rx="2" fill="#ffffff" stroke="#cccccc"/>
+    <text x="177" y="135" text-anchor="middle" font-family="Arial" font-size="8" fill="#333333">A-F</text>
+  </g>
+  
+  <!-- Drawer 2 -->
+  <g>
+    <rect x="155" y="170" width="90" height="60" fill="#5a6f8a"/>
+    <rect x="157" y="172" width="86" height="56" fill="#6a7f9a"/>
+    
+    <!-- Drawer handle -->
+    <rect x="220" y="195" width="20" height="8" rx="4" fill="#888888"/>
+    <rect x="222" y="197" width="16" height="4" rx="2" fill="#aaaaaa"/>
+    
+    <!-- Drawer lock -->
+    <circle cx="210" cy="199" r="4" fill="#666666"/>
+    <circle cx="210" cy="199" r="2" fill="#333333"/>
+    <rect x="209" y="197" width="2" height="4" fill="#333333"/>
+    
+    <!-- Drawer label holder -->
+    <rect x="160" y="190" width="35" height="15" rx="2" fill="#ffffff" stroke="#cccccc"/>
+    <text x="177" y="200" text-anchor="middle" font-family="Arial" font-size="8" fill="#333333">G-M</text>
+  </g>
+  
+  <!-- Drawer 3 -->
+  <g>
+    <rect x="155" y="235" width="90" height="60" fill="#5a6f8a"/>
+    <rect x="157" y="237" width="86" height="56" fill="#6a7f9a"/>
+    
+    <!-- Drawer handle -->
+    <rect x="220" y="260" width="20" height="8" rx="4" fill="#888888"/>
+    <rect x="222" y="262" width="16" height="4" rx="2" fill="#aaaaaa"/>
+    
+    <!-- Drawer lock -->
+    <circle cx="210" cy="264" r="4" fill="#666666"/>
+    <circle cx="210" cy="264" r="2" fill="#333333"/>
+    <rect x="209" y="262" width="2" height="4" fill="#333333"/>
+    
+    <!-- Drawer label holder -->
+    <rect x="160" y="255" width="35" height="15" rx="2" fill="#ffffff" stroke="#cccccc"/>
+    <text x="177" y="265" text-anchor="middle" font-family="Arial" font-size="8" fill="#333333">N-S</text>
+  </g>
+  
+  <!-- Drawer 4 (bottom) -->
+  <g>
+    <rect x="155" y="300" width="90" height="55" fill="#5a6f8a"/>
+    <rect x="157" y="302" width="86" height="51" fill="#6a7f9a"/>
+    
+    <!-- Drawer handle -->
+    <rect x="220" y="322" width="20" height="8" rx="4" fill="#888888"/>
+    <rect x="222" y="324" width="16" height="4" rx="2" fill="#aaaaaa"/>
+    
+    <!-- Drawer lock -->
+    <circle cx="210" cy="326" r="4" fill="#666666"/>
+    <circle cx="210" cy="326" r="2" fill="#333333"/>
+    <rect x="209" y="324" width="2" height="4" fill="#333333"/>
+    
+    <!-- Drawer label holder -->
+    <rect x="160" y="320" width="35" height="15" rx="2" fill="#ffffff" stroke="#cccccc"/>
+    <text x="177" y="330" text-anchor="middle" font-family="Arial" font-size="8" fill="#333333">T-Z</text>
+  </g>
+  
+  <!-- Cabinet top -->
+  <rect x="148" y="98" width="104" height="8" fill="#3a4f6a"/>
+  <polygon points="148,98 158,88 262,88 252,98" fill="#4a5f7a"/>
+  
+  <!-- File folders visible in slightly open drawer -->
+  <g opacity="0.7">
+    <rect x="160" y="240" width="3" height="25" fill="#f39c12"/>
+    <rect x="165" y="240" width="3" height="25" fill="#e74c3c"/>
+    <rect x="170" y="240" width="3" height="25" fill="#3498db"/>
+    <rect x="175" y="240" width="3" height="25" fill="#2ecc71"/>
+    <rect x="180" y="240" width="3" height="25" fill="#9b59b6"/>
+  </g>
+  
+  <!-- Cabinet brand/model plate -->
+  <rect x="160" y="80" width="80" height="12" rx="2" fill="#2c3e50"/>
+  <text x="200" y="89" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffffff">OFFICE PRO</text>
+  
+  <!-- Security features -->
+  <g>
+    <!-- Master lock -->
+    <rect x="245" y="115" width="8" height="15" rx="2" fill="#666666"/>
+    <circle cx="249" cy="120" r="3" fill="#333333"/>
+    <rect x="248" y="118" width="2" height="4" fill="#333333"/>
+    
+    <!-- Anti-tip mechanism -->
+    <rect x="245" y="340" width="8" height="10" rx="1" fill="#888888"/>
+  </g>
+  
+  <!-- Nameplate -->
+  <rect x="150" y="50" width="100" height="20" rx="3" fill="#ffffff" stroke="#cccccc"/>
+  <text x="200" y="63" text-anchor="middle" font-family="Arial" font-size="12" fill="#333333">FILING CABINET</text>
+</svg>

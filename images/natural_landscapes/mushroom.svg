@@ -1,0 +1,164 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="185" rx="35" ry="6" fill="#000000" opacity="0.4"/>
+  
+  <!-- Ground area -->
+  <ellipse cx="100" cy="185" rx="30" ry="4" fill="#8FBC8F"/>
+  <ellipse cx="100" cy="185" rx="25" ry="3" fill="#9ACD32"/>
+  
+  <!-- Soil and organic matter -->
+  <ellipse cx="100" cy="183" rx="28" ry="5" fill="#8B4513" opacity="0.6"/>
+  <ellipse cx="100" cy="182" rx="24" ry="4" fill="#A0522D" opacity="0.5"/>
+  
+  <!-- Main mushroom stem -->
+  <ellipse cx="100" cy="160" rx="8" ry="25" fill="#F5F5DC"/>
+  <ellipse cx="100" cy="160" rx="6" ry="23" fill="#FFFAF0"/>
+  <ellipse cx="100" cy="160" rx="4" ry="21" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Stem texture and details -->
+  <ellipse cx="98" cy="155" rx="2" ry="8" fill="#F0F0F0" opacity="0.6"/>
+  <ellipse cx="102" cy="165" rx="1.5" ry="6" fill="#F0F0F0" opacity="0.6"/>
+  <ellipse cx="99" cy="170" rx="1" ry="4" fill="#F0F0F0" opacity="0.5"/>
+  
+  <!-- Stem rings/bands -->
+  <ellipse cx="100" cy="150" rx="7" ry="1" fill="#E6E6FA" opacity="0.7"/>
+  <ellipse cx="100" cy="155" rx="7.5" ry="1" fill="#E6E6FA" opacity="0.6"/>
+  <ellipse cx="100" cy="160" rx="8" ry="1" fill="#E6E6FA" opacity="0.6"/>
+  <ellipse cx="100" cy="165" rx="7.5" ry="1" fill="#E6E6FA" opacity="0.5"/>
+  <ellipse cx="100" cy="170" rx="7" ry="1" fill="#E6E6FA" opacity="0.5"/>
+  
+  <!-- Mushroom cap -->
+  <ellipse cx="100" cy="135" rx="25" ry="15" fill="#DC143C"/>
+  <ellipse cx="100" cy="132" rx="23" ry="13" fill="#FF6347"/>
+  <ellipse cx="100" cy="130" rx="21" ry="11" fill="#FF4500"/>
+  <ellipse cx="100" cy="128" rx="19" ry="9" fill="#FF6347" opacity="0.8"/>
+  
+  <!-- Cap highlights -->
+  <ellipse cx="90" cy="125" rx="8" ry="4" fill="#FFB6C1" opacity="0.7"/>
+  <ellipse cx="110" cy="127" rx="6" ry="3" fill="#FFB6C1" opacity="0.6"/>
+  <ellipse cx="100" cy="122" rx="5" ry="2" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- White spots on cap -->
+  <circle cx="85" cy="130" r="3" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="95" cy="125" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="105" cy="128" r="2.8" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="115" cy="132" r="2.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="90" cy="135" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="110" cy="135" r="2.3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="100" cy="132" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="78" cy="135" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="122" cy="135" r="1.7" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="88" cy="140" r="1.3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="112" cy="140" r="1.4" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- Cap edge details -->
+  <ellipse cx="100" cy="142" rx="24" ry="2" fill="#8B0000" opacity="0.6"/>
+  <ellipse cx="100" cy="143" rx="23" ry="1.5" fill="#8B0000" opacity="0.4"/>
+  
+  <!-- Gills under cap -->
+  <path d="M 78 142 Q 100 145 122 142" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.7"/>
+  <path d="M 80 143 Q 100 146 120 143" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.7"/>
+  <path d="M 82 144 Q 100 147 118 144" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.6"/>
+  <path d="M 84 145 Q 100 148 116 145" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.6"/>
+  <path d="M 86 146 Q 100 149 114 146" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 88 147 Q 100 150 112 147" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 90 148 Q 100 151 110 148" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.4"/>
+  <path d="M 92 149 Q 100 152 108 149" fill="none" stroke="#F5F5DC" stroke-width="0.8" opacity="0.4"/>
+  
+  <!-- Radial gill lines -->
+  <line x1="100" y1="142" x2="78" y2="142" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  <line x1="100" y1="142" x2="85" y2="145" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  <line x1="100" y1="142" x2="92" y2="147" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  <line x1="100" y1="142" x2="108" y2="147" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  <line x1="100" y1="142" x2="115" y2="145" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  <line x1="100" y1="142" x2="122" y2="142" stroke="#F5F5DC" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Smaller mushrooms around main one -->
+  <ellipse cx="75" cy="175" rx="4" ry="8" fill="#F5F5DC"/>
+  <ellipse cx="75" cy="175" rx="3" ry="7" fill="#FFFAF0"/>
+  <ellipse cx="75" cy="168" rx="8" ry="4" fill="#DC143C"/>
+  <ellipse cx="75" cy="167" rx="7" ry="3" fill="#FF6347"/>
+  <circle cx="72" cy="166" r="1" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="78" cy="168" r="0.8" fill="#FFFFFF" opacity="0.9"/>
+  
+  <ellipse cx="125" cy="178" rx="5" ry="10" fill="#F5F5DC"/>
+  <ellipse cx="125" cy="178" rx="4" ry="9" fill="#FFFAF0"/>
+  <ellipse cx="125" cy="170" rx="10" ry="5" fill="#DC143C"/>
+  <ellipse cx="125" cy="169" rx="9" ry="4" fill="#FF6347"/>
+  <circle cx="120" cy="168" r="1.2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="130" cy="170" r="1" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="125" cy="171" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+  
+  <ellipse cx="65" cy="180" rx="3" ry="6" fill="#F5F5DC"/>
+  <ellipse cx="65" cy="180" rx="2.5" ry="5" fill="#FFFAF0"/>
+  <ellipse cx="65" cy="175" rx="6" ry="3" fill="#DC143C"/>
+  <ellipse cx="65" cy="174" rx="5" ry="2.5" fill="#FF6347"/>
+  <circle cx="63" cy="174" r="0.6" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="67" cy="175" r="0.5" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Tiny mushroom buds -->
+  <ellipse cx="85" cy="182" rx="1.5" ry="3" fill="#F5F5DC"/>
+  <ellipse cx="85" cy="180" rx="2.5" ry="1.5" fill="#FF6347"/>
+  <ellipse cx="115" cy="183" rx="1.8" ry="3.5" fill="#F5F5DC"/>
+  <ellipse cx="115" cy="181" rx="3" ry="1.8" fill="#FF6347"/>
+  <ellipse cx="95" cy="184" rx="1.2" ry="2.5" fill="#F5F5DC"/>
+  <ellipse cx="95" cy="182.5" rx="2" ry="1.2" fill="#FF6347"/>
+  
+  <!-- Moss and small plants around mushrooms -->
+  <ellipse cx="80" cy="183" rx="4" ry="2" fill="#228B22" opacity="0.7"/>
+  <ellipse cx="120" cy="185" rx="5" ry="2.5" fill="#32CD32" opacity="0.6"/>
+  <ellipse cx="90" cy="186" rx="3" ry="1.5" fill="#9ACD32" opacity="0.5"/>
+  <ellipse cx="110" cy="187" rx="3.5" ry="1.8" fill="#228B22" opacity="0.6"/>
+  
+  <!-- Small grass blades -->
+  <rect x="72" y="180" width="0.5" height="6" fill="#228B22" rx="0.25"/>
+  <rect x="74" y="179" width="0.4" height="7" fill="#32CD32" rx="0.2"/>
+  <rect x="128" y="182" width="0.6" height="5" fill="#228B22" rx="0.3"/>
+  <rect x="130" y="181" width="0.4" height="6" fill="#32CD32" rx="0.2"/>
+  <rect x="87" y="185" width="0.3" height="4" fill="#9ACD32" rx="0.15"/>
+  <rect x="113" y="186" width="0.4" height="5" fill="#228B22" rx="0.2"/>
+  
+  <!-- Fallen leaves -->
+  <ellipse cx="78" cy="184" rx="1.5" ry="2" fill="#8B4513" transform="rotate(30 78 184)" opacity="0.7"/>
+  <ellipse cx="122" cy="186" rx="1.3" ry="1.8" fill="#A0522D" transform="rotate(-20 122 186)" opacity="0.7"/>
+  <ellipse cx="92" cy="187" rx="1.2" ry="1.5" fill="#D2691E" transform="rotate(45 92 187)" opacity="0.6"/>
+  <ellipse cx="108" cy="188" rx="1.4" ry="1.7" fill="#8B4513" transform="rotate(-35 108 188)" opacity="0.6"/>
+  
+  <!-- Insects and small creatures -->
+  <ellipse cx="88" cy="170" rx="1.5" ry="0.8" fill="#000000" opacity="0.6"/>
+  <circle cx="87" cy="170" r="0.4" fill="#000000" opacity="0.6"/>
+  <line x1="86" y1="169" x2="84" y2="168" stroke="#000000" stroke-width="0.3"/>
+  <line x1="86" y1="171" x2="84" y2="172" stroke="#000000" stroke-width="0.3"/>
+  
+  <ellipse cx="112" cy="155" rx="1.2" ry="0.6" fill="#8B4513" opacity="0.6"/>
+  <circle cx="111" cy="155" r="0.3" fill="#8B4513" opacity="0.6"/>
+  
+  <!-- Snail -->
+  <ellipse cx="70" cy="185" rx="2" ry="1.5" fill="#D2B48C"/>
+  <circle cx="68" cy="184" r="1.5" fill="#8B7355"/>
+  <circle cx="68" cy="184" r="1" fill="#A0522D"/>
+  <circle cx="68" cy="184" r="0.5" fill="#8B4513"/>
+  <ellipse cx="66" cy="183" rx="0.8" ry="0.4" fill="#D2B48C"/>
+  <circle cx="65.5" cy="182.5" r="0.2" fill="#000000"/>
+  <circle cx="66.5" cy="182.5" r="0.2" fill="#000000"/>
+  
+  <!-- Dewdrops -->
+  <circle cx="95" cy="128" r="1" fill="#E0FFFF" opacity="0.8" stroke="#B0E0E6" stroke-width="0.2"/>
+  <circle cx="105" cy="130" r="0.8" fill="#E0FFFF" opacity="0.8" stroke="#B0E0E6" stroke-width="0.2"/>
+  <circle cx="85" cy="132" r="0.6" fill="#E0FFFF" opacity="0.7" stroke="#B0E0E6" stroke-width="0.2"/>
+  <circle cx="115" cy="134" r="0.7" fill="#E0FFFF" opacity="0.7" stroke="#B0E0E6" stroke-width="0.2"/>
+  <circle cx="98" cy="165" r="0.5" fill="#E0FFFF" opacity="0.6" stroke="#B0E0E6" stroke-width="0.1"/>
+  <circle cx="102" cy="170" r="0.4" fill="#E0FFFF" opacity="0.6" stroke="#B0E0E6" stroke-width="0.1"/>
+  
+  <!-- Spores floating in air -->
+  <circle cx="110" cy="115" r="0.3" fill="#FFFAF0" opacity="0.6"/>
+  <circle cx="90" cy="110" r="0.2" fill="#FFFAF0" opacity="0.5"/>
+  <circle cx="120" cy="120" r="0.25" fill="#FFFAF0" opacity="0.5"/>
+  <circle cx="80" cy="118" r="0.2" fill="#FFFAF0" opacity="0.4"/>
+  <circle cx="105" cy="108" r="0.2" fill="#FFFAF0" opacity="0.4"/>
+  <circle cx="95" cy="112" r="0.15" fill="#FFFAF0" opacity="0.3"/>
+  
+  <!-- Mushroom name plate -->
+  <rect x="75" y="190" width="50" height="8" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF">MUSHROOM</text>
+</svg>

@@ -1,0 +1,153 @@
+meta:
+  pack: "nature-and-water"
+  save_root: "res://assets/maps/nature/"
+  macros: "assets/prompts/_macros.yaml"
+  notes:
+    - Trees use YSort sprites; ensure trunks read clearly against ground.
+    - Include seasonal variants where specified (spring/summer/autumn/winter).
+defaults:
+  apply:
+    base_prompt: "@base"
+    negative_prompt: "@negative"
+trees:
+  save_dir: "trees"
+  items:
+    - id: oak_tree
+      file: "oak_tree.png"
+      size_px: [48, 64]
+      prompt: >-
+        @base, oak tree, lush round canopy, visible trunk base, soft cast shadow,
+        seasonal variants for leaves
+      negative: "@negative"
+      seasonal_variants: ["spring","summer","autumn","winter"]
+      animation:
+        frames: 3
+        frame_duration_s: 0.5
+    - id: pine_tree
+      file: "pine_tree.png"
+      size_px: [40, 72]
+      prompt: >-
+        @base, evergreen pine, conical layered needles, dark green, subtle snow cap option
+      negative: "@negative"
+    - id: willow_tree
+      file: "willow_tree.png"
+      size_px: [56, 80]
+      prompt: >-
+        @base, willow with hanging branches, gentle curves, soft shading,
+        reads clearly at pixel scale
+      negative: "@negative"
+    - id: cherry_tree
+      file: "cherry_tree.png"
+      size_px: [48, 64]
+      prompt: >-
+        @base, cherry blossom tree, pink blossoms, sparse petals around base,
+        spring emphasis, summer/green variant
+      negative: "@negative"
+      seasonal_variants: ["spring","summer","autumn","winter"]
+    - id: palm_tree
+      file: "palm_tree.png"
+      size_px: [40, 80]
+      prompt: >-
+        @base, tropical palm, curved trunk, large fronds, beach vibe
+      negative: "@negative"
+small_plants:
+  save_dir: "plants"
+  items:
+    - id: bush_green
+      file: "bush_green.png"
+      size_px: [24, 24]
+      prompt: >-
+        @base, round green bush, dense leaves, slight highlight, clean outline
+      negative: "@negative"
+    - id: bush_flower
+      file: "bush_flower.png"
+      size_px: [24, 24]
+      prompt: >-
+        @base, flowering bush, small colorful blossoms, balanced distribution,
+        avoid clutter
+      negative: "@negative"
+    - id: grass_tuft
+      file: "grass_tuft.png"
+      size_px: [16, 16]
+      prompt: >-
+        @base, grass tuft decal, 3-5 variants, readable silhouette, subtle shadows
+      negative: "@negative"
+decorations:
+  save_dir: "decorations"
+  items:
+    - { id: flower_bed, file: "flower_bed.png", size_px: [32, 32],
+        prompt: "@base, colorful flower bed, varied blossoms, bordered soil, cozy park feel",
+        negative: "@negative" }
+    - { id: rock_small, file: "rock_small.png", size_px: [16, 16],
+        prompt: "@base, small rock set, 3-5 variants, rounded forms, soft shading",
+        negative: "@negative" }
+    - { id: rock_large, file: "rock_large.png", size_px: [32, 32],
+        prompt: "@base, large rock/boulder, layered shading, crisp edge pixels",
+        negative: "@negative" }
+    - { id: fountain, file: "fountain.png", size_px: [48, 48],
+        prompt: "@base, park fountain, water spray highlights, stone basin, circular plan",
+        negative: "@negative",
+        animation: { frames: 4, frame_duration_s: 0.3 } }
+    - { id: bench_wood, file: "bench_wood.png", size_px: [32, 16],
+        prompt: "@base, wooden bench, slats and metal legs, soft shadow",
+        negative: "@negative" }
+    - { id: bench_stone, file: "bench_stone.png", size_px: [32, 16],
+        prompt: "@base, stone bench, simple slab and supports, park style",
+        negative: "@negative" }
+    - { id: lamp_post, file: "lamp_post.png", size_px: [16, 32],
+        prompt: "@base, classic lamp post, warm light bulb glow, day-night usable",
+        negative: "@negative",
+        animation: { frames: 2, frame_duration_s: 0.5 } }
+    - { id: trash_bin, file: "trash_bin.png", size_px: [16, 16],
+        prompt: "@base, compact trash bin, lid detail, civic green",
+        negative: "@negative" }
+    - { id: mailbox, file: "mailbox.png", size_px: [16, 24],
+        prompt: "@base, town mailbox, red body, flag, post shadow",
+        negative: "@negative" }
+    - { id: sign_post, file: "sign_post.png", size_px: [16, 32],
+        prompt: "@base, wooden sign post, readable arrow boards, road guidance",
+        negative: "@negative" }
+water_features:
+  save_dir: "water"
+  items:
+    - id: pond
+      file: "pond.png"
+      size_px: [64, 64]
+      prompt: >-
+        @base, small round pond, animated water surface (4 frames),
+        gentle shore pixels, reeds hint
+      negative: "@negative"
+      animation: { frames: 4, frame_duration_s: 0.3 }
+    - id: river_horizontal
+      file: "river_horizontal.png"
+      size_px: [96, 48]
+      prompt: >-
+        @base, horizontal river tiles, tileable segments, animated water (4 frames),
+        foam highlights near banks
+      negative: "@negative"
+      animation: { frames: 4, frame_duration_s: 0.3 }
+    - id: river_vertical
+      file: "river_vertical.png"
+      size_px: [48, 96]
+      prompt: >-
+        @base, vertical river tiles, tileable segments, animated water (4 frames),
+        consistent flow direction
+      negative: "@negative"
+      animation: { frames: 4, frame_duration_s: 0.3 }
+    - id: river_corner
+      file: "river_corner.png"
+      size_px: [48, 48]
+      prompt: >-
+        @base, river corner tiles for 4 directions, banks and flow shading consistent,
+        animated water (4 frames)
+      negative: "@negative"
+      animation: { frames: 4, frame_duration_s: 0.3 }
+    - id: waterfall
+      file: "waterfall.png"
+      size_px: [32, 48]
+      prompt: >-
+        @base, small waterfall, cascading pixels, white foam (#FFFFFF 20% opacity),
+        looped animation
+      negative: "@negative"
+      animation: { frames: 4, frame_duration_s: 0.2 }
+

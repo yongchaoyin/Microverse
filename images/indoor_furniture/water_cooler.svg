@@ -1,0 +1,144 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground Shadow -->
+  <ellipse cx="100" cy="185" rx="35" ry="8" fill="#000000" opacity="0.15"/>
+  
+  <!-- Ground Area -->
+  <rect x="0" y="175" width="200" height="25" fill="#f0f0f0"/>
+  
+  <!-- Water Cooler Base -->
+  <rect x="75" y="150" width="50" height="25" fill="#2c3e50" rx="3"/>
+  <rect x="77" y="152" width="46" height="21" fill="#34495e" rx="2"/>
+  
+  <!-- Main Body -->
+  <rect x="70" y="80" width="60" height="75" fill="#ecf0f1" rx="5"/>
+  <rect x="72" y="82" width="56" height="71" fill="#ffffff" rx="4"/>
+  
+  <!-- Water Bottle/Tank -->
+  <ellipse cx="100" cy="65" rx="25" ry="15" fill="#3498db" opacity="0.8"/>
+  <rect x="75" y="35" width="50" height="30" fill="#3498db" opacity="0.8" rx="25"/>
+  <ellipse cx="100" cy="35" rx="25" ry="15" fill="#2980b9" opacity="0.9"/>
+  
+  <!-- Water Level Indicator -->
+  <rect x="78" y="40" width="44" height="20" fill="#5dade2" opacity="0.6" rx="22"/>
+  <rect x="80" y="45" width="40" height="10" fill="#85c1e9" opacity="0.8" rx="20"/>
+  
+  <!-- Water Bubbles -->
+  <g>
+    <circle cx="90" cy="50" r="2" fill="#ffffff" opacity="0.6"/>
+    <circle cx="105" cy="45" r="1.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="95" cy="55" r="1" fill="#ffffff" opacity="0.8"/>
+    <circle cx="110" cy="52" r="1" fill="#ffffff" opacity="0.6"/>
+  </g>
+  
+  <!-- Bottle Cap/Top -->
+  <rect x="85" y="25" width="30" height="12" fill="#2c3e50" rx="15"/>
+  <rect x="87" y="27" width="26" height="8" fill="#34495e" rx="13"/>
+  <circle cx="100" cy="31" r="3" fill="#95a5a6"/>
+  
+  <!-- Control Panel -->
+  <rect x="80" y="90" width="40" height="25" fill="#bdc3c7" rx="2"/>
+  <rect x="82" y="92" width="36" height="21" fill="#ecf0f1" rx="1"/>
+  
+  <!-- Hot/Cold Buttons -->
+  <g>
+    <!-- Hot Button (Red) -->
+    <circle cx="90" cy="102" r="6" fill="#e74c3c"/>
+    <circle cx="90" cy="102" r="4" fill="#c0392b"/>
+    <text x="90" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" font-weight="bold" fill="#ffffff">H</text>
+    
+    <!-- Cold Button (Blue) -->
+    <circle cx="110" cy="102" r="6" fill="#3498db"/>
+    <circle cx="110" cy="102" r="4" fill="#2980b9"/>
+    <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" font-weight="bold" fill="#ffffff">C</text>
+  </g>
+  
+  <!-- Dispensing Area -->
+  <rect x="85" y="120" width="30" height="15" fill="#95a5a6" rx="2"/>
+  <rect x="87" y="122" width="26" height="11" fill="#bdc3c7" rx="1"/>
+  
+  <!-- Water Spouts -->
+  <g>
+    <!-- Left Spout (Hot) -->
+    <rect x="92" y="118" width="4" height="8" fill="#7f8c8d" rx="2"/>
+    <rect x="93" y="119" width="2" height="6" fill="#95a5a6" rx="1"/>
+    
+    <!-- Right Spout (Cold) -->
+    <rect x="104" y="118" width="4" height="8" fill="#7f8c8d" rx="2"/>
+    <rect x="105" y="119" width="2" height="6" fill="#95a5a6" rx="1"/>
+  </g>
+  
+  <!-- Drip Tray -->
+  <rect x="80" y="135" width="40" height="4" fill="#7f8c8d" rx="2"/>
+  <rect x="82" y="136" width="36" height="2" fill="#95a5a6" rx="1"/>
+  
+  <!-- Water Drops -->
+  <g>
+    <ellipse cx="94" cy="130" rx="1" ry="2" fill="#3498db" opacity="0.7"/>
+    <ellipse cx="106" cy="132" rx="0.8" ry="1.5" fill="#3498db" opacity="0.6"/>
+  </g>
+  
+  <!-- Status LEDs -->
+  <g>
+    <!-- Power LED (Green) -->
+    <circle cx="85" cy="95" r="1.5" fill="#2ecc71"/>
+    
+    <!-- Hot Ready LED (Red) -->
+    <circle cx="95" cy="95" r="1.5" fill="#e74c3c"/>
+    
+    <!-- Cold Ready LED (Blue) -->
+    <circle cx="105" cy="95" r="1.5" fill="#3498db"/>
+    
+    <!-- Filter LED (Yellow) -->
+    <circle cx="115" cy="95" r="1.5" fill="#f39c12"/>
+  </g>
+  
+  <!-- Brand Logo -->
+  <rect x="85" y="140" width="30" height="8" fill="#2c5aa0" rx="1"/>
+  <text x="100" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" font-weight="bold" fill="#ffffff">AQUA FRESH</text>
+  
+  <!-- Side Vents -->
+  <g>
+    <!-- Left Side Vents -->
+    <g stroke="#95a5a6" stroke-width="1" opacity="0.5">
+      <line x1="75" y1="100" x2="75" y2="105"/>
+      <line x1="75" y1="108" x2="75" y2="113"/>
+      <line x1="75" y1="116" x2="75" y2="121"/>
+    </g>
+    
+    <!-- Right Side Vents -->
+    <g stroke="#95a5a6" stroke-width="1" opacity="0.5">
+      <line x1="125" y1="100" x2="125" y2="105"/>
+      <line x1="125" y1="108" x2="125" y2="113"/>
+      <line x1="125" y1="116" x2="125" y2="121"/>
+    </g>
+  </g>
+  
+  <!-- Temperature Display -->
+  <rect x="88" y="85" width="24" height="6" fill="#2c3e50" rx="1"/>
+  <text x="100" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" fill="#2ecc71">READY</text>
+  
+  <!-- Water Level Sensor -->
+  <rect x="125" y="50" width="3" height="15" fill="#7f8c8d" rx="1"/>
+  <circle cx="126.5" cy="52" r="1" fill="#e74c3c"/>
+  <circle cx="126.5" cy="55" r="1" fill="#f39c12"/>
+  <circle cx="126.5" cy="58" r="1" fill="#2ecc71"/>
+  
+  <!-- Bottle Handle -->
+  <path d="M 75 45 Q 65 50 75 55" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  <path d="M 125 45 Q 135 50 125 55" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  
+  <!-- Main Body Highlight -->
+  <rect x="72" y="82" width="56" height="15" fill="url(#coolerGradient)" opacity="0.3" rx="4"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="coolerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Nameplate -->
+  <rect x="70" y="190" width="60" height="8" fill="#2c3e50" rx="1"/>
+  <text x="100" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff">WATER COOLER</text>
+</svg>

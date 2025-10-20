@@ -1,0 +1,49 @@
+meta:
+  pack: "interior-office"
+  save_root: "res://assets/maps/interior/office/"
+  macros: "assets/prompts/_macros.yaml"
+  notes:
+    - Furniture sprites fit 16x16 or 32x32; align to 16px grid.
+    - Use modern office aesthetic; keep readable silhouettes.
+defaults:
+  apply:
+    base_prompt: "@base"
+    negative_prompt: "@negative"
+furniture:
+  items:
+    - { id: desk_single, file: "desk_single.png", size_px: [32, 16],
+        prompt: "@base, modern office desk, wood top, metal legs, cable grommet detail",
+        negative: "@negative" }
+    - { id: office_chair, file: "office_chair.png", size_px: [16, 16],
+        prompt: "@base, swivel office chair, five-caster base, cushioned seat",
+        negative: "@negative" }
+    - { id: pc_setup, file: "pc_setup.png", size_px: [32, 16],
+        prompt: "@base, monitor + keyboard + small tower, screen glow, tidy cables",
+        negative: "@negative" }
+    - { id: meeting_table, file: "meeting_table.png", size_px: [48, 32],
+        prompt: "@base, meeting table with 4 chairs, rectangular top, minimalistic",
+        negative: "@negative" }
+    - { id: whiteboard, file: "whiteboard.png", size_px: [32, 32],
+        prompt: "@base, standing whiteboard, marker tray, light reflections",
+        negative: "@negative" }
+    - { id: bookshelf, file: "bookshelf.png", size_px: [32, 32],
+        prompt: "@base, office bookshelf, varied book spines, binders, decor items",
+        negative: "@negative" }
+    - { id: coffee_machine, file: "coffee_machine.png", size_px: [16, 16],
+        prompt: "@base, coffee machine on small counter, cup icon, warm steam",
+        negative: "@negative" }
+    - { id: sofa, file: "sofa.png", size_px: [32, 16],
+        prompt: "@base, office sofa, two-seater, soft cushions, reception vibe",
+        negative: "@negative" }
+props:
+  items:
+    - { id: plant_pot, file: "plant_pot.png", size_px: [16, 16],
+        prompt: "@base, indoor plant in pot, glossy leaves, reception corner prop",
+        negative: "@negative" }
+    - { id: water_dispenser, file: "water_dispenser.png", size_px: [16, 24],
+        prompt: "@base, water dispenser, blue bottle, tap icons, simple highlights",
+        negative: "@negative" }
+    - { id: printer, file: "printer.png", size_px: [16, 16],
+        prompt: "@base, compact office printer, paper tray detail, status light",
+        negative: "@negative" }
+
