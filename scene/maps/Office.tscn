@@ -16874,7 +16874,9 @@ tile_map_data = PackedByteArray("AAAVAAgAAAANACAAAAAWAAgAAAAOAB8AAAAXAAgAAAAPACA
 tile_set = SubResource("TileSet_opch4")
 
 [node name="MainCamera" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
 script = ExtResource("16_tgr77")
+map_bounds = Rect2(0, 0, 1200, 600)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 visible = false

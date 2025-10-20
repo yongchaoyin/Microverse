@@ -35,8 +35,8 @@ class_name CameraController
 @export var map_bounds: Rect2 = Rect2(0, 0, 2400, 1920)  # 150×120 tiles @ 16px
 
 ## 是否启用平滑移动
-@export var position_smoothing_enabled: bool = true
-@export var position_smoothing_speed: float = 5.0
+@export var enable_position_smoothing: bool = true
+@export var position_smoothing_rate: float = 5.0
 
 # ========================================
 # 私有变量
@@ -70,7 +70,7 @@ func _ready():
 	_setup_camera_limits()
 
 	# 启用平滑
-	if position_smoothing_enabled:
+	if enable_position_smoothing:
 		# Godot 4.x使用不同的平滑方式,这里手动实现
 		pass
 

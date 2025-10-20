@@ -8,6 +8,7 @@ enum APIType {
 	OLLAMA,
 	OPENAI,
 	DEEPSEEK,
+	SILICONFLOW,  # 新增：硅基流动
 	DOUBAO,
 	GEMINI,
 	CLAUDE,
@@ -75,6 +76,18 @@ static func _initialize():
 		"DeepSeek",
 		"https://api.deepseek.com/v1/chat/completions",
 		["deepseek-chat"],
+		true,
+		{"Content-Type": "application/json", "Authorization": "Bearer {api_key}"},
+		"openai",
+		"openai"
+	)
+	
+	# 硅基流动配置
+	_providers["SiliconFlow"] = APIProvider.new(
+		"SiliconFlow",
+		"硅基流动",
+		"https://api.siliconflow.cn/v1/chat/completions",
+		["deepseek-ai/DeepSeek-V3.2-Exp", "Qwen/Qwen2.5-7B-Instruct", "meta-llama/Llama-3.1-8B-Instruct"],
 		true,
 		{"Content-Type": "application/json", "Authorization": "Bearer {api_key}"},
 		"openai",

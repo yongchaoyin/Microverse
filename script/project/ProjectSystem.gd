@@ -1,8 +1,6 @@
 # script/project/ProjectSystem.gd
 extends Node
 
-class_name ProjectSystem
-
 # ========================================
 # 信号定义
 # ========================================

@@ -1,5 +1,4 @@
 # script/project/ProjectTypeTemplates.gd
-class_name ProjectTypeTemplates
 extends Node
 
 # Autoload单例: ProjectTypeTemplates

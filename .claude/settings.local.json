@@ -40,7 +40,14 @@
       "Bash(done)",
       "Bash(echo:*)",
       "Bash(printf:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(awk:*)",
+      "Bash(sort:*)",
+      "Bash(for:*)",
+      "Bash(do if [ ! -f \"$script\" ])",
+      "Bash(then echo \"❌ MISSING: $script\")",
+      "Bash(else echo \"✓ $script\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

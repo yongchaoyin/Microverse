@@ -89,7 +89,7 @@ func _ready():
 
 func _create_light2d():
 	"""创建Light2D节点(如果不存在)"""
-	light = Light2D.new()
+	light = PointLight2D.new()
 	light.name = "Light2D"
 	light.color = light_color
 	light.energy = light_energy

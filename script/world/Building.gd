@@ -420,7 +420,7 @@ func is_character_inside(character: Node) -> bool:
 	"""
 	return character in characters_inside
 
-func set_owner(new_owner_id: String):
+func set_building_owner(new_owner_id: String):
 	"""
 	设置建筑所有者
 

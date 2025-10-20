@@ -250,7 +250,7 @@ func _turn_on_all_lights(use_delay: bool):
 			delay = randf_range(turn_on_delay_min, turn_on_delay_max)
 
 		# 启动协程开灯
-		_turn_on_light_delayed(light, delay).call_deferred()
+		call_deferred("_turn_on_light_delayed", light, delay)
 
 	# 等待所有灯光开启完成
 	if total_count > 0:
@@ -298,7 +298,7 @@ func _turn_off_all_lights(use_delay: bool):
 			delay = randf_range(turn_off_delay_min, turn_off_delay_max)
 
 		# 启动协程关灯
-		_turn_off_light_delayed(light, delay).call_deferred()
+		call_deferred("_turn_off_light_delayed", light, delay)
 
 	# 等待所有灯光关闭完成
 	if total_count > 0:

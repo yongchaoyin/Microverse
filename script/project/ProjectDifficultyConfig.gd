@@ -1,5 +1,4 @@
 # script/project/ProjectDifficultyConfig.gd
-class_name ProjectDifficultyConfig
 extends Node
 
 # Autoload单例: ProjectDifficultyConfig

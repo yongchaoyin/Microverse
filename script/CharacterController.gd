@@ -36,7 +36,8 @@ func _ready():
 		add_child(chat_history)
 	
 	# 创建AI代理
-	ai_agent = AIAgent.new()
+	var ai_agent_scene = preload("res://script/ai/AIAgent.gd")
+	ai_agent = ai_agent_scene.new()
 	add_child(ai_agent)
 	
 	# 创建AI模型显示标签
@@ -48,7 +49,8 @@ func _ready():
 func set_selected(selected: bool):
 	is_selected = selected
 	# 切换AI代理的控制状态
-	ai_agent.toggle_player_control(selected)
+	if ai_agent:
+		ai_agent.toggle_player_control(selected)
 	# 可以在这里添加选中效果,比如添加一个光环或改变颜色
 
 func move_to(target: Vector2):
@@ -238,7 +240,7 @@ func _recalculate_path():
 
 func _physics_process(delta):
 	# AI控制的角色或被选中的角色都可以移动
-	if not is_selected and ai_agent.is_player_controlled:
+	if not is_selected and ai_agent and ai_agent.is_player_controlled:
 		return
 		
 	# 处理键盘输入 - 只有被选中的角色才能响应键盘输入
