@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "default_relationship": {
+    "familiarity": 5.0,
+    "affection": 5.0,
+    "trust": 5.0,
+    "romance": 0.0,
+    "respect": 5.0,
+    "cordiality": 5.0
+  }
+}

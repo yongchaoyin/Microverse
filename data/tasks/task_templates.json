@@ -1,0 +1,166 @@
+{
+	"work": [
+		{
+			"id": "frontend_feature_slice",
+			"name": "实现前端功能切片",
+			"description": "实现用户故事对应的前端界面组件，确保交互体验符合设计规范。",
+			"career_ids": ["frontend_engineer", "product_manager"],
+			"estimated_minutes": 180,
+			"deadline_offset_minutes": 360,
+			"default_priority": 7,
+			"tags": ["frontend", "coding", "ui"],
+			"success_metrics": {
+				"completion_rate": 1.0,
+				"quality_score": 0.85,
+				"punctuality": 0.9
+			}
+		},
+		{
+			"id": "backend_api_endpoint",
+			"name": "交付后端接口",
+			"description": "设计并实现新的REST接口，补充单元测试并更新Swagger文档。",
+			"career_ids": ["backend_engineer"],
+			"estimated_minutes": 240,
+			"deadline_offset_minutes": 480,
+			"default_priority": 8,
+			"tags": ["backend", "api", "testing"],
+			"success_metrics": {
+				"completion_rate": 1.0,
+				"quality_score": 0.88,
+				"punctuality": 0.92
+			}
+		},
+		{
+			"id": "qa_regression_suite",
+			"name": "回归测试集执行",
+			"description": "执行高风险模块的回归测试，记录缺陷并更新测试报告。",
+			"career_ids": ["qa_engineer"],
+			"estimated_minutes": 210,
+			"deadline_offset_minutes": 360,
+			"default_priority": 6,
+			"tags": ["qa", "testing"],
+			"success_metrics": {
+				"completion_rate": 1.0,
+				"quality_score": 0.82,
+				"punctuality": 0.95
+			}
+		},
+		{
+			"id": "hr_interview_day",
+			"name": "候选人面试日程",
+			"description": "安排、主持并记录3名候选人的面试反馈，更新人才库状态。",
+			"career_ids": ["hr_manager"],
+			"estimated_minutes": 180,
+			"deadline_offset_minutes": 300,
+			"default_priority": 6,
+			"tags": ["hr", "interview", "report"],
+			"success_metrics": {
+				"completion_rate": 1.0,
+				"quality_score": 0.8,
+				"punctuality": 0.9
+			}
+		},
+		{
+			"id": "executive_board_update",
+			"name": "董事会周报",
+			"description": "汇总公司关键指标，撰写周报邮件并准备15分钟简报稿。",
+			"career_ids": ["ceo", "executive_assistant"],
+			"estimated_minutes": 150,
+			"deadline_offset_minutes": 240,
+			"default_priority": 9,
+			"tags": ["executive", "report", "analysis"],
+			"success_metrics": {
+				"completion_rate": 1.0,
+				"quality_score": 0.9,
+				"punctuality": 0.96
+			}
+		}
+	],
+	"daily": [
+		{
+			"id": "daily_sync",
+			"name": "团队站会",
+			"description": "参与跨职能团队站会，分享任务进度和阻塞点。",
+			"estimated_minutes": 30,
+			"deadline_offset_minutes": 60,
+			"default_priority": 5,
+			"tags": ["daily", "communication"]
+		},
+		{
+			"id": "documentation_cleanup",
+			"name": "文档整理",
+			"description": "整理知识库，归档当天产生的业务或技术文档。",
+			"estimated_minutes": 40,
+			"deadline_offset_minutes": 120,
+			"default_priority": 4,
+			"tags": ["daily", "documentation"]
+		},
+		{
+			"id": "workspace_reset",
+			"name": "工位整理",
+			"description": "整理个人工位和公共区域，保持良好的办公环境。",
+			"estimated_minutes": 20,
+			"deadline_offset_minutes": 180,
+			"default_priority": 3,
+			"tags": ["daily", "environment"]
+		}
+	],
+	"social": [
+		{
+			"id": "coffee_chat",
+			"name": "咖啡社交",
+			"description": "与指定同事进行咖啡聊天，交流工作或生活近况。",
+			"estimated_minutes": 45,
+			"deadline_offset_minutes": 180,
+			"default_priority": 4,
+			"tags": ["social", "relationship"]
+		},
+		{
+			"id": "team_lunch",
+			"name": "团队午餐",
+			"description": "组织或参与团队午餐，加强团队凝聚力。",
+			"estimated_minutes": 60,
+			"deadline_offset_minutes": 240,
+			"default_priority": 4,
+			"tags": ["social", "team"]
+		},
+		{
+			"id": "mentor_session",
+			"name": "导师交流",
+			"description": "与导师或徒弟定期交流进展，制定下阶段成长计划。",
+			"estimated_minutes": 50,
+			"deadline_offset_minutes": 360,
+			"default_priority": 5,
+			"tags": ["social", "growth"]
+		}
+	],
+	"growth": [
+		{
+			"id": "skill_course",
+			"name": "技能课程学习",
+			"description": "完成在线课程的一个章节并记录学习笔记。",
+			"estimated_minutes": 90,
+			"deadline_offset_minutes": 720,
+			"default_priority": 5,
+			"tags": ["growth", "learning"]
+		},
+		{
+			"id": "fitness_training",
+			"name": "健康训练",
+			"description": "完成一次完整的健身训练，重点关注核心力量。",
+			"estimated_minutes": 60,
+			"deadline_offset_minutes": 540,
+			"default_priority": 4,
+			"tags": ["growth", "health"]
+		},
+		{
+			"id": "reading_club",
+			"name": "阅读分享",
+			"description": "阅读行业相关文章并输出400字思考或总结。",
+			"estimated_minutes": 75,
+			"deadline_offset_minutes": 600,
+			"default_priority": 4,
+			"tags": ["growth", "knowledge"]
+		}
+	]
+}

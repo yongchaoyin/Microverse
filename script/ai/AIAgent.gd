@@ -23,6 +23,12 @@ var is_player_controlled = false
 @onready var character_controller = character
 @onready var dialog_manager = get_node("/root/DialogManager")
 @onready var character_manager = get_node("/root/CharacterManager")
+@onready var schedule_manager = get_node_or_null("/root/ScheduleManager")
+@onready var task_system = get_node_or_null("/root/TaskSystem")
+@onready var career_system = get_node_or_null("/root/CareerSystem")
+@onready var event_bus = get_node_or_null("/root/EventBus")
+@onready var time_system = get_node_or_null("/root/TimeSystem")
+@onready var economy_manager = get_node_or_null("/root/EconomyManager")
 
 # 定时器，用于定期进行AI决策
 var decision_timer: Timer
@@ -33,7 +39,18 @@ var decision_timer: Timer
 # 添加新的感知相关变量
 @onready var room_manager = get_node("/root/Office/RoomManager")
 
+var agent_id: String = ""
+var current_activity: Dictionary = {}
+var active_tasks: Array = []
+var schedule_hook_connected := false
+var task_hook_connected := false
+
 func _ready():
+	agent_id = character.name if character else name
+	_register_schedule_hooks()
+	_register_task_hooks()
+	_register_economy_account()
+	
 	# 创建并配置决策定时器
 	decision_timer = Timer.new()
 	decision_timer.wait_time = 60  # 每1分钟进行一次决策
@@ -65,6 +82,144 @@ func toggle_player_control(enabled: bool):
 func _on_decision_timer_timeout():
 	if not is_player_controlled:
 		make_decision()
+
+# --------------------------------------
+# 日程与任务系统集成
+# --------------------------------------
+
+func _register_schedule_hooks():
+	if schedule_hook_connected:
+		return
+	if schedule_manager:
+		schedule_manager.activity_changed.connect(_on_schedule_activity_changed)
+		schedule_hook_connected = true
+		schedule_manager.register_agent(agent_id, character.name)
+	elif event_bus:
+		event_bus.subscribe("schedule.activity_changed", self, "_on_schedule_event")
+		schedule_hook_connected = true
+
+func _register_task_hooks():
+	if task_hook_connected:
+		return
+	if task_system:
+		task_system.task_list_refreshed.connect(_on_task_list_refreshed)
+		task_system.task_completed.connect(_on_task_completed)
+		task_system.task_failed.connect(_on_task_failed)
+		task_system.task_cancelled.connect(_on_task_cancelled)
+		task_hook_connected = true
+		task_system.auto_assign_for_ai(agent_id, 3)
+
+func _register_economy_account():
+	if economy_manager and economy_manager.has_method("register_character"):
+		economy_manager.register_character(agent_id, character)
+
+func _on_schedule_activity_changed(ai_id: String, activity: Dictionary) -> void:
+	if ai_id != agent_id:
+		return
+	_handle_activity_transition(activity)
+
+func _on_schedule_event(payload: Dictionary) -> void:
+	if payload.get("ai_id", "") != agent_id:
+		return
+	var activity := payload.get("activity", {})
+	if activity is Dictionary:
+		_handle_activity_transition(activity)
+
+func _handle_activity_transition(activity: Dictionary) -> void:
+	current_activity = activity.duplicate(true)
+	_sync_character_activity_metadata()
+	_navigate_to_activity(current_activity)
+	if _should_focus_on_work(current_activity):
+		_ensure_work_tasks()
+
+func _navigate_to_activity(activity: Dictionary) -> void:
+	if character == null or not character.has_method("move_to"):
+		return
+	var location_enum := int(activity.get("location_enum", LocationManager.LocationType.OTHER))
+	if location_enum == LocationManager.LocationType.OTHER:
+		return
+	var target_location := LocationManager.get_available_location(location_enum)
+	if target_location == null:
+		target_location = LocationManager.get_nearest_location(character.global_position, location_enum)
+	if target_location:
+		if not activity.has("location_id"):
+			current_activity["location_id"] = target_location.id
+		character.move_to(target_location.position)
+
+func _should_focus_on_work(activity: Dictionary) -> bool:
+	var location_enum := int(activity.get("location_enum", LocationManager.LocationType.OTHER))
+	if location_enum == LocationManager.LocationType.OFFICE or location_enum == LocationManager.LocationType.MEETING_ROOM:
+		return true
+	var name := String(activity.get("activity", "")).to_lower()
+	var keywords := ["work", "dev", "meeting", "plan", "review", "strategy", "api", "analysis"]
+	for keyword in keywords:
+		if name.find(keyword) != -1:
+			return true
+	return false
+
+func _ensure_work_tasks():
+	if task_system == null:
+		return
+	var deficit := max(0, 3 - active_tasks.size())
+	if deficit <= 0:
+		return
+	task_system.auto_assign_for_ai(agent_id, deficit)
+
+func _on_task_list_refreshed(ai_id: String, tasks: Array) -> void:
+	if ai_id != agent_id:
+		return
+	active_tasks = tasks.duplicate(true)
+	_sync_character_task_metadata()
+	if _should_focus_on_work(current_activity):
+		_ensure_work_tasks()
+
+func _on_task_completed(ai_id: String, task: Dictionary, _result: Dictionary) -> void:
+	if ai_id != agent_id:
+		return
+	_add_memory(character, "你完成了任务：%s" % task.get("name", task.get("id", "")))
+
+func _on_task_failed(ai_id: String, task: Dictionary, reason: String) -> void:
+	if ai_id != agent_id:
+		return
+	_add_memory(character, "你未能完成任务：%s（原因：%s）" % [task.get("name", task.get("id", "")), reason])
+
+func _on_task_cancelled(ai_id: String, task: Dictionary, reason: String) -> void:
+	if ai_id != agent_id:
+		return
+	_add_memory(character, "任务被取消：%s（原因：%s）" % [task.get("name", task.get("id", "")), reason])
+
+func _sync_character_activity_metadata():
+	if not character:
+		return
+	var metadata := character.get_meta("character_data", {})
+	metadata["current_activity"] = current_activity
+	character.set_meta("character_data", metadata)
+
+func _sync_character_task_metadata():
+	if not character:
+		return
+	var metadata := character.get_meta("character_data", {})
+	metadata["tasks"] = active_tasks
+	character.set_meta("character_data", metadata)
+
+func _exit_tree():
+	if schedule_manager and schedule_manager.activity_changed.is_connected(_on_schedule_activity_changed):
+		schedule_manager.activity_changed.disconnect(_on_schedule_activity_changed)
+	elif event_bus and schedule_hook_connected:
+		event_bus.unsubscribe("schedule.activity_changed", self, "_on_schedule_event")
+
+	if task_system:
+		if task_system.task_list_refreshed.is_connected(_on_task_list_refreshed):
+			task_system.task_list_refreshed.disconnect(_on_task_list_refreshed)
+		if task_system.task_completed.is_connected(_on_task_completed):
+			task_system.task_completed.disconnect(_on_task_completed)
+		if task_system.task_failed.is_connected(_on_task_failed):
+			task_system.task_failed.disconnect(_on_task_failed)
+		if task_system.task_cancelled.is_connected(_on_task_cancelled):
+			task_system.task_cancelled.disconnect(_on_task_cancelled)
+
+	if economy_manager and economy_manager.has_method("deregister_character"):
+		economy_manager.deregister_character(agent_id)
 
 # 修改生成场景描述函数
 func generate_scene_description() -> String:

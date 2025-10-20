@@ -2470,9 +2470,102 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="AI设置" type="ScrollContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer"]
+[node name="Schedule" type="ScrollContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 4
+
+[node name="ScheduleContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="CurrentActivityPanel" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ActivityTitleLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel"]
+layout_mode = 2
+text = "当前活动"
+
+[node name="ActivityNameLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "未选择角色"
+
+[node name="ActivityLocationLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel"]
+layout_mode = 2
+text = ""
+
+[node name="ActivityTimeLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel"]
+layout_mode = 2
+text = ""
+
+[node name="ScheduleSeparator" type="HSeparator" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer"]
+layout_mode = 2
+
+[node name="AgendaTitleLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer"]
+layout_mode = 2
+text = "今日日程"
+
+[node name="AgendaList" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="AgendaEmptyLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/AgendaList"]
+layout_mode = 2
+text = "暂无日程"
+
+[node name="经济" type="ScrollContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="FinanceContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="BalancePanel" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BalanceTitleLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/BalancePanel"]
+layout_mode = 2
+text = "账户概览"
+
+[node name="BalanceValueLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/BalancePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+
+[node name="PayrollInfoLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/BalancePanel"]
+layout_mode = 2
+text = ""
+
+[node name="FinanceSeparator" type="HSeparator" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer"]
+layout_mode = 2
+
+[node name="TransactionTitleLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer"]
+layout_mode = 2
+text = "近期交易"
+
+[node name="TransactionList" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="TransactionEmptyLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/TransactionList"]
+layout_mode = 2
+text = "暂无交易记录"
+
+[node name="AI设置" type="ScrollContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 6
 
 [node name="AISettingsContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/AI设置"]
 layout_mode = 2

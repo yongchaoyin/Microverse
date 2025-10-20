@@ -105,10 +105,15 @@ func _try_start_conversation():
 	var character_manager = get_node("/root/CharacterManager")
 	if not character_manager or not character_manager.current_character:
 		return
-	
+
 	# 获取当前选中角色附近的其他角色
 	var nearby_character = character_manager.get_nearby_character(character_manager.current_character)
 	if nearby_character:
+		# 检查关系状态 (Phase D集成)
+		var can_talk = _check_relationship_before_dialog(character_manager.current_character, nearby_character)
+		if not can_talk:
+			return
+
 		# 使用新的对话服务开始对话
 		var success = dialog_service.try_start_conversation(character_manager.current_character, nearby_character)
 		if success:
@@ -117,6 +122,9 @@ func _try_start_conversation():
 			_add_memory_to_current_character(character_manager.current_character, "你主动与%s开始了对话。" % nearby_character.name)
 			# 为被对话的角色也添加记忆
 			_add_memory_to_current_character(nearby_character, "%s主动与你开始了对话。" % character_manager.current_character.name)
+
+			# 对话成功会略微增加熟悉度 (Phase D集成)
+			_update_relationship_after_dialog(character_manager.current_character, nearby_character)
 		else:
 			print("[DialogManager] 无法开始对话")
 
@@ -288,3 +296,74 @@ func _add_memory_to_current_character(target_character, content: String):
 	})
 	target_character.set_meta("character_data", metadata)
 	print("[DialogManager] 为%s添加记忆：%s" % [target_character.name, content])
+
+# ========================================
+# Phase D: 关系系统集成
+# ========================================
+
+func _check_relationship_before_dialog(character_a: Node, character_b: Node) -> bool:
+	"""对话前检查关系状态
+
+	检查是否有未解决的冲突或关系是否太差
+
+	Args:
+		character_a: 角色A
+		character_b: 角色B
+
+	Returns:
+		true表示可以对话, false表示不可以
+	"""
+	var relationship_manager = get_node_or_null("/root/RelationshipManager")
+	var conflict_system = get_node_or_null("/root/ConflictSystem")
+
+	if not relationship_manager or not conflict_system:
+		return true  # 如果系统未加载,允许对话
+
+	# 获取AI ID
+	var ai_a = character_a.get_meta("ai_id", character_a.name)
+	var ai_b = character_b.get_meta("ai_id", character_b.name)
+
+	# 检查是否在冲突冷却期
+	if not conflict_system.can_interact(ai_a, ai_b):
+		print("[DialogManager] %s和%s处于冲突冷却期,无法对话" % [ai_a, ai_b])
+		return false
+
+	# 检查关系状态
+	var relationship = relationship_manager.get_relationship(ai_a, ai_b)
+	if not relationship.is_empty():
+		var trust = relationship.get("trust", 0.0)
+		var affection = relationship.get("affection", 0.0)
+
+		# 如果信任度和好感度都极低,限制对话
+		if trust < -80 and affection < -80:
+			print("[DialogManager] %s和%s关系极差(信任: %.0f, 好感: %.0f),拒绝对话" % [ai_a, ai_b, trust, affection])
+			return false
+
+	return true
+
+func _update_relationship_after_dialog(character_a: Node, character_b: Node):
+	"""对话后更新关系
+
+	每次成功对话会略微增加熟悉度和好感
+
+	Args:
+		character_a: 角色A
+		character_b: 角色B
+	"""
+	var relationship_manager = get_node_or_null("/root/RelationshipManager")
+	if not relationship_manager:
+		return
+
+	# 获取AI ID
+	var ai_a = character_a.get_meta("ai_id", character_a.name)
+	var ai_b = character_b.get_meta("ai_id", character_b.name)
+
+	# 增加熟悉度和好感度
+	var changes = {
+		"familiarity": 2.0,  # 每次对话+2熟悉度
+		"affection": 1.0     # 每次对话+1好感度
+	}
+
+	relationship_manager.modify_relationship(ai_a, ai_b, changes, "进行了一次对话")
+
+	print("[DialogManager] 更新关系: %s <-> %s (熟悉度+2, 好感度+1)" % [ai_a, ai_b])

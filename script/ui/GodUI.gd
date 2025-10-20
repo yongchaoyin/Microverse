@@ -1,4 +1,4 @@
-extends Control
+﻿extends Control
 
 # 脚本引用
 var BackgroundStoryManager = preload("res://script/ai/background_story/BackgroundStoryManager.gd")
@@ -6,6 +6,7 @@ var BackgroundStoryManager = preload("res://script/ai/background_story/Backgroun
 # 面板引用
 @onready var left_panel = $HBoxContainer/LeftPanel
 @onready var right_panel = $HBoxContainer/RightPanel
+@onready var right_panel_container = $HBoxContainer/RightPanel/VBoxContainer
 @onready var character_list = $HBoxContainer/LeftPanel/VBoxContainer/CharacterList
 @onready var character_detail = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail
 @onready var toggle_ui_button = $HBoxContainer/RightPanel/VBoxContainer/ToggleUIButton
@@ -22,11 +23,69 @@ var BackgroundStoryManager = preload("res://script/ai/background_story/Backgroun
 @onready var task_detail_list = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/任务/TaskDetailList
 @onready var ai_settings_container = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/AI设置/AISettingsContainer
 @onready var avatar_sprite = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/HBoxContainer/Avatar/AnimatedSprite2D
+@onready var schedule_activity_name_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel/ActivityNameLabel
+@onready var schedule_activity_location_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel/ActivityLocationLabel
+@onready var schedule_activity_time_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/CurrentActivityPanel/ActivityTimeLabel
+@onready var schedule_agenda_list = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/AgendaList
+@onready var schedule_empty_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/Schedule/ScheduleContainer/AgendaList/AgendaEmptyLabel
+@onready var finance_balance_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/BalancePanel/BalanceValueLabel
+@onready var finance_payroll_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/BalancePanel/PayrollInfoLabel
+@onready var finance_transaction_list = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/TransactionList
+@onready var finance_empty_label = $HBoxContainer/LeftPanel/VBoxContainer/CharacterDetail/TabContainer/经济/FinanceContainer/TransactionList/TransactionEmptyLabel
 
 # 当前选中的角色
 var selected_character = null
 var all_characters = []
 var ui_visible = true
+var _time_system = null
+var _time_label: Label = null
+var _time_control_buttons: Dictionary = {}
+var _event_bus = null
+var _schedule_manager = null
+var _task_system = null
+var _economy_manager = null
+var _last_payroll_summary = {}
+
+const TASK_STATE_LABELS := {
+	0: "进行中",
+	1: "已完成",
+	2: "已失败",
+	3: "已取消"
+}
+
+const TASK_STATE_COLORS := {
+	0: Color(0.95, 0.95, 0.95),
+	1: Color(0.6, 0.9, 0.6),
+	2: Color(0.95, 0.6, 0.6),
+	3: Color(0.7, 0.7, 0.7)
+}
+
+const LOCATION_LABELS := {
+	"OFFICE": "办公室",
+	"DEV_DESK": "开发工位",
+	"QA_LAB": "测试实验室",
+	"HR_OFFICE": "人力资源部",
+	"PRODUCT_WAR_ROOM": "产品战情室",
+	"EXECUTIVE_OFFICE": "行政办公室",
+	"ADMIN_DESK": "行政中心",
+	"FRONT_DESK": "前台",
+	"BOARD_ROOM": "董事会议室",
+	"MEETING_ROOM": "会议室",
+	"SCRUM_AREA": "项目讨论区",
+	"WORKSHOP": "培训室",
+	"CAFETERIA": "餐厅",
+	"CAFE": "咖啡馆",
+	"COFFEE_SHOP": "咖啡馆",
+	"FITNESS": "健身房",
+	"GYM": "健身房",
+	"LOUNGE": "休闲区",
+	"LOBBY": "大厅",
+	"PENTHOUSE": "顶层公寓",
+	"HOME": "住宅",
+	"HOME_DESK": "家庭工位",
+	"MARKET": "市集",
+	"PARK": "公园"
+}
 
 func _ready():
 	# 初始隐藏头像动画节点
@@ -75,6 +134,8 @@ func _ready():
 	disease_popup.get_node("VBoxContainer/SeveritySlider").value_changed.connect(_on_disease_severity_changed)
 	emotion_popup.get_node("VBoxContainer/EmotionStrength").value_changed.connect(_on_emotion_strength_changed)
 	
+	_setup_observer_bindings()
+	
 	# 初始化任务系统
 	_init_task_system()
 	
@@ -100,6 +161,8 @@ func _ready():
 	# 获取场景中的角色
 	_update_character_lists()
 	
+	_setup_time_controls()
+	
 	# 初始关闭UI
 	_toggle_ui(true)
 
@@ -108,6 +171,446 @@ func _process(_delta):
 	# 每隔一段时间更新角色列表
 	if Engine.get_process_frames() % 60 == 0:  # 每约1秒检查一次
 		_update_character_lists()
+
+func _setup_observer_bindings():
+	_event_bus = get_node_or_null("/root/EventBus")
+	_schedule_manager = get_node_or_null("/root/ScheduleManager")
+	_task_system = get_node_or_null("/root/TaskSystem")
+	_economy_manager = get_node_or_null("/root/EconomyManager")
+
+	if _schedule_manager and _schedule_manager.has_signal("activity_changed") and not _schedule_manager.activity_changed.is_connected(_on_schedule_manager_activity):
+		_schedule_manager.activity_changed.connect(_on_schedule_manager_activity)
+
+	if _task_system:
+		if _task_system.has_signal("task_list_refreshed") and not _task_system.task_list_refreshed.is_connected(_on_task_list_signal):
+			_task_system.task_list_refreshed.connect(_on_task_list_signal)
+		if _task_system.has_signal("task_assigned") and not _task_system.task_assigned.is_connected(_on_task_assigned_signal):
+			_task_system.task_assigned.connect(_on_task_assigned_signal)
+		if _task_system.has_signal("task_completed") and not _task_system.task_completed.is_connected(_on_task_completed_signal):
+			_task_system.task_completed.connect(_on_task_completed_signal)
+		if _task_system.has_signal("task_failed") and not _task_system.task_failed.is_connected(_on_task_failed_signal):
+			_task_system.task_failed.connect(_on_task_failed_signal)
+		if _task_system.has_signal("task_cancelled") and not _task_system.task_cancelled.is_connected(_on_task_cancelled_signal):
+			_task_system.task_cancelled.connect(_on_task_cancelled_signal)
+
+	if _economy_manager:
+		if _economy_manager.has_signal("balance_changed") and not _economy_manager.balance_changed.is_connected(_on_economy_balance_changed):
+			_economy_manager.balance_changed.connect(_on_economy_balance_changed)
+		if _economy_manager.has_signal("transaction_recorded") and not _economy_manager.transaction_recorded.is_connected(_on_economy_transaction):
+			_economy_manager.transaction_recorded.connect(_on_economy_transaction)
+		if _economy_manager.has_signal("payroll_processed") and not _economy_manager.payroll_processed.is_connected(_on_economy_payroll_processed):
+			_economy_manager.payroll_processed.connect(_on_economy_payroll_processed)
+
+func _is_selected_ai(ai_id: String) -> bool:
+	return selected_character != null and selected_character.name == ai_id
+
+func _on_schedule_manager_activity(ai_id: String, _activity: Dictionary) -> void:
+	if _is_selected_ai(ai_id):
+		_refresh_schedule_view()
+
+func _on_task_list_signal(ai_id: String, _tasks: Array) -> void:
+	if _is_selected_ai(ai_id):
+		_update_task_detail()
+	if _task_popup_is_tracking(ai_id):
+		_update_task_list()
+
+func _on_task_assigned_signal(ai_id: String, _task: Dictionary) -> void:
+	if _is_selected_ai(ai_id):
+		_update_task_detail()
+	if _task_popup_is_tracking(ai_id):
+		_update_task_list()
+
+func _on_task_completed_signal(ai_id: String, _task: Dictionary, _result: Dictionary) -> void:
+	if _is_selected_ai(ai_id):
+		_update_task_detail()
+	if _task_popup_is_tracking(ai_id):
+		_update_task_list()
+
+func _on_task_failed_signal(ai_id: String, _task: Dictionary, _reason: String) -> void:
+	if _is_selected_ai(ai_id):
+		_update_task_detail()
+	if _task_popup_is_tracking(ai_id):
+		_update_task_list()
+
+func _on_task_cancelled_signal(ai_id: String, _task: Dictionary, _reason: String) -> void:
+	if _is_selected_ai(ai_id):
+		_update_task_detail()
+	if _task_popup_is_tracking(ai_id):
+		_update_task_list()
+
+func _on_economy_balance_changed(ai_id: String, _new_balance: float, _delta: float) -> void:
+	if _is_selected_ai(ai_id):
+		_refresh_finance_view()
+
+func _on_economy_transaction(ai_id: String, _transaction: Dictionary) -> void:
+	if _is_selected_ai(ai_id):
+		_refresh_finance_view()
+
+func _on_economy_payroll_processed(summary: Array) -> void:
+	for item in summary:
+		var ai_id: String = item.get("ai_id", "")
+		if ai_id == "":
+			continue
+		_last_payroll_summary[ai_id] = item
+	if selected_character:
+		var current_name := selected_character.name
+		if _last_payroll_summary.has(current_name):
+			_refresh_finance_view()
+
+func _task_popup_is_tracking(ai_id: String) -> bool:
+	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
+	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
+		return false
+	return all_characters[character_selector.selected].name == ai_id
+
+func _reset_schedule_view():
+	schedule_activity_name_label.text = "未选择角色"
+	schedule_activity_location_label.text = ""
+	schedule_activity_time_label.text = ""
+	_clear_agenda_entries()
+	schedule_empty_label.show()
+
+func _reset_finance_view():
+	finance_balance_label.text = "余额：0"
+	finance_payroll_label.text = ""
+	_clear_transaction_entries()
+	finance_empty_label.show()
+
+func _refresh_finance_view():
+	if not selected_character:
+		_reset_finance_view()
+		return
+
+	var balance := float(selected_character.get_meta("money", 0.0))
+	finance_balance_label.text = "\u4F59\u989D\uFF1A" + _format_currency(balance)
+
+	var payroll_info := _last_payroll_summary.get(selected_character.name, null)
+	if payroll_info:
+		var base_salary := float(payroll_info.get("base_salary", 0.0))
+		var bonus := float(payroll_info.get("bonus", payroll_info.get("bonus_pay", payroll_info.get("bonus", 0.0))))
+		var overtime := float(payroll_info.get("overtime_pay", 0.0))
+		finance_payroll_label.text = "上次发薪：基础%s + 奖金%s + 加班%s" % [
+			_format_currency(base_salary),
+			_format_currency(bonus),
+			_format_currency(overtime)
+		]
+	else:
+		finance_payroll_label.text = "上次发薪：暂无记录"
+
+	_clear_transaction_entries()
+
+	var transactions: Array = []
+	if _economy_manager and _economy_manager.has_method("get_transactions"):
+		transactions = _economy_manager.get_transactions(selected_character.name, 10)
+	else:
+		var character_data = selected_character.get_meta("character_data", {})
+		transactions = character_data.get("transactions", [])
+
+	if transactions.is_empty():
+		finance_empty_label.show()
+		return
+
+	finance_empty_label.hide()
+	for txn in transactions:
+		if typeof(txn) != TYPE_DICTIONARY:
+			continue
+
+		var item_container := VBoxContainer.new()
+		item_container.add_theme_constant_override("separation", 2)
+		item_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+		var header := HBoxContainer.new()
+		header.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		header.add_theme_constant_override("separation", 8)
+
+		var type_label := Label.new()
+		type_label.text = _format_transaction_type(String(txn.get("type", "")))
+		type_label.custom_minimum_size = Vector2(90, 0)
+		header.add_child(type_label)
+
+		var amount_label := Label.new()
+		var amount := float(txn.get("amount", 0.0))
+		var direction := String(txn.get("direction", "income"))
+		var amount_text := _format_currency(amount)
+		if direction == "expense":
+			amount_label.text = "-" + amount_text
+			amount_label.modulate = Color(0.9, 0.3, 0.3)
+		else:
+			amount_label.text = "+" + amount_text
+			amount_label.modulate = Color(0.3, 0.75, 0.3)
+		header.add_child(amount_label)
+
+		var balance_label := Label.new()
+		balance_label.text = "余额：" + _format_currency(float(txn.get("balance_after", balance)))
+		balance_label.modulate = Color(0.6, 0.6, 0.6)
+		header.add_child(balance_label)
+
+		var time_label := Label.new()
+		time_label.text = _format_timestamp(int(txn.get("timestamp", 0)))
+		time_label.modulate = Color(0.6, 0.6, 0.6)
+		header.add_child(time_label)
+
+		item_container.add_child(header)
+
+		var metadata := txn.get("metadata", {})
+		var description_text := ""
+		if typeof(metadata) == TYPE_DICTIONARY:
+			if metadata.has("description"):
+				description_text = String(metadata["description"])
+			elif String(txn.get("type", "")) == "salary":
+				description_text = "基础%s 奖金%s 加班%s" % [
+					_format_currency(float(metadata.get("base_salary", 0.0))),
+					_format_currency(float(metadata.get("bonus", metadata.get("bonus_pay", 0.0)))),
+					_format_currency(float(metadata.get("overtime_pay", 0.0)))
+				]
+
+		if description_text != "":
+			var desc_label := Label.new()
+			desc_label.text = description_text
+			desc_label.modulate = Color(0.55, 0.55, 0.55)
+			desc_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			item_container.add_child(desc_label)
+
+		finance_transaction_list.add_child(item_container)
+
+func _clear_transaction_entries():
+	for child in finance_transaction_list.get_children():
+		if child != finance_empty_label:
+			child.queue_free()
+
+func _format_transaction_type(txn_type: String) -> String:
+	match txn_type:
+		"salary":
+			return "工资"
+		"bonus":
+			return "奖金"
+		"purchase":
+			return "支出"
+		"fine":
+			return "罚款"
+		"transfer_in":
+			return "转入"
+		"transfer_out":
+			return "转出"
+		"adjust":
+			return "调整"
+		_:
+			return txn_type.capitalize()
+
+func _format_currency(amount: float, decimals: int = 0, include_sign: bool = false) -> String:
+	var precision := clamp(decimals, 0, 4)
+	var value := abs(amount)
+	var format_string := "%.*f" % [precision, value]
+	var prefix := ""
+	if include_sign:
+		if amount > 0.0:
+			prefix = "+"
+		elif amount < 0.0:
+			prefix = "-"
+	else:
+		if amount < 0.0:
+			prefix = "-"
+	return prefix + format_string + "元"
+
+func _format_timestamp(timestamp: int) -> String:
+	if timestamp <= 0:
+		return "-"
+	var dict := Time.get_datetime_dict_from_unix_time(timestamp)
+	return "%02d-%02d %02d:%02d" % [dict.month, dict.day, dict.hour, dict.minute]
+
+func _refresh_schedule_view():
+	if not selected_character:
+		_reset_schedule_view()
+		return
+
+	var character_data = selected_character.get_meta("character_data", {})
+	var activity = character_data.get("current_activity", {})
+
+	if activity.is_empty():
+		schedule_activity_name_label.text = "暂无活动"
+		schedule_activity_location_label.text = ""
+		schedule_activity_time_label.text = ""
+	else:
+		var activity_name = String(activity.get("activity", "未知活动"))
+		schedule_activity_name_label.text = activity_name
+
+		var location_type = String(activity.get("location_type", ""))
+		var location_id = String(activity.get("location_id", ""))
+		var location_text = "地点：" + _format_location_label(location_type, location_id)
+		schedule_activity_location_label.text = location_text
+
+		var start_minute = int(activity.get("start_minute", -1))
+		var end_minute = int(activity.get("end_minute", -1))
+		if start_minute >= 0 and end_minute >= 0:
+			var time_label = "时间：%s - %s" % [_format_minutes(start_minute), _format_minutes(end_minute)]
+			var current_minute = _current_minutes_of_day()
+			if current_minute >= start_minute and current_minute < end_minute:
+				var remaining = end_minute - current_minute
+				time_label += "（剩余%d分钟）" % remaining
+			schedule_activity_time_label.text = time_label
+		else:
+			schedule_activity_time_label.text = ""
+
+	var agenda: Array = []
+	if _schedule_manager:
+		agenda = _schedule_manager.get_agenda(selected_character.name)
+	else:
+		agenda = character_data.get("agenda", [])
+
+	_populate_schedule_agenda(agenda)
+
+func _clear_agenda_entries():
+	for child in schedule_agenda_list.get_children():
+		if child != schedule_empty_label:
+			child.queue_free()
+
+func _populate_schedule_agenda(entries: Array):
+	_clear_agenda_entries()
+	if entries.is_empty():
+		schedule_empty_label.show()
+		return
+
+	schedule_empty_label.hide()
+
+	for i in range(entries.size()):
+		var entry = entries[i]
+		if typeof(entry) != TYPE_DICTIONARY:
+			continue
+
+		var block = VBoxContainer.new()
+		block.add_theme_constant_override("separation", 2)
+		block.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+		var header = HBoxContainer.new()
+		header.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		header.add_theme_constant_override("separation", 8)
+
+		var time_label = Label.new()
+		time_label.custom_minimum_size = Vector2(120, 0)
+		time_label.text = _format_minutes_range(entry)
+		header.add_child(time_label)
+
+		var name_label = Label.new()
+		name_label.text = String(entry.get("activity", ""))
+		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		name_label.add_theme_font_size_override("font_size", 13)
+		header.add_child(name_label)
+
+		var location_label = Label.new()
+		location_label.text = _format_location_label(String(entry.get("location_type", "")), String(entry.get("location_id", "")))
+		location_label.modulate = Color(0.7, 0.7, 0.7)
+		header.add_child(location_label)
+
+		block.add_child(header)
+
+		var metadata: Dictionary = entry.get("metadata", {})
+		if metadata and metadata.size() > 0:
+			var meta_label = Label.new()
+			meta_label.modulate = Color(0.6, 0.6, 0.6)
+			meta_label.text = _format_schedule_metadata(metadata)
+			block.add_child(meta_label)
+
+		schedule_agenda_list.add_child(block)
+
+		if i < entries.size() - 1:
+			var separator = HSeparator.new()
+			separator.modulate = Color(0.4, 0.4, 0.4, 0.4)
+			schedule_agenda_list.add_child(separator)
+
+func _format_schedule_metadata(metadata: Dictionary) -> String:
+	var parts: Array = []
+	for key in metadata.keys():
+		parts.append("%s: %s" % [str(key), str(metadata[key])])
+	return ", ".join(parts)
+
+func _format_minutes_range(entry: Dictionary) -> String:
+	var start_minute = int(entry.get("start_minute", -1))
+	var end_minute = int(entry.get("end_minute", -1))
+	if start_minute >= 0 and end_minute >= 0:
+		return "%s-%s" % [_format_minutes(start_minute), _format_minutes(end_minute)]
+	return entry.get("start", "--:--")
+
+func _format_minutes(value: int) -> String:
+	var minutes = clamp(value, 0, 24 * 60)
+	var hour = minutes / 60
+	var minute = minutes % 60
+	return "%02d:%02d" % [hour, minute]
+
+func _current_minutes_of_day() -> int:
+	if _time_system:
+		return _time_system.get_current_hour() * 60 + _time_system.get_current_minute()
+	var now = Time.get_datetime_dict_from_system()
+	return now.hour * 60 + now.minute
+
+func _format_location_label(location_type: String, location_id: String) -> String:
+	if location_type == "":
+		return location_id if location_id != "" else "未指定地点"
+	var upper = location_type.to_upper()
+	if LOCATION_LABELS.has(upper):
+		return LOCATION_LABELS[upper]
+	return location_type.capitalize()
+
+func _compute_task_stats(tasks: Array) -> Dictionary:
+	var stats = {
+		"total": tasks.size(),
+		"active": 0,
+		"completed": 0,
+		"failed": 0,
+		"cancelled": 0
+	}
+	for task in tasks:
+		match int(task.get("state", 0)):
+			0:
+				stats["active"] += 1
+			1:
+				stats["completed"] += 1
+			2:
+				stats["failed"] += 1
+			3:
+				stats["cancelled"] += 1
+	return stats
+
+func _format_task_name(task: Dictionary) -> String:
+	if task.has("name") and String(task["name"]).strip_edges() != "":
+		return String(task["name"])
+	if task.has("description") and String(task["description"]).strip_edges() != "":
+		return String(task["description"])
+	return String(task.get("id", "未命名任务"))
+
+func _format_task_deadline(task: Dictionary) -> String:
+	if not task.has("deadline"):
+		return "截止：未设置"
+	var deadline_ts = int(task["deadline"])
+	var deadline_dict = Time.get_datetime_dict_from_unix_time(deadline_ts)
+	var deadline_text = "%02d-%02d %02d:%02d" % [
+		deadline_dict.month,
+		deadline_dict.day,
+		deadline_dict.hour,
+		deadline_dict.minute
+	]
+	var diff = deadline_ts - _current_timestamp()
+	var diff_text = ""
+	if diff >= 0:
+		diff_text = "剩余" + _format_duration(diff)
+	else:
+		diff_text = "已超时" + _format_duration(-diff)
+	return "截止：%s（%s）" % [deadline_text, diff_text]
+
+func _format_duration(seconds: int) -> String:
+	var abs_seconds = max(0, seconds)
+	var hours = abs_seconds / 3600
+	var minutes = (abs_seconds % 3600) / 60
+	if hours > 0 and minutes > 0:
+		return "%d小时%d分钟" % [hours, minutes]
+	elif hours > 0:
+		return "%d小时" % hours
+	else:
+		return "%d分钟" % max(1, minutes)
+
+func _current_timestamp() -> int:
+	if _time_system:
+		return _time_system.get_current_timestamp()
+	return Time.get_unix_time_from_system()
 
 func _update_character_lists():
 	# 获取所有角色
@@ -187,6 +690,9 @@ func _update_character_detail():
 		if ai_settings_container and ai_settings_container.has_method("set_character"):
 			ai_settings_container.set_character("")
 		
+		_reset_schedule_view()
+		_reset_finance_view()
+		
 		return
 	
 	# 基本信息
@@ -263,6 +769,8 @@ func _update_character_detail():
 	
 	# 更新任务信息
 	_update_task_detail()
+	_refresh_finance_view()
+	_refresh_schedule_view()
 	
 	# 更新AI设置界面
 	if ai_settings_container and ai_settings_container.has_method("set_character"):
@@ -548,11 +1056,14 @@ func _on_emotion_strength_changed(value):
 
 # 初始化任务系统
 func _init_task_system():
+	if _task_system:
+		return
+
 	# 为每个角色初始化任务列表
 	for character in all_characters:
 		if not character.has_meta("tasks"):
 			character.set_meta("tasks", [])
-			
+		
 		# 为每个角色设置每日任务刷新的时间戳
 		if not character.has_meta("last_task_refresh"):
 			character.set_meta("last_task_refresh", Time.get_unix_time_from_system())
@@ -562,10 +1073,73 @@ func _update_task_list():
 	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
 	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
 		return
-		
-	var selected_character = all_characters[character_selector.selected]
 	
-	# 获取任务列表
+	var selected_character = all_characters[character_selector.selected]
+	var character_data = selected_character.get_meta("character_data", {})
+	var tasks = character_data.get("tasks", [])
+	
+	var task_container = task_popup.get_node("VBoxContainer/TaskList/TaskContainer")
+	for child in task_container.get_children():
+		child.queue_free()
+	
+	tasks.sort_custom(func(a, b):
+		var state_a = int(a.get("state", 0))
+		var state_b = int(b.get("state", 0))
+		if state_a != state_b:
+			return state_a < state_b
+		return int(a.get("priority", 0)) > int(b.get("priority", 0))
+	)
+	
+	for i in range(tasks.size()):
+		var task = tasks[i]
+		var state = int(task.get("state", 0))
+		
+		var task_item = VBoxContainer.new()
+		task_item.add_theme_constant_override("separation", 2)
+		task_item.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		
+		var header = HBoxContainer.new()
+		header.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		header.add_theme_constant_override("separation", 6)
+		
+		var task_label = Label.new()
+		task_label.text = "%d. %s" % [i + 1, _format_task_name(task)]
+		task_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		task_label.modulate = TASK_STATE_COLORS.get(state, Color(0.95, 0.95, 0.95))
+		header.add_child(task_label)
+		
+		var complete_button = Button.new()
+		complete_button.text = "完成"
+		complete_button.disabled = state != 0
+		complete_button.pressed.connect(_on_complete_task.bind(i))
+		header.add_child(complete_button)
+		
+		var cancel_button = Button.new()
+		cancel_button.text = "取消"
+		cancel_button.disabled = state == 3
+		cancel_button.pressed.connect(_on_delete_task.bind(i))
+		header.add_child(cancel_button)
+		
+		task_item.add_child(header)
+		
+		var info_label = Label.new()
+		info_label.text = "状态：%s | 优先级：%d" % [
+			TASK_STATE_LABELS.get(state, "未知状态"),
+			int(task.get("priority", 0))
+		]
+		info_label.modulate = Color(0.7, 0.7, 0.7)
+		task_item.add_child(info_label)
+		
+		var deadline_preview = Label.new()
+		deadline_preview.text = _format_task_deadline(task)
+		deadline_preview.modulate = Color(0.6, 0.6, 0.6)
+		task_item.add_child(deadline_preview)
+		
+		task_container.add_child(task_item)
+	
+	if not _task_system:
+		_check_daily_task_refresh(selected_character)
+# 获取任务列表
 	var character_data = selected_character.get_meta("character_data", {})
 	var tasks = character_data.get("tasks", [])
 	
@@ -614,145 +1188,132 @@ func _on_add_task():
 	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
 	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
 		return
-		
-	var selected_character = all_characters[character_selector.selected]
-	
-	# 获取任务描述和优先级
+
+	var target_character: Node = all_characters[character_selector.selected]
 	var task_input = task_popup.get_node("VBoxContainer/AddTaskContainer/TaskInput")
 	var priority_slider = task_popup.get_node("VBoxContainer/AddTaskContainer/PriorityContainer/PrioritySlider")
-	
 	var task_description = task_input.text.strip_edges()
 	var priority = int(priority_slider.value)
-	
+
 	if task_description.is_empty():
 		return
-		
-	# 创建新任务
-	var new_task = {
-		"description": task_description,
-		"priority": priority,
-		"created_at": Time.get_unix_time_from_system(),
-		"completed": false
-	}
-	
-	# 添加到角色的任务列表
-	var tasks = selected_character.get_meta("tasks", [])
-	tasks.append(new_task)
-	selected_character.set_meta("tasks", tasks)
-	
-	# 清空输入框
+
+	if _task_system:
+		var task_id = "manual_%s_%d" % [target_character.name, Time.get_unix_time_from_system()]
+		var manual_task = {
+			"id": task_id,
+			"name": task_description,
+			"description": task_description,
+			"default_priority": priority,
+			"priority": priority,
+			"estimated_minutes": 60,
+			"deadline_offset_minutes": max(120, (11 - priority) * 45),
+			"domain": "daily",
+			"tags": ["手动创建"]
+		}
+		_task_system.assign_task(target_character.name, manual_task)
+	else:
+		var tasks = target_character.get_meta("tasks", [])
+		var new_task = {
+			"id": "legacy_%s_%d" % [target_character.name, Time.get_unix_time_from_system()],
+			"name": task_description,
+			"description": task_description,
+			"priority": priority,
+			"created_at": Time.get_unix_time_from_system(),
+			"completed": false
+		}
+		tasks.append(new_task)
+		target_character.set_meta("tasks", tasks)
+		_update_task_list()
+		if target_character == selected_character:
+			_update_character_detail()
+
 	task_input.text = ""
 	priority_slider.value = 5
-	
-	# 更新任务列表UI
-	_update_task_list()
-	
-	# 添加任务记忆
-	var current_time = Time.get_datetime_dict_from_system()
-	var time_str = "%04d-%02d-%02d %02d:%02d" % [
-		current_time.year, current_time.month, current_time.day,
-		current_time.hour, current_time.minute
-	]
-	var memory_text = "你给自己安排了一个新任务：%s（渴望程度：%d/10）" % [task_description, priority]
-	
-	# 使用MemoryManager添加记忆
-	MemoryManager.add_memory(selected_character, memory_text, MemoryManager.MemoryType.TASK, MemoryManager.MemoryImportance.NORMAL)
-	
-	# 如果当前选中的角色是正在查看的角色，更新详情面板
-	if selected_character == selected_character:
-		_update_character_detail()
+
+	var memory_text = "你给自己安排了一个新任务：%s（优先级：%d/10）" % [task_description, priority]
+	MemoryManager.add_memory(target_character, memory_text, MemoryManager.MemoryType.TASK, MemoryManager.MemoryImportance.NORMAL)
 
 # 完成任务
 func _on_complete_task(task_index):
 	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
 	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
 		return
-		
-	var selected_character = all_characters[character_selector.selected]
-	
-	# 获取任务列表
-	var character_data = selected_character.get_meta("character_data", {})
+
+	var target_character: Node = all_characters[character_selector.selected]
+	var character_data = target_character.get_meta("character_data", {})
 	var tasks = character_data.get("tasks", [])
-	
+
 	if task_index < 0 or task_index >= tasks.size():
 		return
-		
-	# 标记任务为已完成
-	var task = tasks[task_index]
-	task["completed"] = true
-	task["completed_at"] = Time.get_unix_time_from_system()
-	
-	# 添加完成任务的记忆
-	var memory_text = "你完成了任务：%s" % [task["description"]]
-	
-	# 使用MemoryManager添加记忆
-	MemoryManager.add_memory(selected_character, memory_text, MemoryManager.MemoryType.TASK, MemoryManager.MemoryImportance.NORMAL)
-	
-	# 从列表中移除已完成的任务
-	tasks.remove_at(task_index)
-	character_data["tasks"] = tasks
-	selected_character.set_meta("character_data", character_data)
-	
-	# 更新任务列表UI
-	_update_task_list()
-	
-	# 如果当前选中的角色是正在查看的角色，更新详情面板
-	if selected_character == selected_character:
-		_update_character_detail()
+
+	var task: Dictionary = tasks[task_index]
+	var task_id = String(task.get("id", ""))
+
+	if _task_system and task_id != "":
+		_task_system.complete_task(target_character.name, task_id, {})
+	else:
+		task["completed"] = true
+		task["completed_at"] = Time.get_unix_time_from_system()
+		tasks.remove_at(task_index)
+		character_data["tasks"] = tasks
+		target_character.set_meta("character_data", character_data)
+		_update_task_list()
+		if target_character == selected_character:
+			_update_character_detail()
+
+	var memory_text = "你完成了任务：%s" % [_format_task_name(task)]
+	MemoryManager.add_memory(target_character, memory_text, MemoryManager.MemoryType.TASK, MemoryManager.MemoryImportance.NORMAL)
 
 # 删除任务
 func _on_delete_task(task_index):
 	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
 	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
 		return
-		
-	var selected_character = all_characters[character_selector.selected]
-	
-	# 获取任务列表
-	var character_data = selected_character.get_meta("character_data", {})
+
+	var target_character: Node = all_characters[character_selector.selected]
+	var character_data = target_character.get_meta("character_data", {})
 	var tasks = character_data.get("tasks", [])
-	
+
 	if task_index < 0 or task_index >= tasks.size():
 		return
-		
-	# 从列表中移除任务
-	tasks.remove_at(task_index)
-	character_data["tasks"] = tasks
-	selected_character.set_meta("character_data", character_data)
-	
-	# 更新任务列表UI
-	_update_task_list()
+
+	var task: Dictionary = tasks[task_index]
+	var task_id = String(task.get("id", ""))
+
+	if _task_system and task_id != "":
+		_task_system.cancel_task(target_character.name, task_id, "cancelled_by_player")
+	else:
+		tasks.remove_at(task_index)
+		character_data["tasks"] = tasks
+		target_character.set_meta("character_data", character_data)
+		_update_task_list()
+		if target_character == selected_character:
+			_update_character_detail()
 
 # 刷新任务列表
 func _on_refresh_tasks():
 	var character_selector = task_popup.get_node("VBoxContainer/CharacterSelector")
 	if character_selector.selected < 0 or character_selector.selected >= all_characters.size():
 		return
-		
-	var selected_character = all_characters[character_selector.selected]
-	
-	# 强制刷新任务
-	_refresh_daily_tasks(selected_character)
-	
-	# 更新任务列表UI
-	_update_task_list()
 
-# 检查是否需要刷新每日任务
+	var target_character: Node = all_characters[character_selector.selected]
+
+	if _task_system:
+		_task_system.refresh_daily_tasks(target_character.name)
+	else:
+		_refresh_daily_tasks(target_character)
+		_update_task_list()
+
+# 判断是否需要刷新每日任务
 func _check_daily_task_refresh(character_node):
-	if not character_node:
+	if _task_system or not character_node:
 		return
-		
-	# 获取角色数据
+
 	var character_data = character_node.get_meta("character_data", {})
-	
-	# 获取上次刷新时间
 	var last_refresh = character_data.get("last_task_refresh", 0)
 	var current_time = Time.get_unix_time_from_system()
-	
-	# 计算时间差（秒）
 	var time_diff = current_time - last_refresh
-	
-	# 如果超过24小时（86400秒），刷新任务
 	if time_diff >= 86400:
 		_refresh_daily_tasks(character_node)
 
@@ -760,42 +1321,27 @@ func _check_daily_task_refresh(character_node):
 func _refresh_daily_tasks(character_node):
 	if not character_node:
 		return
-		
-	# 获取角色数据
+
+	if _task_system:
+		_task_system.refresh_daily_tasks(character_node.name)
+		return
+
 	var character_data = character_node.get_meta("character_data", {})
-	
-	# 获取当前任务列表
 	var tasks = character_data.get("tasks", [])
-	
-	# 保留未完成的任务
 	var incomplete_tasks = []
 	for task in tasks:
 		if not task.get("completed", false):
 			incomplete_tasks.append(task)
-			
-	# 重新排序任务（根据优先级从高到低）
+
 	incomplete_tasks.sort_custom(func(a, b): return a["priority"] > b["priority"])
-	
-	# 如果任务数量少于10个，自动生成新任务
+
 	while incomplete_tasks.size() < 10:
-		# 生成随机任务
 		var new_task = _generate_random_task(character_node)
 		incomplete_tasks.append(new_task)
-		
-	# 更新任务列表
+
 	character_data["tasks"] = incomplete_tasks
-	
-	# 更新刷新时间
 	character_data["last_task_refresh"] = Time.get_unix_time_from_system()
 	character_node.set_meta("character_data", character_data)
-	
-	# 添加任务刷新记忆
-	var memory_text = "你重新整理了今天的任务计划，现在有%d个待完成的任务" % [incomplete_tasks.size()]
-	
-	# 使用MemoryManager添加记忆
-	MemoryManager.add_memory(character_node, memory_text, MemoryManager.MemoryType.TASK, MemoryManager.MemoryImportance.NORMAL)
-
-# 生成随机任务
 func _generate_random_task(character_node):
 	if not character_node:
 		return null
@@ -837,79 +1383,88 @@ func _generate_random_task(character_node):
 func _update_task_detail():
 	if not selected_character:
 		return
-		
-	# 清空当前任务详情列表
+
 	_clear_children(task_detail_list)
-	
-	# 获取任务列表
 	var character_data = selected_character.get_meta("character_data", {})
-	var tasks = character_data.get("tasks", [])
-	
+	var tasks: Array = character_data.get("tasks", [])
+
 	if tasks.is_empty():
 		var no_task_label = Label.new()
 		no_task_label.text = "暂无任务"
 		task_detail_list.add_child(no_task_label)
 		return
-		
-	# 按渴望程度排序任务（从高到低）
-	tasks.sort_custom(func(a, b): return a["priority"] > b["priority"])
-	
-	# 显示任务统计
+
+	# 按状态（进行中优先）和优先级排序
+	tasks.sort_custom(func(a, b):
+		var state_a = int(a.get("state", 0))
+		var state_b = int(b.get("state", 0))
+		if state_a != state_b:
+			return state_a < state_b
+		var priority_a = int(a.get("priority", 0))
+		var priority_b = int(b.get("priority", 0))
+		return priority_a > priority_b
+	)
+
+	var stats = _compute_task_stats(tasks)
 	var stats_label = Label.new()
-	stats_label.text = "总任务数：%d" % tasks.size()
+	stats_label.text = "总数：%d | 进行中：%d | 已完成：%d | 失败：%d | 取消：%d" % [
+		stats["total"], stats["active"], stats["completed"], stats["failed"], stats["cancelled"]
+	]
 	stats_label.add_theme_font_size_override("font_size", 14)
 	task_detail_list.add_child(stats_label)
-	
-	# 添加分隔线
-	var separator = HSeparator.new()
-	task_detail_list.add_child(separator)
-	
-	# 显示前5个最重要的任务
-	var display_count = min(5, tasks.size())
-	for i in range(display_count):
+	task_detail_list.add_child(HSeparator.new())
+
+	for i in range(tasks.size()):
 		var task = tasks[i]
-		
-		# 创建任务容器
+		var state := int(task.get("state", 0))
 		var task_container = VBoxContainer.new()
-		task_container.add_theme_constant_override("separation", 2)
-		
-		# 任务标题
-		var task_title = Label.new()
-		task_title.text = "%d. %s" % [i + 1, task["description"]]
-		task_title.add_theme_font_size_override("font_size", 12)
-		task_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		task_container.add_child(task_title)
-		
-		# 任务详情
-		var task_info = Label.new()
-		var priority_text = "渴望程度：%d/10" % task["priority"]
-		
-		# 添加创建时间
-		var created_time = Time.get_datetime_dict_from_unix_time(task["created_at"])
-		var time_str = "%02d-%02d %02d:%02d" % [created_time.month, created_time.day, created_time.hour, created_time.minute]
-		priority_text += " | 创建时间：%s" % time_str
-		
-		task_info.text = priority_text
-		task_info.add_theme_font_size_override("font_size", 10)
-		task_info.modulate = Color(0.7, 0.7, 0.7)
-		task_container.add_child(task_info)
-		
-		# 添加任务容器到列表
+		task_container.add_theme_constant_override("separation", 3)
+		task_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+		var title_label = Label.new()
+		title_label.text = "%d. %s" % [i + 1, _format_task_name(task)]
+		title_label.add_theme_font_size_override("font_size", 13)
+		title_label.modulate = TASK_STATE_COLORS.get(state, Color(0.95, 0.95, 0.95))
+		task_container.add_child(title_label)
+
+		var details_label = Label.new()
+		var domain_text = String(task.get("domain", "未知类型"))
+		var priority_value = int(task.get("priority", 0))
+		var estimated_minutes = int(task.get("estimated_minutes", 0))
+		var detail_text = "状态：%s | 优先级：%d | 分类：%s" % [
+			TASK_STATE_LABELS.get(state, "未知状态"),
+			priority_value,
+			domain_text
+		]
+		if estimated_minutes > 0:
+			detail_text += " | 预计耗时：%d分钟" % estimated_minutes
+		details_label.text = detail_text
+		details_label.modulate = Color(0.7, 0.7, 0.7)
+		task_container.add_child(details_label)
+
+		var deadline_label = Label.new()
+		deadline_label.text = _format_task_deadline(task)
+		task_container.add_child(deadline_label)
+
+		var description = String(task.get("description", ""))
+		var name = String(task.get("name", ""))
+		if description != "" and description != name:
+			var desc_label = Label.new()
+			desc_label.text = description
+			desc_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			task_container.add_child(desc_label)
+
+		var tags: Array = task.get("tags", [])
+		if tags.size() > 0:
+			var tags_label = Label.new()
+			tags_label.text = "标签：" + ", ".join(tags)
+			tags_label.modulate = Color(0.6, 0.6, 0.6)
+			task_container.add_child(tags_label)
+
 		task_detail_list.add_child(task_container)
-		
-		# 添加分隔线（除了最后一个）
-		if i < display_count - 1:
-			var task_separator = HSeparator.new()
-			task_detail_list.add_child(task_separator)
-			
-	# 如果还有更多任务，显示提示
-	if tasks.size() > display_count:
-		var more_label = Label.new()
-		more_label.text = "...还有 %d 个任务" % (tasks.size() - display_count)
-		more_label.add_theme_font_size_override("font_size", 10)
-		more_label.modulate = Color(0.6, 0.6, 0.6)
-		more_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		task_detail_list.add_child(more_label)
+
+		if i < tasks.size() - 1:
+			task_detail_list.add_child(HSeparator.new())
 
 # 更新优先级滑块的值显示
 func _on_priority_changed(value):
@@ -1104,3 +1659,143 @@ func clear_character_selection():
 		character_list.deselect_all()
 	# 更新角色详情显示
 	_update_character_detail()
+
+# --------------------------------------
+# 时间系统工具
+# --------------------------------------
+
+func _setup_time_controls():
+	_time_system = get_node_or_null("/root/TimeSystem")
+	if not _time_system or not right_panel_container:
+		return
+	
+	if _time_system.has_signal("time_updated"):
+		_time_system.time_updated.connect(_on_time_updated)
+	if _time_system.has_signal("hour_changed"):
+		_time_system.hour_changed.connect(func(_hour): _refresh_time_label())
+	if _time_system.has_signal("season_changed"):
+		_time_system.season_changed.connect(func(_season_name, _season_index, _year): _refresh_time_label())
+	if _time_system.has_signal("day_changed"):
+		_time_system.day_changed.connect(func(_day, _season): _refresh_time_label())
+	
+	_time_label = Label.new()
+	_time_label.name = "SimulationTimeLabel"
+	_time_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_time_label.add_theme_font_size_override("font_size", 16)
+	_time_label.modulate = Color(0.9, 0.95, 1.0)
+	right_panel_container.add_child(_time_label)
+	right_panel_container.move_child(_time_label, 0)
+	
+	var controls := HBoxContainer.new()
+	controls.name = "SimulationTimeControls"
+	controls.add_theme_constant_override("separation", 6)
+	controls.alignment = BoxContainer.ALIGNMENT_CENTER
+	right_panel_container.add_child(controls)
+	right_panel_container.move_child(controls, 1)
+	
+	var button_defs = [
+		{"label": "暂停", "scale": 0.0, "tooltip": "暂停时间流逝"},
+		{"label": "1x", "scale": 1.0, "tooltip": "恢复正常速度"},
+		{"label": "2x", "scale": 2.0, "tooltip": "时间加速到2倍"},
+		{"label": "4x", "scale": 4.0, "tooltip": "时间加速到4倍"}
+	]
+	
+	for def in button_defs:
+		var btn := Button.new()
+		btn.text = def["label"]
+		btn.toggle_mode = true
+		btn.tooltip_text = def["tooltip"]
+		btn.focus_mode = Control.FOCUS_NONE
+		btn.pressed.connect(_on_time_scale_button_pressed.bind(btn, def["scale"]))
+		controls.add_child(btn)
+		_time_control_buttons[def["scale"]] = btn
+	
+	_refresh_time_label()
+	_update_time_control_state()
+
+func _on_time_updated(time_snapshot: Dictionary):
+	_refresh_time_label(time_snapshot)
+
+func _refresh_time_label(snapshot: Dictionary = {}):
+	if not _time_label or not _time_system:
+		return
+	
+	var time_dict := snapshot if snapshot.has("timestamp") else _time_system.get_current_time_dict()
+	var date_text := str(time_dict.get("date_string", "")).strip_edges()
+	var time_text := str(time_dict.get("time_string", "")).strip_edges()
+	var components: Array = []
+	if date_text != "":
+		components.append(date_text)
+	if time_text != "":
+		components.append(time_text)
+	
+	var scale := _time_system.time_speed_multiplier
+	if _time_system.is_paused:
+		scale = 0.0
+	var label_text := " ".join(PackedStringArray(components))
+	if label_text.is_empty():
+		label_text = "Time %.0f" % time_dict.get("timestamp", 0)
+	label_text += "  x%.1f" % scale
+	_time_label.text = label_text
+	_update_time_control_state()
+
+func _on_time_scale_button_pressed(_button: Button, scale: float):
+	if not _time_system:
+		return
+	
+	if scale <= 0.0:
+		_time_system.pause()
+	else:
+		if _time_system.is_paused:
+			_time_system.resume()
+		_time_system.set_time_scale(scale)
+	_refresh_time_label()
+
+func _update_time_control_state():
+	if not _time_system:
+		return
+	var active_scale := _time_system.time_speed_multiplier
+	if _time_system.is_paused:
+		active_scale = 0.0
+	for scale in _time_control_buttons.keys():
+		var btn: Button = _time_control_buttons[scale]
+		if not is_instance_valid(btn):
+			continue
+		var should_press := is_equal_approx(scale, active_scale)
+		if scale == 0.0 and _time_system.is_paused:
+			should_press = true
+		btn.set_pressed_no_signal(should_press)
+
+func _on_relationship_changed(ai_id: String, target_id: String, rel: Dictionary):
+	if not selected_character or selected_character.name != ai_id:
+		return
+	relation_manager_cache[target_id] = rel
+	relation_tags_cache[target_id] = _relationship_manager.get_tags(ai_id, target_id)
+	relation_dirty = true
+
+
+func _on_tags_changed(ai_id: String, target_id: String, tags: Array):
+	if not selected_character or selected_character.name != ai_id:
+		return
+	relation_tags_cache[target_id] = tags
+	relation_dirty = true
+
+
+func _on_relationship_removed(ai_id: String, target_id: String):
+	if not selected_character or selected_character.name != ai_id:
+		return
+	relation_manager_cache.erase(target_id)
+	relation_tags_cache.erase(target_id)
+	relation_dirty = true
+
+
+func _refresh_relationship_view():
+	if not selected_character:
+		_relation_list_clear()
+		return
+	relation_manager_cache = _relationship_manager.get_relationships(selected_character.name)
+	relation_tags_cache = {}
+	for target in relation_manager_cache.keys():
+		relation_tags_cache[target] = _relationship_manager.get_tags(selected_character.name, target)
+	_relation_list_render()
+

@@ -1,0 +1,219 @@
+{
+	"character_careers": {
+		"Stephen": "ceo",
+		"Tom": "executive_assistant",
+		"Lea": "receptionist",
+		"Alice": "frontend_engineer",
+		"Grace": "hr_manager",
+		"Jack": "backend_engineer",
+		"Joe": "qa_engineer",
+		"Monica": "product_manager"
+	},
+	"careers": [
+		{
+			"id": "ceo",
+			"name": "Chief Executive Officer",
+			"name_cn": "公司老板",
+			"default_location_type": "EXECUTIVE_OFFICE",
+			"default_location_id": "office_ceo",
+			"weekly_base_salary": 3500,
+			"bonus_multiplier": 2.0,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "06:00", "end": "08:30", "activity": "personal_morning", "location_type": "PENTHOUSE" },
+					{ "start": "08:30", "end": "12:00", "activity": "work_executive", "location_type": "EXECUTIVE_OFFICE" },
+					{ "start": "12:00", "end": "13:30", "activity": "business_lunch", "location_type": "CAFETERIA" },
+					{ "start": "13:30", "end": "18:00", "activity": "strategy_meeting", "location_type": "BOARD_ROOM" },
+					{ "start": "18:00", "end": "21:00", "activity": "networking", "location_type": "LOUNGE" },
+					{ "start": "21:00", "end": "24:00", "activity": "rest", "location_type": "PENTHOUSE" }
+				],
+				"weekend": [
+					{ "start": "07:00", "end": "10:00", "activity": "gym", "location_type": "FITNESS" },
+					{ "start": "10:00", "end": "14:00", "activity": "investor_calls", "location_type": "EXECUTIVE_OFFICE" },
+					{ "start": "14:00", "end": "18:00", "activity": "family_time", "location_type": "PENTHOUSE" },
+					{ "start": "18:00", "end": "24:00", "activity": "social_event", "location_type": "LOUNGE" }
+				]
+			}
+		},
+		{
+			"id": "executive_assistant",
+			"name": "Executive Assistant",
+			"name_cn": "行政秘书",
+			"default_location_type": "ADMIN_DESK",
+			"default_location_id": "desk_tom",
+			"weekly_base_salary": 1800,
+			"bonus_multiplier": 1.4,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "07:30", "end": "09:00", "activity": "office_preparation", "location_type": "ADMIN_DESK" },
+					{ "start": "09:00", "end": "12:00", "activity": "schedule_coordination", "location_type": "ADMIN_DESK" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_social", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "17:30", "activity": "meeting_support", "location_type": "BOARD_ROOM" },
+					{ "start": "17:30", "end": "19:00", "activity": "report_digest", "location_type": "ADMIN_DESK" },
+					{ "start": "19:00", "end": "24:00", "activity": "off_work", "location_type": "LOUNGE" }
+				],
+				"weekend": [
+					{ "start": "09:00", "end": "12:00", "activity": "personal_time", "location_type": "LOUNGE" },
+					{ "start": "12:00", "end": "15:00", "activity": "friends_meetup", "location_type": "CAFE" },
+					{ "start": "15:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "receptionist",
+			"name": "Receptionist",
+			"name_cn": "前台接待",
+			"default_location_type": "FRONT_DESK",
+			"default_location_id": "frontdesk_lea",
+			"weekly_base_salary": 1200,
+			"bonus_multiplier": 1.2,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:00", "end": "09:00", "activity": "frontdesk_setup", "location_type": "FRONT_DESK" },
+					{ "start": "09:00", "end": "12:00", "activity": "visitor_handling", "location_type": "FRONT_DESK" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_break", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "17:00", "activity": "mail_distribution", "location_type": "FRONT_DESK" },
+					{ "start": "17:00", "end": "18:30", "activity": "office_tour", "location_type": "LOBBY" },
+					{ "start": "18:30", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "09:00", "end": "12:00", "activity": "personal_errands", "location_type": "MARKET" },
+					{ "start": "12:00", "end": "23:00", "activity": "friends_meetup", "location_type": "CAFE" },
+					{ "start": "23:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "frontend_engineer",
+			"name": "Frontend Engineer",
+			"name_cn": "前端工程师",
+			"default_location_type": "DEV_DESK",
+			"default_location_id": "desk_alice",
+			"weekly_base_salary": 2000,
+			"bonus_multiplier": 1.5,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:30", "end": "09:30", "activity": "standup", "location_type": "SCRUM_AREA" },
+					{ "start": "09:30", "end": "12:00", "activity": "feature_dev", "location_type": "DEV_DESK" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_break", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "16:00", "activity": "ui_collab", "location_type": "MEETING_ROOM" },
+					{ "start": "16:00", "end": "18:30", "activity": "code_review", "location_type": "DEV_DESK" },
+					{ "start": "18:30", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "09:30", "end": "12:00", "activity": "side_project", "location_type": "HOME_DESK" },
+					{ "start": "12:00", "end": "14:00", "activity": "friends_brunch", "location_type": "CAFE" },
+					{ "start": "14:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "backend_engineer",
+			"name": "Backend Engineer",
+			"name_cn": "后端工程师",
+			"default_location_type": "DEV_DESK",
+			"default_location_id": "desk_jack",
+			"weekly_base_salary": 2100,
+			"bonus_multiplier": 1.6,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:45", "end": "09:30", "activity": "standup", "location_type": "SCRUM_AREA" },
+					{ "start": "09:30", "end": "12:30", "activity": "api_dev", "location_type": "DEV_DESK" },
+					{ "start": "12:30", "end": "13:30", "activity": "lunch_break", "location_type": "CAFETERIA" },
+					{ "start": "13:30", "end": "17:30", "activity": "service_maintenance", "location_type": "DEV_DESK" },
+					{ "start": "17:30", "end": "19:00", "activity": "knowledge_share", "location_type": "MEETING_ROOM" },
+					{ "start": "19:00", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "10:00", "end": "13:00", "activity": "gaming", "location_type": "HOME" },
+					{ "start": "13:00", "end": "18:00", "activity": "meetup", "location_type": "CAFE" },
+					{ "start": "18:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "qa_engineer",
+			"name": "QA Engineer",
+			"name_cn": "测试工程师",
+			"default_location_type": "QA_LAB",
+			"default_location_id": "desk_joe",
+			"weekly_base_salary": 1700,
+			"bonus_multiplier": 1.4,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:30", "end": "09:30", "activity": "bug_triage", "location_type": "QA_LAB" },
+					{ "start": "09:30", "end": "12:00", "activity": "test_execution", "location_type": "QA_LAB" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_break", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "16:00", "activity": "automation_scripts", "location_type": "QA_LAB" },
+					{ "start": "16:00", "end": "18:30", "activity": "regression_review", "location_type": "MEETING_ROOM" },
+					{ "start": "18:30", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "09:00", "end": "12:00", "activity": "board_games", "location_type": "LOUNGE" },
+					{ "start": "12:00", "end": "15:00", "activity": "food_hunt", "location_type": "MARKET" },
+					{ "start": "15:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "hr_manager",
+			"name": "HR Manager",
+			"name_cn": "人力资源经理",
+			"default_location_type": "HR_OFFICE",
+			"default_location_id": "office_grace",
+			"weekly_base_salary": 1900,
+			"bonus_multiplier": 1.5,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:30", "end": "09:30", "activity": "policy_review", "location_type": "HR_OFFICE" },
+					{ "start": "09:30", "end": "12:00", "activity": "interview_session", "location_type": "MEETING_ROOM" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_break", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "16:30", "activity": "employee_support", "location_type": "HR_OFFICE" },
+					{ "start": "16:30", "end": "18:00", "activity": "training_design", "location_type": "WORKSHOP" },
+					{ "start": "18:00", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "09:00", "end": "11:00", "activity": "yoga", "location_type": "FITNESS" },
+					{ "start": "11:00", "end": "15:00", "activity": "family_time", "location_type": "HOME" },
+					{ "start": "15:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		},
+		{
+			"id": "product_manager",
+			"name": "Product Manager",
+			"name_cn": "产品经理",
+			"default_location_type": "PRODUCT_WAR_ROOM",
+			"default_location_id": "desk_monica",
+			"weekly_base_salary": 2200,
+			"bonus_multiplier": 1.7,
+			"daily_schedule": {
+				"weekday": [
+					{ "start": "08:00", "end": "09:30", "activity": "metrics_review", "location_type": "PRODUCT_WAR_ROOM" },
+					{ "start": "09:30", "end": "12:00", "activity": "stakeholder_sync", "location_type": "MEETING_ROOM" },
+					{ "start": "12:00", "end": "13:00", "activity": "lunch_customer_chat", "location_type": "CAFETERIA" },
+					{ "start": "13:00", "end": "16:00", "activity": "roadmap_planning", "location_type": "PRODUCT_WAR_ROOM" },
+					{ "start": "16:00", "end": "18:30", "activity": "feature_prioritization", "location_type": "SCRUM_AREA" },
+					{ "start": "18:30", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+				],
+				"weekend": [
+					{ "start": "09:00", "end": "12:00", "activity": "market_research", "location_type": "CAFE" },
+					{ "start": "12:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+				]
+			}
+		}
+	],
+	"default_schedule": {
+		"weekday": [
+			{ "start": "08:30", "end": "09:30", "activity": "standup", "location_type": "MEETING_ROOM" },
+			{ "start": "09:30", "end": "12:00", "activity": "focused_work", "location_type": "OFFICE" },
+			{ "start": "12:00", "end": "13:00", "activity": "lunch_break", "location_type": "CAFETERIA" },
+			{ "start": "13:00", "end": "17:30", "activity": "project_work", "location_type": "OFFICE" },
+			{ "start": "17:30", "end": "24:00", "activity": "off_work", "location_type": "HOME" }
+		],
+		"weekend": [
+			{ "start": "09:00", "end": "12:00", "activity": "personal_time", "location_type": "HOME" },
+			{ "start": "12:00", "end": "24:00", "activity": "rest", "location_type": "HOME" }
+		]
+	}
+}

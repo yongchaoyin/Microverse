@@ -1,0 +1,3 @@
+# This is a placeholder file for the SQLite DLL
+# In a real installation, this would be the actual compiled binary
+# For testing purposes, we'll create the plugin structure first

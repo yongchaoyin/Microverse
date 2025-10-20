@@ -1,0 +1,38 @@
+{
+	"default": {
+		"name": "默认性格",
+		"description": "平衡的性格模板",
+		"big_five": {
+			"extraversion": 50,
+			"agreeableness": 50,
+			"conscientiousness": 50,
+			"neuroticism": 50,
+			"openness": 50
+		},
+		"traits": ["友好", "可靠"]
+	},
+	"outgoing": {
+		"name": "外向型",
+		"description": "活泼外向，喜欢社交",
+		"big_five": {
+			"extraversion": 80,
+			"agreeableness": 60,
+			"conscientiousness": 50,
+			"neuroticism": 30,
+			"openness": 70
+		},
+		"traits": ["健谈", "热情", "主动"]
+	},
+	"introvert": {
+		"name": "内向型",
+		"description": "内向安静，深思熟虑",
+		"big_five": {
+			"extraversion": 20,
+			"agreeableness": 60,
+			"conscientiousness": 70,
+			"neuroticism": 40,
+			"openness": 50
+		},
+		"traits": ["安静", "思考者", "谨慎"]
+	}
+}

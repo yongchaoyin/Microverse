@@ -1,0 +1,30 @@
+{
+	"time": {
+		"start_year": 1,
+		"start_season_index": 0,
+		"start_day": 1,
+		"start_hour": 6,
+		"start_minute": 0,
+		"time_scale": 1.0
+	},
+	"ui": {
+		"language": "zh-CN",
+		"show_debug_panels": false,
+		"show_relationship_overlay": true
+	},
+	"audio": {
+		"master_volume_db": 0.0,
+		"music_volume_db": -6.0,
+		"sfx_volume_db": -4.0
+	},
+	"llm": {
+		"default_provider": "openai",
+		"temperature": 0.8,
+		"max_tokens": 2048
+	},
+	"economy": {
+		"base_salary_multiplier": 1.0,
+		"weekly_bonus_cap": 200,
+		"enable_inflation": true
+	}
+}

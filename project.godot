@@ -12,11 +12,20 @@ config_version=5
 
 config/name="Microverse"
 run/main_scene="uid://nhba2jdtsjsx"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
+ConfigManager="*res://script/core/ConfigManager.gd"
+EventBus="*res://script/core/EventBus.gd"
+DebugConsole="*res://script/debug/DebugConsole.gd"
+PerformanceMonitor="*res://script/debug/PerformanceMonitor.gd"
+PerformanceDashboard="*res://script/debug/PerformanceDashboard.gd"
+TimeSystem="*res://script/time/TimeSystem.gd"
+WeatherSystem="*res://script/weather/WeatherSystem.gd"
+CareerSystem="*res://script/ai/career/CareerSystem.gd"
+ScheduleManager="*res://script/ai/schedule/ScheduleManager.gd"
 SettingsManager="*res://script/ui/SettingsManager.gd"
 DialogManager="*res://script/ai/DialogManager.gd"
 CharacterManager="*res://script/CharacterManager.gd"
@@ -24,7 +33,15 @@ APIManager="*res://script/ai/APIManager.gd"
 GameSaveManager="*res://script/GameSaveManager.gd"
 SaveLoadUIManager="*res://scene/ui/SaveLoadUIManager.tscn"
 MemoryManager="*res://script/ai/memory/MemoryManager.gd"
+PersonalityEngine="*res://script/ai/personality/PersonalityEngine.gd"
 LocationManager="*res://script/navigation/LocationManager.gd"
+TaskSystem="*res://script/task/TaskSystem.gd"
+EconomyManager="*res://script/economy/EconomyManager.gd"
+DatabaseManager="*res://script/data/DatabaseManager.gd"
+RelationshipManager="*res://script/ai/relationship/RelationshipManager.gd"
+SaveManager="*res://script/save/SaveManager.gd"
+ConflictSystem="*res://script/conflict/ConflictSystem.gd"
+ObservationUI="*res://script/ui/observation/ObservationUI.gd"
 
 [display]
 
