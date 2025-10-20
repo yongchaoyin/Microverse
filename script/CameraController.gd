@@ -151,6 +151,8 @@ func _input(event):
 				toggle_follow_mode()
 			KEY_F12:  # F12导出当前视口PNG
 				_export_map_screenshot()
+			KEY_F11:  # F11生成纯绘制镇区地图PNG
+				_generate_town_map_image()
 
 func zoom_camera(delta_zoom: float):
 	"""缩放相机，限制在最小和最大缩放范围内"""
@@ -266,3 +268,9 @@ func export_full_map_png(output_path: String = "user://TownMap_Full.png"):
 	add_child(exporter)
 	await exporter.export_current_scene(output_path, Vector2i(int(map_bounds.size.x), int(map_bounds.size.y)))
 	exporter.queue_free()
+
+func _generate_town_map_image(output_path: String = "user://TownMap_Generated.png"):
+	var gen := TownMapImageGenerator.new()
+	add_child(gen)
+	await gen.generate(output_path, Vector2i(int(map_bounds.size.x), int(map_bounds.size.y)))
+	gen.queue_free()
