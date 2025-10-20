@@ -4,23 +4,20 @@
 
 [node name="MapSelection" type="Control"]
 script = ExtResource("1")
-layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+margin_left = 40.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -100.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
-layout_mode = 2
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/ScrollContainer"]
 columns = 1
@@ -35,14 +32,13 @@ text = "办公室 (Office)"
 [node name="ParkButton" type="Button" parent="MarginContainer/ScrollContainer/GridContainer/PanelContainer/VBoxContainer"]
 text = "公园 (Park)"
 
+[node name="TownButton" type="Button" parent="MarginContainer/ScrollContainer/GridContainer/PanelContainer/VBoxContainer"]
+text = "小镇 (Town)"
+
 [node name="BackButton" type="Button" parent="."]
-text = "返回"
-anchors_preset = 6
-anchor_left = 0.5
+anchor_left = 0.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.0
 anchor_bottom = 1.0
-offset_left = -60
-offset_top = -60
-offset_right = 60
-offset_bottom = -20
+position = Vector2(40, -50)
+text = "返回"

@@ -1,0 +1,376 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://script/CameraController.gd" id="1"]
+[ext_resource type="Script" path="res://script/world/DayNightCycle.gd" id="2"]
+[ext_resource type="Script" path="res://script/world/Building.gd" id="3"]
+[ext_resource type="Script" path="res://script/world/InteractionZone.gd" id="4"]
+[ext_resource type="PackedScene" path="res://scene/world/StreetLight.tscn" id="5"]
+[ext_resource type="Script" path="res://script/world/StreetLights.gd" id="6"]
+[ext_resource type="Script" path="res://script/world/WindowLights.gd" id="7"]
+
+[sub_resource type="Gradient" id="Gradient_Tree"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.2, 0.6, 0.2, 1, 0.15, 0.5, 0.15, 1)
+
+[sub_resource type="GradientTexture2D" id="TreeTex"]
+gradient = SubResource("Gradient_Tree")
+width = 32
+height = 32
+
+[sub_resource type="Gradient" id="Gradient_HouseRed"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.7, 0.2, 0.2, 1, 0.6, 0.15, 0.15, 1)
+
+[sub_resource type="GradientTexture2D" id="HouseRedTex"]
+gradient = SubResource("Gradient_HouseRed")
+width = 48
+height = 36
+
+[sub_resource type="Gradient" id="Gradient_HouseBlue"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.2, 0.4, 0.7, 1, 0.15, 0.3, 0.6, 1)
+
+[sub_resource type="GradientTexture2D" id="HouseBlueTex"]
+gradient = SubResource("Gradient_HouseBlue")
+width = 48
+height = 36
+
+[sub_resource type="Gradient" id="Gradient_HouseGreen"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.3, 0.6, 0.3, 1, 0.25, 0.5, 0.25, 1)
+
+[sub_resource type="GradientTexture2D" id="HouseGreenTex"]
+gradient = SubResource("Gradient_HouseGreen")
+width = 48
+height = 36
+
+[sub_resource type="RectangleShape2D" id="RectHouse"]
+size = Vector2(48, 36)
+
+[sub_resource type="RectangleShape2D" id="RectEntrance"]
+size = Vector2(18, 12)
+
+[node name="Town" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1")
+position = Vector2(1200, 960)
+current = true
+map_bounds = Rect2(0, 0, 2400, 1920)
+zoom = Vector2(0.8, 0.8)
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="Ground" type="Polygon2D" parent="Decor"]
+color = Color(0.2, 0.6, 0.2, 1)
+polygon = PackedVector2Array( Vector2(0,0), Vector2(2400,0), Vector2(2400,1920), Vector2(0,1920) )
+
+[node name="MainRoadH" type="Line2D" parent="Decor"]
+default_color = Color(0.4, 0.4, 0.4, 1)
+width = 60.0
+points = PackedVector2Array( Vector2(0,960), Vector2(2400,960) )
+
+[node name="MainRoadV" type="Line2D" parent="Decor"]
+default_color = Color(0.4, 0.4, 0.4, 1)
+width = 60.0
+points = PackedVector2Array( Vector2(1200,0), Vector2(1200,1920) )
+
+[node name="Lake" type="Polygon2D" parent="Decor"]
+color = Color(0.2, 0.5, 0.9, 0.9)
+polygon = PackedVector2Array( Vector2(300,1200), Vector2(480,1100), Vector2(650,1150), Vector2(700,1300), Vector2(540,1400), Vector2(360,1350) )
+
+[node name="Trees" type="Node2D" parent="Decor"]
+
+[node name="Tree1" type="Sprite2D" parent="Decor/Trees"]
+position = Vector2(300, 300)
+texture = SubResource("TreeTex")
+
+[node name="Tree2" type="Sprite2D" parent="Decor/Trees"]
+position = Vector2(400, 350)
+texture = SubResource("TreeTex")
+
+[node name="Tree3" type="Sprite2D" parent="Decor/Trees"]
+position = Vector2(500, 320)
+texture = SubResource("TreeTex")
+
+[node name="Tree4" type="Sprite2D" parent="Decor/Trees"]
+position = Vector2(1800, 300)
+texture = SubResource("TreeTex")
+
+[node name="Tree5" type="Sprite2D" parent="Decor/Trees"]
+position = Vector2(1700, 350)
+texture = SubResource("TreeTex")
+
+[node name="StreetLights" type="Node2D" parent="."]
+script = ExtResource("6")
+
+[node name="Light_North" parent="StreetLights" instance=ExtResource("5")] 
+position = Vector2(1200, 400)
+
+[node name="Light_South" parent="StreetLights" instance=ExtResource("5")] 
+position = Vector2(1200, 1520)
+
+[node name="Light_West" parent="StreetLights" instance=ExtResource("5")] 
+position = Vector2(600, 960)
+
+[node name="Light_East" parent="StreetLights" instance=ExtResource("5")] 
+position = Vector2(1800, 960)
+
+[node name="WindowLights" type="Node2D" parent="."]
+script = ExtResource("7")
+
+[node name="Buildings" type="Node2D" parent="."]
+
+# House: Tom
+[node name="House_Tom" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1000, 800)
+script = ExtResource("3")
+building_name = "House_Tom"
+building_type = "house"
+owner_id = "tom"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Tom"]
+texture = SubResource("HouseRedTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Tom"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Tom"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Tom/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Tom"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Tom"]
+position = Vector2(0, -18)
+
+# House: Monica
+[node name="House_Monica" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1400, 800)
+script = ExtResource("3")
+building_name = "House_Monica"
+building_type = "house"
+owner_id = "monica"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Monica"]
+texture = SubResource("HouseBlueTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Monica"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Monica"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Monica/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Monica"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Monica"]
+position = Vector2(0, -18)
+
+# House: Stephen
+[node name="House_Stephen" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1000, 1120)
+script = ExtResource("3")
+building_name = "House_Stephen"
+building_type = "house"
+owner_id = "stephen"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Stephen"]
+texture = SubResource("HouseGreenTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Stephen"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Stephen"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Stephen/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Stephen"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Stephen"]
+position = Vector2(0, -18)
+
+# House: Lea
+[node name="House_Lea" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1400, 1120)
+script = ExtResource("3")
+building_name = "House_Lea"
+building_type = "house"
+owner_id = "lea"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Lea"]
+texture = SubResource("HouseRedTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Lea"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Lea"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Lea/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Lea"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Lea"]
+position = Vector2(0, -18)
+
+# House: Alice
+[node name="House_Alice" type="StaticBody2D" parent="Buildings"]
+position = Vector2(800, 600)
+script = ExtResource("3")
+building_name = "House_Alice"
+building_type = "house"
+owner_id = "alice"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Alice"]
+texture = SubResource("HouseBlueTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Alice"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Alice"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Alice/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Alice"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Alice"]
+position = Vector2(0, -18)
+
+# House: Bob
+[node name="House_Bob" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1600, 600)
+script = ExtResource("3")
+building_name = "House_Bob"
+building_type = "house"
+owner_id = "bob"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Bob"]
+texture = SubResource("HouseGreenTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Bob"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Bob"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Bob/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Bob"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Bob"]
+position = Vector2(0, -18)
+
+# House: Eva
+[node name="House_Eva" type="StaticBody2D" parent="Buildings"]
+position = Vector2(800, 1320)
+script = ExtResource("3")
+building_name = "House_Eva"
+building_type = "house"
+owner_id = "eva"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Eva"]
+texture = SubResource("HouseRedTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Eva"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Eva"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Eva/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Eva"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Eva"]
+position = Vector2(0, -18)
+
+# House: Jack
+[node name="House_Jack" type="StaticBody2D" parent="Buildings"]
+position = Vector2(1600, 1320)
+script = ExtResource("3")
+building_name = "House_Jack"
+building_type = "house"
+owner_id = "jack"
+allow_visitors = true
+restrict_by_relationship = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/House_Jack"]
+texture = SubResource("HouseBlueTex")
+offset = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/House_Jack"]
+shape = SubResource("RectHouse")
+
+[node name="EntranceZone" type="Area2D" parent="Buildings/House_Jack"]
+position = Vector2(0, 28)
+script = ExtResource("4")
+interaction_type = "enter"
+
+[node name="EntranceShape" type="CollisionShape2D" parent="Buildings/House_Jack/EntranceZone"]
+shape = SubResource("RectEntrance")
+
+[node name="Windows" type="Node2D" parent="Buildings/House_Jack"]
+
+[node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Jack"]
+position = Vector2(0, -18)
+
+[node name="Locations" type="Node2D" parent="."]
+
+[node name="TownCenter" type="Marker2D" parent="Locations" groups=["location"]]
+position = Vector2(1200, 960)
+__meta__ = {
+"location_id": "town_center",
+"location_name_cn": "小镇中心",
+"location_type": "TOWN",
+"location_capacity": 200
+}
