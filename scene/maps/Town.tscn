@@ -151,6 +151,16 @@ shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Tom"]
 
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Tom/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Tom/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
+
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Tom"]
 position = Vector2(0, -18)
 
@@ -180,6 +190,16 @@ interaction_type = "enter"
 shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Monica"]
+
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Monica/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Monica/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
 
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Monica"]
 position = Vector2(0, -18)
@@ -211,6 +231,16 @@ shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Stephen"]
 
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Stephen/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Stephen/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
+
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Stephen"]
 position = Vector2(0, -18)
 
@@ -240,6 +270,16 @@ interaction_type = "enter"
 shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Lea"]
+
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Lea/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Lea/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
 
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Lea"]
 position = Vector2(0, -18)
@@ -271,6 +311,16 @@ shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Alice"]
 
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Alice/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Alice/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
+
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Alice"]
 position = Vector2(0, -18)
 
@@ -300,6 +350,16 @@ interaction_type = "enter"
 shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Bob"]
+
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Bob/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Bob/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
 
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Bob"]
 position = Vector2(0, -18)
@@ -331,6 +391,16 @@ shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Eva"]
 
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Eva/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Eva/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
+
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Eva"]
 position = Vector2(0, -18)
 
@@ -360,6 +430,16 @@ interaction_type = "enter"
 shape = SubResource("RectEntrance")
 
 [node name="Windows" type="Node2D" parent="Buildings/House_Jack"]
+
+[node name="WindowLight1" type="Light2D" parent="Buildings/House_Jack/Windows" groups=["window_lights"]]
+position = Vector2(-12, -24)
+energy = 0.0
+enabled = false
+
+[node name="WindowLight2" type="Light2D" parent="Buildings/House_Jack/Windows" groups=["window_lights"]]
+position = Vector2(12, -24)
+energy = 0.0
+enabled = false
 
 [node name="InteriorSpawn" type="Marker2D" parent="Buildings/House_Jack"]
 position = Vector2(0, -18)
