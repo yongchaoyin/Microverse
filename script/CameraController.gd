@@ -153,6 +153,8 @@ func _input(event):
 				_export_map_screenshot()
 			KEY_F11:  # F11生成纯绘制镇区地图PNG
 				_generate_town_map_image()
+			KEY_F10:  # F10生成并保存Town_Auto.tscn
+				_export_town_scene_tscn()
 
 func zoom_camera(delta_zoom: float):
 	"""缩放相机，限制在最小和最大缩放范围内"""
@@ -274,3 +276,9 @@ func _generate_town_map_image(output_path: String = "user://TownMap_Generated.pn
 	add_child(gen)
 	await gen.generate(output_path, Vector2i(int(map_bounds.size.x), int(map_bounds.size.y)))
 	gen.queue_free()
+
+func _export_town_scene_tscn(path: String = "res://scene/maps/Town_Auto.tscn"):
+	var exporter := TownSceneExporter.new()
+	add_child(exporter)
+	exporter.build_and_save(path)
+	exporter.queue_free()
