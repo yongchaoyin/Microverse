@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://automated_test"]
+
+[ext_resource type="PackedScene" uid="uid://terminalchat" path="res://scene/ui/TerminalChat.tscn" id="1"]
+[ext_resource type="Script" path="res://script/test/automated_test.gd" id="2"]
+
+[node name="Root" type="Node"]
+
+[node name="TerminalChat" parent="." instance=ExtResource("1")]
+
+[node name="AutomatedTest" type="Node" parent="."]
+script = ExtResource("2")

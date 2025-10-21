@@ -2,7 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(python3:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ui/SettingsUI.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ai/terminal/TerminalChat.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only)",
+      "Bash(exit 0)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ai/terminal/MultiAgentOrchestrator.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ai/terminal/AgentManager.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ai/APIConfig.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/ui/SettingsManager.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/test/test_terminal.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . --check-only --script script/test/automated_test.gd)",
+      "Bash(\"C:\\Godot\\godot.exe\" --headless --path . scene/test/automated_test.tscn)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

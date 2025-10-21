@@ -1,0 +1,364 @@
+[gd_scene load_steps=2 format=3 uid="uid://settingsui"]
+
+[ext_resource type="Script" path="res://script/ui/SettingsUI.gd" id="1"]
+
+[node name="SettingsUI" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "设置 Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="Panel/VBox/Header"]
+layout_mode = 2
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Tabs" type="TabContainer" parent="Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AI角色" type="VBoxContainer" parent="Panel/VBox/Tabs"]
+layout_mode = 2
+
+[node name="Toolbar" type="HBoxContainer" parent="Panel/VBox/Tabs/AI角色"]
+layout_mode = 2
+
+[node name="AddBtn" type="Button" parent="Panel/VBox/Tabs/AI角色/Toolbar"]
+layout_mode = 2
+text = "+ 添加角色"
+
+[node name="EditBtn" type="Button" parent="Panel/VBox/Tabs/AI角色/Toolbar"]
+layout_mode = 2
+text = "✎ 编辑"
+
+[node name="DeleteBtn" type="Button" parent="Panel/VBox/Tabs/AI角色/Toolbar"]
+layout_mode = 2
+text = "🗑 删除"
+
+[node name="Spacer" type="Control" parent="Panel/VBox/Tabs/AI角色/Toolbar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RefreshBtn" type="Button" parent="Panel/VBox/Tabs/AI角色/Toolbar"]
+layout_mode = 2
+text = "⟳ 刷新"
+
+[node name="AgentList" type="ItemList" parent="Panel/VBox/Tabs/AI角色"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="通用设置" type="VBoxContainer" parent="Panel/VBox/Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="GlobalAITitle" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "━━━ 全局AI配置（未设置密钥的角色将使用此配置）━━━"
+
+[node name="GlobalAPILabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "全局API提供商:"
+
+[node name="GlobalAPIOption" type="OptionButton" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="GlobalModelLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "全局模型:"
+
+[node name="GlobalModelEdit" type="LineEdit" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+placeholder_text = "例如: zai-org/GLM-4.6"
+
+[node name="GlobalKeyLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "全局API密钥:"
+
+[node name="GlobalKeyEdit" type="LineEdit" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+placeholder_text = "输入全局API密钥，未配置的角色将使用此密钥"
+secret = true
+
+[node name="HSeparator0" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="UITitle" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "━━━ 界面设置 ━━━"
+
+[node name="LanguageLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "界面语言 / Interface Language:"
+
+[node name="LanguageOption" type="OptionButton" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="FontSizeLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "字体大小 / Font Size:"
+
+[node name="FontSizeContainer" type="HBoxContainer" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="FontSizeSlider" type="HSlider" parent="Panel/VBox/Tabs/通用设置/FontSizeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 12.0
+max_value = 32.0
+step = 1.0
+value = 20.0
+
+[node name="FontSizeValue" type="Label" parent="Panel/VBox/Tabs/通用设置/FontSizeContainer"]
+layout_mode = 2
+text = "20"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="ThemeLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "主题 / Theme:"
+
+[node name="ThemeOption" type="OptionButton" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="FgColorLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "终端前景色 / Terminal Foreground:"
+
+[node name="FgColorPicker" type="ColorPickerButton" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+color = Color(0.86, 0.9, 0.86, 1)
+
+[node name="BgColorLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "终端背景色 / Terminal Background:"
+
+[node name="BgColorPicker" type="ColorPickerButton" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+color = Color(0.08, 0.08, 0.08, 1)
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="OpacityLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "终端透明度 / Terminal Opacity:"
+
+[node name="OpacityContainer" type="HBoxContainer" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="OpacitySlider" type="HSlider" parent="Panel/VBox/Tabs/通用设置/OpacityContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.3
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="OpacityValue" type="Label" parent="Panel/VBox/Tabs/通用设置/OpacityContainer"]
+layout_mode = 2
+text = "100%"
+
+[node name="HSeparator5" type="HSeparator" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="BlurLabel" type="Label" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+text = "背景模糊度 / Background Blur:"
+
+[node name="BlurContainer" type="HBoxContainer" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+
+[node name="BlurSlider" type="HSlider" parent="Panel/VBox/Tabs/通用设置/BlurContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 10.0
+step = 0.5
+value = 0.0
+
+[node name="BlurValue" type="Label" parent="Panel/VBox/Tabs/通用设置/BlurContainer"]
+layout_mode = 2
+text = "0.0"
+
+[node name="Spacer" type="Control" parent="Panel/VBox/Tabs/通用设置"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="关于" type="VBoxContainer" parent="Panel/VBox/Tabs"]
+visible = false
+layout_mode = 2
+
+[node name="AboutText" type="RichTextLabel" parent="Panel/VBox/Tabs/关于"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center][b]苏格拉底终端 Socratic Terminal[/b]
+v1.0
+
+与8位AI思想家进行深度对话
+Deep AI Discussion
+
+[url=https://github.com/yourusername/Socratic-Terminal]GitHub[/url]
+
+© 2025 Open Source (MIT License)[/center]"
+fit_content = true
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="Panel/VBox/BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveBtn" type="Button" parent="Panel/VBox/BottomBar"]
+layout_mode = 2
+text = "保存 Save"
+
+[node name="CancelBtn" type="Button" parent="Panel/VBox/BottomBar"]
+layout_mode = 2
+text = "取消 Cancel"
+
+[node name="AgentEditDialog" type="Window" parent="."]
+title = "编辑AI角色"
+initial_position = 2
+size = Vector2i(500, 600)
+visible = false
+
+[node name="VBox" type="VBoxContainer" parent="AgentEditDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="NameLabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "角色名称 / Agent Name:"
+
+[node name="NameEdit" type="LineEdit" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+placeholder_text = "例如: 哲学家"
+
+[node name="APILabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "API厂商 / API Provider:"
+
+[node name="APIOption" type="OptionButton" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+
+[node name="ModelLabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "模型 / Model:"
+
+[node name="ModelEdit" type="LineEdit" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+placeholder_text = "例如: gpt-4o-mini"
+
+[node name="KeyLabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "API密钥 / API Key:"
+
+[node name="KeyEdit" type="LineEdit" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+placeholder_text = "sk-... 或 ${ENV:OPENAI_API_KEY}"
+secret = true
+
+[node name="ColorLabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "显示颜色 / Display Color:"
+
+[node name="ColorPicker" type="ColorPickerButton" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+color = Color(0.6, 0.9, 1, 1)
+
+[node name="PromptLabel" type="Label" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+text = "系统提示词 / System Prompt:"
+
+[node name="PromptEdit" type="TextEdit" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "定义AI角色的人格和行为..."
+
+[node name="Checks" type="HBoxContainer" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+
+[node name="EnabledCheck" type="CheckButton" parent="AgentEditDialog/VBox/Checks"]
+layout_mode = 2
+text = "启用 / Enabled"
+
+[node name="ModeratorCheck" type="CheckButton" parent="AgentEditDialog/VBox/Checks"]
+layout_mode = 2
+text = "主持人 / Moderator"
+
+[node name="Buttons" type="HBoxContainer" parent="AgentEditDialog/VBox"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="AgentEditDialog/VBox/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveBtn" type="Button" parent="AgentEditDialog/VBox/Buttons"]
+layout_mode = 2
+text = "保存 Save"
+
+[node name="CancelBtn" type="Button" parent="AgentEditDialog/VBox/Buttons"]
+layout_mode = 2
+text = "取消 Cancel"

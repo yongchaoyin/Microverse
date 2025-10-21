@@ -10,21 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Microverse"
-run/main_scene="uid://nhba2jdtsjsx"
+config/name="Socratic Terminal"
+run/main_scene="res://scene/ui/TerminalChat.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SettingsManager="*res://script/ui/SettingsManager.gd"
-DialogManager="*res://script/ai/DialogManager.gd"
-CharacterManager="*res://script/CharacterManager.gd"
 APIManager="*res://script/ai/APIManager.gd"
-GameSaveManager="*res://script/GameSaveManager.gd"
-SaveLoadUIManager="*res://scene/ui/SaveLoadUIManager.tscn"
-MemoryManager="*res://script/ai/memory/MemoryManager.gd"
-LocationManager="*res://script/navigation/LocationManager.gd"
+AgentManager="*res://script/ai/terminal/AgentManager.gd"
+MultiAgentOrchestrator="*res://script/ai/terminal/MultiAgentOrchestrator.gd"
 
 [display]
 
@@ -36,7 +32,7 @@ display/window/dpi/allow_hidpi=true
 
 [dotnet]
 
-project/assembly_name="Microverse"
+project/assembly_name="SocraticTerminal"
 
 [input]
 

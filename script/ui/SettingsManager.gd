@@ -12,9 +12,9 @@ const CHARACTER_AI_CONFIG_FILE = "user://character_ai_settings.cfg"
 
 # 当前设置（默认AI设置）
 var current_settings = {
-	"api_type": "Ollama",
-	"model": "qwen2.5:1.5b",
-	"api_key": "",
+	"api_type": "SiliconFlow",
+	"model": "zai-org/GLM-4.6",
+	"api_key": "sk-sqljxintwepakfliiagxqxfrcaiqdfnbcdongdenqhksgdpr",
 	"show_ai_model_label": true,
 	# 显示设置
 	"window_mode": "windowed", # windowed | fullscreen | exclusive_fullscreen
@@ -24,6 +24,13 @@ var current_settings = {
 
 # 角色独立AI设置
 var character_ai_settings = {}
+
+# 全局AI配置（作为未配置角色的默认值）
+var global_ai_config = {
+	"api_type": "SiliconFlow",
+	"model": "zai-org/GLM-4.6",
+	"api_key": "sk-sqljxintwepakfliiagxqxfrcaiqdfnbcdongdenqhksgdpr"
+}
 
 # 可用的API类型和模型（通过APIConfig统一管理）
 var api_types: Array[String] = []
@@ -102,12 +109,29 @@ func load_settings():
 	# 应用显示设置
 	apply_display_settings()
 
-# 获取角色AI设置（优先使用角色独立设置，没有则返回默认设置）
+# 获取全局AI配置
+func get_global_ai_config() -> Dictionary:
+	return global_ai_config.duplicate()
+
+# 设置全局AI配置
+func set_global_ai_config(config: Dictionary):
+	global_ai_config = config.duplicate()
+	save_settings()
+	print("[SettingsManager] 全局AI配置已更新")
+
+# 获取角色AI设置（优先级：角色独立设置 > 全局AI配置）
 func get_character_ai_settings(character_name: String) -> Dictionary:
 	if character_ai_settings.has(character_name):
-		return character_ai_settings[character_name].duplicate()
+		var char_settings = character_ai_settings[character_name].duplicate()
+		# 如果角色配置没有API密钥，使用全局配置
+		if char_settings.get("api_key", "") == "":
+			char_settings["api_type"] = global_ai_config.get("api_type", "SiliconFlow")
+			char_settings["model"] = global_ai_config.get("model", "zai-org/GLM-4.6")
+			char_settings["api_key"] = global_ai_config.get("api_key", "")
+		return char_settings
 	else:
-		return current_settings.duplicate()
+		# 没有独立配置，返回全局配置
+		return global_ai_config.duplicate()
 
 # 设置角色AI配置
 func set_character_ai_settings(character_name: String, settings: Dictionary):

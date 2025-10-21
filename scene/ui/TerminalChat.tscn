@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://terminalchat"]
+
+[ext_resource type="Script" path="res://script/ai/terminal/TerminalChat.gd" id="1_6a0pl"]
+
+[sub_resource type="Theme" id="Theme_0"]
+
+[node name="TerminalChat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6a0pl")
+theme = SubResource("Theme_0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.08, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+
+[node name="Toolbar" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="SettingsBtn" type="Button" parent="VBox/Toolbar"]
+layout_mode = 2
+text = "⚙ 设置"
+
+[node name="ThemeBtn" type="Button" parent="VBox/Toolbar"]
+layout_mode = 2
+text = "Toggle Theme"
+
+[node name="FontSize" type="HSlider" parent="VBox/Toolbar"]
+layout_mode = 2
+min_value = 12.0
+max_value = 32.0
+step = 1.0
+value = 20.0
+size_flags_horizontal = 3
+
+[node name="Scroll" type="ScrollContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Output" type="RichTextLabel" parent="VBox/Scroll"]
+layout_mode = 2
+custom_minimum_size = Vector2(800, 400)
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+text = ""
+fit_content = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
+autowrap_mode = 2
+
+[node name="InputRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+
+[node name="Input" type="TextEdit" parent="VBox/InputRow"]
+layout_mode = 2
+placeholder_text = "输入主题或命令（/help），支持多行输入，Ctrl+Enter发送"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="Send" type="Button" parent="VBox/InputRow"]
+layout_mode = 2
+text = "发送"
+size_flags_vertical = 4
+

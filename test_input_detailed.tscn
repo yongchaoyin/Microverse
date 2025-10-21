@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://testinputdetailed"]
+
+[ext_resource type="Script" path="res://test_input_detailed.gd" id="1"]
+
+[node name="TestInputDetailed" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.08, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+
+[node name="Scroll" type="ScrollContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Output" type="RichTextLabel" parent="VBox/Scroll"]
+layout_mode = 2
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+text = "输入测试场景已加载，请尝试输入内容并按Enter发送\n"
+fit_content = true
+size_flags_vertical = 3
+autowrap_mode = 2
+
+[node name="InputRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+
+[node name="Input" type="TextEdit" parent="VBox/InputRow"]
+layout_mode = 2
+placeholder_text = "输入测试内容，Ctrl+Enter发送"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="Send" type="Button" parent="VBox/InputRow"]
+layout_mode = 2
+text = "发送"
+size_flags_vertical = 4

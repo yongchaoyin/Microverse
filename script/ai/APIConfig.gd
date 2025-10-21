@@ -116,7 +116,19 @@ static func _initialize():
 		"claude",
 		"claude"
 	)
-	
+
+	# SiliconFlow配置 (硅基流动)
+	_providers["SiliconFlow"] = APIProvider.new(
+		"SiliconFlow",
+		"SiliconFlow (硅基流动)",
+		"https://api.siliconflow.cn/v1/messages",
+		["zai-org/GLM-4.6", "deepseek-ai/DeepSeek-V3", "Qwen/Qwen2.5-72B-Instruct"],
+		true,
+		{"Content-Type": "application/json", "Authorization": "Bearer {api_key}", "anthropic-version": "2023-06-01"},
+		"claude",
+		"claude"
+	)
+
 	# KIMI配置
 	_providers["KIMI"] = APIProvider.new(
 		"KIMI",
@@ -155,7 +167,7 @@ static func get_api_types() -> Array[String]:
 # 获取API提供商配置
 static func get_provider(api_type: String) -> APIProvider:
 	_initialize()
-	return _providers.get(api_type, _providers["Ollama"])
+	return _providers.get(api_type, _providers["SiliconFlow"])
 
 # 获取指定API的模型列表
 static func get_models_for_api(api_type: String) -> Array[String]:
